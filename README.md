@@ -8,7 +8,7 @@ Discover the traces of an unknown civilization and its secrets through an advent
 
 ## Input
 
-Z -> Forward
+Z -> Forward /n
 Q -> Left
 S -> Backward
 D -> Right
