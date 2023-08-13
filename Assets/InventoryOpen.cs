@@ -25,7 +25,7 @@ public class InventoryOpen : MonoBehaviour
     void Paused()
     {
         inventoryUI.SetActive(true);
-        PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.StopMovement();
         Time.timeScale = 0;
         gameIsPaused = true;
     }

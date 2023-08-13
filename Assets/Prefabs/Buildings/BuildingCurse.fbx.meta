@@ -3,7 +3,52 @@ guid: bcee54d886f644b499a828a4a448d2f7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: fb58619094b9f7340a5e133d7163f9f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glasses
+    second: {fileID: 2100000, guid: 0b7ef8a0e9439ad4a870b80e3cb3c724, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iron
+    second: {fileID: 2100000, guid: 750f0dd1e46c4f841b87ab0a0d700ba1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: d21b8bdd6398aea4f8210eb89442cf2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal rust
+    second: {fileID: 2100000, guid: c67c8ed2c8d39f3448daf0aa8a0f0b46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof bord
+    second: {fileID: 2100000, guid: fce3012f23eab264cb72225beed705a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: b61c4498735d2454db93c5c2d8a4f06d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Border
+    second: {fileID: 2100000, guid: e98d1b2d9ad483d44b8023a55809f368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Border 2
+    second: {fileID: 2100000, guid: 614843a52a30dee46a3c57393cfd3904, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

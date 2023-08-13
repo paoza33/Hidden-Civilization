@@ -17,22 +17,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Date eri
-    second: {fileID: 2100000, guid: a1b0e7fcf598d2544be847a1dbeddcc0, type: 2}
+    second: {fileID: -876546973899608171, guid: b8916441e9eca0e4b9f468423b24f6ea, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hanao
-    second: {fileID: 2100000, guid: a1b0e7fcf598d2544be847a1dbeddcc0, type: 2}
+    second: {fileID: -876546973899608171, guid: b8916441e9eca0e4b9f468423b24f6ea, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Kimono
-    second: {fileID: 2100000, guid: a1b0e7fcf598d2544be847a1dbeddcc0, type: 2}
+    second: {fileID: -876546973899608171, guid: b8916441e9eca0e4b9f468423b24f6ea, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin
-    second: {fileID: 2100000, guid: a1b0e7fcf598d2544be847a1dbeddcc0, type: 2}
+    second: {fileID: -876546973899608171, guid: b8916441e9eca0e4b9f468423b24f6ea, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

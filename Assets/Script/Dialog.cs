@@ -9,5 +9,4 @@ public class Dialog
     // "TextArea" Create a scrollable textview in the inspector.
     [TextArea(3, 10)]
     public string[] sentences;
-
 }

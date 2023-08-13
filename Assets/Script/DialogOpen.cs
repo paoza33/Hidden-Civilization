@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogOpen : MonoBehaviour
 {
     private Animator animatorDialog;
-    private Text textNameCanvas;
-    private Text textDialogCanvas;
+    private TextMeshProUGUI textNameCanvas;
+    private TextMeshProUGUI textDialogCanvas;
     private Queue<string> sentences;
     public static DialogOpen instance;
     private void Awake()
@@ -19,15 +20,15 @@ public class DialogOpen : MonoBehaviour
         }
         instance = this;
         animatorDialog = GameObject.FindGameObjectWithTag("UIDialog").GetComponent<Animator>();
-        textNameCanvas = GameObject.FindGameObjectWithTag("UINameDialog").GetComponent<Text>();
-        textDialogCanvas = GameObject.FindGameObjectWithTag("UITextDialog").GetComponent <Text>();
+        textNameCanvas = GameObject.FindGameObjectWithTag("UINameDialog").GetComponent<TextMeshProUGUI>();
+        textDialogCanvas = GameObject.FindGameObjectWithTag("UITextDialog").GetComponent <TextMeshProUGUI>();
         sentences = new Queue<string>();
     }
 
     public void StartDialog(Dialog _dialog)
     {
         animatorDialog.SetBool("isOpen", true);
-        PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.StopMovement();
         textNameCanvas.text = _dialog.name;
 
         sentences.Clear();
@@ -49,16 +50,27 @@ public class DialogOpen : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
         return true;
     }
-    IEnumerator TypeSentence(string sentence)
+    /*IEnumerator TypeSentence(string sentence)     // Letter by letter
     {
         textDialogCanvas.text = "";
-
         foreach (char letter in sentence.ToCharArray())
         {
             textDialogCanvas.text += letter;
             yield return new WaitForSeconds(0.01f);
         }
+    }*/
+
+    IEnumerator TypeSentence(string sentence)       // Word by word
+    {
+        textDialogCanvas.text = "";
+        string[] words = sentence.Split(' ');
+        foreach (string word in words)
+        {
+            textDialogCanvas.text += word + " ";
+            yield return new WaitForSeconds(0.05f);
+        }
     }
+
     public void EndDialog()
     {
         animatorDialog.SetBool("isOpen", false);

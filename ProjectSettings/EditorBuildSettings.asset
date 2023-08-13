@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level0.unity
     guid: f18c5d1cd89dee4498919b1e30ceffac
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/LastDoor.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Level2.unity
@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City.unity
     guid: fadbfb3597fa58448b6c0fb8976c1dea
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: fa53ddf53043a574b97d7c6aa0afd3ea
+  - enabled: 1
+    path: Assets/Scenes/LostIsland.unity
+    guid: 08d50d8c44e5cf34d8d180d121a6253c
+  - enabled: 1
+    path: Assets/Scenes/Labyrinth.unity
+    guid: 252aa9fe86c28194ba981e8badb106bb
+  - enabled: 1
+    path: Assets/Scenes/KnowledgePlace.unity
+    guid: 0e3eb2ca4a2db4446bc1615a3f131794
   m_configObjects: {}

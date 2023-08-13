@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Interaction_Policer : MonoBehaviour
 {
-    public Animator animatorPlayer;
-    public Animator animatorDialog;
+    //public Animator animatorPlayer;
+    //public Animator animatorDialog;
     private bool playerAlreadyInteract = false;
     public AudioClip clip;
+    public Transform PositionClip;
 
     private void Awake()
     {
@@ -18,10 +19,10 @@ public class Interaction_Policer : MonoBehaviour
 
         if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
         {
-            animatorDialog.SetBool("isOpen", true);
+            //animatorDialog.SetBool("isOpen", true);
             playerAlreadyInteract = true;
-            animatorPlayer.SetBool("AttackIdle", true);
-            AudioManager.instance.PlayClipAt(clip, transform.position);
+            //animatorPlayer.SetBool("AttackIdle", true);
+            AudioManager.instance.PlayClipAt(clip, PositionClip.position);
         }
     }
 
@@ -38,9 +39,9 @@ public class Interaction_Policer : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             enabled = false;
-            animatorDialog.SetBool("isOpen", false);
+            //animatorDialog.SetBool("isOpen", false);
             playerAlreadyInteract = false;
-            animatorPlayer.SetBool("AttackIdle", false);
+            //animatorPlayer.SetBool("AttackIdle", false);
         }
     }
 }

@@ -17,10 +17,10 @@ TagManager:
   - Water
   - UI
   - NPC
-  - 
-  - 
-  - 
-  - 
+  - Cube
+  - Camera
+  - Base_Collider_Player
+  - Plateform
   - 
   - 
   - 

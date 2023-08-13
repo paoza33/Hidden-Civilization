@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStart : MonoBehaviour
 {
+    public Vector3 offsetPosition;
+    public Vector3 cameraRotation;
+
     private void Awake()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.position = transform.position;
-        CameraMovement.instance.StartPosition(PlayerMovement.instance.GetTransform());
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = transform.position;
+        CameraMovement.instance.StartPosition(offsetPosition, cameraRotation);
     }
 }

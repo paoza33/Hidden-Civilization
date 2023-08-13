@@ -17,12 +17,12 @@ public class TriggerChangeScene : MonoBehaviour
     {
         if (other.CompareTag("Player") && !alreadyTriggered)
         {
-            PlayerMovement.instance.enabled = false;
+            PlayerMovement.instance.StopMovement();
             alreadyTriggered = true;
             StartCoroutine(Fade());
         }
     }
-    public IEnumerator Fade()
+    private IEnumerator Fade()
     {
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);

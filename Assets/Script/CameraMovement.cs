@@ -28,60 +28,64 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!Input.GetButtonDown("Jump"))
+        if (PlayerMovement.instance.GetisGrounded())
         {
-            if (PlayerMovement.instance.GetisGrounded())
+            // Fix the camera position x/z if the player raise the limit of the level
+
+            if(!cameraFixX && !cameraFixZ)
             {
-                // Fix the camera position x/z if the player raise the limit of the level
-                if(!cameraFixX && !cameraFixZ)
-                {
-                    transform.position = Vector3.SmoothDamp(transform.position, player.transform.position + posOffSet, ref velocity, timeOffSet);
-                }
-                else if(cameraFixX && cameraFixZ)
-                {
-                    Vector3 vFix = new Vector3(fixX, player.transform.position.y, fixZ);
-                    transform.position = Vector3.SmoothDamp(transform.position, vFix + posOffSet, ref velocity, timeOffSet);
-                }
-                else if (cameraFixX)
-                {
-                    Vector3 vFixX = new Vector3(fixX, player.transform.position.y, player.transform.position.z);
-                    transform.position = Vector3.SmoothDamp(transform.position, vFixX + posOffSet, ref velocity, timeOffSet);
-                }
-                else
-                {
-                    Vector3 vFixZ = new Vector3(player.transform.position.x, player.transform.position.y, fixZ);
-                    transform.position = Vector3.SmoothDamp(transform.position, vFixZ + posOffSet, ref velocity, timeOffSet);
-                }
-                // Axis Y updated for when player was falling
-                newPosOffSetY = player.transform.position.y + posOffSet.y;
+                transform.position = Vector3.SmoothDamp(transform.position, player.transform.position + posOffSet, ref velocity, timeOffSet);
+            }
+            else if(cameraFixX && cameraFixZ)
+            {
+                Vector3 vFix = new Vector3(fixX, player.transform.position.y, fixZ);
+                transform.position = Vector3.SmoothDamp(transform.position, vFix + posOffSet, ref velocity, timeOffSet);
+            }
+            else if (cameraFixX)
+            {
+                Vector3 vFixX = new Vector3(fixX, player.transform.position.y, player.transform.position.z);
+                transform.position = Vector3.SmoothDamp(transform.position, vFixX + posOffSet, ref velocity, timeOffSet);
             }
             else
             {
-                // Fix axis Y when player fall
-
-                Vector3 posTarget = new Vector3(player.transform.position.x + posOffSet.x, newPosOffSetY, player.transform.position.z + posOffSet.z);
-                transform.position = Vector3.SmoothDamp(transform.position, posTarget, ref velocity, timeOffSet);
+                Vector3 vFixZ = new Vector3(player.transform.position.x, player.transform.position.y, fixZ);
+                transform.position = Vector3.SmoothDamp(transform.position, vFixZ + posOffSet, ref velocity, timeOffSet);
             }
-        }
-    }
-
-    public void SetIsOutdoor(bool _isOutdoor) {
-        if (_isOutdoor)
-        {
-            posOffSet = new Vector3(0, 9, (float)-7.5);
-            cameraRotation = Quaternion.Euler(50, 0, 0);
+            // Axis Y updated for when player was falling
+            newPosOffSetY = player.transform.position.y + posOffSet.y;
         }
         else
         {
-            posOffSet = new Vector3(0, 7, (float)-3.5);
-            cameraRotation = Quaternion.Euler(60, 0, 0);
+            // Fix axis Y when player fall
+
+            Vector3 posTarget = new Vector3(player.transform.position.x + posOffSet.x, newPosOffSetY, player.transform.position.z + posOffSet.z);
+            transform.position = Vector3.SmoothDamp(transform.position, posTarget, ref velocity, timeOffSet);
         }
-        transform.rotation = cameraRotation;
     }
 
-    public void StartPosition(Transform _transform)
+    public void StartPosition(Vector3 _posOffset, Vector3 newRotation)
     {
-        transform.position = _transform.position + posOffSet;
+        posOffSet = _posOffset;
+        transform.position = player.transform.position + posOffSet;
         newPosOffSetY = posOffSet.y;
+        transform.rotation = Quaternion.Euler(newRotation);
+    }
+
+    public void StartPosition(Vector3 _posOffset, Quaternion newRotation)
+    {
+        posOffSet = _posOffset;
+        transform.position = player.transform.position + posOffSet;
+        newPosOffSetY = posOffSet.y;
+        transform.rotation = newRotation;
+    }
+
+    public Vector3 PosOffSet
+    {
+        get { return posOffSet; }
+    }
+
+    public Quaternion CameraRotation
+    {
+        get { return cameraRotation; }
     }
 }
