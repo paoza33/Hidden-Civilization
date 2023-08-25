@@ -67,7 +67,7 @@ public class TriggerPlateformControl : MonoBehaviour
         {
             PlateformMovement.instance.Moove(color, indexPoints);
         }
-        else if (Input.GetButtonDown("Right") && canInteract)
+        else if (Input.GetAxisRaw("Horizontal") == 1 && canInteract)
         {
             if(!(indexPoints +1 >= endPoints.Length))
             {
@@ -80,7 +80,7 @@ public class TriggerPlateformControl : MonoBehaviour
                 LaserSphereManagment.instance.SetLaser(laser, startPoint[indexPoints], endPoints[indexPoints]);
             }          
         }
-        else if(Input.GetButtonDown("Left") && canInteract)
+        else if(Input.GetAxisRaw("Horizontal") == -1 && canInteract)
         {
             if(!(indexPoints -1 <0))
             {

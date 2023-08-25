@@ -55,14 +55,12 @@ public class DissolveElement : MonoBehaviour
     {
         if(!(dissolveValue > 1))           
         {
-            Debug.Log("test");
             dissolveMat.SetFloat(referenceVarShader, dissolveValue);
             yield return new WaitForSeconds(0.01f);
             StartCoroutine(Dissolution(dissolveMat, (dissolveMat.GetFloat(referenceVarShader) + 0.005f) * speed, referenceVarShader, cube));
         }
         else
         {
-            Debug.Log("destroy");
             Destroy(cube.gameObject);
         }
     }

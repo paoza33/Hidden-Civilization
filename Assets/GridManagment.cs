@@ -26,13 +26,13 @@ public class GridManagment : MonoBehaviour
 
     void Start()
     {
-        // gridScene[column, linea] -> [0,0] == left down of the gridScene
+        // gridScene[column, linea] -> [1,1] == left down of the gridScene (origin)
         InitializeGrid(1, 1, 4, "MainCube");
-        InitializeGrid(2, 2, 1, "SecondaryCube");
-        InitializeGrid(3, 3, 1, "SecondaryCube");
-        InitializeGrid(4, 3, 5, "SecondaryCube");
-        InitializeGrid(5, 5, 2, "SecondaryCube");
-        InitializeGrid(6, 5, 5, "SecondaryCube");        
+        InitializeGrid(2, 1, 1, "SecondaryCube");
+        InitializeGrid(3, 3, 2, "SecondaryCube");
+        InitializeGrid(4, 5, 3, "SecondaryCube");
+        InitializeGrid(5, 5, 4, "SecondaryCube");
+        InitializeGrid(6, 4, 5, "SecondaryCube");        
     }
     private void InitializeGrid(int id, int x, int y, string name)
     {

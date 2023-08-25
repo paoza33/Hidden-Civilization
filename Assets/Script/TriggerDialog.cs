@@ -43,7 +43,6 @@ public class TriggerDialog : MonoBehaviour
                     animatorDoor.SetBool("PlayerHaveKey", true);
                     colliderToDesactivate.enabled = false;
                     DialogOpen.instance.StartDialog(open);
-                    Debug.Log(open.sentences);
                 }
                 else
                 {

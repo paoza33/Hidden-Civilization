@@ -35,7 +35,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 1.66
+    - _Alpha: 0.33
     - _AlphaClip: 0
     - _AmbiantOcclusion: -1.7
     - _Blend: 0
@@ -46,7 +46,7 @@ Material:
     - _DstBlend: 10
     - _MaskPower: -0
     - _Metallic: 0
-    - _NoiseScale: 10
+    - _NoiseScale: 2.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: -10.75
@@ -60,7 +60,7 @@ Material:
     - _DotsTiling: {r: 25, g: 25, b: 0, a: 0}
     - _EmmissiveColor: {r: 0.195, g: 0.75, b: 0.3867272, a: 0}
     - _HDRColor: {r: 0.19607843, g: 0.7490196, b: 0.39215687, a: 0}
-    - _NoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0, g: 7.4, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7081752361127962252
 MonoBehaviour:

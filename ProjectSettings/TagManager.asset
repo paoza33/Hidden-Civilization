@@ -21,8 +21,8 @@ TagManager:
   - Camera
   - Base_Collider_Player
   - Plateform
-  - 
-  - 
+  - Ignore light
+  - OnlyCollisionPlayer
   - 
   - 
   - 

@@ -60,7 +60,7 @@ public class DialogOpen : MonoBehaviour
         }
     }*/
 
-    IEnumerator TypeSentence(string sentence)       // Word by word
+    IEnumerator TypeSentence(string sentence)       // Word by word (work with sprite)
     {
         textDialogCanvas.text = "";
         string[] words = sentence.Split(' ');

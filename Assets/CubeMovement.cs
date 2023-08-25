@@ -13,6 +13,13 @@ public class CubeMovement : MonoBehaviour
     private CubeObject cubeObject;
     private bool isCube = false;
     private float closeEnough = 0.01f;
+
+    [SerializeField]
+    private Shader shader;
+    [SerializeField]
+    private GameObject stele;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -41,6 +48,7 @@ public class CubeMovement : MonoBehaviour
                     gridCoordinate[0] = mainCube.positionX;
                     gridCoordinate[1] = i - 1; // si oui, notre position sera la position juste derriere le cube rencontre
                     isCube = true;
+                    break;
                 }
             }
             if (!isCube)
@@ -58,6 +66,7 @@ public class CubeMovement : MonoBehaviour
                     gridCoordinate[0] = mainCube.positionX;
                     gridCoordinate[1] = i + 1;
                     isCube = true;
+                    break;
                 }
             }
             if (!isCube)
@@ -75,9 +84,10 @@ public class CubeMovement : MonoBehaviour
                     gridCoordinate[0] = i - 1;
                     gridCoordinate[1] = mainCube.positionY;
                     isCube = true;
+                    break;
                 }
             }
-            if (!isCube)
+            if (!isCube)    // si on ne rencontre pas de cube
             {
                 gridCoordinate[0] = 6;
                 gridCoordinate[1] = mainCube.positionY;
@@ -92,6 +102,7 @@ public class CubeMovement : MonoBehaviour
                     gridCoordinate[0] = i + 1;
                     gridCoordinate[1] = mainCube.positionY;
                     isCube = true;
+                    break;
                 }
             }
             if (!isCube)
@@ -108,10 +119,11 @@ public class CubeMovement : MonoBehaviour
         mainCube.positionY = gridCoordinate[1];
     }
 
+
     private void FixedUpdate()
     {
         currentPos = cubeObject.transform.position;
-        cubeObject.transform.position = Vector3.MoveTowards(currentPos, newWorldPos, 4f * Time.deltaTime);
+        cubeObject.transform.position = Vector3.MoveTowards(currentPos, newWorldPos, 5f * Time.deltaTime);
         if (Vector3.Distance(cubeObject.transform.position, newWorldPos) < closeEnough) // les vecteurs ne sont pas egaux à des milliemes pres
         {
             if (!isCube)
@@ -122,6 +134,15 @@ public class CubeMovement : MonoBehaviour
             else
             {
                 isCube = false;
+                if(cubeObject.GetComponent<CubeObject>().name == "MainCube")
+                {
+                    if((cubeObject.GetComponent<CubeObject>().positionX == 3) && (cubeObject.GetComponent<CubeObject>().positionY == 3))
+                    {
+                        stele.gameObject.SetActive(true);
+                        cubeObject.GetComponent<MeshRenderer>().material.shader = shader;
+                        DissolveElement.instance.Dissolve(cubeObject.GetComponent<MeshRenderer>().material, "_Dissolve_value", cubeObject);
+                    }
+                }
             }
             enabled = false;
         }
