@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9145803615023657155}
   - component: {fileID: 5279257231290335078}
   - component: {fileID: 7973419948693785516}
-  - component: {fileID: 7536136888560960023}
+  - component: {fileID: 779383006753506289}
   m_Layer: 0
   m_Name: Fence City 2
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7536136888560960023
-BoxCollider:
+--- !u!64 &779383006753506289
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.026651405, y: 0.16690749, z: 0.02356707}
-  m_Center: {x: 0, y: 0.066667914, z: 0.01177071}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 8ab1c1b2967646e43bb129913e60af64, type: 3}
