@@ -11,8 +11,6 @@ public class TriggerChangePiece : MonoBehaviour
 
     private float alphaValue = 1f;
 
-    // Latence lors du changement d'alpha (fonctionne bien sur pC mais lag sur pc portable)
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -35,9 +33,6 @@ public class TriggerChangePiece : MonoBehaviour
 
     private IEnumerator FadeAlpha(Material _materialP, Material _materialN, Color _color)
     {
-        if(alphaValue < 0f){
-            alphaValue = 0f;
-        }
         _color.a = alphaValue;
         _materialN.color = _color;
 
@@ -46,14 +41,15 @@ public class TriggerChangePiece : MonoBehaviour
 
         yield return new WaitForSeconds(0.001f);
 
-        if(alphaValue > 0f)
+        if(alphaValue >= 0f)
         {
-            alphaValue -= 0.15f;
+            Debug.Log(alphaValue);
+            alphaValue -= 0.01f;
             StartCoroutine(FadeAlpha(_materialP, _materialN, _color));
         }
         else
         {
-            alphaValue = 1f;    // if alpha stay at zero, script doesn't work properly, 
+            alphaValue = 1f;
         }
     }
 }
