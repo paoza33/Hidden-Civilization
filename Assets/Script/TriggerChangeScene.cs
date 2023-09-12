@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,6 +25,7 @@ public class TriggerChangeScene : MonoBehaviour
     {
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
+        PlayerMovement.instance.enabled = true;
         SceneManager.LoadScene(levelToLoad);
     }
 }

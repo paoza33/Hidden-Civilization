@@ -33,6 +33,10 @@ public class TriggerChangePiece : MonoBehaviour
 
     private IEnumerator FadeAlpha(Material _materialP, Material _materialN, Color _color)
     {
+        if(alphaValue < 0f)
+        {
+            alphaValue = 0f;
+        }
         _color.a = alphaValue;
         _materialN.color = _color;
 
@@ -41,10 +45,9 @@ public class TriggerChangePiece : MonoBehaviour
 
         yield return new WaitForSeconds(0.001f);
 
-        if(alphaValue >= 0f)
+        if(alphaValue > 0f)
         {
-            Debug.Log(alphaValue);
-            alphaValue -= 0.01f;
+            alphaValue -= 0.02f;
             StartCoroutine(FadeAlpha(_materialP, _materialN, _color));
         }
         else
