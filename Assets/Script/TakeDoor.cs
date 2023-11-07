@@ -17,6 +17,7 @@ public class TakeDoor : MonoBehaviour
         if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
         {
             playerAlreadyInteract = true;
+            PlayerMovement.instance.StopMovement();
             StartCoroutine(Fade());
         }
     }
@@ -40,6 +41,9 @@ public class TakeDoor : MonoBehaviour
     {
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.50f);
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
         SceneManager.LoadScene(levelToLoad);
     }
 }

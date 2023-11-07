@@ -26,6 +26,8 @@ public class TriggerChangeScene : MonoBehaviour
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
         PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
         SceneManager.LoadScene(levelToLoad);
     }
 }
