@@ -17,7 +17,7 @@ public class CabinetInteraction : MonoBehaviour
     {
         enabled = false;
     }
-
+    
     private void Update(){
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
             playerAlreadyInteract = true;
