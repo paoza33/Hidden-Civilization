@@ -940,6 +940,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Library
+  isKeyNeeded: 1
+  keyName: KeyLibrary
+  open:
+    name: Open
+    sentences:
+    - C'est ouvert !!
+    - yeeeeeeeeeeeeeeees
+  notOpen:
+    name: Not open
+    sentences:
+    - "ferm\xE9 ..."
+    - Fuck
 --- !u!65 &616471852
 BoxCollider:
   m_ObjectHideFlags: 0

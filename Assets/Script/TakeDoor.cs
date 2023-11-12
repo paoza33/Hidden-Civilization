@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 public class TakeDoor : MonoBehaviour
 {
     private bool playerAlreadyInteract;
+    private bool ifChangeLevel = false;
     public string levelToLoad;
     private Animator animator;
+    public bool isKeyNeeded;
+    public string keyName;
+    public Dialog open;
+    private bool test;
+    public Dialog notOpen;
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -17,8 +23,29 @@ public class TakeDoor : MonoBehaviour
         if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
         {
             playerAlreadyInteract = true;
-            PlayerMovement.instance.StopMovement();
-            StartCoroutine(Fade());
+            if(isKeyNeeded){
+                if(Inventory.instance.FindItem(keyName)){
+                    ifChangeLevel = true;
+                    DialogOpen.instance.StartDialog(open);
+                }
+                else{
+                    ifChangeLevel = false;
+                    DialogOpen.instance.StartDialog(notOpen);
+                }
+            }
+            else{
+                PlayerMovement.instance.StopMovement();
+                StartCoroutine(Fade());
+            }
+        }
+        else if(Input.GetButtonDown("Interact")){
+            if(!DialogOpen.instance.DisplayNextSentences()){
+                playerAlreadyInteract = false;
+                if(ifChangeLevel){
+                    PlayerMovement.instance.StopMovement();
+                    StartCoroutine(Fade());
+                }
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

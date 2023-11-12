@@ -6,6 +6,21 @@ using UnityEngine.SceneManagement;
 public class TeleportRuins : MonoBehaviour
 {
     public GameObject barrier;
+    public Dialog dialogBarrier;
+
+    private void Awake()
+    {
+        enabled = false;
+    }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("Interact")){
+                if(!DialogOpen.instance.DisplayNextSentences()){
+                    StartCoroutine(ChangeScene());
+                }
+            }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +29,9 @@ public class TeleportRuins : MonoBehaviour
             Rigidbody rb = other.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
             barrier.SetActive(true);
-            StartCoroutine(ChangeScene());
+            DialogOpen.instance.StartDialog(dialogBarrier);
+            // enlever le box collider
+            enabled = true;
         }
         
     }
