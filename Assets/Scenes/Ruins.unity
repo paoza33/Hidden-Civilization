@@ -20841,6 +20841,8 @@ MonoBehaviour:
     sentences:
     - wtf !!
     - "bloqu\xE9"
+  animator: {fileID: 0}
+  levelToLoad: Ruins
 --- !u!1001 &1767565577
 PrefabInstance:
   m_ObjectHideFlags: 0

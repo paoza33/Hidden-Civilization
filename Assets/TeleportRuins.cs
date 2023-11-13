@@ -7,38 +7,46 @@ public class TeleportRuins : MonoBehaviour
 {
     public GameObject barrier;
     public Dialog dialogBarrier;
+    public Animator animator;
+    public string levelToLoad;
 
     private void Awake()
     {
+        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
     }
 
     private void Update()
     {
+        animator.SetTrigger("FadeRedIn");
         if(Input.GetButtonDown("Interact")){
-                if(!DialogOpen.instance.DisplayNextSentences()){
-                    StartCoroutine(ChangeScene());
-                }
+            if(!DialogOpen.instance.DisplayNextSentences()){
+                PlayerMovement.instance.StopMovement();
+                StartCoroutine(Fade());
             }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.zero;
             barrier.SetActive(true);
             DialogOpen.instance.StartDialog(dialogBarrier);
-            // enlever le box collider
+            PlayerMovement.instance.enabled = true;
+            GetComponent<BoxCollider>().enabled = false;
             enabled = true;
         }
         
     }
 
-    private IEnumerator ChangeScene()
+    public IEnumerator Fade()
     {
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Ruins");
+        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(0.50f);
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
+        SceneManager.LoadScene(levelToLoad);
     }
 }
