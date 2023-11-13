@@ -7,18 +7,20 @@ public class TeleportRuins : MonoBehaviour
 {
     public GameObject barrier;
     public Dialog dialogBarrier;
-    public Animator animator;
+    public Light lt;
     public string levelToLoad;
 
     private void Awake()
     {
-        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
     }
 
     private void Update()
     {
-        animator.SetTrigger("FadeRedIn");
+        // couleur light
+        //lt.color -= (Color.white / 2.0f) * Time.deltaTime;
+        lt.color = Color.red;
+        Debug.Log(lt.color);
         if(Input.GetButtonDown("Interact")){
             if(!DialogOpen.instance.DisplayNextSentences()){
                 PlayerMovement.instance.StopMovement();
@@ -42,7 +44,6 @@ public class TeleportRuins : MonoBehaviour
 
     public IEnumerator Fade()
     {
-        animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.50f);
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;

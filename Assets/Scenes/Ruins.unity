@@ -20841,7 +20841,7 @@ MonoBehaviour:
     sentences:
     - wtf !!
     - "bloqu\xE9"
-  animator: {fileID: 0}
+  lt: {fileID: 1050018587}
   levelToLoad: Ruins
 --- !u!1001 &1767565577
 PrefabInstance:
