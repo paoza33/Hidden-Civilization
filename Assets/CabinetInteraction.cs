@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class CabinetInteraction : MonoBehaviour
 {
     public string keyNeeded;
-    public bool playerAlreadyInteract = false;
+    private bool playerAlreadyInteract = false;
+    private bool flickeringActivate = false;
     
     public Dialog open;
     public Dialog notOpen;
 
+    public GameObject symbol;
 
     private void Awake()
     {
@@ -23,7 +25,13 @@ public class CabinetInteraction : MonoBehaviour
             playerAlreadyInteract = true;
             if(Inventory.instance.FindItem(keyNeeded)){
                 DialogOpen.instance.StartDialog(open);
-                //rajouter flicker symbol
+                if (!flickeringActivate)
+                {
+                    flickeringActivate = true;
+                    symbol.GetComponent<FlickeringEmissive>().isReverse = false;
+                    symbol.GetComponent<FlickeringEmissive>().enabled = true;
+                }
+                
             }
             else{
                 DialogOpen.instance.StartDialog(notOpen);
