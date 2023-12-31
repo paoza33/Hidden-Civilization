@@ -411,7 +411,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,13 +455,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (6)
+      value: Cabinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &311037987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 311037986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &311037988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 311037986}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &345059539
@@ -588,7 +597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -632,13 +641,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (3)
+      value: Cabinet3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &416284276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 416284275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &416284277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 416284275}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &419476750
@@ -650,7 +668,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -694,7 +712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (4)
+      value: Cabinet9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -816,7 +838,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3ca7521534a7f5b8052b8145e1cf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 0000000000000000000000000000000000000000
+  symbols1:
+  - {fileID: 311037988}
+  - {fileID: 2134206920}
+  symbols2:
+  - {fileID: 416284277}
+  - {fileID: 1640989561}
+  symbols3:
+  - {fileID: 1954865557}
+  - {fileID: 1879755128}
 --- !u!4 &583166792
 Transform:
   m_ObjectHideFlags: 0
@@ -884,13 +914,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (4)
+      value: Cabinet18
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,7 +1097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (14)
+      value: Cabinet15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1258,7 +1296,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1302,7 +1340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (1)
+      value: Cabinet7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1633,7 +1675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1677,7 +1719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (12)
+      value: Cabinet12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1751,9 +1797,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (10)
+      value: Cabinet14
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
@@ -2275,13 +2325,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (1)
+      value: Cabinet8
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2464,7 +2518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2508,7 +2562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (07)
+      value: Cabinet16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -2545,26 +2603,26 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1272035744}
-  - {fileID: 738915852}
-  - {fileID: 1954865556}
-  - {fileID: 1640989560}
+  - {fileID: 311037987}
+  - {fileID: 2134206919}
   - {fileID: 416284276}
+  - {fileID: 1640989560}
+  - {fileID: 1954865556}
+  - {fileID: 1879755127}
+  - {fileID: 738915852}
+  - {fileID: 1272035744}
   - {fileID: 419476751}
   - {fileID: 2086104275}
   - {fileID: 1513119644}
   - {fileID: 1016369518}
-  - {fileID: 1879755127}
-  - {fileID: 1825334875}
-  - {fileID: 1402309782}
   - {fileID: 1457358702}
   - {fileID: 1100518159}
   - {fileID: 649191724}
+  - {fileID: 1402309782}
+  - {fileID: 1825334875}
   - {fileID: 596722562}
-  - {fileID: 2134206919}
   - {fileID: 1879813683}
   - {fileID: 1550319561}
-  - {fileID: 311037987}
   m_Father: {fileID: 97986234}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2658,9 +2716,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (9)
+      value: Cabinet13
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
@@ -2815,7 +2877,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2859,7 +2921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (11)
+      value: Cabinet11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -2875,13 +2941,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (6)
+      value: Cabinet20
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3049,13 +3119,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (2)
+      value: Cabinet4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &1640989560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 1640989559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1640989561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 1640989559}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1668445529
@@ -3329,13 +3408,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (3)
+      value: Cabinet17
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3393,7 +3476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3437,13 +3520,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (13)
+      value: Cabinet6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &1879755127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 1879755126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1879755128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 1879755126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1879813682
@@ -3453,13 +3545,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (5)
+      value: Cabinet19
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3630,13 +3726,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (2)
+      value: Cabinet5
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3683,6 +3783,11 @@ PrefabInstance:
 --- !u!4 &1954865556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1954865555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1954865557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1954865555}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1955110752
@@ -4148,13 +4253,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: id
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
-      value: Cabinet1 (7)
+      value: Cabinet10
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3229022669899490805, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4257,7 +4366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4301,13 +4410,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: m_Name
-      value: Cabinet2 (5)
+      value: Cabinet2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: id
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &2134206919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3458972428111166328, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 2134206918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2134206920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 2134206918}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &504952288207280203

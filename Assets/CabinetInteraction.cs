@@ -13,6 +13,8 @@ public class CabinetInteraction : MonoBehaviour
     public Dialog open;
     public Dialog notOpen;
 
+    public int id;
+
     public GameObject symbol;
 
     private void Awake()
@@ -25,12 +27,10 @@ public class CabinetInteraction : MonoBehaviour
             playerAlreadyInteract = true;
             if(Inventory.instance.FindItem(keyNeeded)){
                 DialogOpen.instance.StartDialog(open);
-                if (!flickeringActivate)
-                {
-                    flickeringActivate = true;
-                    symbol.GetComponent<FlickeringEmissive>().isReverse = false;
-                    symbol.GetComponent<FlickeringEmissive>().enabled = true;
-                }
+                flickeringActivate = true;
+                symbol.GetComponent<FlickeringEmissive>().isReverse = false;
+                symbol.GetComponent<FlickeringEmissive>().enabled = true;
+                LibraryManagment.instance.AddOrderPlayer(id);
                 
             }
             else{
