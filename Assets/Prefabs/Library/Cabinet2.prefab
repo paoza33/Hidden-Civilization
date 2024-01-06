@@ -126,6 +126,7 @@ MonoBehaviour:
     sentences:
     - 1er test not open
     - 2eme test not open
+  id: 1
   symbol: {fileID: 6851303382347199303}
 --- !u!1 &6851303382347199303
 GameObject:
@@ -231,17 +232,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 9
-      outSlope: 9
+      inSlope: 37.5
+      outSlope: 37.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 0.24
       value: 9
-      inSlope: 9
-      outSlope: 9
+      inSlope: 37.5
+      outSlope: 37.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -255,17 +256,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 9
-      inSlope: -9
-      outSlope: -9
+      inSlope: -37.5
+      outSlope: -37.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 0.24
       value: 0
-      inSlope: -9
-      outSlope: -9
+      inSlope: -37.5
+      outSlope: -37.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

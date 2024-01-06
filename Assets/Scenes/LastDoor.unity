@@ -985,6 +985,7 @@ MonoBehaviour:
   colliderToDesactivate: {fileID: 0}
   open:
     name: "Pon\xE9glyphe"
+    choices: []
     sentences:
     - 'Blue -> 2
 
@@ -1004,6 +1005,7 @@ MonoBehaviour:
       <sprite=5>     <sprite=6>     <sprite=7>
   notOpen:
     name: 
+    choices: []
     sentences: []
   isNeedKey: 0
 --- !u!1 &583227038
@@ -2521,11 +2523,13 @@ MonoBehaviour:
   colliderToDesactivate: {fileID: 0}
   open:
     name: "Pon\xE9glyphe"
+    choices: []
     sentences:
     - "Que l'homme \xE0 la t\xEAte de ma\xEFs active les sph\xE8res dans le bon ordre,
       pour que la porte secr\xE8te soit r\xE9v\xE9l\xE9e."
   notOpen:
     name: 
+    choices: []
     sentences: []
   isNeedKey: 0
 --- !u!65 &1557166609
@@ -6262,7 +6266,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 71f6335c85017834992db0270c73d861, type: 3}
 --- !u!23 &7412556697432624274
@@ -7884,7 +7888,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: 71f6335c85017834992db0270c73d861, type: 3}
 --- !u!1 &8701117988058133906

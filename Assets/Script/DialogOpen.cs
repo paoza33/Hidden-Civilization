@@ -10,6 +10,14 @@ public class DialogOpen : MonoBehaviour
     private TextMeshProUGUI textNameCanvas;
     private TextMeshProUGUI textDialogCanvas;
     private Queue<string> sentences;
+    private Button choice1;
+    private Button choice2;
+
+    private string sentenceChoice1;
+    private string sentenceChoice2;
+
+    private bool ifDialog = false;
+
     public static DialogOpen instance;
     private void Awake()
     {
@@ -23,13 +31,32 @@ public class DialogOpen : MonoBehaviour
         textNameCanvas = GameObject.FindGameObjectWithTag("UINameDialog").GetComponent<TextMeshProUGUI>();
         textDialogCanvas = GameObject.FindGameObjectWithTag("UITextDialog").GetComponent <TextMeshProUGUI>();
         sentences = new Queue<string>();
-    }
-
-    public void StartDialog(Dialog _dialog)
+        choice1 = GameObject.FindGameObjectWithTag("UIChoice1").GetComponent<Button>();
+        choice2 = GameObject.FindGameObjectWithTag("UIChoice2").GetComponent<Button>();
+    }  
+    
+    
+    public void StartDialog(Dialog _dialog) // chercher a afficher les boutons seulement a la derniere phrase
     {
-        animatorDialog.SetBool("isOpen", true);
         PlayerMovement.instance.StopMovement();
         textNameCanvas.text = _dialog.name;
+        if(_dialog.choices.Length == 2) // cette solution n'est pas viable si on travail en groupe.
+        {
+            ifDialog = true;
+            choice1.GetComponentInChildren<Text>().text = _dialog.choices[0];
+            choice2.GetComponentInChildren<Text>().text = _dialog.choices[1];
+
+            sentenceChoice1 = _dialog.sentencesChoice1;
+            sentenceChoice2 = _dialog.sentencesChoice2;
+        }
+        else
+        {
+            choice1.gameObject.SetActive(false);
+            choice2.gameObject.SetActive(false);
+            ifDialog = false;
+        }
+
+        animatorDialog.SetBool("isOpen", true);
 
         sentences.Clear();
         foreach (string sentence in _dialog.sentences)
@@ -41,13 +68,24 @@ public class DialogOpen : MonoBehaviour
 
     public bool DisplayNextSentences()
     {
-        if(sentences.Count == 0) { 
+        if(sentences.Count == 0 && !ifDialog) { 
             EndDialog();
             return false;
         }
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        else if (sentences.Count == 0 && ifDialog)
+        {
+            if (!choice1.gameObject.activeSelf)    // on affiche les boutons lorsque c'est la dernière phrase
+            {
+                choice1.gameObject.SetActive(true);
+                choice2.gameObject.SetActive(true);
+            }
+        }
+        else 
+        {
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
         return true;
     }
     /*IEnumerator TypeSentence(string sentence)     // Letter by letter
@@ -77,5 +115,29 @@ public class DialogOpen : MonoBehaviour
         textNameCanvas.text = "";
         textDialogCanvas.text = "";
         PlayerMovement.instance.enabled = true;
+    }
+
+    public void PlayerMakeAChoice(int choice)
+    {
+        if(choice == 1)
+        {
+            sentences.Enqueue(sentenceChoice1);
+        }
+        else if (choice == 2)
+        {
+            sentences.Enqueue(sentenceChoice2);
+        }
+
+        choice1.gameObject.SetActive(false);
+        choice2.gameObject.SetActive(false);
+
+        ifDialog = false;
+
+        DisplayNextSentences();
+    }
+
+    private void DisplayButton()
+    {
+
     }
 }

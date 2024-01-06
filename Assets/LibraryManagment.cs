@@ -36,28 +36,25 @@ public class LibraryManagment : MonoBehaviour
     private void Start()
     {
         symbols.AddRange(symbols1);
-        for(int i = 0; i < symbols.Count; i++)
-        {
-            symbols[i].SetActive(true);
-        }
         orderSolution.AddRange(solution1);
+        ResetFlickering();
     }
 
-    public void AddOrderPlayer(int symboleID)
+    public void AddOrderPlayer(int symboleID, GameObject symbol)
     {
         if (orderPlayer.Count < orderSolution.Count) // on ajoute si liste pas complète
         {
             if(!orderPlayer.Contains(symboleID))
             {
+                Debug.Log("here");
                 orderPlayer.Add(symboleID);
+                symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est déjà sur true, donc il suffit juste de l'activer
             }
             else
             {
-                Debug.Log("élément deja mis");
+                return;
             }
-            
         }
-        Debug.Log(orderPlayer[0]);
         if ((orderPlayer.Count == orderSolution.Count) && orderPlayer.SequenceEqual(orderSolution))   // si l'ordre du joueur est correct
         {
             LevelAccomplished();
@@ -68,24 +65,24 @@ public class LibraryManagment : MonoBehaviour
         }
         else if(orderPlayer.Count > orderSolution.Count ) // cas qui n'est pas suppose arriver
         {
-            Debug.Log("depassement non suppose etre possible");
+            Debug.Log("depassement non supposé etre possible");
         }
     }
 
     private void LevelFailed()
     {
-        Debug.Log("failed level " + level);
         orderPlayer.Clear();
-        for (int i = 0; i < symbols.Count; i++)
-        {
-            symbols[i].GetComponent<FlickeringEmissive>().enabled = true;
-            symbols[i].GetComponent<FlickeringEmissive>().isReverse = true;
-        }
+        StartCoroutine(DelayResetFlicker());
+    }
+
+    private IEnumerator DelayResetFlicker()
+    {
+        yield return new WaitForSeconds(0.25f);
+        ResetFlickering();
     }
 
     private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouvé -> donc trouver exactement le meme nombre de mots que de symboles
     {
-        Debug.Log("accomplished lvl " + level);
         orderPlayer.Clear();
         if (level == 0)
         {
@@ -99,7 +96,7 @@ public class LibraryManagment : MonoBehaviour
         }
         else if (level == 2)
         {
-            //gérer l'ending
+            Debug.Log("finished");
         }
     }
 
@@ -108,26 +105,27 @@ public class LibraryManagment : MonoBehaviour
         orderSolution.Clear();
         orderSolution.AddRange(newSolution);
 
-        for (int i = 0; i < symbols.Count; i++)
-        {
-            symbols[i].GetComponent<FlickeringEmissive>().enabled = true;
-            symbols[i].GetComponent<FlickeringEmissive>().isReverse = true;
-        }
-        SetSymbolsActive(false);
+        SetSymbolsDesactive();
 
         symbols.Clear();
         symbols.AddRange(newSymbols);
 
-        SetSymbolsActive(true);
+        ResetFlickering();
     }
 
-    private void SetSymbolsActive(bool isActive)
+    private void SetSymbolsDesactive()
     {
         for (int i = 0; i < symbols.Count; i++)
         {
-            symbols[i].SetActive(isActive);
+            symbols[i].SetActive(false);
+        }
+    }
+
+    private void ResetFlickering()
+    {
+        for(int i =0; i<symbols.Count; i++)
+        {
             symbols[i].GetComponent<FlickeringEmissive>().enabled = true;
-            symbols[i].GetComponent<FlickeringEmissive>().isReverse = true;
         }
     }
 }

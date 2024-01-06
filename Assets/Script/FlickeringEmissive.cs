@@ -68,7 +68,7 @@ public class FlickeringEmissive : MonoBehaviour
     {
         if (!isInstantaneous)
         {
-            if (flicker && renderer.isVisible)
+            if (flicker && renderer.isVisible)  // renderer.isVisible si on souhaite que le flicker s'active seulement lorsqu'on le voit
             {
                 if (isFirstTime)
                 {
@@ -103,7 +103,7 @@ public class FlickeringEmissive : MonoBehaviour
                     materials[i].SetColor(EMISSIVE_COLOR_NAME, color);
                 }
 
-                if (brightness == maxValueBrightness && !isReverse)
+                if (brightness == maxValueBrightness && !isReverse) // lorsque le flicker atteint sa valeur max, il se désactive
                 {
                     isReverse = true;
                     scaledTime = 0f;

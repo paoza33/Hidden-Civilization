@@ -8,7 +8,6 @@ public class CabinetInteraction : MonoBehaviour
 {
     public string keyNeeded;
     private bool playerAlreadyInteract = false;
-    private bool flickeringActivate = false;
     
     public Dialog open;
     public Dialog notOpen;
@@ -27,11 +26,6 @@ public class CabinetInteraction : MonoBehaviour
             playerAlreadyInteract = true;
             if(Inventory.instance.FindItem(keyNeeded)){
                 DialogOpen.instance.StartDialog(open);
-                flickeringActivate = true;
-                symbol.GetComponent<FlickeringEmissive>().isReverse = false;
-                symbol.GetComponent<FlickeringEmissive>().enabled = true;
-                LibraryManagment.instance.AddOrderPlayer(id);
-                
             }
             else{
                 DialogOpen.instance.StartDialog(notOpen);
@@ -42,7 +36,6 @@ public class CabinetInteraction : MonoBehaviour
             if (!DialogOpen.instance.DisplayNextSentences())
             {
                 playerAlreadyInteract = false;
-                
             }
         }
     }

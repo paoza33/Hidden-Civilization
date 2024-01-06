@@ -457,10 +457,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabinet1
       objectReference: {fileID: 0}
-    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
-      propertyPath: id
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
 --- !u!4 &311037987 stripped
@@ -1023,11 +1019,17 @@ MonoBehaviour:
   keyName: KeyLibrary
   open:
     name: Open
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - C'est ouvert !!
     - yeeeeeeeeeeeeeeees
   notOpen:
     name: Not open
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - "ferm\xE9 ..."
     - Fuck
@@ -2325,10 +2327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
-    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
-      propertyPath: id
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
       value: Cabinet8
@@ -3726,10 +3724,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
-    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
-      propertyPath: id
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
       value: Cabinet5
@@ -4084,10 +4078,16 @@ MonoBehaviour:
   colliderToDesactivate: {fileID: 0}
   open:
     name: Receptionist
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - Welcome to the library
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   isNeedKey: 0
 --- !u!1 &2078963217
@@ -4415,6 +4415,38 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: id
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.sentencesChoice1
+      value: choix num 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.sentencesChoice2
+      value: choix num 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.choices.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: notOpen.choices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.choices.Array.data[0]
+      value: choix 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.choices.Array.data[1]
+      value: choix 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: notOpen.choices.Array.data[0]
+      value: choix 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: notOpen.choices.Array.data[1]
+      value: choix 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
