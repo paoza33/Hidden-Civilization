@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2270,7 +2270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.41
+      value: -69.32
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2714,23 +2714,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - name: age control
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - "contr\xF4le de l'age 1"
     - "contr\xF4le de l'age 2"
   - name: deuxieme pour le test
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - ok je vois
   - name: trois pour le test
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - ok je vois
   - name: quatre
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - ok je vois
   - name: 5
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - ok je vois
   emptyDialog:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - 
   contenairs:
@@ -3571,10 +3589,16 @@ MonoBehaviour:
   colliderToDesactivate: {fileID: 0}
   open:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - 
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   isNeedKey: 0
 --- !u!1 &76714126622322567

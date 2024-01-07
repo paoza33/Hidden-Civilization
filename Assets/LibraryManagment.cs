@@ -42,13 +42,12 @@ public class LibraryManagment : MonoBehaviour
 
     public void AddOrderPlayer(int symboleID, GameObject symbol)
     {
-        if (orderPlayer.Count < orderSolution.Count) // on ajoute si liste pas complète
+        if (orderPlayer.Count < orderSolution.Count) // on ajoute si liste pas complï¿½te
         {
             if(!orderPlayer.Contains(symboleID))
             {
-                Debug.Log("here");
                 orderPlayer.Add(symboleID);
-                symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est déjà sur true, donc il suffit juste de l'activer
+                symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est dï¿½jï¿½ sur true, donc il suffit juste de l'activer
             }
             else
             {
@@ -65,7 +64,7 @@ public class LibraryManagment : MonoBehaviour
         }
         else if(orderPlayer.Count > orderSolution.Count ) // cas qui n'est pas suppose arriver
         {
-            Debug.Log("depassement non supposé etre possible");
+            Debug.Log("depassement non supposï¿½ etre possible");
         }
     }
 
@@ -81,7 +80,7 @@ public class LibraryManagment : MonoBehaviour
         ResetFlickering();
     }
 
-    private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouvé -> donc trouver exactement le meme nombre de mots que de symboles
+    private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouvï¿½ -> donc trouver exactement le meme nombre de mots que de symboles
     {
         orderPlayer.Clear();
         if (level == 0)

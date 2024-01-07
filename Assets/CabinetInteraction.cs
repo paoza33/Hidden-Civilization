@@ -26,6 +26,7 @@ public class CabinetInteraction : MonoBehaviour
             playerAlreadyInteract = true;
             if(Inventory.instance.FindItem(keyNeeded)){
                 DialogOpen.instance.StartDialog(open);
+                LibraryManagment.instance.AddOrderPlayer(id, symbol);
             }
             else{
                 DialogOpen.instance.StartDialog(notOpen);
