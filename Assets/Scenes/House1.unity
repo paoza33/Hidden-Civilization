@@ -349,10 +349,10 @@ Transform:
   - {fileID: 1767263555}
   - {fileID: 1764194295}
   - {fileID: 755012088}
-  - {fileID: 1642661375}
   - {fileID: 1129095513}
   - {fileID: 1484406427}
   - {fileID: 1965785863}
+  - {fileID: 1642661375}
   - {fileID: 486581081}
   - {fileID: 991947207}
   - {fileID: 753017224}
@@ -1832,8 +1832,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.431699, y: 1, z: 9.767174}
-  m_Center: {x: -1.4817176, y: 0, z: -4.383587}
+  m_Size: {x: 4.5201397, y: 1, z: 2.9518647}
+  m_Center: {x: 0.11064625, y: 0, z: -0.97593284}
 --- !u!4 &2136530148
 Transform:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194e01a111ca1c94b85745c629b23558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Home
+  levelToLoad: City
 --- !u!1001 &2490264337801054346
 PrefabInstance:
   m_ObjectHideFlags: 0

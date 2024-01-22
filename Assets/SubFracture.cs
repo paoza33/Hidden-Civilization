@@ -11,17 +11,18 @@ public class SubFracture : MonoBehaviour
 
     private Fracture parent;
 
-    private bool isConnexionNeedToBeBreak;
+    public bool isConnexionNeedToBeBreak;
 
     private void Start()
     {
-        parent = transform.root.GetComponent<Fracture>();
+        //parent = transform.root.GetComponent<Fracture>();
         GetComponent<Rigidbody>().isKinematic = true;
+        enabled = false;
     }
 
     void Update()
     {
-        for (int i = 0; i < connections.Count; i++) // Make sure it is not isolated
+        /*for (int i = 0; i < connections.Count; i++) // Make sure it is not isolated
         {
             if (!connections[i].grounded && !connections[i].connected)
             {
@@ -48,12 +49,16 @@ public class SubFracture : MonoBehaviour
                 }
             }
         }
-
-        if(isConnexionNeedToBeBreak)
+        if (isConnexionNeedToBeBreak)
             connected = false;
         else
             connected = somehowGrounded && connections.Count >= 1 || grounded;
+        GetComponent<Rigidbody>().isKinematic = connected;*/
 
+        if (isConnexionNeedToBeBreak)
+            connected = false;
+        else
+            connected = true;
         GetComponent<Rigidbody>().isKinematic = connected;
     }
 
@@ -72,6 +77,12 @@ public class SubFracture : MonoBehaviour
     public void BreakAllConnexion()
     {
         isConnexionNeedToBeBreak = true;
+    }
+
+    public void ReconnectAllConnexion()
+    {
+        isConnexionNeedToBeBreak = false;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
     private void OnDrawGizmosSelected()

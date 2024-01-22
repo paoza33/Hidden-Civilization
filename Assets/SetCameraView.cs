@@ -41,8 +41,8 @@ public class SetCameraView : MonoBehaviour
         }
         else
         {
-            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, newPosition, 1f);
-            Camera.main.transform.rotation = Quaternion.RotateTowards(Camera.main.transform.rotation, newRotation, 2f);
+            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, newPosition, 2f);
+            Camera.main.transform.rotation = Quaternion.RotateTowards(Camera.main.transform.rotation, newRotation, 4f);
         }
         
         if (Vector3.Distance(Camera.main.transform.position, newPosition) < 0.1f && Quaternion.Angle(Camera.main.transform.rotation, newRotation) < 0.1f)

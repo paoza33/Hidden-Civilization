@@ -29,9 +29,10 @@ public class FallingDeathZone : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(timeRespawn);
         player.gameObject.transform.position = respawn.position;
-
         Quaternion cam = Camera.main.transform.rotation;
         CameraMovement.instance.StartPosition(CameraMovement.instance.PosOffSet, cam);
+        if(SceneManager.GetActiveScene().name == "Labyrinth")
+            LabyrinthManager.instance.ReconnectAllConnexion();
     }
 
     private IEnumerator Fade()

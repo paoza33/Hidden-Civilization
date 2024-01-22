@@ -22,8 +22,7 @@ public class TriggerPlateformControl : MonoBehaviour
 
     private bool canInteract = false;
     private bool firstInteract = true;
-
-    private Quaternion targetRotation;
+    private bool canChangeButton = true;
 
     private void Awake()
     {
@@ -53,7 +52,11 @@ public class TriggerPlateformControl : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Interact") && firstInteract)
+        if (Input.GetAxisRaw("Horizontal") == 0 && canInteract)
+        {
+            canChangeButton = true;
+        }
+        if (Input.GetButtonDown("Interact") && firstInteract)
         {
             PlayerMovement.instance.StopMovement();
             LaserSphereManagment.instance.SetLaser(laser, startPoint[indexPoints], endPoints[indexPoints]);
@@ -67,9 +70,10 @@ public class TriggerPlateformControl : MonoBehaviour
         {
             PlateformMovement.instance.Moove(color, indexPoints);
         }
-        else if (Input.GetAxisRaw("Horizontal") == 1 && canInteract)
+        else if (Input.GetAxisRaw("Horizontal") == 1 && canInteract && canChangeButton)
         {
-            if(!(indexPoints +1 >= endPoints.Length))
+            canChangeButton = false;
+            if (!(indexPoints +1 >= endPoints.Length))
             {
                 buttons[indexPoints +1].GetComponent<FlickeringEmissive>().isReverse = false;
                 buttons[indexPoints +1].GetComponent<FlickeringEmissive>().enabled = true;
@@ -80,9 +84,10 @@ public class TriggerPlateformControl : MonoBehaviour
                 LaserSphereManagment.instance.SetLaser(laser, startPoint[indexPoints], endPoints[indexPoints]);
             }          
         }
-        else if(Input.GetAxisRaw("Horizontal") == -1 && canInteract)
+        else if(Input.GetAxisRaw("Horizontal") == -1 && canInteract && canChangeButton)
         {
-            if(!(indexPoints -1 <0))
+            canChangeButton = false;
+            if (!(indexPoints -1 <0))
             {
                 buttons[indexPoints - 1].GetComponent<FlickeringEmissive>().isReverse = false;
                 buttons[indexPoints - 1].GetComponent<FlickeringEmissive>().enabled = true;

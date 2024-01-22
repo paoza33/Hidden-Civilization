@@ -39,7 +39,7 @@ public class TriggerCameraView : MonoBehaviour
                 else if (!isSetDefaultPosCamera)
                 {
                     GameObject player = GameObject.FindGameObjectWithTag("Player");
-                    SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, CameraMovement.instance.CameraRotation, false, ifInstantaneousMovement);
+                    SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, Quaternion.Euler(60,0,0), false, ifInstantaneousMovement);
                 }
                 else
                     Debug.Log("error triggerCameraView");

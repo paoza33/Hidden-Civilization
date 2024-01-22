@@ -13,6 +13,8 @@ public class TakeDoor : MonoBehaviour
     public Dialog open;
     private bool test;
     public Dialog notOpen;
+
+    private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -20,30 +22,40 @@ public class TakeDoor : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
+        if (!sceneChanging)
         {
-            playerAlreadyInteract = true;
-            if(isKeyNeeded){
-                if(Inventory.instance.FindItem(keyName)){
-                    ifChangeLevel = true;
-                    DialogOpen.instance.StartDialog(open);
+            if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
+            {
+                playerAlreadyInteract = true;
+                if (isKeyNeeded)
+                {
+                    if (Inventory.instance.FindItem(keyName))
+                    {
+                        ifChangeLevel = true;
+                        DialogOpen.instance.StartDialog(open);
+                    }
+                    else
+                    {
+                        ifChangeLevel = false;
+                        DialogOpen.instance.StartDialog(notOpen);
+                    }
                 }
-                else{
-                    ifChangeLevel = false;
-                    DialogOpen.instance.StartDialog(notOpen);
-                }
-            }
-            else{
-                PlayerMovement.instance.StopMovement();
-                StartCoroutine(Fade());
-            }
-        }
-        else if(Input.GetButtonDown("Interact")){
-            if(!DialogOpen.instance.DisplayNextSentences()){
-                playerAlreadyInteract = false;
-                if(ifChangeLevel){
+                else
+                {
                     PlayerMovement.instance.StopMovement();
                     StartCoroutine(Fade());
+                }
+            }
+            else if (Input.GetButtonDown("Interact"))
+            {
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    playerAlreadyInteract = false;
+                    if (ifChangeLevel)
+                    {
+                        PlayerMovement.instance.StopMovement();
+                        StartCoroutine(Fade());
+                    }
                 }
             }
         }
@@ -66,6 +78,7 @@ public class TakeDoor : MonoBehaviour
 
     public IEnumerator Fade()
     {
+        sceneChanging = true;
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.50f);
         PlayerMovement.instance.enabled = true;

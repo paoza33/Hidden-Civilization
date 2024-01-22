@@ -30,6 +30,8 @@ public class LabyrinthEnigm : MonoBehaviour // Le trigger de la sphere gere tout
 
     public GameObject cameraLabyrinthe; // new camera position for labyrinthe enigme
 
+    private Quaternion defaultCameraRotation;
+
     private void Awake()
     {
         enabled = false;
@@ -37,6 +39,7 @@ public class LabyrinthEnigm : MonoBehaviour // Le trigger de la sphere gere tout
         {
             targetRotations[i] = circles[i].transform.rotation;
         }
+        defaultCameraRotation = Camera.main.transform.rotation;
     }
 
     // Update is called once per frame
@@ -81,7 +84,7 @@ public class LabyrinthEnigm : MonoBehaviour // Le trigger de la sphere gere tout
             circles[indexCircle].GetComponent<FlickeringEmissive>().isReverse = true;
             canSetCameraLabyrinthe = true;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, CameraMovement.instance.CameraRotation, false, false);
+            SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, Quaternion.Euler(90,0,0), false, false);
             PlayerMovement.instance.enabled = true;
             sphere.GetComponent<FlickeringEmissive>().isReverse = false;
         }

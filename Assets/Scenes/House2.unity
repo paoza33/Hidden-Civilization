@@ -1771,8 +1771,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.431699, y: 1, z: 9.767174}
-  m_Center: {x: -1.4817176, y: 0, z: -4.383587}
+  m_Size: {x: 3.9822364, y: 1, z: 2.4627924}
+  m_Center: {x: 0.19708562, y: 0, z: -0.7313962}
 --- !u!4 &2136530148
 Transform:
   m_ObjectHideFlags: 0
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194e01a111ca1c94b85745c629b23558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Home
+  levelToLoad: City
 --- !u!1001 &2490264337801054346
 PrefabInstance:
   m_ObjectHideFlags: 0

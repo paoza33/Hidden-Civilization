@@ -7,9 +7,16 @@ public class ActiveDeathZoneLabyrinth : MonoBehaviour
     public List<SubFracture> subFractureList;
     private void OnTriggerEnter(Collider other)
     {
-        foreach(SubFracture subFracture in subFractureList)
+        if (other.CompareTag("Player"))
         {
-            subFracture.BreakAllConnexion();
+            foreach (SubFracture subFracture in subFractureList)
+            {
+                LabyrinthManager.instance.subFractureList.Enqueue(subFracture);
+                LabyrinthManager.instance.initialPosList.Enqueue(subFracture.transform.localPosition);
+                LabyrinthManager.instance.initialRotList.Enqueue(subFracture.transform.rotation);
+                subFracture.GetComponent<SubFracture>().enabled = true;
+                subFracture.BreakAllConnexion();
+            }
         }
     }
 }

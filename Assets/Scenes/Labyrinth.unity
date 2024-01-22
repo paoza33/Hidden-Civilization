@@ -417,6 +417,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389936389}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &394691591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394691593}
+  - component: {fileID: 394691592}
+  m_Layer: 0
+  m_Name: LabyrinthManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &394691592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394691591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2002cb2cebb11354ea5f8d307665e8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &394691593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394691591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.88834476, y: -81.07696, z: 60.239296}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467423430
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +490,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.38457274, y: 1, z: 0.36664814}
-  m_Center: {x: -0.00016105226, y: 0, z: -0.22921816}
+  m_Size: {x: 0.8975766, y: 1, z: 1.0492687}
+  m_Center: {x: -0.06326925, y: 0, z: -0.20560503}
 --- !u!4 &467423432
 Transform:
   m_ObjectHideFlags: 0
@@ -456,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467423430}
   m_LocalRotation: {x: -0, y: 0.4333445, z: -0, w: 0.90122837}
-  m_LocalPosition: {x: 11.925658, y: -11.800153, z: 9.251764}
+  m_LocalPosition: {x: 11.595728, y: -11.800153, z: 8.97072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1140,11 +1184,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.82
+      value: 11.7117
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1152,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.19
+      value: 51.341293
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1397,7 +1441,7 @@ Transform:
   - {fileID: 1155909460}
   - {fileID: 1265983069}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994203775
 GameObject:
@@ -1556,6 +1600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastPlateform: {fileID: 2525075775580465140}
   teleporter: {fileID: 7993090031177297680}
+  levelToLoad: KnowledgePlace
 --- !u!1 &1062203318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,67 +2192,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181389570}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1265983068
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1265983069}
-  - component: {fileID: 1265983070}
-  - component: {fileID: 1265983071}
-  m_Layer: 0
-  m_Name: FallingDeathZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1265983069
+--- !u!4 &1265983069 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+  m_PrefabInstance: {fileID: 2466368862443679236}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265983068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: -13.13, z: 13.51}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 948379915}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1265983070
-BoxCollider:
+--- !u!1001 &1380651878
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265983068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 126.05238, y: 1, z: 124.914536}
-  m_Center: {x: -0.3147049, y: 0, z: -1.830574}
---- !u!114 &1265983071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265983068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9325ef44208ab914487643b39838eb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 740348764}
-  timeRespawn: 2
-  timeManager: {fileID: 1675887320}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_Size.y
+      value: 16.278034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_Size.z
+      value: 17.719711
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_Center.y
+      value: -0.21844387
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_Center.z
+      value: -8.359853
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5055003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.663326
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00012340446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00012340446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211642714666067100, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
+      propertyPath: m_Name
+      value: Limit Z
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
 --- !u!1 &1449467447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,8 +2410,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1511588978}
   - component: {fileID: 1511588977}
+  - component: {fileID: 1511588979}
   m_Layer: 0
-  m_Name: InvisibleWall
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2363,11 +2426,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511588976}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.254616, y: 4.35211, z: 1}
-  m_Center: {x: -1.5811844, y: 0.33411694, z: 0}
+  m_Size: {x: 20.254616, y: 4.35211, z: 6.515396}
+  m_Center: {x: -1.5811844, y: 0.33411694, z: -2.757698}
 --- !u!4 &1511588978
 Transform:
   m_ObjectHideFlags: 0
@@ -2376,13 +2439,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511588976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.01, y: 1.57, z: -29.25}
+  m_LocalPosition: {x: -5.01, y: 1.57, z: -26.741774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511588979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511588976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194e01a111ca1c94b85745c629b23558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: LastDoor
 --- !u!1 &1515978403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,52 +2686,17 @@ Transform:
   m_Father: {fileID: 670366431}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1675887319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1675887321}
-  - component: {fileID: 1675887320}
-  m_Layer: 0
-  m_Name: TimeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1675887320
+--- !u!114 &1675887320 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2731371177984299915, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+  m_PrefabInstance: {fileID: 2731371176392298835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675887319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3080e62faa5fa554aa04ab3b0ae9ed40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowdownFactor: 0.05
-  slowdownLength: 2
---- !u!4 &1675887321
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675887319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.09571, y: -113.116516, z: 132.85419}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681143641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,7 +3537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 62.155, y: -138.391, z: 0}
 --- !u!33 &14842425998121281
 MeshFilter:
@@ -5272,6 +5313,71 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &2466368862443679236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 948379915}
+    m_Modifications:
+    - target: {fileID: 2466368863340556376, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_Name
+      value: FallingDeathZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556377, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466368863340556379, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 740348764}
+    - target: {fileID: 2466368863340556379, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
+      propertyPath: timeManager
+      value: 
+      objectReference: {fileID: 1675887320}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aafa1fa95a10b5a4faaa2a59639c06bd, type: 3}
 --- !u!33 &2467966400579697902
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5429,6 +5535,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &2731371176392298835
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2731371177984299908, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_Name
+      value: TimeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.09571
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -113.116516
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 132.85419
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731371177984299914, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10b884e02e2f93c44bd2a0860d478936, type: 3}
 --- !u!23 &2750676530593245197
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6302,6 +6465,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &3796084234823870756
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6677,6 +6841,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &4222127260616258782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6827,6 +6992,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &4303493004376637542
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7019,6 +7185,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &4616954010613105200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7263,6 +7430,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &4876832935745326274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7859,6 +8027,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &5634866530607777546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7927,6 +8096,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &5699625566554076059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8228,6 +8398,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &5986790902611894552
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8505,6 +8676,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6258077054929728963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8657,6 +8829,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6415489440510758985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8876,6 +9049,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6546742198761381942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8992,6 +9166,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6658628788867094655
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9074,6 +9249,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6715604753760152524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9134,6 +9310,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6727698935210912019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9267,6 +9444,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6875350948656350488
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9320,6 +9498,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6879045823908621274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9401,6 +9580,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6923335479505486628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9540,6 +9720,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6956259113861492396
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9627,6 +9808,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &6959054721138396458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9704,6 +9886,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7023550441589150329
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9791,6 +9974,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7029608594278503247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9851,6 +10035,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7134115789648193259
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9943,7 +10128,7 @@ Transform:
   - {fileID: 591593507}
   - {fileID: 670366431}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &7269555574454483621
 Transform:
@@ -10020,6 +10205,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7392026078976578912
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10101,6 +10287,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7421128528378798770
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10188,6 +10375,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7438074645420205705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10241,6 +10429,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7446962875542102308
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10328,6 +10517,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7523847349378688822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10455,6 +10645,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7695970767851769181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10508,6 +10699,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7699416077913318922
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10568,6 +10760,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7699459944648067924
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10621,6 +10814,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7717258120523520600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10708,6 +10902,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7795755378162818402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10852,6 +11047,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7853254136959255313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10912,6 +11108,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7856841709309390276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10989,6 +11186,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7932308018503312541
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11050,6 +11248,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7963268567438978020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11224,6 +11423,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7982692421702882964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11297,6 +11497,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &7993642103072476645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11403,6 +11604,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8083736664645431404
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11469,6 +11671,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8090540255629638898
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11522,6 +11725,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8159214489970759479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11609,6 +11813,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8179367569450732860
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11675,6 +11880,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8180817187183888504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11777,6 +11983,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8198842237367051330
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11830,6 +12037,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8301585793295025472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11883,6 +12091,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8314017125792863787
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11943,6 +12152,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8337849719841483653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12030,6 +12240,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8337909023637623657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12148,6 +12359,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8426048206542243080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12232,6 +12444,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8469483108797767706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12340,6 +12553,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8485636549770758699
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12393,6 +12607,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8534675557001745526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12570,6 +12785,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8602348382311330357
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12636,6 +12852,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8638799542655185382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12718,6 +12935,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8663374386296513772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12805,6 +13023,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8723161255948806352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12892,6 +13111,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8723297232118475867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12979,6 +13199,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8753914061914129553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13045,6 +13266,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8762505508457967711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13111,6 +13333,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8805068676533621510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13254,6 +13477,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8868451253596544528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13314,6 +13538,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &8969794649407018178
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13367,6 +13592,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &9057240991336151461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13420,6 +13646,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &9096595359742268168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13494,6 +13721,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &9195306119548975200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13581,6 +13809,7 @@ MonoBehaviour:
   grounded: 1
   connected: 0
   connections: []
+  isConnexionNeedToBeBreak: 0
 --- !u!54 &9219885475863983973
 Rigidbody:
   m_ObjectHideFlags: 0

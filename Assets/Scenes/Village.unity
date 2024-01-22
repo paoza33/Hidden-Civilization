@@ -7410,7 +7410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105596, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: levelToLoad
-      value: Village
+      value: Wood_Beginning
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105597, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: m_Size.x
@@ -7537,9 +7537,15 @@ MonoBehaviour:
   keyName: 
   open:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
 --- !u!1 &621265746
 GameObject:
@@ -8023,9 +8029,15 @@ MonoBehaviour:
   keyName: 
   open:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
 --- !u!1 &657485392
 GameObject:
@@ -16421,9 +16433,15 @@ MonoBehaviour:
   keyName: 
   open:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
 --- !u!1 &1358453312
 GameObject:
@@ -18143,9 +18161,15 @@ MonoBehaviour:
   keyName: 
   open:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
   notOpen:
     name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences: []
 --- !u!65 &1455388819
 BoxCollider:
@@ -20934,7 +20958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105596, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: levelToLoad
-      value: Village
+      value: Camp
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105597, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: m_Size.x
@@ -21011,7 +21035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105596, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: levelToLoad
-      value: Village
+      value: City
       objectReference: {fileID: 0}
     - target: {fileID: 5793799820795105597, guid: b895c622597211c4e8ea51fefa7971b9, type: 3}
       propertyPath: m_Size.x

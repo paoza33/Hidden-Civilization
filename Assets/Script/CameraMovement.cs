@@ -74,6 +74,7 @@ public class CameraMovement : MonoBehaviour
     public void StartPosition(Vector3 _posOffset, Quaternion newRotation)
     {
         posOffSet = _posOffset;
+        cameraRotation = newRotation;
         transform.position = player.transform.position + posOffSet;
         newPosOffSetY = posOffSet.y;
         transform.rotation = newRotation;

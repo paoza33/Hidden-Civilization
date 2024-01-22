@@ -59,6 +59,14 @@ public class TriggerDialog : MonoBehaviour
             if (!DialogOpen.instance.DisplayNextSentences())
             {
                 playerAlreadyInteract = false;
+                if (colliderToDesactivate != null)
+                {
+                    colliderToDesactivate.enabled = false;
+                    Debug.Log("omada");
+                }
+                    
+                else
+                    Debug.Log("yare");
             }
         }
     }

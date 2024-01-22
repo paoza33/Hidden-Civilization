@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class TeleporterLabyrinthe : MonoBehaviour
 {
     public GameObject lastPlateform, teleporter;
-    void Update()
+    public string levelToLoad;
+
+    private Animator animator;
+    private void Awake()
     {
-        
+        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +29,16 @@ public class TeleporterLabyrinthe : MonoBehaviour
         teleporter.GetComponent<FlickeringEmissive>().isPingPong = false;
 
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Labyrinth");
+        StartCoroutine(Fade());
+    }
+
+    private IEnumerator Fade()
+    {
+        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(0.75f);
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
+        SceneManager.LoadScene(levelToLoad);
     }
 }

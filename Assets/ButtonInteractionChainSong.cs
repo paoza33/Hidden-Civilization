@@ -8,6 +8,7 @@ public class ButtonInteractionChainSong : MonoBehaviour
     public AudioClip[] clip;
     public GameObject button;
 
+    public Transform cameraHigh;
     private void Awake()
     {
         enabled = false;
@@ -19,6 +20,8 @@ public class ButtonInteractionChainSong : MonoBehaviour
         {
             playerAlreadyInteract = true;
             StartCoroutine(PlayChainsSong(0));
+            SetCameraView.instance.SetNewPosCamera(cameraHigh.position, cameraHigh.rotation, true, false);
+            PlayerMovement.instance.StopMovement();
         }
         else if(Input.GetButtonDown("Interact") && playerAlreadyInteract)
         {
@@ -39,13 +42,8 @@ public class ButtonInteractionChainSong : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            enabled = false;
-            button.GetComponent<FlickeringEmissive>().isReverse = true;
-            playerAlreadyInteract = false;
-            StopAllCoroutines();
-        }
+        enabled = false;
+        button.GetComponent<FlickeringEmissive>().isReverse = true;
     }
 
     private IEnumerator PlayChainsSong(int index)
@@ -55,6 +53,13 @@ public class ButtonInteractionChainSong : MonoBehaviour
             AudioManager.instance.PlayClipAt(clip[index], transform.position);
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(PlayChainsSong(index + 1));
+        }
+        else
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerMovement.instance.enabled = true;
+            SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, Quaternion.Euler(60, 0, 0), false, false);  // modifier la camera pour qu'elle retourne a sa position/orientation initial
+            playerAlreadyInteract = false;
         }
     }
 }
