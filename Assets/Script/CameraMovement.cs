@@ -69,6 +69,7 @@ public class CameraMovement : MonoBehaviour
         transform.position = player.transform.position + posOffSet;
         newPosOffSetY = posOffSet.y;
         transform.rotation = Quaternion.Euler(newRotation);
+        cameraRotation = Quaternion.Euler(newRotation);
     }
 
     public void StartPosition(Vector3 _posOffset, Quaternion newRotation)

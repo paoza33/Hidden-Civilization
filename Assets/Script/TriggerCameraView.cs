@@ -9,6 +9,7 @@ public class TriggerCameraView : MonoBehaviour
     public bool isStatic;
     public bool ifInstantaneousMovement;
     public bool ifIgnoreTriggerExit;
+    public GameObject triggerToActivate;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,9 +24,13 @@ public class TriggerCameraView : MonoBehaviour
             }
             else
                 Debug.Log("error triggerCameraView");
+            if(triggerToActivate != null){
+                triggerToActivate.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
     }
-
+   
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

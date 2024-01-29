@@ -813,7 +813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233180436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.66, y: 0, z: 8.55}
+  m_LocalPosition: {x: 23.79, y: 0, z: 6.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -849,7 +849,8 @@ MonoBehaviour:
   isSetDefaultPosCamera: 0
   isStatic: 1
   ifInstantaneousMovement: 0
-  ifIgnoreTriggerExit: 1
+  ifIgnoreTriggerExit: 0
+  triggerToActivate: {fileID: 1698907639}
 --- !u!1 &1247272571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,8 +1239,9 @@ MonoBehaviour:
   secondaryCamera: {fileID: 379824333}
   isSetDefaultPosCamera: 1
   isStatic: 0
-  ifInstantaneousMovement: 0
-  ifIgnoreTriggerExit: 1
+  ifInstantaneousMovement: 1
+  ifIgnoreTriggerExit: 0
+  triggerToActivate: {fileID: 1233180436}
 --- !u!1 &1964756829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2121,7 @@ GameObject:
   - component: {fileID: 2549685766316802754}
   - component: {fileID: 2549685766316802753}
   - component: {fileID: 2549685766316802752}
+  - component: {fileID: 2549685766316802755}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -2235,6 +2238,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2441658414131813105, guid: 1087fd47006a8934a8e94cca994b3de4, type: 3}
+--- !u!114 &2549685766316802755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2271580628267931552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b629d9647fa596b8d686db07b7d329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 379824334}
 --- !u!4 &3176666299424253809
 Transform:
   m_ObjectHideFlags: 0
