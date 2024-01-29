@@ -18,8 +18,7 @@ public class TeleportRuins : MonoBehaviour
     private void Update()
     {
         // couleur light
-        lt.color -= (Color.white / 2.0f) * Time.deltaTime;
-        Debug.Log(lt.color);
+        lt.color -= (Color.white / 4f) * Time.deltaTime;
         if(Input.GetButtonDown("Interact")){
             if(!DialogOpen.instance.DisplayNextSentences()){
                 PlayerMovement.instance.StopMovement();
