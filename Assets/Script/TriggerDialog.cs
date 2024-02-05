@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class TriggerDialog : MonoBehaviour
 {
@@ -18,8 +20,14 @@ public class TriggerDialog : MonoBehaviour
 
     public bool isNeedKey;
 
+    public bool isChangingScene;
+    public string levelToLoad;
+
+    private Animator animator;
+
     private void Awake()
     {
+        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
     }
 
@@ -36,7 +44,7 @@ public class TriggerDialog : MonoBehaviour
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract)
         {
             playerAlreadyInteract = true;
-            if (isNeedKey)  // si on a besoin d'une clé pour ouvrir le dialogue
+            if (isNeedKey)  // si on a besoin d'une clï¿½ pour ouvrir le dialogue
             {
                 if (Inventory.instance.FindItem(keyNeeded))
                 {
@@ -63,6 +71,10 @@ public class TriggerDialog : MonoBehaviour
                 {
                     colliderToDesactivate.enabled = false;
                 }
+                if(isChangingScene){
+                    PlayerMovement.instance.StopMovement();
+                    StartCoroutine(Fade());
+                }
             }
         }
     }
@@ -73,5 +85,15 @@ public class TriggerDialog : MonoBehaviour
         {
             enabled = false;
         }
+    }
+
+    private IEnumerator Fade()
+    {
+        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(0.75f);
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
+        SceneManager.LoadScene(levelToLoad);
     }
 }
