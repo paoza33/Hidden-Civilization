@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerSphereLastDoor : MonoBehaviour
 {
-    public GameObject sphere, road;
+    public GameObject sphere;
     private bool alreadyInteract = false;
     public int id;
 
@@ -19,8 +19,8 @@ public class TriggerSphereLastDoor : MonoBehaviour
         {
             alreadyInteract = true;
             LastDoorManagment.instance.AddOrderPlayer(id);
-            sphere.GetComponent<FlickeringEmissive>().enabled = false;
-            road.GetComponent<FlickeringEmissive>().enabled = true;
+            sphere.GetComponent<FlickeringEmissive>().isReverse = false;
+            sphere.GetComponent<FlickeringEmissive>().enabled = true;
             enabled = false;
         }
     }
@@ -29,8 +29,6 @@ public class TriggerSphereLastDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sphere.GetComponent<FlickeringEmissive>().isReverse = false;
-            sphere.GetComponent<FlickeringEmissive>().enabled = true;
             enabled = true;
         }
     }
@@ -39,9 +37,19 @@ public class TriggerSphereLastDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            alreadyInteract = false;
-            sphere.GetComponent<FlickeringEmissive>().isReverse = true;
             enabled = false;
         }
+    }
+
+    public void ResetInteraction()
+    {
+        StartCoroutine(DelayResetInteraction());
+    }
+
+    private IEnumerator DelayResetInteraction()
+    {
+        yield return new WaitForSeconds(0.3f);
+        alreadyInteract = false;
+        sphere.GetComponent<FlickeringEmissive>().isReverse = true;
     }
 }

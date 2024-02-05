@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PanelControl : MonoBehaviour
 {
@@ -7,6 +10,7 @@ public class PanelControl : MonoBehaviour
     [SerializeField]
     private GameObject towerToRotate, towerTop;
     private bool IsMooving = false;
+    private bool isEnding = false;
     [SerializeField]
     private float speed = 1f;
 
@@ -73,8 +77,6 @@ public class PanelControl : MonoBehaviour
             {
                 TowerMovementLvl3();    // rotation lvl3
             }
-            else
-                Debug.Log("All levels achieved");
 
             IsMooving = true;
         }
@@ -83,7 +85,7 @@ public class PanelControl : MonoBehaviour
             IsMooving = false;
             ObjectifAchieved(); // this fonction checks if the tower rotation corresponds to the objectif rotation
         }
-        if(Input.GetKeyDown(KeyCode.Escape) && !IsMooving)  // the player can exit the panel control with "escape" button only if the laser don't moove
+        if(Input.GetKeyDown(KeyCode.Escape) && !IsMooving && !isEnding)  // the player can exit the panel control with "escape" button only if the laser don't moove
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, CameraMovement.instance.CameraRotation, false, false);
@@ -111,6 +113,7 @@ public class PanelControl : MonoBehaviour
                     DissolveElement.instance.Dissolve(Barier.GetComponent<MeshRenderer>().material, "_Dissolve_value", Barier);
                     DissolveElement.instance.Dissolve(towerTop.GetComponent<MeshRenderer>().material, "_Dissolve_value", towerTop);
                     towerToRotate.GetComponent<LineRenderer>().enabled = false;
+                    StartCoroutine(CancelAllPanelsControl());
                 }
                 lvlAchieved = false;
             }
@@ -218,5 +221,20 @@ public class PanelControl : MonoBehaviour
                 thirdBand.GetComponent<FlickeringEmissive>().enabled = true;
             }
         }
+    }
+
+    private IEnumerator CancelAllPanelsControl()
+    {
+        isEnding = true;
+        yield return new WaitForSeconds(3f);
+        foreach(GameObject triggersphere in triggerSpheres)
+        {
+            triggersphere.GetComponent<BoxCollider>().enabled = false;
+        }
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, CameraMovement.instance.CameraRotation, false, false);
+        PlayerMovement.instance.enabled = true;
+        triggerSpheres[idStatic].GetComponent<SphereLevitation>().enabled = true;
+        enabled = false;
     }
 }

@@ -62,11 +62,7 @@ public class TriggerDialog : MonoBehaviour
                 if (colliderToDesactivate != null)
                 {
                     colliderToDesactivate.enabled = false;
-                    Debug.Log("omada");
                 }
-                    
-                else
-                    Debug.Log("yare");
             }
         }
     }

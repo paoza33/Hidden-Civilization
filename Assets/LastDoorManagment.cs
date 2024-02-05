@@ -11,7 +11,7 @@ public class LastDoorManagment : MonoBehaviour
     public GameObject secretDoor;
     public GameObject labyrinth;
 
-    public GameObject[] roadToPipes;
+    public GameObject[] Spheres;
     public GameObject[] triggerSpheres;
 
     public Transform newPosCamera;
@@ -45,9 +45,9 @@ public class LastDoorManagment : MonoBehaviour
         }
         else if ((orderPlayer.Count == orderSolution.Count) && !orderPlayer.SequenceEqual(orderSolution))
         {
-            for(int i=0;  i<roadToPipes.Length; i++)
+            for(int i=0;  i<Spheres.Length; i++)
             {
-                roadToPipes[i].GetComponent<FlickeringEmissive>().isReverse = true;
+                Spheres[i].GetComponent<TriggerSphereLastDoor>().ResetInteraction();
             }
         }
     }
