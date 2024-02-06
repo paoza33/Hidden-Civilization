@@ -1519,7 +1519,9 @@ MonoBehaviour:
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - donc oklm
+    - "et l\xE0 apr\xE8s trigger"
   notOpen:
     name: 
     choices: []

@@ -62,7 +62,7 @@ public class PanelControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact") && !IsMooving)  // if true, rotate tower
+        if (Input.GetButtonDown("Interact") && !IsMooving && !isEnding)  // if true, rotate tower
         {
             initialRotation = towerToRotate.transform.rotation;
             if (isLvl1)

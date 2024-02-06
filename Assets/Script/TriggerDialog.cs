@@ -71,9 +71,18 @@ public class TriggerDialog : MonoBehaviour
                 {
                     colliderToDesactivate.enabled = false;
                 }
-                if(isChangingScene){
+                if (isChangingScene && !isNeedKey)
+                {
                     PlayerMovement.instance.StopMovement();
                     StartCoroutine(Fade());
+                }
+                else if (isChangingScene && isNeedKey)
+                {
+                    if (Inventory.instance.FindItem(keyNeeded))
+                    {
+                        PlayerMovement.instance.StopMovement();
+                        StartCoroutine(Fade());
+                    }
                 }
             }
         }
