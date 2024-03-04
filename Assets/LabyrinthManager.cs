@@ -21,6 +21,11 @@ public class LabyrinthManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        StartCoroutine(Fade());
+    }
+
     public void ReconnectAllConnexion()
     {
         foreach (SubFracture subFracture in subFractureList)
@@ -32,5 +37,16 @@ public class LabyrinthManager : MonoBehaviour
         }
         subFractureList.Clear();
         initialPosList.Clear();
+    }
+
+    private IEnumerator Fade()
+    {
+        PlayerMovement.instance.StopMovement();
+        yield return new WaitForSeconds(1f);
+        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.SetTrigger("FadeOut");
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class TriggerDialog : MonoBehaviour
 {
@@ -25,10 +25,13 @@ public class TriggerDialog : MonoBehaviour
 
     private Animator animator;
 
+    private TextMeshProUGUI textInteract;
+
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +39,7 @@ public class TriggerDialog : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             enabled = true;
+            textInteract.enabled = true;
         }
     }
 
@@ -94,6 +98,7 @@ public class TriggerDialog : MonoBehaviour
         {
             enabled = false;
         }
+        textInteract.enabled = false;
     }
 
     private IEnumerator Fade()

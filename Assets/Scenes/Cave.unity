@@ -1235,6 +1235,7 @@ GameObject:
   - component: {fileID: 1117788489}
   - component: {fileID: 1117788492}
   - component: {fileID: 1117788491}
+  - component: {fileID: 1117788493}
   m_Layer: 0
   m_Name: CaveManagment
   m_TagString: Untagged
@@ -1302,6 +1303,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &1117788493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117788488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53856addf14f9cc40a7e8f6e4e091db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unfixX: 1
+  unfixZ: 1
 --- !u!1 &1264403016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1882,8 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
+  isChangingScene: 0
+  levelToLoad: 
 --- !u!1 &1926082105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 9c8fb609d1996964eadd71be8d8a6790, type: 3}
+  - {fileID: -6478536213147159724, guid: 68bf7b992280d344181657825759f59e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1996,4 +2013,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148472424255}
-  m_Mesh: {fileID: -2124705421725058983, guid: 9c8fb609d1996964eadd71be8d8a6790, type: 3}
+  m_Mesh: {fileID: -8307728555915282368, guid: 68bf7b992280d344181657825759f59e, type: 3}

@@ -11,6 +11,7 @@ TagManager:
   - UIDialog
   - UIChoice1
   - UIChoice2
+  - UIInteract
   layers:
   - Default
   - TransparentFX

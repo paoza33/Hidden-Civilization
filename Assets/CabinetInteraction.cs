@@ -24,12 +24,16 @@ public class CabinetInteraction : MonoBehaviour
     private void Update(){
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
             playerAlreadyInteract = true;
-            if(Inventory.instance.FindItem(keyNeeded)){
+
+            if(LibraryManagment.instance.state == 0)
+            {
+                DialogOpen.instance.StartDialog(notOpen);
+                
+            }
+            else if(LibraryManagment.instance.state == 1)
+            {
                 DialogOpen.instance.StartDialog(open);
                 LibraryManagment.instance.AddOrderPlayer(id, symbol);
-            }
-            else{
-                DialogOpen.instance.StartDialog(notOpen);
             }
         }
         else if(Input.GetButtonDown("Interact"))

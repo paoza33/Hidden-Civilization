@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TakeDoor : MonoBehaviour
@@ -11,13 +12,14 @@ public class TakeDoor : MonoBehaviour
     public bool isKeyNeeded;
     public string keyName;
     public Dialog open;
-    private bool test;
     public Dialog notOpen;
+    private TextMeshProUGUI text;
 
     private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        text = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         enabled = false;
     }
     private void Update()
@@ -66,6 +68,7 @@ public class TakeDoor : MonoBehaviour
         {
             enabled = true;
         }
+        text.enabled = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -74,16 +77,24 @@ public class TakeDoor : MonoBehaviour
         {
             enabled = false;
         }
+        text.enabled = false;
     }
 
     public IEnumerator Fade()
     {
         sceneChanging = true;
         animator.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(0.50f);
+        yield return new WaitForSeconds(0.75f);
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
+
+        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+        data.currentSceneName = levelToLoad;
+        data.previousSceneName = SceneManager.GetActiveScene().name;
+
+        SaveDataManager.SaveDataSpawn(data);
+
         SceneManager.LoadScene(levelToLoad);
     }
 }

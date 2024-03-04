@@ -21,7 +21,7 @@ public class FlickeringEmissive : MonoBehaviour
 
     public bool isReverse;
 
-    private Renderer renderer;
+    private new Renderer renderer;
     private List<Material> materials = new List<Material>();
     private List<Color> initialColors = new List<Color>();
 
