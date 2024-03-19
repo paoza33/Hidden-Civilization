@@ -314,8 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Camp
-  isKeyNeeded: 0
-  keyName: 
+  isKeyNeeded: 1
+  keyName: Nothing
   open:
     name: 
     choices: []
@@ -323,11 +323,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   notOpen:
-    name: 
+    name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - J'ai besoin de cette lampe-torche avant de partir
 --- !u!65 &399490368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376,7 +377,7 @@ Transform:
   - {fileID: 1456059946}
   - {fileID: 1428445245}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &699147121
 PrefabInstance:
@@ -645,7 +646,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1011776639
 MonoBehaviour:
@@ -1009,6 +1010,162 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6110320664652139775, guid: 97a2de5412b524146b8473ded0cc2900, type: 3}
   m_PrefabInstance: {fileID: 1090664024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1256196196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256196199}
+  - component: {fileID: 1256196198}
+  - component: {fileID: 1256196197}
+  m_Layer: 0
+  m_Name: TriggerOldMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1256196197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256196196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55f54e73cb5b15488259c8a6e140901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Old Man
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Player!? Qu'est-ce que tu fais ici? Une lampe torche... Je vois.
+    - Et ce livre est crucial. Repose-le et rentre chez toi, rapidement! Tu arrives
+      au mauvais moment.
+    - ...
+    - "... Attends... Tu pourrais bien \xEAtre la solution la plus s\xFBre..."
+    - "\xC9coute-moi attentivement! Des individus mal intentionn\xE9s sont \xE0 la
+      recherche de certains de mes biens. Je ne vais pas entrer dans les d\xE9tails,
+      mais il est imp\xE9ratif que ce livre ne tombe pas entre leurs mains."
+    - "Cache-toi dans ma salle de bain. D\xE8s que tu entendras des hommes entrer,
+      sors par la fen\xEAtre et rentre chez toi en dissimulant le livre."
+    - "Ils ne sont pas au courant de l'existence de ce livre. Ils ne le rechercheront
+      pas apr\xE8s leur passage. Mais ne le montre \xE0 personne et n'en parle \xE0
+      personne."
+    - "Pose cette lampe-torche, ils ne doivent pas te rep\xE9rer, ils ne s'attendent
+      pas \xE0 te voir ici, seulement moi. Donc rentrer sans te faire remarquer devrait
+      \xEAtre simple pour toi."
+    - "Ils arrivent ... On a plus de temps, cache-toi et suis mes instructions ...
+      .  D\xE9sol\xE9 de t'embrigader dans ce danger, toi, un enfant, mais tu ne
+      mesure pas l'importance de ce que tu tiens entre tes mains. Je te le confie
+      car tu es inteligent et astucieux."
+    - "Ne cherche pas \xE0 en savoir plus, , je reviendrai quand je le pourrais.
+      J'ai confiance en toi Player."
+  unfixZ: 0
+  unfixX: 0
+  ifFade: 0
+  destroyTrigger: 1
+--- !u!65 &1256196198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256196196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 6.72, y: 0.63, z: 0.23}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1256196199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256196196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49049014, y: 0.35035002, z: 1.54154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1334612776
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4548788
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.045000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.22347343
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46174863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8870109
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843805434500230555, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Name
+      value: Misterious
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843805434500230555, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+--- !u!1 &1334612777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8843805434500230555, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+  m_PrefabInstance: {fileID: 1334612776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428445244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1256,89 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 3, z: 10.22}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1512398343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512398346}
+  - component: {fileID: 1512398345}
+  - component: {fileID: 1512398347}
+  m_Layer: 0
+  m_Name: Door2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1512398345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512398343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19004816, y: 1, z: 0.5317254}
+  m_Center: {x: -0.40497592, y: 0, z: 0.10910678}
+--- !u!4 &1512398346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512398343}
+  m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58515596, y: 0.35034984, z: -4.05405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1598238316}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512398347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512398343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNeeded: 
+  animatorDoor: {fileID: 0}
+  colliderToDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  open:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - J'ai peur
+  notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  isNeedKey: 0
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
+  isChangingScene: 1
+  levelToLoad: Camp
+  pnjAppear: {fileID: 0}
 --- !u!4 &1598238316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 97a2de5412b524146b8473ded0cc2900, type: 3}
@@ -1134,7 +1374,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1672784029
 MonoBehaviour:
@@ -1149,8 +1389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraMainPos: {x: 0.18651888, y: 5.0476747, z: -1.3636303}
-  unfixX: 0
-  unfixZ: 1
   objState0: []
   objState1: []
 --- !u!64 &1742311573
@@ -1294,7 +1532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: 30, z: 0}
 --- !u!1 &1877111637
 GameObject:
@@ -1402,6 +1640,8 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 1256196198}
+  colliderDoorBathroom: {fileID: 1512398345}
   open:
     name: Player
     choices: []
@@ -1416,8 +1656,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
+  isItemObtained: 1
+  item: {fileID: 11400000, guid: da476122b0081e04193fa6dd9ec58700, type: 2}
+  destroyObject: 1
   isChangingScene: 0
   levelToLoad: 
+  pnjAppear: {fileID: 1334612777}
 --- !u!64 &2127876308
 MeshCollider:
   m_ObjectHideFlags: 0

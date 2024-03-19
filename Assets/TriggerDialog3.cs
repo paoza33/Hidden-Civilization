@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,9 @@ public class TriggerDialog3 : MonoBehaviour
     public bool unfixX;
 
     public bool ifFade;
+
+    public bool destroyTrigger;
+
 
     private void Awake()
     {
@@ -45,7 +49,11 @@ public class TriggerDialog3 : MonoBehaviour
                     if (unfixZ)
                         CameraMovement.instance.cameraFixZ = false;
                     enabled = false;
-                }                
+                }
+                if(destroyTrigger)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }

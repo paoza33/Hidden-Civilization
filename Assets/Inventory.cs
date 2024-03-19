@@ -22,11 +22,16 @@ public class Inventory : MonoBehaviour
         bool found = false;
         foreach(Item item in items)
         {
-            if (item.nameItem == nameItem)
+            if (string.Equals(item.name, nameItem))
             {
                 found = true;
             }
         }
         return found;
+    }
+
+    public void AddItem(Item item)
+    {
+        items.Add(item);
     }
 }

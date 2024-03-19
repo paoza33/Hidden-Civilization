@@ -28,6 +28,7 @@ public class TakeDoor : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
             {
+                text.enabled = false;
                 playerAlreadyInteract = true;
                 if (isKeyNeeded)
                 {
@@ -57,6 +58,10 @@ public class TakeDoor : MonoBehaviour
                     {
                         PlayerMovement.instance.StopMovement();
                         StartCoroutine(Fade());
+                    }
+                    else
+                    {
+                        text.enabled = true;
                     }
                 }
             }

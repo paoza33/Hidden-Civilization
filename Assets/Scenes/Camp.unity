@@ -389,6 +389,7 @@ MonoBehaviour:
   playerStart: {fileID: 1947464217}
   spawnWoodenHut: {fileID: 8465755776970253264}
   spawnBeach: {fileID: 1639797504}
+  spawnWindow: {fileID: 1937753837}
   SpecialTrees:
   - {fileID: 678686861}
   - {fileID: 446188906}
@@ -452,6 +453,7 @@ MonoBehaviour:
   unfixZ: 0
   unfixX: 0
   ifFade: 1
+  destroyTrigger: 0
 --- !u!65 &248560191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1472,6 +1474,8 @@ MonoBehaviour:
   keyNeeded: LostIsland
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
   open:
     name: 
     choices: []
@@ -1487,8 +1491,12 @@ MonoBehaviour:
     sentences:
     - je peux pas encore prendre le bateau
   isNeedKey: 1
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
   isChangingScene: 1
   levelToLoad: LostIsland
+  pnjAppear: {fileID: 0}
 --- !u!65 &1413355668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1951,6 +1959,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851316744}
   m_Mesh: {fileID: 7560277172612512602, guid: e26ac08adb4cec34d936b6e0aac6206c, type: 3}
+--- !u!1 &1937753836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1937753837}
+  m_Layer: 0
+  m_Name: SpawnWoodenHutWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1937753837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937753836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.69869, y: 3.8038, z: 33.82379}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943455156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2038,8 @@ MonoBehaviour:
   keyNeeded: LostIsland
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
   open:
     name: 
     choices: []
@@ -2014,8 +2055,12 @@ MonoBehaviour:
     sentences:
     - je peux pas encore prendre le bateau
   isNeedKey: 1
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
   isChangingScene: 1
   levelToLoad: LostIsland
+  pnjAppear: {fileID: 0}
 --- !u!65 &1943455159
 BoxCollider:
   m_ObjectHideFlags: 0

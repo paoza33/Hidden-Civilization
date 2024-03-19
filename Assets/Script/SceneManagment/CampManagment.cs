@@ -8,6 +8,7 @@ public class CampManagment : MonoBehaviour
 
     public Transform spawnWoodenHut;
     public Transform spawnBeach;
+    public Transform spawnWindow;
     private int state;
     public GameObject[] SpecialTrees;
     public Light skyLight;
@@ -17,12 +18,17 @@ public class CampManagment : MonoBehaviour
 
     private void Awake()
     {
+        state = SaveDataManager.LoadDataSceneState().campState;
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
-        if (data.previousSceneName == "WoodenHut")
+        if (data.previousSceneName == "WoodenHut" && state ==2)     // modifier de telle façon que state 0 -> cabane impossible, soleil, state 1 = tomber nuit cabane possible, state 2 nuit et on pars, state 3 present
             playerStart.transform.position = spawnWoodenHut.position;
+
+        else if(data.previousSceneName == "WoodenHut" && state == 1)
+            playerStart.transform.position = spawnWindow.position;
+
         else if(data.previousSceneName == "Camp")
             playerStart.transform.position = spawnBeach.position;
-        state = SaveDataManager.LoadDataSceneState().campState;
+        
     }
 
     private void Start()
