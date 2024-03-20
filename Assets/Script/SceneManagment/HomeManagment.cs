@@ -12,6 +12,8 @@ public class HomeManagment : MonoBehaviour
     public Dialog dialogState4;
     public Dialog dialogState5;
 
+    public GameObject[] collidersToActivate;
+
     private Animator animator;
 
     public Transform spawnBedroom;
@@ -33,25 +35,31 @@ public class HomeManagment : MonoBehaviour
             return;
         }
 
-        else if(saveDataSceneState != null && saveDataSceneState.homeState == 0)    // présent, joueur doit prendre livre
+        else if(saveDataSceneState != null && saveDataSceneState.homeState == 0)    // prï¿½sent, joueur doit prendre livre
         {
             player.transform.position = spawnBedroom.position;
             ifLongFade = true;
             saveDataSceneState.homeState = 1;
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState0);
+            foreach(GameObject obj in collidersToActivate){
+                obj.SetActive(true);
+            }
         }
 
-        else if(saveDataSceneState != null && saveDataSceneState.homeState == 1)    //passé, flashback
+        else if(saveDataSceneState != null && saveDataSceneState.homeState == 1)    //passï¿½, flashback
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
             saveDataSceneState.homeState = 2;
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState1);
+            foreach(GameObject obj in collidersToActivate){
+                obj.SetActive(true);
+            }
         }
 
-        else if (saveDataSceneState != null && saveDataSceneState.homeState == 2)   // retour présent, joueur explique où il doit aller
+        else if (saveDataSceneState != null && saveDataSceneState.homeState == 2)   // retour prï¿½sent, joueur explique oï¿½ il doit aller
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
@@ -60,7 +68,7 @@ public class HomeManagment : MonoBehaviour
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
-        else if (saveDataSceneState != null && saveDataSceneState.homeState == 3)   // retour library, il explique qu'i reconnait le signe et qu'il doit aller vers forêt
+        else if (saveDataSceneState != null && saveDataSceneState.homeState == 3)   // retour library, il explique qu'i reconnait le signe et qu'il doit aller vers forï¿½t
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
@@ -69,7 +77,7 @@ public class HomeManagment : MonoBehaviour
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
-        else if (saveDataSceneState != null && saveDataSceneState.homeState == 4)   // retour wood, il se demande qui était cet homme et qu'il doit partir maintenant qu'il fait nuit
+        else if (saveDataSceneState != null && saveDataSceneState.homeState == 4)   // retour wood, il se demande qui ï¿½tait cet homme et qu'il doit partir maintenant qu'il fait nuit
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
@@ -78,7 +86,7 @@ public class HomeManagment : MonoBehaviour
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
-        else if (saveDataSceneState != null && saveDataSceneState.homeState == 5)   // retour Cave, "Je me suis assez reposé, il est temps d'aller au ruins"
+        else if (saveDataSceneState != null && saveDataSceneState.homeState == 5)   // retour Cave, "Je me suis assez reposï¿½, il est temps d'aller au ruins"
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;

@@ -718,20 +718,28 @@ MonoBehaviour:
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - "La foret !! Ce signe me rappelle celui grav\xE9 dans cette structure \xE9trange.
+      Pas de temps \xE0 perdre, je dois v\xE9rifier \xE7a maintenant."
   dialogState4:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - "Qui \xE9tait cet homme ? Il semblait avoir des connaissances sur cette structure
+      ..."
+    - "Bref, v\xE9rifions ces dires ,il fait nuit d\xE9sormais, je peux y aller."
   dialogState5:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
-  spawnBedroom: {fileID: 0}
+    sentences:
+    - "Je me suis assez repos\xE9, direction les ruines du nord-est."
+  collidersToActivate:
+  - {fileID: 1120411358}
+  spawnBedroom: {fileID: 6004611300616648162}
   unfixX: 1
   unfixZ: 1
 --- !u!4 &587649524
@@ -1346,6 +1354,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060267668}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1120411358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120411360}
+  - component: {fileID: 1120411359}
+  m_Layer: 0
+  m_Name: InvisibleWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1120411359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120411358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.670896, y: 1, z: 1}
+  m_Center: {x: 0.835448, y: 0, z: 0}
+--- !u!4 &1120411360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120411358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.1006064, y: 0.96, z: 15.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1129095512
 PrefabInstance:
   m_ObjectHideFlags: 0

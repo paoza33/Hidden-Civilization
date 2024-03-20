@@ -12,32 +12,51 @@ public class VillageManagment : MonoBehaviour
 
     private int state;
 
-    public GameObject[] colliderState0, colliderState1, colliderState2;
+    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3;
+
+    public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4;
 
     private void Awake()
     {
         SaveDataSceneState dataState = SaveDataManager.LoadDataSceneState();
         state = dataState.villageState;
-        if(state == 0)
+        if(state == 0)  // joueur enfant, il se dirige vers le camp, on bloque wood et city
         {
             // enfant jour avec objectif -> camp
             foreach(GameObject obj in colliderState0)
                 obj.SetActive(true);
+            foreach(GameObject obj in portalsState0)
+                obj.SetActive(true);
+            
         }
-        else if(state == 1)
-        {
-            // enfant nuit objectif -> home
+        else if(state == 1){
+            // enfant nuit objectif -> home, on bloque city, wood et camp
             skyLight.intensity = 0.2f;
             foreach (GameObject obj in colliderState1)
                 obj.SetActive(true);
-        }
-        else
-        {
-            //present
-            foreach (GameObject obj in colliderState2)
+            foreach(GameObject obj in portalsState1)
                 obj.SetActive(true);
         }
-
+        else if(state == 2) // joueur se dirige vers city, on ne bloque rien
+        {
+            foreach (GameObject obj in colliderState2)
+                obj.SetActive(true);
+            foreach(GameObject obj in portalsState2)
+                obj.SetActive(true);
+        }
+        else if(state == 3){    // joueur se dirige vers wood, nuit, on bloque city et camp
+            skyLight.intensity = 0.2f;
+            foreach (GameObject obj in colliderState3)
+                obj.SetActive(true);
+            foreach(GameObject obj in portalsState3)
+                obj.SetActive(true);
+        }
+        else // default bloque rien
+        {
+            //present
+            foreach(GameObject obj in portalsState4)
+                obj.SetActive(true);
+        }
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Home")
