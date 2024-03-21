@@ -12,7 +12,7 @@ public class VillageManagment : MonoBehaviour
 
     private int state;
 
-    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3;
+    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3, colliderState4;
 
     public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4;
 
@@ -27,7 +27,6 @@ public class VillageManagment : MonoBehaviour
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState0)
                 obj.SetActive(true);
-            
         }
         else if(state == 1){
             // enfant nuit objectif -> home, on bloque city, wood et camp
@@ -37,7 +36,7 @@ public class VillageManagment : MonoBehaviour
             foreach(GameObject obj in portalsState1)
                 obj.SetActive(true);
         }
-        else if(state == 2) // joueur se dirige vers city, on ne bloque rien
+        else if(state == 2) // joueur se dirige vers city, on bloque wood et camp
         {
             foreach (GameObject obj in colliderState2)
                 obj.SetActive(true);
