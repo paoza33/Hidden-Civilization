@@ -22,9 +22,10 @@ public class LibraryManagment : MonoBehaviour
     public GameObject playerStart;
     public Transform spawnLibTwo;
 
-    public BoxCollider[] collidersDesactivate;
-    public GameObject objState0;
-    public GameObject objState1;
+    public BoxCollider[] collidersDesactivateState0;
+    public BoxCollider[] collidersDesactivateState1;
+    public GameObject[] objState0;
+    public GameObject[] objState1;
 
     private int level = 0;
 
@@ -51,11 +52,17 @@ public class LibraryManagment : MonoBehaviour
 
         if(state == 0)
         {
-            foreach(BoxCollider coll in collidersDesactivate)
+            foreach(BoxCollider coll in collidersDesactivateState0)
                 coll.gameObject.SetActive(false);
-
-            if (state == 1)
-                SettingsEngima();
+            foreach(GameObject obj in objState0)
+                obj.SetActive(true);
+        }
+        if (state == 1){
+            foreach(BoxCollider coll in collidersDesactivateState1)
+                coll.gameObject.SetActive(false);
+            foreach(GameObject obj in objState1)
+                obj.SetActive(true);
+            SettingsEngima();
         }
     }
 
