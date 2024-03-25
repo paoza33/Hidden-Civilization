@@ -22,6 +22,10 @@ public class LibraryManagment : MonoBehaviour
     public GameObject playerStart;
     public Transform spawnLibTwo;
 
+    public BoxCollider[] collidersDesactivate;
+    public GameObject objState0;
+    public GameObject objState1;
+
     private int level = 0;
 
     [HideInInspector]
@@ -45,13 +49,20 @@ public class LibraryManagment : MonoBehaviour
         SaveDataSceneState dataState = SaveDataManager.LoadDataSceneState();
         state = dataState.libraryState;
 
+        if(state == 0)
+        {
+            foreach(BoxCollider coll in collidersDesactivate)
+                coll.gameObject.SetActive(false);
+
+            if (state == 1)
+                SettingsEngima();
+        }
     }
 
     private void Start()
     {
         StartCoroutine(Fade());
-        if(state == 1)
-            SettingsEngima();
+        
     }
 
     public void AddOrderPlayer(int symboleID, GameObject symbol)

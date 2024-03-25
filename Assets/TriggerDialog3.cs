@@ -77,6 +77,7 @@ public class TriggerDialog3 : MonoBehaviour
 
     private IEnumerator FadeCamp()
     {
+        enabled = false;
         PlayerMovement.instance.StopMovement();
         animator.SetTrigger("FadeIn");
         SaveDataSceneState data = SaveDataManager.LoadDataSceneState();

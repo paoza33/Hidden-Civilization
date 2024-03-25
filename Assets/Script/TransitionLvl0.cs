@@ -44,7 +44,7 @@ public class TransitionLvl0 : MonoBehaviour
             SaveDataManager.SaveDataSceneState(data);
         }
         SaveDataSpawn newData = SaveDataManager.LoadDataSpawn();
-        //levelToLoad = newData.currentSceneName;
+        levelToLoad = newData.currentSceneName;
         SceneManager.LoadScene(levelToLoad);
     }
 }

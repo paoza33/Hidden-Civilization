@@ -12,8 +12,6 @@ public class HomeManagment : MonoBehaviour
     public Dialog dialogState4;
     public Dialog dialogState5;
 
-    public GameObject[] collidersToActivate;
-
     private Animator animator;
 
     public Transform spawnBedroom;
@@ -22,7 +20,10 @@ public class HomeManagment : MonoBehaviour
     public bool unfixX;
     public bool unfixZ;
 
-    private void Start()
+    public GameObject[] objState0;
+    public GameObject laptop;
+
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -37,34 +38,28 @@ public class HomeManagment : MonoBehaviour
 
         else if(saveDataSceneState != null && saveDataSceneState.homeState == 0)    // pr�sent, joueur doit prendre livre
         {
+            foreach(GameObject obj in objState0)
+                obj.SetActive(true);
+
             player.transform.position = spawnBedroom.position;
             ifLongFade = true;
-            saveDataSceneState.homeState = 1;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState0);
-            foreach(GameObject obj in collidersToActivate){
-                obj.SetActive(true);
-            }
         }
 
         else if(saveDataSceneState != null && saveDataSceneState.homeState == 1)    //pass�, flashback
         {
+            laptop.SetActive(false);
+            player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.homeState = 2;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState1);
-            foreach(GameObject obj in collidersToActivate){
-                obj.SetActive(true);
-            }
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 2)   // retour pr�sent, joueur explique o� il doit aller
         {
+            player.transform.localScale = new Vector3(1f, 1f, 1f); // retour taille normal
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.homeState = 3;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
@@ -72,8 +67,6 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.homeState = 4;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
@@ -81,8 +74,6 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.homeState = 5;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
@@ -90,13 +81,12 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.homeState = 6;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
             DialogOpen.instance.StartDialog(dialogState2);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 6)   // default
         {
+            enabled = false;
             ifLongFade= false;
         }
 

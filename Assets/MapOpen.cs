@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryOpen : MonoBehaviour
+public class MapOpen : MonoBehaviour
 {
     public GameObject inventoryUI;
     public static bool gameIsPaused;
@@ -10,7 +10,7 @@ public class InventoryOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Inventory"))
+        if (Input.GetButtonDown("Map"))
         {
             if (gameIsPaused)
             {
@@ -22,7 +22,7 @@ public class InventoryOpen : MonoBehaviour
             }
         }
     }
-    void Paused()
+    public void Paused()
     {
         inventoryUI.SetActive(true);
         PlayerMovement.instance.StopMovement();

@@ -10,14 +10,19 @@ public class WoodenHutManagment : MonoBehaviour
     public GameObject[] objState0;
     public GameObject[] objState1;
 
+    private GameObject player;
+
     private SaveDataSceneState data;
-    private void Start()
+    private void Awake()
     {
+
+        player = GameObject.FindGameObjectWithTag("Player");
         data = SaveDataManager.LoadDataSceneState();
-        StartCoroutine(Fade());
+
         if(data.woodenHutState == 0)
         {
-            foreach(GameObject obj in objState0)
+            player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            foreach (GameObject obj in objState0)
             {
                 obj.SetActive(true);
             }
@@ -29,16 +34,22 @@ public class WoodenHutManagment : MonoBehaviour
                 obj.SetActive(true);
             }
         }
+
+        StartCoroutine(Fade());
     }
 
     private IEnumerator Fade()
     {
-        PlayerMovement.instance.StopMovement();
-        yield return new WaitForSeconds(0.1f);
         CameraMovement.instance.cameraFixX = true;
+        CameraMovement.instance.fixX = cameraMainPos.x;
         Camera.main.transform.position = cameraMainPos; // solution rapide car bug lorsqu'on lance le jeu sur cette map
 
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.1f);
+
+        PlayerMovement.instance.StopMovement();
+
+        yield return new WaitForSeconds(1f);
+
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;

@@ -5,58 +5,96 @@ using UnityEngine;
 public class CampManagment : MonoBehaviour
 {
     public GameObject playerStart;
+    private GameObject player;
 
     public Transform spawnWoodenHut;
     public Transform spawnBeach;
     public Transform spawnWindow;
     private int state;
-    public GameObject[] SpecialTrees;
+    public GameObject[] triggerState0, triggerState1, triggerState2, triggerState3;
     public Light skyLight;
 
-    public GameObject[] triggerBoat;
-    public GameObject triggerBeach;
+    public Dialog dialogState1;
+
+    private SaveDataSpawn spawn;
 
     private void Awake()
     {
+        enabled = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+
         state = SaveDataManager.LoadDataSceneState().campState;
-        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
-        if (data.previousSceneName == "WoodenHut" && state ==2)     // modifier de telle façon que state 0 -> cabane impossible, soleil, state 1 = tomber nuit cabane possible, state 2 nuit et on pars, state 3 present
-            playerStart.transform.position = spawnWoodenHut.position;
+        Debug.Log("state camp = " + state);
+        spawn = SaveDataManager.LoadDataSpawn();
 
-        else if(data.previousSceneName == "WoodenHut" && state == 1)
-            playerStart.transform.position = spawnWindow.position;
-
-        else if(data.previousSceneName == "Camp")
-            playerStart.transform.position = spawnBeach.position;
-        
+        SettingsStart();
     }
 
-    private void Start()
+    private void SettingsStart()
     {
-        if(state == 0)
+        if(state == 0)  // enfant -> trigger beach, special tree, door ("C'est la cabane du vieil homme, il semble n'y avoir personne")
         {
-            foreach(GameObject obj in SpecialTrees)
+            Debug.Log("zero");
+            player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            foreach (GameObject obj in triggerState0)
             {
                 obj.SetActive(true);
             }
-            foreach (GameObject obj in triggerBoat)
-                obj.SetActive(false);
+            StartCoroutine(Fade());
         }
-        else if(state == 1)
+
+        else if(state == 1) // enfant -> night, longfade "oops il fait déjà nuit, door (joueur rentre dedans sans dialog), invisible wall village
         {
-            foreach(GameObject obj in SpecialTrees)
+            player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            playerStart.transform.position = spawnBeach.position;
+
+            DialogOpen.instance.StartDialog(dialogState1);
+            enabled = true;
+
+            foreach (GameObject obj in triggerState1)
             {
                 obj.SetActive(true);
             }
-
-            triggerBeach.SetActive(false);
-
-            foreach (GameObject obj in triggerBoat)
-                obj.SetActive(false);
 
             skyLight.intensity = 0.2f;
         }
-        StartCoroutine(Fade());
+
+        else if (state == 2) // enfant -> night -> door ("J'entends des gens parler à l'interieur, je ne devrais pas rester là longtemps")
+        {
+            player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            playerStart.transform.position = spawnWindow.position;
+
+            foreach (GameObject obj in triggerState2)
+            {
+                obj.SetActive(true);
+            }
+            skyLight.intensity = 0.2f;
+            StartCoroutine(Fade());
+        }
+
+        else if(state == 3) // trigger boat -> direction lost island, door -> peut rentrer.
+        {
+            if (spawn.previousSceneName == "WoodenHut" && state == 3)
+                playerStart.transform.position = spawnWoodenHut.position;
+
+            foreach (GameObject obj in triggerState3)
+            {
+                obj.SetActive(true);
+            }
+            StartCoroutine(Fade());
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                StartCoroutine(Fade());
+                enabled = false;
+            }
+        }
     }
 
     private IEnumerator Fade()
