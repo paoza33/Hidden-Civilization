@@ -38,6 +38,9 @@ public class TriggerDialog : MonoBehaviour
 
     private TextMeshProUGUI textInteract;
 
+    public bool ifLibrary;
+    private bool ifAlreadyLibraryInteraction; // on incrémente de 1 l'etat de library en state 0
+
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -82,6 +85,9 @@ public class TriggerDialog : MonoBehaviour
         {
             if (!DialogOpen.instance.DisplayNextSentences())
             {
+                if(ifLibrary)   // cas de library en state0
+                    LibraryManagment.instance.SetupState0();
+
                 playerAlreadyInteract = false;
                 if (ifChangeStateCamp)
                 {

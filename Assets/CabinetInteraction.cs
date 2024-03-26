@@ -24,17 +24,7 @@ public class CabinetInteraction : MonoBehaviour
     private void Update(){
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
             playerAlreadyInteract = true;
-
-            if(LibraryManagment.instance.state == 0)
-            {
-                DialogOpen.instance.StartDialog(notOpen);
-                
-            }
-            else if(LibraryManagment.instance.state == 1)
-            {
-                DialogOpen.instance.StartDialog(open);
-                LibraryManagment.instance.AddOrderPlayer(id, symbol);
-            }
+            DialogOpen.instance.StartDialog(open);
         }
         else if(Input.GetButtonDown("Interact"))
         {

@@ -27,6 +27,9 @@ public class LibraryManagment : MonoBehaviour
     public GameObject[] objState0;
     public GameObject[] objState1;
 
+    private int nbrInteractionState0; // déclanche un dialogue quand = en state0
+    public Dialog dialogEndState0;
+
     private int level = 0;
 
     [HideInInspector]
@@ -36,6 +39,7 @@ public class LibraryManagment : MonoBehaviour
 
     private void Awake()
     {
+        enabled = false;
         if(instance != null)
         {
             Debug.Log("il y a plus d'une instance de library managment");
@@ -57,11 +61,14 @@ public class LibraryManagment : MonoBehaviour
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
         }
-        if (state == 1){
+        else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
                 coll.gameObject.SetActive(false);
+
             foreach(GameObject obj in objState1)
                 obj.SetActive(true);
+        }
+        else if (state == 2){
             SettingsEngima();
         }
     }
@@ -69,6 +76,11 @@ public class LibraryManagment : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Fade());
+        
+    }
+
+    private void Update()
+    {
         
     }
 
@@ -164,6 +176,13 @@ public class LibraryManagment : MonoBehaviour
         for(int i =0; i<symbols.Count; i++)
         {
             symbols[i].GetComponent<FlickeringEmissive>().enabled = true;
+        }
+    }
+
+    public void SetupState0(){
+        nbrInteractionState0 +=1;
+        if(nbrInteractionState0 == 5){
+            DialogOpen.instance.StartDialog(dialogEndState0);
         }
     }
 
