@@ -9,6 +9,8 @@ public class UpgradeState : MonoBehaviour
 
     private SaveDataSceneState state;
 
+    public bool noInteraction;
+
     private void Awake()
     {
         enabled = false;
@@ -19,7 +21,15 @@ public class UpgradeState : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            enabled = true;
+            if(noInteraction){
+                for(int i = 0; i < scenesToUpgrade.Length; i++)
+                {
+                   UpgradingState(scenesToUpgrade[i]);
+                }
+                SaveDataManager.SaveDataSceneState(state);
+            }
+            else
+                enabled = true;
         }
     }
 

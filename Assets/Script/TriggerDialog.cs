@@ -85,8 +85,10 @@ public class TriggerDialog : MonoBehaviour
         {
             if (!DialogOpen.instance.DisplayNextSentences())
             {
-                if(ifLibrary)   // cas de library en state0
+                if(ifLibrary && !ifAlreadyLibraryInteraction){// cas de library en state0
+                    ifAlreadyLibraryInteraction = true;
                     LibraryManagment.instance.SetupState0();
+                }
 
                 playerAlreadyInteract = false;
                 if (ifChangeStateCamp)

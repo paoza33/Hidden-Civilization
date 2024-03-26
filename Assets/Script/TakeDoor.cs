@@ -15,6 +15,9 @@ public class TakeDoor : MonoBehaviour
     public Dialog notOpen;
     private TextMeshProUGUI text;
 
+    public bool ifLibraryDoorState0;
+    private bool libraryDoorAlreadyInteract;
+
     private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
     private void Awake()
     {
@@ -54,6 +57,11 @@ public class TakeDoor : MonoBehaviour
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
                     playerAlreadyInteract = false;
+                    if(ifLibraryDoorState0 && !libraryDoorAlreadyInteract){
+                        libraryDoorAlreadyInteract = true;
+                        LibraryManagment.instance.SetupState0();
+                    }
+                    
                     if (ifChangeLevel)
                     {
                         PlayerMovement.instance.StopMovement();

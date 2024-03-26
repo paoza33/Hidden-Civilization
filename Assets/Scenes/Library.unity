@@ -869,6 +869,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Cette porte est interdit d'acc\xE8s. Impossible de passer par l\xE0."
+  ifLibraryDoorState0: 1
 --- !u!65 &515947550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1048,7 +1049,6 @@ MonoBehaviour:
   - {fileID: 596722563}
   - {fileID: 1879813684}
   - {fileID: 1550319562}
-  collidersDesactivateState2: []
   objState0:
   - {fileID: 1933506407}
   - {fileID: 2071007191}
@@ -1056,6 +1056,7 @@ MonoBehaviour:
   - {fileID: 1858640305}
   - {fileID: 1436799236}
   - {fileID: 1095199190}
+  - {fileID: 515947547}
   objState1:
   - {fileID: 616471849}
   - {fileID: 934505967}
@@ -1063,7 +1064,20 @@ MonoBehaviour:
   - {fileID: 1858640305}
   - {fileID: 1436799236}
   - {fileID: 1095199190}
-  objState2: []
+  dialogEndState0:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Le livre n'a aucune r\xE9action, blablabla"
+  dialogBeginningState2:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  exitWall: {fileID: 2049385381}
   state: 0
 --- !u!4 &583166792
 Transform:
@@ -1282,6 +1296,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "ferm\xE9 ... La cl\xE9 devrait etre \xE0 la reception."
+  ifLibraryDoorState0: 0
 --- !u!65 &616471852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2017,6 +2032,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!64 &934505970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2384,6 +2400,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 1
 --- !u!1 &1095916748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2485,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 1
 --- !u!1001 &1100518158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3430,6 +3448,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 1
 --- !u!1 &1452826537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,6 +3689,7 @@ GameObject:
   - component: {fileID: 1492813354}
   - component: {fileID: 1492813353}
   - component: {fileID: 1492813352}
+  - component: {fileID: 1492813355}
   m_Layer: 0
   m_Name: ChangeScene
   m_TagString: Untagged
@@ -3718,6 +3738,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1492813355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492813351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0ae9b94ed513c4f8e27bb383ccad97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToUpgrade:
+  - Library
+  - City
+  noInteraction: 1
 --- !u!1 &1512050981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,6 +4587,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 1
 --- !u!1001 &1879755126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5235,6 +5272,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2049385381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049385382}
+  - component: {fileID: 2049385385}
+  - component: {fileID: 2049385384}
+  - component: {fileID: 2049385383}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2049385382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049385381}
+  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.29, y: 0, z: 7.131663}
+  m_LocalScale: {x: 5.5, y: 2.5, z: 4.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5916373643847214157}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2049385383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049385381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9328058, y: 0.9718999, z: 0.7899522}
+  m_Center: {x: 0.09023957, y: 0.48645636, z: 0.19007799}
+--- !u!23 &2049385384
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049385381}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -1255982633427224767, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  - {fileID: 3574201260729892757, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  - {fileID: -5907195542950636081, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  - {fileID: 7791062526585337147, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  - {fileID: -1197154322231120570, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  - {fileID: 1264416248767005770, guid: 3d9405681370c5545848378009d731c0, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2049385385
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049385381}
+  m_Mesh: {fileID: -3329902420748629119, guid: 3d9405681370c5545848378009d731c0, type: 3}
 --- !u!1 &2061099954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5408,6 +5547,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!1 &2078963217
 GameObject:
   m_ObjectHideFlags: 0
@@ -6687,6 +6827,7 @@ Transform:
   m_Children:
   - {fileID: 3990466041093402727}
   - {fileID: 504952288207280203}
+  - {fileID: 2049385382}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

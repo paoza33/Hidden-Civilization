@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571427, b: 0.30692387, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.22571349, b: 0.30692273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1170,8 +1170,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1196500654}
-  - component: {fileID: 1196500655}
   - component: {fileID: 1196500656}
+  - component: {fileID: 1196500658}
+  - component: {fileID: 1196500657}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -1194,26 +1195,6 @@ Transform:
   m_Father: {fileID: 1322155493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1196500655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196500653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5bfe8ef1cf024f48ae2ff8b7580900b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Test
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences:
-    - yooo
-    - book
 --- !u!65 &1196500656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1227,6 +1208,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9828477, y: 1, z: 0.4516163}
   m_Center: {x: -0.013241053, y: 0, z: 0.27419186}
+--- !u!114 &1196500657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196500653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0ae9b94ed513c4f8e27bb383ccad97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToUpgrade:
+  - Library
+--- !u!114 &1196500658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196500653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNeeded: 
+  animatorDoor: {fileID: 0}
+  colliderToDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  ifChangeStateCamp: 0
+  open:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "L'\xE9tag\xE8re est vide ... Tout \xE7a pour rien ..."
+    - "Un indice dans le livre que j'aurais loup\xE9 ? regardons \xE7a."
+    - "!? Quelque chose dans le creux de l'\xE9tag\xE8re a commenc\xE9 \xE0 briller
+      lorsque j'ai sorti le livre."
+    - "(prend l'objet) ... Un m\xE9daillon ? Il y a un signe dessus."
+    - "C'est l'un des signes du livre qui est suivi d'une page blanche. Oui voila,
+      cette page l\xE0."
+    - "HEIN !? Du texte est apparu ... Le m\xE9daillon fait appraitre le texte lorsqu'il
+      est \xE0 proximit\xE9 du livre. Toute les pages blanches sont apreils ? Int\xE9ressant."
+    - "HEIN !? Du texte est apparu ! Le m\xE9daillon fait appraitre le texte lorsqu'il
+      est \xE0 proximit\xE9 du livre. Toute les pages blanches sont apreils ? Int\xE9ressant..."
+    - "Le texte raconte une histoire, et les signes correspondent aux plaques devant
+      les \xE9tag\xE8res de l'\xE9tage inf\xE9rieure. Allons voir \xE7a de plus pr\xE8s."
+  notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  isNeedKey: 0
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
+  isChangingScene: 0
+  levelToLoad: 
+  pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!1001 &1226450371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2074,7 +2120,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "*Cough* *Cough * ... Toute cette poussi\xE8re ..."
-    - "Etrange ... Il n'y a que cette \xE9tag\xE8re cass\xE9, fouillons de plus pr\xE8s"
+    - "Il n'y a que cette \xE9tag\xE8re cass\xE9e, fouillons \xE7a de plus pr\xE8s."
 --- !u!4 &1907465872
 Transform:
   m_ObjectHideFlags: 0

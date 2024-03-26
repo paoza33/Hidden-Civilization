@@ -29,6 +29,9 @@ public class LibraryManagment : MonoBehaviour
 
     private int nbrInteractionState0; // déclanche un dialogue quand = en state0
     public Dialog dialogEndState0;
+    public Dialog dialogBeginningState2;
+
+    public GameObject exitWall;
 
     private int level = 0;
 
@@ -57,31 +60,36 @@ public class LibraryManagment : MonoBehaviour
         if(state == 0)
         {
             foreach(BoxCollider coll in collidersDesactivateState0)
-                coll.gameObject.SetActive(false);
+                coll.enabled = false;
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
+                StartCoroutine(Fade());
         }
         else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
-                coll.gameObject.SetActive(false);
+                coll.enabled = false;
 
             foreach(GameObject obj in objState1)
                 obj.SetActive(true);
+                StartCoroutine(Fade());
         }
         else if (state == 2){
             SettingsEngima();
+            DialogOpen.instance.StartDialog(dialogBeginningState2);
+            enabled = true;
         }
-    }
-
-    private void Start()
-    {
-        StartCoroutine(Fade());
-        
     }
 
     private void Update()
     {
-        
+        if(Input.GetButtonDown("Interact")){
+            if(!DialogOpen.instance.DisplayNextSentences()){
+                if (state == 2){ // start state2
+                    StartCoroutine(Fade());
+                    enabled = false;
+                }
+            }
+        }
     }
 
     public void AddOrderPlayer(int symboleID, GameObject symbol)
@@ -182,8 +190,15 @@ public class LibraryManagment : MonoBehaviour
     public void SetupState0(){
         nbrInteractionState0 +=1;
         if(nbrInteractionState0 == 5){
-            DialogOpen.instance.StartDialog(dialogEndState0);
+            StartCoroutine(StartDialogEndState0());
         }
+    }
+
+    private IEnumerator StartDialogEndState0(){
+        yield return new WaitForSeconds(1f);
+        exitWall.SetActive(false); // desactive le mur invisible pour quitter library
+        DialogOpen.instance.StartDialog(dialogEndState0);
+        enabled = true;
     }
 
     private IEnumerator Fade()
