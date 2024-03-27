@@ -2026,7 +2026,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
-  isItemObtained: 0
+  isItemObtained: 1
   item: {fileID: 11400000, guid: 7a59efc737759e9ee93f3660dd9b7134, type: 2}
   destroyObject: 1
   isChangingScene: 0
@@ -5655,7 +5655,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2084515559}
   - component: {fileID: 2084515561}
-  - component: {fileID: 2084515560}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -5678,19 +5677,6 @@ Transform:
   m_Father: {fileID: 2061099955}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2084515560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084515558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 194e01a111ca1c94b85745c629b23558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: 
 --- !u!65 &2084515561
 BoxCollider:
   m_ObjectHideFlags: 0
