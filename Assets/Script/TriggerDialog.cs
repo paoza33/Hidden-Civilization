@@ -15,6 +15,7 @@ public class TriggerDialog : MonoBehaviour
     public Animator animatorDoor;
 
     public BoxCollider colliderToDesactivate;
+    public MeshCollider meshColliderDesactivate;
     public BoxCollider colliderToActivate;
     public BoxCollider colliderDoorBathroom;    // on rajoute plusieurs variables s'utilisant que dans un cas, car flemme de refaire un script pour chacun de ces cas 
 
@@ -104,6 +105,11 @@ public class TriggerDialog : MonoBehaviour
                 if (colliderToDesactivate != null)
                 {
                     colliderToDesactivate.enabled = false;
+                    enabled = false;
+                }
+                if(meshColliderDesactivate != null){
+                    meshColliderDesactivate.enabled = false;
+                    enabled = false;
                 }
                 if(colliderToActivate != null)
                 {
@@ -115,6 +121,7 @@ public class TriggerDialog : MonoBehaviour
                 }
                 if (isChangingScene && !isNeedKey)
                 {
+                    enabled = false;
                     PlayerMovement.instance.StopMovement();
                     StartCoroutine(Fade());
                 }
@@ -122,6 +129,7 @@ public class TriggerDialog : MonoBehaviour
                 {
                     if (Inventory.instance.FindItem(keyNeeded))
                     {
+                        enabled = false;
                         PlayerMovement.instance.StopMovement();
                         StartCoroutine(Fade());
                     }
@@ -132,6 +140,7 @@ public class TriggerDialog : MonoBehaviour
                 }
                 if (isItemObtained)
                 {
+                    enabled = false;
                     Inventory.instance.AddItem(item);
                     textInteract.enabled = false;
                     if (destroyObject)

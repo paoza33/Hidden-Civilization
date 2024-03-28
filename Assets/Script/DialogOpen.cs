@@ -10,6 +10,7 @@ public class DialogOpen : MonoBehaviour
     private TextMeshProUGUI textNameCanvas;
     private TextMeshProUGUI textDialogCanvas;
     private Queue<string> sentences;
+    private string currentSentence; // pour pouvoir afficher instantanement la phrase en cours
     private Button choice1;
     private Button choice2;
 
@@ -18,6 +19,8 @@ public class DialogOpen : MonoBehaviour
 
     private bool ifDialog = false;
 
+    private bool sentenceComplete = true;
+    
     public static DialogOpen instance;
     private void Awake()
     {
@@ -68,13 +71,18 @@ public class DialogOpen : MonoBehaviour
 
     public bool DisplayNextSentences()
     {
-        if(sentences.Count == 0 && !ifDialog) { 
+        if(!sentenceComplete){
+            StopAllCoroutines();
+            textDialogCanvas.text = currentSentence;
+            sentenceComplete = true;
+        }
+        else if(sentences.Count == 0 && !ifDialog) { 
             EndDialog();
             return false;
         }
         else if (sentences.Count == 0 && ifDialog)
         {
-            if (!choice1.gameObject.activeSelf)    // on affiche les boutons lorsque c'est la dernière phrase
+            if (!choice1.gameObject.activeSelf)    // on affiche les boutons lorsque c'est la derniï¿½re phrase
             {
                 choice1.gameObject.SetActive(true);
                 choice2.gameObject.SetActive(true);
@@ -83,6 +91,7 @@ public class DialogOpen : MonoBehaviour
         else 
         {
             string sentence = sentences.Dequeue();
+            currentSentence = sentence;
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
         }
@@ -102,11 +111,13 @@ public class DialogOpen : MonoBehaviour
     {
         textDialogCanvas.text = "";
         string[] words = sentence.Split(' ');
+        sentenceComplete = false;
         foreach (string word in words)
         {
             textDialogCanvas.text += word + " ";
             yield return new WaitForSeconds(0.05f);
         }
+        sentenceComplete = true;
     }
 
     public void EndDialog()

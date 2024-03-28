@@ -1049,6 +1049,10 @@ MonoBehaviour:
   - {fileID: 596722563}
   - {fileID: 1879813684}
   - {fileID: 1550319562}
+  - {fileID: 1095916750}
+  - {fileID: 1858640307}
+  - {fileID: 1436799238}
+  - {fileID: 1095199192}
   objState0:
   - {fileID: 1933506407}
   - {fileID: 2071007191}
@@ -1072,11 +1076,12 @@ MonoBehaviour:
     sentences:
     - "Le livre n'a aucune r\xE9action, blablabla"
   dialogBeginningState2:
-    name: 
+    name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - explication enigme.
   exitWall: {fileID: 2049385381}
   state: 0
 --- !u!4 &583166792
@@ -2008,6 +2013,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 934505970}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -2028,7 +2034,7 @@ MonoBehaviour:
   isNeedKey: 0
   isItemObtained: 1
   item: {fileID: 11400000, guid: 7a59efc737759e9ee93f3660dd9b7134, type: 2}
-  destroyObject: 1
+  destroyObject: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
@@ -2377,6 +2383,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -2462,6 +2469,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -3425,6 +3433,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -4564,6 +4573,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -5524,6 +5534,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
