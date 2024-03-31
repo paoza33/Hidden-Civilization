@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -21,9 +22,14 @@ public class LibraryManagment : MonoBehaviour
 
     public GameObject playerStart;
     public Transform spawnLibTwo;
+    public Transform spawnState2;
 
     public BoxCollider[] collidersDesactivateState0;
     public BoxCollider[] collidersDesactivateState1;
+
+    public GameObject[] allCab;
+    public GameObject[] cabLevel0, cabLevel1, cabLevel2, cabLevel3;
+
     public GameObject[] objState0;
     public GameObject[] objState1;
 
@@ -31,24 +37,38 @@ public class LibraryManagment : MonoBehaviour
     public Dialog dialogEndState0;
     public Dialog dialogBeginningState2;
 
+    public Dialog bookLevel0, bookLevel1, bookLevel2, bookLevel3;
+
     public GameObject exitWall;
 
     private int level = 0;
 
+    private TextMeshProUGUI readBook;
+    private TextMeshProUGUI textInteract;
+
     [HideInInspector]
     public int state;
+
+    public int currentId;
+    private GameObject currentSymbol;
+    private BoxCollider currentBoxCol;
+
+    private bool startingState2Dialog;
+    private bool readingBook;
 
     public static LibraryManagment instance;
 
     private void Awake()
     {
-        enabled = false;
         if(instance != null)
         {
             Debug.Log("il y a plus d'une instance de library managment");
             return;
         }
         instance = this;
+
+        readBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Library2")
@@ -67,27 +87,53 @@ public class LibraryManagment : MonoBehaviour
         }
         else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
-                coll.enabled = false;
+                coll.enabled = false;                                                                                           // chercher à mettre le texte du chef + bon ordre
 
             foreach(GameObject obj in objState1)
                 obj.SetActive(true);
                 StartCoroutine(Fade());
         }
         else if (state == 2){
+            foreach (GameObject obj in cabLevel1) { obj.GetComponent<BoxCollider>().enabled = false; }
+            foreach (GameObject obj in cabLevel2) { obj.GetComponent<BoxCollider>().enabled = false; }
+            foreach (GameObject obj in cabLevel3) { obj.GetComponent<BoxCollider>().enabled = false; }
+
+            startingState2Dialog = true;
+            playerStart.transform.position = spawnState2.position;
             SettingsEngima();
             DialogOpen.instance.StartDialog(dialogBeginningState2);
-            enabled = true;
         }
     }
 
     private void Update()
     {
-        if(Input.GetButtonDown("Interact")){
+        if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2)
+        {
+            readingBook = true;
+
+            if(level == 0)
+                DialogOpen.instance.StartDialog(bookLevel0);
+            else if(level == 1)
+                DialogOpen.instance.StartDialog(bookLevel1);
+            else if(level == 2)
+                DialogOpen.instance.StartDialog(bookLevel2);
+            else if(level == 3)
+                DialogOpen.instance.StartDialog(bookLevel3);
+
+        }
+        else if (startingState2Dialog && Input.GetButtonDown("Interact")){
             if(!DialogOpen.instance.DisplayNextSentences()){
-                if (state == 2){ // start state2
+                if (state == 2 && startingState2Dialog){ // start state2
+                    startingState2Dialog = false;
                     StartCoroutine(Fade());
-                    enabled = false;
                 }
+            }
+        }
+        else if(readingBook && Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                readingBook = false;
             }
         }
     }
@@ -96,16 +142,15 @@ public class LibraryManagment : MonoBehaviour
     {
         if (orderPlayer.Count < orderSolution.Count) // on ajoute si liste pas compl�te
         {
-            if(!orderPlayer.Contains(symboleID))
-            {
-                orderPlayer.Add(symboleID);
-                symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est d�j� sur true, donc il suffit juste de l'activer
-            }
-            else
-            {
-                return;
-            }
+            orderPlayer.Add(symboleID);
+            symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est d�j� sur true, donc il suffit juste de l'activer
         }
+
+        for (int i = 0; i < orderPlayer.Count; i++)
+        {
+            Debug.Log("order player [" + i + "]" + orderPlayer[i]);
+        }
+
         if ((orderPlayer.Count == orderSolution.Count) && orderPlayer.SequenceEqual(orderSolution))   // si l'ordre du joueur est correct
         {
             LevelAccomplished();
@@ -118,10 +163,45 @@ public class LibraryManagment : MonoBehaviour
         {
             Debug.Log("depassement non suppos� etre possible");
         }
+        
     }
 
     private void LevelFailed()
     {
+        Debug.Log("Failed");
+        if (level == 0)
+        {
+            foreach (GameObject obj in cabLevel0)
+            {
+                obj.GetComponent<BoxCollider>().enabled = true;
+                obj.GetComponent<CabinetInteraction>().playerAlreadyInteract = false;
+            }
+        }
+        if (level == 1)
+        {
+            foreach (GameObject obj in cabLevel1)
+            {
+                obj.GetComponent<BoxCollider>().enabled = true;
+                obj.GetComponent<CabinetInteraction>().playerAlreadyInteract = false;
+            }
+        }
+        if (level == 2)
+        {
+            foreach (GameObject obj in cabLevel2)
+            {
+                obj.GetComponent<BoxCollider>().enabled = true;
+                obj.GetComponent<CabinetInteraction>().playerAlreadyInteract = false;
+            }
+        }
+        if (level == 3)
+        {
+            foreach (GameObject obj in cabLevel3)
+            {
+                obj.GetComponent<BoxCollider>().enabled = true;
+                obj.GetComponent<CabinetInteraction>().playerAlreadyInteract = false;
+            }
+        }
+
         orderPlayer.Clear();
         StartCoroutine(DelayResetFlicker());
     }
@@ -134,19 +214,36 @@ public class LibraryManagment : MonoBehaviour
 
     private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouv� -> donc trouver exactement le meme nombre de mots que de symboles
     {
+        Debug.Log("Accomplished");
         orderPlayer.Clear();
         if (level == 0)
         {
+            foreach(GameObject obj in cabLevel0)
+            {
+                obj.GetComponent<BoxCollider>().enabled = false;
+                obj.GetComponent<CabinetInteraction>().enabled = false;
+            }
+            foreach (GameObject obj in cabLevel1)
+                obj.GetComponent<BoxCollider>().enabled = true;
+
             level = 1;
             UpdateLevel(solution2, symbols2);
         }
         else if (level == 1)
         {
+            foreach (GameObject obj in cabLevel1)
+            {
+                obj.GetComponent<BoxCollider>().enabled = false;
+                obj.GetComponent<CabinetInteraction>().enabled = false;
+            }
+            foreach (GameObject obj in cabLevel2)
+                obj.GetComponent<BoxCollider>().enabled = true;
             level = 2;
             UpdateLevel(solution3, symbols3);
         }
         else if (level == 2)
         {
+            readBook.enabled = false;
             Debug.Log("finished");
         }
     }
@@ -156,6 +253,33 @@ public class LibraryManagment : MonoBehaviour
         symbols.AddRange(symbols1);
         orderSolution.AddRange(solution1);
         ResetFlickering();
+    }
+
+    public void UpdateCurrentCabinet(int id, GameObject symbol, BoxCollider col)
+    {
+        currentId = id;
+        currentSymbol = symbol;
+        currentBoxCol = col;
+    }
+
+    public void Choice(int choice)
+    {
+        DialogOpen.instance.EndDialog();
+        if (choice == 0)
+        {
+            textInteract.enabled = false;
+            currentBoxCol.enabled = false;
+            AddOrderPlayer(currentId, currentSymbol);
+            enabled = false;
+        }
+        else
+        {
+            textInteract.enabled = true;
+            allCab[currentId -1].GetComponent<CabinetInteraction>().enabled = true;
+            allCab[currentId - 1].GetComponent<CabinetInteraction>().playerAlreadyInteract = false;
+        }
+
+        readBook.enabled = true;
     }
 
     private void UpdateLevel(List<int> newSolution, List<GameObject> newSymbols)
@@ -198,7 +322,6 @@ public class LibraryManagment : MonoBehaviour
         yield return new WaitForSeconds(1f);
         exitWall.SetActive(false); // desactive le mur invisible pour quitter library
         DialogOpen.instance.StartDialog(dialogEndState0);
-        enabled = true;
     }
 
     private IEnumerator Fade()
@@ -210,5 +333,7 @@ public class LibraryManagment : MonoBehaviour
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
+        yield return new WaitForSeconds(1f);
+        readBook.enabled = true;
     }
 }

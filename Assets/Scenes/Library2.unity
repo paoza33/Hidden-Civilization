@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.22571349, b: 0.30692273, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571427, b: 0.30692387, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,6 +181,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.002354, y: 1, z: 15.557839}
   m_Center: {x: -4.001177, y: 0, z: -3.375997}
+--- !u!1 &63362031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63362033}
+  - component: {fileID: 63362032}
+  m_Layer: 0
+  m_Name: BlockExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &63362032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63362031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.47721, y: 1, z: 1.8559189}
+  m_Center: {x: -0.8667016, y: 0, z: 0.42795944}
+--- !u!4 &63362033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63362031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.0921364, y: -0.030030012, z: -10.05758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97986233
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545864590}
-  - component: {fileID: 545864589}
+  - component: {fileID: 545864591}
   m_Layer: 0
   m_Name: Library2Managment
   m_TagString: Untagged
@@ -697,20 +742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &545864589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545864588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53856addf14f9cc40a7e8f6e4e091db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unfixX: 1
-  unfixZ: 1
 --- !u!4 &545864590
 Transform:
   m_ObjectHideFlags: 0
@@ -724,8 +755,28 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545864591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545864588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6953ba4b0467a657db2624afb14d05ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "*Cough* *Cough * ... Toute cette poussi\xE8re ..."
+    - "Il n'y a que cette \xE9tag\xE8re cass\xE9e, fouillons \xE7a de plus pr\xE8s."
 --- !u!1 &655770043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToUpgrade:
   - Library
+  noInteraction: 0
 --- !u!114 &1196500658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyNeeded: 
   animatorDoor: {fileID: 0}
-  colliderToDesactivate: {fileID: 0}
+  colliderToDesactivate: {fileID: 63362032}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -2084,58 +2137,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -33.9, z: 0}
---- !u!1 &1907465870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1907465872}
-  - component: {fileID: 1907465871}
-  m_Layer: 0
-  m_Name: DialogBeggining
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1907465871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907465870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6953ba4b0467a657db2624afb14d05ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Paoza
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences:
-    - "*Cough* *Cough * ... Toute cette poussi\xE8re ..."
-    - "Il n'y a que cette \xE9tag\xE8re cass\xE9e, fouillons \xE7a de plus pr\xE8s."
---- !u!4 &1907465872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907465870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.362106, y: 6.5003977, z: 71.46773}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1955110752
 PrefabInstance:
   m_ObjectHideFlags: 0

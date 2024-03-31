@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class DialogOpen : MonoBehaviour
 {
     private Animator animatorDialog;
+
     private TextMeshProUGUI textNameCanvas;
     private TextMeshProUGUI textDialogCanvas;
+    private TextMeshProUGUI textReadBook;
+
     private Queue<string> sentences;
     private string currentSentence; // pour pouvoir afficher instantanement la phrase en cours
     private Button choice1;
     private Button choice2;
-
-    private string sentenceChoice1;
-    private string sentenceChoice2;
 
     private bool ifDialog = false;
 
@@ -31,8 +31,11 @@ public class DialogOpen : MonoBehaviour
         }
         instance = this;
         animatorDialog = GameObject.FindGameObjectWithTag("UIDialog").GetComponent<Animator>();
+
         textNameCanvas = GameObject.FindGameObjectWithTag("UINameDialog").GetComponent<TextMeshProUGUI>();
         textDialogCanvas = GameObject.FindGameObjectWithTag("UITextDialog").GetComponent <TextMeshProUGUI>();
+        textReadBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
+
         sentences = new Queue<string>();
         choice1 = GameObject.FindGameObjectWithTag("UIChoice1").GetComponent<Button>();
         choice2 = GameObject.FindGameObjectWithTag("UIChoice2").GetComponent<Button>();
@@ -48,9 +51,6 @@ public class DialogOpen : MonoBehaviour
             ifDialog = true;
             choice1.GetComponentInChildren<Text>().text = _dialog.choices[0];
             choice2.GetComponentInChildren<Text>().text = _dialog.choices[1];
-
-            sentenceChoice1 = _dialog.sentencesChoice1;
-            sentenceChoice2 = _dialog.sentencesChoice2;
         }
         else
         {
@@ -128,23 +128,15 @@ public class DialogOpen : MonoBehaviour
         PlayerMovement.instance.enabled = true;
     }
 
-    public void PlayerMakeAChoice(int choice)
+    public void PlayerMakeAChoice(int choice)   // only for library enigm
     {
-        if(choice == 1)
-        {
-            sentences.Enqueue(sentenceChoice1);
-        }
-        else if (choice == 2)
-        {
-            sentences.Enqueue(sentenceChoice2);
-        }
+        LibraryManagment.instance.Choice(choice);
 
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
 
         ifDialog = false;
-
-        DisplayNextSentences();
+        textReadBook.enabled = true;
     }
 
     private void DisplayButton()

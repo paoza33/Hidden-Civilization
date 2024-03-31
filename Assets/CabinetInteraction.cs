@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class CabinetInteraction : MonoBehaviour
 {
     public string keyNeeded;
-    private bool playerAlreadyInteract = false;
+    public bool playerAlreadyInteract = false;
     
     public Dialog open;
     public Dialog notOpen;
@@ -16,33 +17,42 @@ public class CabinetInteraction : MonoBehaviour
 
     public GameObject symbol;
 
+    private TextMeshProUGUI textInteract;
+    private TextMeshProUGUI readBook;
+
     private void Awake()
     {
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
+        readBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
         enabled = false;
     }
     
     private void Update(){
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
             playerAlreadyInteract = true;
+            textInteract.enabled = false;
+            readBook.enabled = false;
+            LibraryManagment.instance.UpdateCurrentCabinet(id, symbol, GetComponent<BoxCollider>());
+
             DialogOpen.instance.StartDialog(open);
         }
         else if(Input.GetButtonDown("Interact"))
         {
-            if (!DialogOpen.instance.DisplayNextSentences())
-            {
-                playerAlreadyInteract = false;
-            }
+            DialogOpen.instance.DisplayNextSentences(); // car qu'une seule phrase et la fin est geree dans librarymanagment avec l'appel de ResetDialog
+            enabled = false;
         }
     }
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Player")){
+            textInteract.enabled = true;
             enabled = true;
         }
     }
 
     private void OnTriggerExit(Collider other){
         if(other.CompareTag("Player")){
+            textInteract.enabled = false;
             enabled = false;
         }
     }

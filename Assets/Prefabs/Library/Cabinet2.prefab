@@ -101,7 +101,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2288668, y: 1.9999992, z: 1.3200814}
+  m_Size: {x: 1.4, y: 1.9999992, z: 1.3200814}
   m_Center: {x: 0.0000029346986, y: 0.99710065, z: 0.30901897}
 --- !u!114 &4832984756315465984
 MonoBehaviour:
@@ -115,18 +115,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2e87e1f2eb268af95c2a9b6144b185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyNeeded: MedalLibrary
+  keyNeeded: 
   open:
     name: Open
+    choices:
+    - Activer
+    - Retour
+    sentencesChoice1: Activer
+    sentencesChoice2: Retour
     sentences:
     - 1er test open
     - 2eme test open
   notOpen:
     name: not open
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
     sentences:
     - 1er test not open
     - 2eme test not open
-  id: 1
+  id: 16
   symbol: {fileID: 6851303382347199303}
 --- !u!1 &6851303382347199303
 GameObject:
