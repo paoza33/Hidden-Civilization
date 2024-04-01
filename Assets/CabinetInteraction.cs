@@ -38,8 +38,9 @@ public class CabinetInteraction : MonoBehaviour
         }
         else if(Input.GetButtonDown("Interact"))
         {
-            DialogOpen.instance.DisplayNextSentences(); // car qu'une seule phrase et la fin est geree dans librarymanagment avec l'appel de ResetDialog
-            enabled = false;
+            if(!DialogOpen.instance.DisplayNextSentences()){
+                enabled = false;
+            }
         }
     }
 

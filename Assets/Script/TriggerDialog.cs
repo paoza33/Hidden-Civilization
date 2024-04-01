@@ -69,7 +69,10 @@ public class TriggerDialog : MonoBehaviour
                 if (Inventory.instance.FindItem(keyNeeded))
                 {
                     animatorDoor.SetBool("PlayerHaveKey", true);
-                    colliderToDesactivate.enabled = false;
+                    if(colliderToDesactivate != null){
+                        colliderToDesactivate.enabled = false;
+                        textInteract.enabled = false;
+                    }
                     DialogOpen.instance.StartDialog(open);
                 }
                 else
@@ -105,6 +108,7 @@ public class TriggerDialog : MonoBehaviour
                 if (colliderToDesactivate != null)
                 {
                     colliderToDesactivate.enabled = false;
+                    textInteract.enabled = false;
                     enabled = false;
                 }
                 if(meshColliderDesactivate != null){
@@ -136,7 +140,8 @@ public class TriggerDialog : MonoBehaviour
                 }
                 else
                 {
-                    textInteract.enabled = true;
+                    if(colliderToDesactivate == null)
+                        textInteract.enabled = true;
                 }
                 if (isItemObtained)
                 {

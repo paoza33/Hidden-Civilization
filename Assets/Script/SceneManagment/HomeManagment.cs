@@ -67,21 +67,21 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState2);
+            DialogOpen.instance.StartDialog(dialogState3);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 4)   // retour wood, il se demande qui �tait cet homme et qu'il doit partir maintenant qu'il fait nuit
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState2);
+            DialogOpen.instance.StartDialog(dialogState4);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 5)   // retour Cave, "Je me suis assez repos�, il est temps d'aller au ruins"
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState2);
+            DialogOpen.instance.StartDialog(dialogState5);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 6)   // default

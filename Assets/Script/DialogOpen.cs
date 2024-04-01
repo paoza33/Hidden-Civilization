@@ -19,7 +19,7 @@ public class DialogOpen : MonoBehaviour
 
     private bool ifDialog = false;
 
-    private bool sentenceComplete = true;
+    public bool sentenceComplete = true;
     
     public static DialogOpen instance;
     private void Awake()
@@ -86,6 +86,7 @@ public class DialogOpen : MonoBehaviour
             {
                 choice1.gameObject.SetActive(true);
                 choice2.gameObject.SetActive(true);
+                return false;
             }
         }
         else 

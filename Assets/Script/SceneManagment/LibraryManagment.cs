@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LibraryManagment : MonoBehaviour
 {
@@ -36,10 +37,9 @@ public class LibraryManagment : MonoBehaviour
     private int nbrInteractionState0; // déclanche un dialogue quand = en state0
     public Dialog dialogEndState0;
     public Dialog dialogBeginningState2;
+    public Dialog ending;
 
     public Dialog bookLevel0, bookLevel1, bookLevel2, bookLevel3;
-
-    public GameObject exitWall;
 
     private int level = 0;
 
@@ -53,8 +53,12 @@ public class LibraryManagment : MonoBehaviour
     private GameObject currentSymbol;
     private BoxCollider currentBoxCol;
 
+    public GameObject windows;
+
+    private bool endingState0;
     private bool startingState2Dialog;
     private bool readingBook;
+    private bool isEnding;
 
     public static LibraryManagment instance;
 
@@ -83,7 +87,7 @@ public class LibraryManagment : MonoBehaviour
                 coll.enabled = false;
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
-                StartCoroutine(Fade());
+            StartCoroutine(Fade());
         }
         else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
@@ -107,7 +111,7 @@ public class LibraryManagment : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2)
+        if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding)
         {
             readingBook = true;
 
@@ -121,6 +125,11 @@ public class LibraryManagment : MonoBehaviour
                 DialogOpen.instance.StartDialog(bookLevel3);
 
         }
+        else if(endingState0 && Input.GetButtonDown("Interact")){
+            if(!DialogOpen.instance.DisplayNextSentences())
+                endingState0 = false;
+        }
+
         else if (startingState2Dialog && Input.GetButtonDown("Interact")){
             if(!DialogOpen.instance.DisplayNextSentences()){
                 if (state == 2 && startingState2Dialog){ // start state2
@@ -136,6 +145,13 @@ public class LibraryManagment : MonoBehaviour
                 readingBook = false;
             }
         }
+        else if(isEnding && Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                StartCoroutine(FadeEnding());
+            }
+        }
     }
 
     public void AddOrderPlayer(int symboleID, GameObject symbol)
@@ -144,11 +160,6 @@ public class LibraryManagment : MonoBehaviour
         {
             orderPlayer.Add(symboleID);
             symbol.GetComponent<FlickeringEmissive>().enabled = true;   // la valeur isReverse est d�j� sur true, donc il suffit juste de l'activer
-        }
-
-        for (int i = 0; i < orderPlayer.Count; i++)
-        {
-            Debug.Log("order player [" + i + "]" + orderPlayer[i]);
         }
 
         if ((orderPlayer.Count == orderSolution.Count) && orderPlayer.SequenceEqual(orderSolution))   // si l'ordre du joueur est correct
@@ -163,12 +174,10 @@ public class LibraryManagment : MonoBehaviour
         {
             Debug.Log("depassement non suppos� etre possible");
         }
-        
     }
 
     private void LevelFailed()
     {
-        Debug.Log("Failed");
         if (level == 0)
         {
             foreach (GameObject obj in cabLevel0)
@@ -214,7 +223,6 @@ public class LibraryManagment : MonoBehaviour
 
     private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouv� -> donc trouver exactement le meme nombre de mots que de symboles
     {
-        Debug.Log("Accomplished");
         orderPlayer.Clear();
         if (level == 0)
         {
@@ -244,7 +252,8 @@ public class LibraryManagment : MonoBehaviour
         else if (level == 2)
         {
             readBook.enabled = false;
-            Debug.Log("finished");
+            DialogOpen.instance.StartDialog(ending);
+            isEnding = true;
         }
     }
 
@@ -270,7 +279,6 @@ public class LibraryManagment : MonoBehaviour
             textInteract.enabled = false;
             currentBoxCol.enabled = false;
             AddOrderPlayer(currentId, currentSymbol);
-            enabled = false;
         }
         else
         {
@@ -319,8 +327,9 @@ public class LibraryManagment : MonoBehaviour
     }
 
     private IEnumerator StartDialogEndState0(){
-        yield return new WaitForSeconds(1f);
-        exitWall.SetActive(false); // desactive le mur invisible pour quitter library
+        yield return new WaitForSeconds(0.2f);
+        windows.SetActive(true);
+        endingState0 = true;
         DialogOpen.instance.StartDialog(dialogEndState0);
     }
 
@@ -334,6 +343,26 @@ public class LibraryManagment : MonoBehaviour
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
         yield return new WaitForSeconds(1f);
-        readBook.enabled = true;
+        if(state == 2)
+            readBook.enabled = true;
+    }
+
+    private IEnumerator FadeEnding()
+    {
+        readBook.enabled = false;
+        PlayerMovement.instance.StopMovement();
+        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.SetTrigger("FadeIn");
+
+        SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
+        data.cityState +=1;
+        data.homeState +=1;
+        data.villageState +=1;
+        SaveDataManager.SaveDataSceneState(data);
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene("Home");
+        
     }
 }
