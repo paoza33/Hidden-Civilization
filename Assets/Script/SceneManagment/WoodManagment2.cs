@@ -9,8 +9,8 @@ public class WoodManagment2 : MonoBehaviour
 
     private int state;
 
-    public GameObject[] triggerState0;
-    private GameObject[] triggerState1;
+    public GameObject[] objState0;
+    public GameObject[] objState1;
 
     private void Awake()
     {
@@ -25,12 +25,12 @@ public class WoodManagment2 : MonoBehaviour
     {
         if(state == 0)
         {
-            foreach(GameObject obj in triggerState0)
+            foreach(GameObject obj in objState0)
                 obj.SetActive(true);
         }
         else if(state == 1)
         {
-            foreach (GameObject obj in triggerState1)
+            foreach (GameObject obj in objState1)
                 obj.SetActive(true);
         }
     }

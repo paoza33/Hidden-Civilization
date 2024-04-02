@@ -1,41 +1,67 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DialogPNJ : MonoBehaviour
 {
-    private Animator animator;
-
     private bool playerAlreadyInteract = false;
 
     public Dialog dialog;
+    public bool needInteraction;
+
+    private TextMeshProUGUI textInteract;
 
     private void Awake()
     {
-        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
+        if (needInteraction)
         {
-            playerAlreadyInteract = true;
-            DialogOpen.instance.StartDialog(dialog);
-        }
-        else if (Input.GetButtonDown("Interact"))
-        {
-            if (!DialogOpen.instance.DisplayNextSentences())
+            if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
             {
-                playerAlreadyInteract = false;
+                textInteract.enabled = false;
+                playerAlreadyInteract = true;
+                DialogOpen.instance.StartDialog(dialog);
+            }
+            else if (Input.GetButtonDown("Interact"))
+            {
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    playerAlreadyInteract = false;
+                    textInteract.enabled = true;
+                }
             }
         }
+        else
+        {
+            if (!playerAlreadyInteract)
+            {
+                DialogOpen.instance.StartDialog(dialog);
+                playerAlreadyInteract = true;
+            }
+            else if (Input.GetButtonDown("Interact"))
+            {
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    playerAlreadyInteract = false;
+                    needInteraction = true;
+                }
+            }   
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            if (needInteraction)
+                textInteract.enabled = true;
             enabled = true;
         }
     }
@@ -44,6 +70,8 @@ public class DialogPNJ : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (needInteraction)
+                textInteract.enabled = false;
             enabled = false;
         }
     }
