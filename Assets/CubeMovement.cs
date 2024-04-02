@@ -36,14 +36,14 @@ public class CubeMovement : MonoBehaviour
         enabled = true;
     }
 
-    // set coordonnées [x,y]
+    // set coordonnï¿½es [x,y]
     private void SetNewPosition(CubeObject mainCube, string direction)
     {
         if(direction == "Eastward")
         {
             for(int i = mainCube.positionY +1; i < 6; i++)
             {
-                if (GridManagment.instance.gridScene[mainCube.positionX,i] != null) // on vérifie si il y a un cube sur le chemin
+                if (GridManagment.instance.gridScene[mainCube.positionX,i] != null) // on vï¿½rifie si il y a un cube sur le chemin
                 {
                     gridCoordinate[0] = mainCube.positionX;
                     gridCoordinate[1] = i - 1; // si oui, notre position sera la position juste derriere le cube rencontre
@@ -124,7 +124,7 @@ public class CubeMovement : MonoBehaviour
     {
         currentPos = cubeObject.transform.position;
         cubeObject.transform.position = Vector3.MoveTowards(currentPos, newWorldPos, 5f * Time.deltaTime);
-        if (Vector3.Distance(cubeObject.transform.position, newWorldPos) < closeEnough) // les vecteurs ne sont pas egaux à des milliemes pres
+        if (Vector3.Distance(cubeObject.transform.position, newWorldPos) < closeEnough) // les vecteurs ne sont pas egaux ï¿½ des milliemes pres
         {
             if (!isCube)
             {
@@ -136,7 +136,7 @@ public class CubeMovement : MonoBehaviour
                 isCube = false;
                 if(cubeObject.GetComponent<CubeObject>().name == "MainCube")
                 {
-                    if((cubeObject.GetComponent<CubeObject>().positionX == 3) && (cubeObject.GetComponent<CubeObject>().positionY == 3))
+                    if((cubeObject.GetComponent<CubeObject>().positionX == 3) && (cubeObject.GetComponent<CubeObject>().positionY == 3)) // win !!!
                     {
                         stele.gameObject.SetActive(true);
                         cubeObject.GetComponent<MeshRenderer>().material.shader = shader;

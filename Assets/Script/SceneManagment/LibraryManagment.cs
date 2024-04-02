@@ -58,6 +58,7 @@ public class LibraryManagment : MonoBehaviour
     private bool endingState0;
     private bool startingState2Dialog;
     private bool readingBook;
+    public bool anotherInteraction;
     private bool isEnding;
 
     public static LibraryManagment instance;
@@ -111,45 +112,48 @@ public class LibraryManagment : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding)
+        if(!anotherInteraction)
         {
-            readingBook = true;
+            if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding)
+            {
+                readingBook = true;
 
-            if(level == 0)
-                DialogOpen.instance.StartDialog(bookLevel0);
-            else if(level == 1)
-                DialogOpen.instance.StartDialog(bookLevel1);
-            else if(level == 2)
-                DialogOpen.instance.StartDialog(bookLevel2);
-            else if(level == 3)
-                DialogOpen.instance.StartDialog(bookLevel3);
+                if(level == 0)
+                    DialogOpen.instance.StartDialog(bookLevel0);
+                else if(level == 1)
+                    DialogOpen.instance.StartDialog(bookLevel1);
+                else if(level == 2)
+                    DialogOpen.instance.StartDialog(bookLevel2);
+                else if(level == 3)
+                    DialogOpen.instance.StartDialog(bookLevel3);
 
-        }
-        else if(endingState0 && Input.GetButtonDown("Interact")){
-            if(!DialogOpen.instance.DisplayNextSentences())
-                endingState0 = false;
-        }
+            }
+            else if(endingState0 && Input.GetButtonDown("Interact")){
+                if(!DialogOpen.instance.DisplayNextSentences())
+                    endingState0 = false;
+            }
 
-        else if (startingState2Dialog && Input.GetButtonDown("Interact")){
-            if(!DialogOpen.instance.DisplayNextSentences()){
-                if (state == 2 && startingState2Dialog){ // start state2
-                    startingState2Dialog = false;
-                    StartCoroutine(Fade());
+            else if (startingState2Dialog && Input.GetButtonDown("Interact")){
+                if(!DialogOpen.instance.DisplayNextSentences()){
+                    if (state == 2 && startingState2Dialog){ // start state2
+                        startingState2Dialog = false;
+                        StartCoroutine(Fade());
+                    }
                 }
             }
-        }
-        else if(readingBook && Input.GetButtonDown("Interact"))
-        {
-            if (!DialogOpen.instance.DisplayNextSentences())
+            else if(readingBook && Input.GetButtonDown("Interact"))
             {
-                readingBook = false;
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    readingBook = false;
+                }
             }
-        }
-        else if(isEnding && Input.GetButtonDown("Interact"))
-        {
-            if (!DialogOpen.instance.DisplayNextSentences())
+            else if(isEnding && Input.GetButtonDown("Interact"))
             {
-                StartCoroutine(FadeEnding());
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    StartCoroutine(FadeEnding());
+                }
             }
         }
     }

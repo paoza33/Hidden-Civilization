@@ -26,6 +26,7 @@ public class VillageManagment : MonoBehaviour
 
         SaveDataSceneState dataState = SaveDataManager.LoadDataSceneState();
         state = dataState.villageState;
+        Debug.Log("state village = " + state);
         if(state == 0)  // joueur enfant, il se dirige vers le camp, on bloque wood et city
         {
             enabled = true;
@@ -59,6 +60,12 @@ public class VillageManagment : MonoBehaviour
             foreach (GameObject obj in colliderState3)
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState3)
+                obj.SetActive(true);
+        }
+        else if(state == 4){        // retour wood pour dormir -> objectif home
+            foreach (GameObject obj in colliderState4)
+                obj.SetActive(true);
+            foreach(GameObject obj in portalsState4)
                 obj.SetActive(true);
         }
         else // default bloque rien

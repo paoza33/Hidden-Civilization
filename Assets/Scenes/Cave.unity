@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18354808, g: 0.22908352, b: 0.30558443, a: 1}
+  m_IndirectSpecularColor: {r: 0.18354753, g: 0.22908285, b: 0.30558324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1818,6 +1818,7 @@ GameObject:
   - component: {fileID: 1898550555}
   - component: {fileID: 1898550556}
   - component: {fileID: 1898550557}
+  - component: {fileID: 1898550558}
   m_Layer: 0
   m_Name: Interaction
   m_TagString: Untagged
@@ -1868,6 +1869,10 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 1068734797}
+  meshColliderDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  ifChangeStateCamp: 0
   open:
     name: Poneglyphe
     choices: []
@@ -1882,8 +1887,30 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
-  isChangingScene: 0
-  levelToLoad: 
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
+  isChangingScene: 1
+  levelToLoad: Home
+  pnjAppear: {fileID: 0}
+  ifLibrary: 0
+--- !u!114 &1898550558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898550554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0ae9b94ed513c4f8e27bb383ccad97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToUpgrade:
+  - Home
+  - City
+  - Village
+  noInteraction: 0
 --- !u!1 &1926082105
 GameObject:
   m_ObjectHideFlags: 0

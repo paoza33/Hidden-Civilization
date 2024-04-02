@@ -75,6 +75,8 @@ public class HomeManagment : MonoBehaviour
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
             DialogOpen.instance.StartDialog(dialogState4);
+            saveDataSceneState.woodState +=1;
+            SaveDataManager.SaveDataSceneState(saveDataSceneState);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 5)   // retour Cave, "Je me suis assez repos�, il est temps d'aller au ruins"

@@ -9,6 +9,7 @@ public class DialogPNJ : MonoBehaviour
 
     public Dialog dialog;
     public bool needInteraction;
+    public Item item;
 
     private TextMeshProUGUI textInteract;
 
@@ -32,6 +33,8 @@ public class DialogPNJ : MonoBehaviour
             {
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
+                    if(item != null)
+                        Inventory.instance.AddItem(item);
                     playerAlreadyInteract = false;
                     textInteract.enabled = true;
                 }

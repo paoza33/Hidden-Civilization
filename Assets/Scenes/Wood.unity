@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyNeeded: The Key
+  keyNeeded: WoodKey
   animatorDoor: {fileID: 298906116}
   colliderToDesactivate: {fileID: 872824086}
   meshColliderDesactivate: {fileID: 0}
@@ -5337,6 +5337,7 @@ MonoBehaviour:
     - "Elle semble r\xE9agir lorsqu'elle est \xE0 proximit\xE9 d'un objet particulier
       la nuit."
   needInteraction: 0
+  item: {fileID: 11400000, guid: 053ef396c8047fc45852f04c1b8b42a9, type: 2}
 --- !u!1001 &661097894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7539,7 +7540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1021990530
 Transform:
   m_ObjectHideFlags: 0
@@ -8453,7 +8454,7 @@ MonoBehaviour:
   scenesToUpgrade:
   - Village
   - Home
-  noInteraction: 0
+  noInteraction: 1
 --- !u!1001 &1191977516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11254,7 +11255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStart: {fileID: 1264740469}
   spawnCave: {fileID: 6852756600515658696}
-  objState0: []
+  objState0:
+  - {fileID: 1021990529}
   objState1:
   - {fileID: 1829880246}
   - {fileID: 1375918199}

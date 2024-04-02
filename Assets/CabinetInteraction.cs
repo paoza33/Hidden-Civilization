@@ -29,6 +29,7 @@ public class CabinetInteraction : MonoBehaviour
     
     private void Update(){
         if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
+            LibraryManagment.instance.anotherInteraction = true;
             playerAlreadyInteract = true;
             textInteract.enabled = false;
             readBook.enabled = false;
@@ -39,6 +40,7 @@ public class CabinetInteraction : MonoBehaviour
         else if(Input.GetButtonDown("Interact"))
         {
             if(!DialogOpen.instance.DisplayNextSentences()){
+                LibraryManagment.instance.anotherInteraction = false;
                 enabled = false;
             }
         }

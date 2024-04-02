@@ -10,9 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b8425e2f1f2eb647b846de6bf856be9, type: 3}
-  m_Name: Key
+  m_Name: WoodKey
   m_EditorClassIdentifier: 
-  typeOfItem: Quest
-  nameItem: The Key
-  descriptionItem: oneKey
-  sprite: {fileID: 0}
+  nameItem: WoodKey

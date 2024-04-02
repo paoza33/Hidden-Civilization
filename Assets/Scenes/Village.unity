@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -331,6 +331,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -355,6 +356,7 @@ MonoBehaviour:
   isChangingScene: 1
   levelToLoad: Home
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &29369132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,6 +385,7 @@ MonoBehaviour:
   scenesToUpgrade:
   - Home
   - Village
+  noInteraction: 0
 --- !u!1 &38950887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +3717,7 @@ MonoBehaviour:
     sentences:
     - "Je dois cacher ce livre avant de rentrer si je ne veux pas que ma m\xE8re
       le vois. L'arbre \xE0 gauche devrait \xEAtre un bon endroit."
+  ifLibraryDoorState0: 0
 --- !u!1 &424576429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,6 +5186,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Je n'ai rien \xE0 faire ici"
+  ifLibraryDoorState0: 0
 --- !u!1 &621265746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,6 +5642,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Je n'ai rien \xE0 faire ici"
+  ifLibraryDoorState0: 0
 --- !u!1 &657485392
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,6 +9572,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -9589,6 +9596,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &1072755303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11617,6 +11625,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Je n'ai rien \xE0 faire ici"
+  ifLibraryDoorState0: 0
 --- !u!1 &1360875294
 GameObject:
   m_ObjectHideFlags: 0
@@ -12879,6 +12888,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  ifLibraryDoorState0: 0
 --- !u!65 &1455388819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18847,6 +18857,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -18871,6 +18882,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &2046688656
 BoxCollider:
   m_ObjectHideFlags: 0
