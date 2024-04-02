@@ -246,6 +246,10 @@ MonoBehaviour:
   keyNeeded: The Key
   animatorDoor: {fileID: 298906116}
   colliderToDesactivate: {fileID: 872824086}
+  meshColliderDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  ifChangeStateCamp: 0
   open:
     name: 
     choices: []
@@ -262,8 +266,13 @@ MonoBehaviour:
     - Still Close mada mada dane omae wa mo shindeiru
     - mais desespere pas mon ami, tu sais que yare yare daze n'est-ce pas ?
   isNeedKey: 1
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
   isChangingScene: 0
   levelToLoad: 
+  pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &13243518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11098,6 +11107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStart: {fileID: 1264740469}
   spawnCave: {fileID: 6852756600515658696}
+  triggerState0: []
 --- !u!4 &1677580116
 Transform:
   m_ObjectHideFlags: 0
@@ -14773,6 +14783,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3664041740968178610, guid: 7db2eff13b40a794bbff08e0971c6af1, type: 3}
   m_PrefabInstance: {fileID: 2142241946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3791795080330718609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3791795080330718612}
+  - component: {fileID: 3791795080330718615}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3791795080330718612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791795080330718609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.244818, y: 0.62, z: 7.5775704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3791795080330718615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791795080330718609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.53232, y: 1, z: 1}
+  m_Center: {x: -1.2516632, y: 0, z: 0}
 --- !u!1001 &6273530120008833228
 PrefabInstance:
   m_ObjectHideFlags: 0
