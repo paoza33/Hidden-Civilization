@@ -15,9 +15,9 @@ public class VillageManagment : MonoBehaviour
 
     private int state;
 
-    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3, colliderState4;
+    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3, colliderState4, colliderState5, colliderState6;
 
-    public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4;
+    public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4, portalsState5, portalsState6;
 
     private void Awake()
     {
@@ -55,23 +55,31 @@ public class VillageManagment : MonoBehaviour
             foreach(GameObject obj in portalsState2)
                 obj.SetActive(true);
         }
-        else if(state == 3){    // joueur se dirige vers wood, nuit, on bloque city et camp
-            skyLight.intensity = 0.2f;
+        else if (state == 3) // joueur se dirige vers wood en journée, on bloque City et camp
+        {
             foreach (GameObject obj in colliderState3)
                 obj.SetActive(true);
-            foreach(GameObject obj in portalsState3)
+            foreach (GameObject obj in portalsState3)
                 obj.SetActive(true);
         }
-        else if(state == 4){        // retour wood pour dormir -> objectif home
+        else if(state == 4){    // joueur se dirige vers wood, nuit, on bloque city et camp
+            skyLight.intensity = 0.2f;
             foreach (GameObject obj in colliderState4)
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState4)
                 obj.SetActive(true);
         }
-        else // default bloque rien
+        else if(state == 5){        // retour wood, direction city -> objectif ruins, on bloque wood et camp
+            foreach (GameObject obj in colliderState5)
+                obj.SetActive(true);
+            foreach(GameObject obj in portalsState5)
+                obj.SetActive(true);
+        }
+        else if (state == 6)    // retour ruins, objectif lost island, on bloque city, wood
         {
-            //present
-            foreach(GameObject obj in portalsState4)
+            foreach (GameObject obj in colliderState6)
+                obj.SetActive(true);
+            foreach (GameObject obj in portalsState6)
                 obj.SetActive(true);
         }
 

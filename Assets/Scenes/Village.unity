@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17879,6 +17879,8 @@ MonoBehaviour:
   - {fileID: 1198489504}
   colliderState4:
   - {fileID: 1455388816}
+  colliderState5: []
+  colliderState6: []
   portalsState0:
   - {fileID: 1248481167820134220}
   - {fileID: 518033861}
@@ -17901,9 +17903,19 @@ MonoBehaviour:
   - {fileID: 2046688654}
   portalsState4:
   - {fileID: 157376130}
-  - {fileID: 1537549209}
-  - {fileID: 22210351}
+  - {fileID: 518033861}
+  - {fileID: 1891128556}
   - {fileID: 2046688654}
+  portalsState5:
+  - {fileID: 2046688654}
+  - {fileID: 1248481167820134220}
+  - {fileID: 1891128556}
+  - {fileID: 1537549209}
+  portalsState6:
+  - {fileID: 2046688654}
+  - {fileID: 1248481167820134220}
+  - {fileID: 518033861}
+  - {fileID: 22210351}
 --- !u!1 &1945566201
 GameObject:
   m_ObjectHideFlags: 0
@@ -18836,7 +18848,7 @@ GameObject:
   - component: {fileID: 2046688656}
   - component: {fileID: 2046688655}
   m_Layer: 0
-  m_Name: State2/3/4
+  m_Name: StatePresent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

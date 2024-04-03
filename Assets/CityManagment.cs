@@ -43,30 +43,7 @@ public class CityManagment : MonoBehaviour
     }
     private void Start()
     {
-        if(state == 0)
-        {
-            foreach(GameObject obj in objState0)
-            {
-                obj.SetActive(true);
-            }
-        }
-        else if(state == 1)
-        {
-            foreach(GameObject obj in objState1)
-            { obj.SetActive(true); }
-
-            skyLight.intensity = 0.2f;
-        }
-        else if( state == 2)    // library close (cambriolage)
-        {
-            foreach (GameObject obj in objState2)
-            { obj.SetActive(true); }
-        }
-        else if(state == 3)
-        {
-            foreach (GameObject obj in objState3)
-            { obj.SetActive(true); }
-        }
+        SettingsCityState();
 
         StartCoroutine(Fade());
     }
@@ -76,5 +53,33 @@ public class CityManagment : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
+    }
+
+    private void SettingsCityState()
+    {
+        if (state == 0)  // direction library
+        {
+            foreach (GameObject obj in objState0)
+            {
+                obj.SetActive(true);
+            }
+        }
+        else if (state == 1)    // direction library night
+        {
+            foreach (GameObject obj in objState1)
+            { obj.SetActive(true); }
+
+            skyLight.intensity = 0.2f;
+        }
+        else if (state == 2)    // objectif ruins
+        {
+            foreach (GameObject obj in objState2)
+            { obj.SetActive(true); }
+        }
+        else if (state == 3)    // retour ruins
+        {
+            foreach (GameObject obj in objState3)
+            { obj.SetActive(true); }
+        }
     }
 }
