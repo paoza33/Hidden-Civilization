@@ -7,12 +7,27 @@ public class RuinsManagment : MonoBehaviour
     public GameObject playerStart;
 
     public Transform spawnTower;
+    public GameObject[] objState0;
+    public GameObject[] objState1;
+
 
     private void Awake()
     {
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Tower")
             playerStart.transform.position = spawnTower.position;
+        
+        SaveDataSceneState state = SaveDataManager.LoadDataSceneState();
+        if(state.ruinsState == 0){
+            foreach(GameObject obj in objState0)
+                obj.SetActive(true);
+        }
+        else if(state.ruinsState == 1){
+            foreach(GameObject obj in objState0)
+                obj.SetActive(true);
+        }
+        
+
     }
 
     private void Start()

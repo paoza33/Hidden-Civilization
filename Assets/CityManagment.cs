@@ -57,6 +57,7 @@ public class CityManagment : MonoBehaviour
 
     private void SettingsCityState()
     {
+        Debug.Log("city state = " + state);
         if (state == 0)  // direction library
         {
             foreach (GameObject obj in objState0)
