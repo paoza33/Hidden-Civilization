@@ -359,9 +359,7 @@ public class LibraryManagment : MonoBehaviour
         animator.SetTrigger("FadeIn");
 
         SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
-        data.cityState +=1;
         data.homeState +=1;
-        data.villageState +=1;
         SaveDataManager.SaveDataSceneState(data);
 
         yield return new WaitForSeconds(1f);

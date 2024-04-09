@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17879,8 +17879,18 @@ MonoBehaviour:
   - {fileID: 1198489504}
   colliderState4:
   - {fileID: 1455388816}
-  colliderState5: []
-  colliderState6: []
+  - {fileID: 646265278}
+  - {fileID: 1198489504}
+  - {fileID: 586384505}
+  colliderState5:
+  - {fileID: 646265278}
+  - {fileID: 1198489504}
+  colliderState6:
+  - {fileID: 1198489504}
+  - {fileID: 586384505}
+  colliderState7:
+  - {fileID: 646265278}
+  - {fileID: 586384505}
   portalsState0:
   - {fileID: 1248481167820134220}
   - {fileID: 518033861}
@@ -17902,16 +17912,21 @@ MonoBehaviour:
   - {fileID: 157376130}
   - {fileID: 2046688654}
   portalsState4:
-  - {fileID: 157376130}
+  - {fileID: 1248481167820134220}
   - {fileID: 518033861}
   - {fileID: 1891128556}
   - {fileID: 2046688654}
   portalsState5:
+  - {fileID: 157376130}
+  - {fileID: 518033861}
+  - {fileID: 1891128556}
+  - {fileID: 2046688654}
+  portalsState6:
   - {fileID: 2046688654}
   - {fileID: 1248481167820134220}
   - {fileID: 1891128556}
   - {fileID: 1537549209}
-  portalsState6:
+  portalsState7:
   - {fileID: 2046688654}
   - {fileID: 1248481167820134220}
   - {fileID: 518033861}

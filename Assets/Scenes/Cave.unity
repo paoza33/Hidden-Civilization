@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18354753, g: 0.22908285, b: 0.30558324, a: 1}
+  m_IndirectSpecularColor: {r: 0.18354808, g: 0.22908352, b: 0.30558443, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1908,8 +1908,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToUpgrade:
   - Home
-  - City
-  - Village
   noInteraction: 0
 --- !u!1 &1926082105
 GameObject:

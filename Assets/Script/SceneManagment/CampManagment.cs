@@ -24,8 +24,9 @@ public class CampManagment : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         state = SaveDataManager.LoadDataSceneState().campState;
-        Debug.Log("state camp = " + state);
+
         spawn = SaveDataManager.LoadDataSpawn();
+
 
         SettingsStart();
     }

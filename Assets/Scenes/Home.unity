@@ -2629,6 +2629,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  ifLibraryDoorState0: 0
 --- !u!114 &2117406332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,6 +2644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToUpgrade:
   - Home
+  statement: 01000000
+  noInteraction: 0
 --- !u!1 &2136530146
 GameObject:
   m_ObjectHideFlags: 0

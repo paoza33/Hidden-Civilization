@@ -395,11 +395,13 @@ MonoBehaviour:
   - {fileID: 678686861}
   - {fileID: 446188906}
   - {fileID: 940360133}
+  - {fileID: 3310555977884721311}
   triggerState1:
   - {fileID: 1227160742}
   - {fileID: 678686861}
   - {fileID: 446188906}
   - {fileID: 1275755698}
+  - {fileID: 3310555977884721311}
   triggerState2:
   - {fileID: 446188906}
   - {fileID: 678686861}
@@ -408,6 +410,7 @@ MonoBehaviour:
   - {fileID: 1413355665}
   - {fileID: 1943455156}
   - {fileID: 1592393453}
+  - {fileID: 3310555977884721311}
   skyLight: {fileID: 654183126}
   dialogState1:
     name: Young Player
@@ -1384,6 +1387,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "C'est la cabane du vieil homme, il ne semble avoir personne \xE0 l'int\xE9rieur."
+  ifLibraryDoorState0: 0
 --- !u!1 &1053488694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1495,7 @@ MonoBehaviour:
     sentences:
     - "J'entends des gens parler \xE0 l'int\xE9rieur."
     - Je ne devrais pas rester ici plus longtemps.
+  ifLibraryDoorState0: 0
 --- !u!65 &1105039680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1612,6 +1617,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  ifLibraryDoorState0: 0
 --- !u!65 &1275755701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1756,6 +1762,7 @@ MonoBehaviour:
   keyNeeded: LostIsland
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -1780,6 +1787,7 @@ MonoBehaviour:
   isChangingScene: 1
   levelToLoad: LostIsland
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &1413355668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2017,6 +2025,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  ifLibraryDoorState0: 0
 --- !u!65 &1592393456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2113,6 +2122,8 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Arbre sp\xE9cial"
+  needInteraction: 0
+  item: {fileID: 0}
 --- !u!65 &1687013199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2394,6 +2405,7 @@ MonoBehaviour:
   keyNeeded: LostIsland
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -2418,6 +2430,7 @@ MonoBehaviour:
   isChangingScene: 1
   levelToLoad: LostIsland
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &1943455159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2680,6 +2693,8 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Arbre sp\xE9cial"
+  needInteraction: 0
+  item: {fileID: 0}
 --- !u!65 &2049150134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3556,6 +3571,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3310555977884721305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310555977884721311}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35710928, y: 1, z: 5.701903}
+  m_Center: {x: 0.32144538, y: 0, z: 0.2055074}
+--- !u!4 &3310555977884721306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310555977884721311}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.4136445, y: 1.825325, z: 6.9480658}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &3310555977884721311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3310555977884721306}
+  - component: {fileID: 3310555977884721305}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!33 &3322714123617936884
 MeshFilter:
   m_ObjectHideFlags: 0

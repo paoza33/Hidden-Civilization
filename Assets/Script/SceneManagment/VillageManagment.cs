@@ -15,9 +15,9 @@ public class VillageManagment : MonoBehaviour
 
     private int state;
 
-    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3, colliderState4, colliderState5, colliderState6;
+    public GameObject[] colliderState0, colliderState1, colliderState2, colliderState3, colliderState4, colliderState5, colliderState6, colliderState7;
 
-    public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4, portalsState5, portalsState6;
+    public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4, portalsState5, portalsState6, portalsState7;
 
     private void Awake()
     {
@@ -62,28 +62,35 @@ public class VillageManagment : MonoBehaviour
             foreach (GameObject obj in portalsState3)
                 obj.SetActive(true);
         }
-        else if(state == 4){    // joueur se dirige vers wood, nuit, on bloque city et camp
-            skyLight.intensity = 0.2f;
+        else if(state == 4) // retour wood, direction home pour dormir
+        {
             foreach (GameObject obj in colliderState4)
                 obj.SetActive(true);
-            foreach(GameObject obj in portalsState4)
+            foreach (GameObject obj in portalsState4)
                 obj.SetActive(true);
         }
-        else if(state == 5){        // retour wood, direction city -> objectif ruins, on bloque wood et camp
+        else if(state == 5){    // joueur se dirige vers wood, nuit, on bloque city et camp
+            skyLight.intensity = 0.2f;
             foreach (GameObject obj in colliderState5)
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState5)
                 obj.SetActive(true);
         }
-        else if (state == 6)    // retour ruins, objectif lost island, on bloque city, wood
-        {
+        else if(state == 6){        // retour wood, direction city -> objectif ruins, on bloque wood et camp
             foreach (GameObject obj in colliderState6)
                 obj.SetActive(true);
-            foreach (GameObject obj in portalsState6)
+            foreach(GameObject obj in portalsState6)
+                obj.SetActive(true);
+        }
+        else if (state == 7)    // retour ruins, objectif lost island, on bloque city, wood
+        {
+            foreach (GameObject obj in colliderState7)
+                obj.SetActive(true);
+            foreach (GameObject obj in portalsState7)
                 obj.SetActive(true);
         }
 
-        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();                   // changer le fait que lorsqu'on interagit avec l'homme msiterieux et qu'on va dans le village, il fait nuit et on peut rentrer dans wood
         if (data.previousSceneName == "Home")
             playerStart.transform.position = spawnHome.position;
 

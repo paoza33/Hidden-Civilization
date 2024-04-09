@@ -329,6 +329,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - J'ai besoin de cette lampe-torche avant de partir
+  ifLibraryDoorState0: 0
 --- !u!65 &399490368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1136,6 +1137,7 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
@@ -1159,6 +1161,7 @@ MonoBehaviour:
   isChangingScene: 1
   levelToLoad: Camp
   pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!114 &1512398348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1178,7 @@ MonoBehaviour:
   - Camp
   - Village
   - WoodenHut
+  noInteraction: 0
 --- !u!1 &1672784026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyNeeded: 
   animatorDoor: {fileID: 0}
-  colliderToDesactivate: {fileID: 0}
+  colliderToDesactivate: {fileID: 399490368}
+  meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 1256196198}
   colliderDoorBathroom: {fileID: 1512398345}
   ifChangeStateCamp: 0
@@ -1495,6 +1500,7 @@ MonoBehaviour:
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 1334612777}
+  ifLibrary: 0
 --- !u!64 &2127876308
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -126,6 +126,13 @@ public class TriggerDialog : MonoBehaviour
                 if (isChangingScene && !isNeedKey)
                 {
                     enabled = false;
+
+                    SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+                    data.currentSceneName = levelToLoad;
+                    data.previousSceneName = SceneManager.GetActiveScene().name;
+
+                    SaveDataManager.SaveDataSpawn(data);
+
                     PlayerMovement.instance.StopMovement();
                     StartCoroutine(Fade());
                 }
@@ -134,6 +141,13 @@ public class TriggerDialog : MonoBehaviour
                     if (Inventory.instance.FindItem(keyNeeded))
                     {
                         enabled = false;
+
+                        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+                        data.currentSceneName = levelToLoad;
+                        data.previousSceneName = SceneManager.GetActiveScene().name;
+
+                        SaveDataManager.SaveDataSpawn(data);
+
                         PlayerMovement.instance.StopMovement();
                         StartCoroutine(Fade());
                     }

@@ -121,6 +121,15 @@ public static class SaveDataManager
             SaveDataSceneState data = binaryFormatter.Deserialize(stream) as SaveDataSceneState;
             stream.Close();
 
+            Debug.Log("homeState = " + data.homeState);
+            Debug.Log("woodState = " + data.woodState);
+            Debug.Log("libraryState = " + data.libraryState);
+            Debug.Log("CityState = " + data.cityState);
+            Debug.Log("ruinsState = " + data.ruinsState);
+            Debug.Log("villageState = " + data.villageState);
+            Debug.Log("campState = " + data.campState);
+            Debug.Log("woodenHutState = " + data.woodenHutState);
+
             return data;
 
         }

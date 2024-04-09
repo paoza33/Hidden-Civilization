@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeState : MonoBehaviour
 {
     public string[] scenesToUpgrade;
+    public int[] statement; // sceneTuUpgrade[i] = statement[i]
     private bool alreadyInteract;
 
     private SaveDataSceneState state;
@@ -24,7 +25,7 @@ public class UpgradeState : MonoBehaviour
             if(noInteraction){
                 for(int i = 0; i < scenesToUpgrade.Length; i++)
                 {
-                   UpgradingState(scenesToUpgrade[i]);
+                   UpgradingState(scenesToUpgrade[i], statement[i]);
                 }
                 SaveDataManager.SaveDataSceneState(state);
             }
@@ -40,47 +41,47 @@ public class UpgradeState : MonoBehaviour
             alreadyInteract = true;
             for(int i = 0; i < scenesToUpgrade.Length; i++)
             {
-                UpgradingState(scenesToUpgrade[i]);
+                UpgradingState(scenesToUpgrade[i], statement[i]);
             }
             SaveDataManager.SaveDataSceneState(state);
             enabled = false;
         }
     }
 
-    private void UpgradingState(string scene)
+    private void UpgradingState(string scene, int _state)
     {
         switch(scene)
         {
             case "City":
-                state.cityState += 1;
+                state.cityState = _state;
                 break;
 
             case "Home":
-                state.homeState += 1;
+                state.homeState = _state;
                 break;
 
             case "Wood":
-                state.woodState += 1;
+                state.woodState = _state;
                 break;
 
             case "Library":
-                state.libraryState += 1;
+                state.libraryState = _state;
                 break;
 
             case "Ruins":
-                state.ruinsState += 1;
+                state.ruinsState = _state;
                 break;
 
             case "Village":
-                state.villageState += 1;
+                state.villageState = _state;
                 break;
 
             case "Camp":
-                state.campState += 1;
+                state.campState = _state;
                 break;
 
             case "WoodenHut":
-                state.woodenHutState += 1;
+                state.woodenHutState = _state;
                 break;
         }
     }
