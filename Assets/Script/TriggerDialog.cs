@@ -98,8 +98,8 @@ public class TriggerDialog : MonoBehaviour
                 if (ifChangeStateCamp)
                 {
                     SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
-                    data.woodenHutState += 1;
-                    data.campState += 1;
+                    data.woodenHutState += 1;   // here
+                    data.campState += 1;    // here
                     SaveDataManager.SaveDataSceneState(data);
                 }
                 if(pnjAppear != null)
