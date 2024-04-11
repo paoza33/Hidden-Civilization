@@ -15,6 +15,7 @@ TagManager:
   - UIMap
   - UIMapText
   - UIReadBook
+  - Flash
   layers:
   - Default
   - TransparentFX
