@@ -1178,6 +1178,7 @@ MonoBehaviour:
   - Camp
   - Village
   - WoodenHut
+  statement: 020000000100000001000000
   noInteraction: 0
 --- !u!1 &1672784026
 GameObject:

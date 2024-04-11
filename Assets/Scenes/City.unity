@@ -3601,17 +3601,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 164933314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c974a227e3cd6a499a1657652597464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyNeeded: 
-  animatorDoor: {fileID: 0}
-  colliderToDesactivate: {fileID: 0}
-  meshColliderDesactivate: {fileID: 0}
-  colliderToActivate: {fileID: 0}
-  colliderDoorBathroom: {fileID: 0}
-  ifChangeStateCamp: 0
-  open:
+  dialog:
     name: Misterious
     choices: []
     sentencesChoice1: 
@@ -3619,20 +3612,8 @@ MonoBehaviour:
     sentences:
     - "Je me demande ce que les ruines peuvent raconter, tu devrais y faire un tour,
       \xE7a peut \xEAtre int\xE9ressant pour toi."
-  notOpen:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
-  isNeedKey: 0
-  isItemObtained: 0
+  needInteraction: 1
   item: {fileID: 0}
-  destroyObject: 0
-  isChangingScene: 0
-  levelToLoad: 
-  pnjAppear: {fileID: 0}
-  ifLibrary: 0
 --- !u!1001 &166563614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13951,7 +13932,7 @@ MonoBehaviour:
     sentences:
     - Tu as tout pris !? Mais t'es pas net !?
     - "Mais siiii je suis tr\xE8s net ! "
-  needInteraction: 0
+  needInteraction: 1
   item: {fileID: 0}
 --- !u!1001 &663299684
 PrefabInstance:

@@ -14625,6 +14625,7 @@ MonoBehaviour:
   scenesToUpgrade:
   - Home
   - Village
+  statement: 0400000004000000
   noInteraction: 1
 --- !u!1001 &2120912938
 PrefabInstance:

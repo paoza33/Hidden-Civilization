@@ -13,6 +13,13 @@ public class DialogPNJ : MonoBehaviour
 
     private TextMeshProUGUI textInteract;
 
+    public bool isRuinsFlash;
+    public Dialog beforeFlash;
+    public Dialog afterFlash;
+
+    public GameObject bodyguardLeft;
+    public GameObject bodyguardRight;
+
     private void Awake()
     {
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
@@ -44,15 +51,32 @@ public class DialogPNJ : MonoBehaviour
         {
             if (!playerAlreadyInteract)
             {
-                DialogOpen.instance.StartDialog(dialog);
-                playerAlreadyInteract = true;
+                if(!isRuinsFlash)
+                {
+                    DialogOpen.instance.StartDialog(dialog);
+                    playerAlreadyInteract = true;
+                }
+                else
+                {
+                    DialogOpen.instance.StartDialog(beforeFlash);
+                }
+                
             }
             else if (Input.GetButtonDown("Interact"))
             {
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
-                    playerAlreadyInteract = false;
-                    needInteraction = true;
+                    if ((!isRuinsFlash))
+                    {
+                        playerAlreadyInteract = false;
+                        needInteraction = true;
+                    }
+                    else
+                    {
+                        // pivoter bodyguard
+                        // sart coroutine avec blocage des mouvements suivi du flash puis après un certains temps afterdialog
+                    }
+                    
                 }
             }   
         }

@@ -359,7 +359,7 @@ public class LibraryManagment : MonoBehaviour
         animator.SetTrigger("FadeIn");
 
         SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
-        data.homeState +=1;
+        data.homeState = 3;
         SaveDataManager.SaveDataSceneState(data);
 
         yield return new WaitForSeconds(1f);

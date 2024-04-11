@@ -67,7 +67,7 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.villageState += 1;   // here
+            saveDataSceneState.villageState = 3;
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
 
             DialogOpen.instance.StartDialog(dialogState3);
@@ -87,8 +87,8 @@ public class HomeManagment : MonoBehaviour
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            saveDataSceneState.cityState +=1;   // here
-            saveDataSceneState.villageState +=1;    // here
+            saveDataSceneState.cityState = 2;   // here
+            saveDataSceneState.villageState = 6;    // here
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
 
             DialogOpen.instance.StartDialog(dialogState5);

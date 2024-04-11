@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13e48ac720d8d34590bf54eead1e250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Wood
+  levelToLoad: Home
 --- !u!4 &1013371965
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f553d749b2f1d4b8dd590ab158da5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sentenceComplete: 1
 --- !u!114 &1065124916
 MonoBehaviour:
   m_ObjectHideFlags: 0

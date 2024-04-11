@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53856addf14f9cc40a7e8f6e4e091db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unfixX: 0
+  unfixZ: 0
 --- !u!4 &216140741
 Transform:
   m_ObjectHideFlags: 0
@@ -222,7 +224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &425313529
 GameObject:
@@ -456,70 +458,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 32871106245695665, guid: 155e89490cb6ce740a00aaa8d1f15106, type: 3}
   m_PrefabInstance: {fileID: 508856599}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &565488274
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 565488276}
-  - component: {fileID: 565488275}
-  - component: {fileID: 565488277}
-  m_Layer: 0
-  m_Name: Trigger Bedroom to Living room
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &565488275
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565488274}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.07, y: 1, z: 2.46}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &565488276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565488274}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.70027, y: 0.90009, z: 19.50195}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &565488277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565488274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4584956afea937a4f8eb6455aaede831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousCeiling: {fileID: 0}
-  nextCeiling: {fileID: 0}
-  previousLight: {fileID: 0}
-  nextLight: {fileID: 1309101802}
-  currentTrigger: {fileID: 565488275}
-  nextTrigger: {fileID: 1624688201}
 --- !u!1001 &635368550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1438,70 +1376,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1624688200
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624688202}
-  - component: {fileID: 1624688201}
-  - component: {fileID: 1624688203}
-  m_Layer: 0
-  m_Name: Trigger Living room to bedroom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1624688201
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624688200}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07, y: 1, z: 2.46}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1624688202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624688200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.60016, y: 0.90009, z: 19.50195}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1624688203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624688200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4584956afea937a4f8eb6455aaede831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousCeiling: {fileID: 0}
-  nextCeiling: {fileID: 0}
-  previousLight: {fileID: 1309101802}
-  nextLight: {fileID: 0}
-  currentTrigger: {fileID: 1624688201}
-  nextTrigger: {fileID: 565488275}
 --- !u!1001 &1639621483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2026,7 +1900,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136530149
 MonoBehaviour:

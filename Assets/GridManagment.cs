@@ -26,6 +26,7 @@ public class GridManagment : MonoBehaviour
 
     void Start()
     {
+        SaveDataManager.LoadDataSceneState();   // à supprimer -> juste pour le debug.log
         // gridScene[column, linea] -> [1,1] == left down of the gridScene (origin)
         InitializeGrid(1, 1, 4, "MainCube");
         InitializeGrid(2, 1, 1, "SecondaryCube");

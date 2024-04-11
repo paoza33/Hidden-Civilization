@@ -1908,6 +1908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToUpgrade:
   - Home
+  statement: 05000000
   noInteraction: 0
 --- !u!1 &1926082105
 GameObject:

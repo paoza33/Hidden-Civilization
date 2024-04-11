@@ -385,6 +385,7 @@ MonoBehaviour:
   scenesToUpgrade:
   - Home
   - Village
+  statement: 0200000002000000
   noInteraction: 0
 --- !u!1 &38950887
 GameObject:
