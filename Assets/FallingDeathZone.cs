@@ -19,6 +19,7 @@ public class FallingDeathZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("death louche");
             StartCoroutine(SetPlayerRespawnPosition(other));
             timeManager.DoSlowmotionFixed(2f);
             StartCoroutine(Fade());
@@ -39,5 +40,7 @@ public class FallingDeathZone : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1.5f);
         animator.SetTrigger("FadeIn");
+        yield return new WaitForSecondsRealtime(0.75f);
+        animator.SetTrigger("FadeOut");
     }
 }

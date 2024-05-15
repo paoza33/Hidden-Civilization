@@ -633,6 +633,8 @@ MonoBehaviour:
     - "Pas besoin de d\xE9cale ici"
   unfixZ: 0
   unfixX: 1
+  ifFade: 0
+  destroyTrigger: 0
 --- !u!1 &332234313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1089,10 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  ifChangeStateCamp: 0
   open:
     name: "Pon\xE9glyphe"
     choices: []
@@ -1116,8 +1122,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
   isChangingScene: 0
   levelToLoad: 
+  pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!1 &583227038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2892,10 @@ MonoBehaviour:
   keyNeeded: 
   animatorDoor: {fileID: 0}
   colliderToDesactivate: {fileID: 0}
+  meshColliderDesactivate: {fileID: 0}
+  colliderToActivate: {fileID: 0}
+  colliderDoorBathroom: {fileID: 0}
+  ifChangeStateCamp: 0
   open:
     name: "Pon\xE9glyphe"
     choices: []
@@ -2896,8 +2911,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   isNeedKey: 0
+  isItemObtained: 0
+  item: {fileID: 0}
+  destroyObject: 0
   isChangingScene: 0
   levelToLoad: 
+  pnjAppear: {fileID: 0}
+  ifLibrary: 0
 --- !u!65 &1557166609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4393,8 +4413,8 @@ GameObject:
   - component: {fileID: 1262158739667495016}
   - component: {fileID: 2423374786164791823}
   - component: {fileID: 2568031775131161364}
-  - component: {fileID: 2568031775131161366}
   - component: {fileID: 2568031775131161365}
+  - component: {fileID: 2568031775131161366}
   m_Layer: 0
   m_Name: Labyrinthe
   m_TagString: Untagged
@@ -4763,8 +4783,8 @@ MonoBehaviour:
   isReverse: 0
   isPingPong: 0
   isInstantaneous: 0
---- !u!64 &2568031775131161366
-MeshCollider:
+--- !u!65 &2568031775131161366
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4773,10 +4793,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2632498924539622675, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.15172273, y: 0.0000025629993, z: 23.277061}
+  m_Center: {x: -0.001834929, y: -0.0000040233126, z: 0.0054006563}
 --- !u!4 &2611953360730713225
 Transform:
   m_ObjectHideFlags: 0

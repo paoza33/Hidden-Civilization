@@ -42,10 +42,18 @@ public class TeleportRuins : MonoBehaviour
 
     public IEnumerator Fade()
     {
-        yield return new WaitForSeconds(0.50f);
-        PlayerMovement.instance.enabled = true;
-        CameraMovement.instance.cameraFixX = false;
-        CameraMovement.instance.cameraFixZ = false;
-        SceneManager.LoadScene(levelToLoad);
+        enabled=false;
+        PlayerMovement.instance.StopMovement();
+        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.SetTrigger("FadeIn");
+
+        yield return new WaitForSeconds(1f);
+
+        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+        data.currentSceneName = "Tower";
+        data.previousSceneName = "Ruins";
+        SaveDataManager.SaveDataSpawn(data);
+
+        SceneManager.LoadScene("Tower");
     }
 }

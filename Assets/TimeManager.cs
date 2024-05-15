@@ -15,6 +15,8 @@ public class TimeManager : MonoBehaviour
     {
         Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime; //    unscaledDeltaTime not change when timescale change
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);   // for the time do not increase more than realtime (1f = realtime)
+        if (Time.timeScale == 1f)
+            enabled = false;
     }
 
     public void DoSlowmotion()

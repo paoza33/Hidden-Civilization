@@ -16,6 +16,8 @@ TagManager:
   - UIMapText
   - UIReadBook
   - Flash
+  - Menu
+  - Credit
   layers:
   - Default
   - TransparentFX

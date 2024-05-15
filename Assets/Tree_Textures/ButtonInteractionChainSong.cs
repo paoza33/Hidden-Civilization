@@ -8,9 +8,12 @@ public class ButtonInteractionChainSong : MonoBehaviour
     public AudioClip[] clip;
     public GameObject button;
 
+    private GameObject player;
+
     public Transform cameraHigh;
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         enabled = false;
     }
 
@@ -23,10 +26,12 @@ public class ButtonInteractionChainSong : MonoBehaviour
             SetCameraView.instance.SetNewPosCamera(cameraHigh.position, cameraHigh.rotation, true, false);
             PlayerMovement.instance.StopMovement();
         }
-        else if(Input.GetButtonDown("Interact") && playerAlreadyInteract)
+        else if(Input.GetButtonDown("Escape") && playerAlreadyInteract)
         {
             StopAllCoroutines();
-            StartCoroutine(PlayChainsSong(0));
+            PlayerMovement.instance.enabled = true;
+            SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, Quaternion.Euler(60, 0, 0), false, false);
+            playerAlreadyInteract = false;
         }
     }
 
@@ -56,7 +61,6 @@ public class ButtonInteractionChainSong : MonoBehaviour
         }
         else
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerMovement.instance.enabled = true;
             SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, Quaternion.Euler(60, 0, 0), false, false);  // modifier la camera pour qu'elle retourne a sa position/orientation initial
             playerAlreadyInteract = false;

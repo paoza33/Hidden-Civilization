@@ -30,7 +30,6 @@ public class LabyrinthEnigm : MonoBehaviour // Le trigger de la sphere gere tout
 
     public GameObject cameraLabyrinthe; // new camera position for labyrinthe enigme
 
-    private Quaternion defaultCameraRotation;
 
     private void Awake()
     {
@@ -39,7 +38,6 @@ public class LabyrinthEnigm : MonoBehaviour // Le trigger de la sphere gere tout
         {
             targetRotations[i] = circles[i].transform.rotation;
         }
-        defaultCameraRotation = Camera.main.transform.rotation;
     }
 
     // Update is called once per frame

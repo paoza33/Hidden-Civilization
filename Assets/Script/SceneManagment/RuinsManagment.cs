@@ -10,6 +10,8 @@ public class RuinsManagment : MonoBehaviour
     public GameObject[] objState0;
     public GameObject[] objState1;
 
+    public GameObject bodyguardLeft, bodyguardRight;
+
 
     private void Awake()
     {
@@ -23,7 +25,9 @@ public class RuinsManagment : MonoBehaviour
                 obj.SetActive(true);
         }
         else if(state.ruinsState == 1){
-            foreach(GameObject obj in objState0)
+            bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0, -90f, 0));
+            bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0, 90f, 0));
+            foreach (GameObject obj in objState1)
                 obj.SetActive(true);
         }
         

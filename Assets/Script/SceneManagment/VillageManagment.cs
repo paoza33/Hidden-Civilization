@@ -26,7 +26,7 @@ public class VillageManagment : MonoBehaviour
 
         SaveDataSceneState dataState = SaveDataManager.LoadDataSceneState();
         state = dataState.villageState;
-        Debug.Log("state village = " + state);
+
         if(state == 0)  // joueur enfant, il se dirige vers le camp, on bloque wood et city
         {
             enabled = true;

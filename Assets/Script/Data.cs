@@ -41,6 +41,7 @@ public static class SaveDataManager
     #region Save and load spawn data
     public static void SaveDataSpawn(SaveDataSpawn data)
     {
+        Debug.Log("save has passed");
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 
         string path = Application.persistentDataPath + "/SpawnData.data";
@@ -105,14 +106,14 @@ public static class SaveDataManager
             campState = data.campState,
             woodenHutState = data.woodenHutState
         };
-        Debug.Log("save homeState = " + data.homeState);
+        /*Debug.Log("save homeState = " + data.homeState);
         Debug.Log("save woodState = " + data.woodState);
         Debug.Log("save libraryState = " + data.libraryState);
         Debug.Log("save CityState = " + data.cityState);
         Debug.Log("save ruinsState = " + data.ruinsState);
         Debug.Log("save villageState = " + data.villageState);
         Debug.Log("save campState = " + data.campState);
-        Debug.Log("save woodenHutState = " + data.woodenHutState);
+        Debug.Log("save woodenHutState = " + data.woodenHutState);*/
 
         binaryFormatter.Serialize(stream, saveData);
         stream.Close();

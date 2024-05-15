@@ -358,12 +358,11 @@ public class LibraryManagment : MonoBehaviour
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeIn");
 
+        yield return new WaitForSeconds(1f);
+
         SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
         data.homeState = 3;
         SaveDataManager.SaveDataSceneState(data);
-
-        yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene("Home");
         
     }

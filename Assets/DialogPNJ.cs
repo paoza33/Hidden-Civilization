@@ -66,6 +66,9 @@ public class DialogPNJ : MonoBehaviour
                 }
                 else
                 {
+                    bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0, -90f, 0));
+                    bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0, 90f, 0));
+
                     DialogOpen.instance.StartDialog(beforeFlash);
                     playerAlreadyInteract = true;
                 }               
@@ -82,9 +85,6 @@ public class DialogPNJ : MonoBehaviour
                     else
                     {
                         if(!ifFlashFinishing){
-                            bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0,-90f,0));
-                            bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0,90f,0));
-
                             StartCoroutine(Flash());
                         }
                         else{

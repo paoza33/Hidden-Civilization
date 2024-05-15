@@ -19,10 +19,6 @@ public class LabyrinthManager : MonoBehaviour
             return;
         }
         instance = this;
-    }
-
-    private void Start()
-    {
         StartCoroutine(Fade());
     }
 

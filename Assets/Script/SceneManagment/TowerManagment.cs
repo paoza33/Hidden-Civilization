@@ -6,53 +6,33 @@ public class TowerManagment : MonoBehaviour
 {
     public new Transform camera;
 
-    private bool ifLongFade;
     public Dialog dialog;
 
     private Animator animator;
 
+    private bool beggining = true;
+
     void Awake()
     {
-        PlayerMovement.instance.StopMovement();
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
-        SaveDataSceneState saveDataSceneState = SaveDataManager.LoadDataSceneState();
 
-        if (saveDataSceneState == null)
-        {
-            Debug.LogError("empty save file data scene state");
-            return;
-        }
-        else if (saveDataSceneState != null && saveDataSceneState.towerState == 0)
-        {
-            ifLongFade = true;
-            saveDataSceneState.towerState = 1;
-            SaveDataManager.SaveDataSceneState(saveDataSceneState);
-        }
-        else if (saveDataSceneState != null && saveDataSceneState.towerState == 1)
-        {
-            ifLongFade = false;
-        }
-        if (ifLongFade)
-        {
-            DialogOpen.instance.StartDialog(dialog);
-        }
-        else
-        {
-            StartCoroutine(StartingFade());
-        }
+        DialogOpen.instance.StartDialog(dialog);
+
     }
 
     private void Start()
     {
-        StartCoroutine(StartingFade());
+        
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact"))
+        if (Input.GetButtonDown("Interact") && beggining)
         {
             if (!DialogOpen.instance.DisplayNextSentences())
             {
+                SetCameraView.instance.SetNewPosCamera(camera.position, camera.rotation, true, true);
+                beggining = false;
                 StartCoroutine(StartingFade());
             }
         }
@@ -60,8 +40,8 @@ public class TowerManagment : MonoBehaviour
 
     private IEnumerator StartingFade()
     {
-        enabled = false;
-        yield return new WaitForSeconds(1f);
+        
+        yield return new WaitForSeconds(0.2f);
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;

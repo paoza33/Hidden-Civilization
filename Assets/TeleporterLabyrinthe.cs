@@ -39,6 +39,13 @@ public class TeleporterLabyrinthe : MonoBehaviour
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
+
+        SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
+        data.currentSceneName = levelToLoad;
+        data.previousSceneName = SceneManager.GetActiveScene().name;
+
+        SaveDataManager.SaveDataSpawn(data);
+
         SceneManager.LoadScene(levelToLoad);
     }
 }

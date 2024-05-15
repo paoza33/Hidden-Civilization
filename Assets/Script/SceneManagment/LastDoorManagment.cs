@@ -33,7 +33,16 @@ public class LastDoorManagment : MonoBehaviour
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Labyrinth")
+        {
             playerStart.transform.position = spwanLabyrinth.position;
+            for (int i = 0; i < triggerSpheres.Length; i++)
+            {
+                triggerSpheres[i].gameObject.SetActive(false);
+            }
+            secretDoor.GetComponent<FlickeringEmissive>().enabled = true;
+            labyrinth.GetComponent<FlickeringEmissive>().enabled = true;
+            secretDoor.GetComponent<MeshCollider>().enabled = false;
+        }
     }
 
     private void Start()
