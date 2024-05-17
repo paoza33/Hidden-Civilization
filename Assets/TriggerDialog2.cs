@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TriggerDialog2 : MonoBehaviour
@@ -19,12 +20,18 @@ public class TriggerDialog2 : MonoBehaviour
 
     private bool moovingLeft, moovingRight;
     private bool isMooving = false;
+    public Dialog speech;
+    private bool isLastTalking;
 
     public float speedDeplacement = 0;
+
+    private Animator animator;
 
     private void Awake()
     {
         enabled = false;
+
+        animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 
         startPosContenairs = new Vector3[contenairs.Length];
 
@@ -44,36 +51,51 @@ public class TriggerDialog2 : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
+        if(!isLastTalking)
         {
-            playerAlreadyInteract = true;
-            DialogOpen.instance.StartDialog(dialogs[index]);
-        }
-        else if (Input.GetButtonDown("Interact") && canDisplayNextSentences)
-        {
-            if (!DialogOpen.instance.DisplayNextSentences())
+            if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
             {
-                playerAlreadyInteract = false;
+                playerAlreadyInteract = true;
+                DialogOpen.instance.StartDialog(dialogs[index]);
             }
-        }
+            else if (Input.GetButtonDown("Interact") && canDisplayNextSentences)
+            {
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
+                    playerAlreadyInteract = false;
+                }
+            }
 
 
-        if (Input.GetAxisRaw("Horizontal") == -1 && !isMooving && playerAlreadyInteract)
-        {          
-            if(index > 0)
-            {
-                isMooving = true;
-                moovingRight = true;
-                index--;
+            if (Input.GetAxisRaw("Horizontal") == -1 && !isMooving && playerAlreadyInteract)
+            {          
+                if(index > 0)
+                {
+                    isMooving = true;
+                    moovingRight = true;
+                    index--;
+                }
+            }
+            else if (Input.GetAxisRaw("Horizontal") == 1 && !isMooving && playerAlreadyInteract)
+            {           
+                if(index < contenairs.Length -1)
+                {
+                    isMooving = true;
+                    moovingLeft = true;
+                    index++;
+                }
+                else if(index == contenairs.Length -1){
+                    // ouvrir le dialog de fin puis passer à scène du speech de l'unknown
+                    DialogOpen.instance.StartDialog(speech);
+                    isLastTalking = true;
+                }
             }
         }
-        else if (Input.GetAxisRaw("Horizontal") == 1 && !isMooving && playerAlreadyInteract)
-        {           
-            if(index < contenairs.Length -1)
-            {
-                isMooving = true;
-                moovingLeft = true;
-                index++;
+        else{
+            if(Input.GetButtonDown("Interact")){
+                if(!DialogOpen.instance.DisplayNextSentences()){
+                    StartCoroutine(FadeKnwoledgePlace());
+                }
             }
         }
     }
@@ -154,5 +176,19 @@ public class TriggerDialog2 : MonoBehaviour
         {
             startPosContenairs[i] = contenairs[i].transform.position;
         }
+    }
+
+
+    private IEnumerator FadeKnwoledgePlace()
+    {
+        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(0.75f);
+        PlayerMovement.instance.enabled = true;
+        CameraMovement.instance.cameraFixX = false;
+        CameraMovement.instance.cameraFixZ = false;
+        SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
+        data.knowledgePlaceState = 1;
+        SaveDataManager.SaveDataSceneState(data);
+        SceneManager.LoadScene("KnowledgePlace");
     }
 }

@@ -11,6 +11,7 @@ public class MenuSystem : MonoBehaviour
     private bool gameIsPaused;
     public GameObject start;
     public GameObject resume;
+    public string levelToLoad; // temporaire pour gain de temps
 
     private void Awake()
     {
@@ -119,7 +120,7 @@ public class MenuSystem : MonoBehaviour
             SaveDataManager.SaveDataSceneState(data);
         }
         SaveDataSpawn newData = SaveDataManager.LoadDataSpawn();
-        string levelToLoad = newData.currentSceneName;
+        //string levelToLoad = newData.currentSceneName;
         SceneManager.LoadScene(levelToLoad);
     }
 }
