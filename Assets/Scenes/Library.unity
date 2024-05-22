@@ -1174,6 +1174,10 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Book level 0
+    - Book level 0
+    - Book level 0
+    - Book level 0
+    - Book level 0
   bookLevel1:
     name: 
     choices: []

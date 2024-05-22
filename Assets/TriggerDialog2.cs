@@ -181,14 +181,9 @@ public class TriggerDialog2 : MonoBehaviour
 
     private IEnumerator FadeKnwoledgePlace()
     {
+        enabled = false;
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
-        PlayerMovement.instance.enabled = true;
-        CameraMovement.instance.cameraFixX = false;
-        CameraMovement.instance.cameraFixZ = false;
-        SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
-        data.knowledgePlaceState = 1;
-        SaveDataManager.SaveDataSceneState(data);
-        SceneManager.LoadScene("KnowledgePlace");
+        KnowledgePlaceManagment.instance.Transition();
     }
 }

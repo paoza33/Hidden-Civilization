@@ -34,7 +34,6 @@ public class SaveDataSceneState
     public int towerState;
     public int campState;
     public int woodenHutState;
-    public int knowledgePlaceState;
 }
 
 public static class SaveDataManager
@@ -106,7 +105,6 @@ public static class SaveDataManager
             villageState = data.villageState,
             campState = data.campState,
             woodenHutState = data.woodenHutState,
-            knowledgePlaceState = data.knowledgePlaceState
         };
         /*Debug.Log("save homeState = " + data.homeState);
         Debug.Log("save woodState = " + data.woodState);

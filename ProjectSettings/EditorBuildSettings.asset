@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WoodenHut.unity
     guid: eb53b930ae9ef004188b3355669b1296
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: 24537dc6058649340b5968c99169caa5
   m_configObjects: {}

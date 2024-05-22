@@ -2,56 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEditorInternal;
 
 public class KnowledgePlaceManagment : MonoBehaviour
 {
     private GameObject player;
     public GameObject unknown;
     public Dialog firstMoment, lastSpeech;
-    private int state;
     public Transform secondaryCam;
+
+    private bool ending;
+
+    public static KnowledgePlaceManagment instance;
 
     private void Awake()
     {
+        enabled = false;
+
         player = GameObject.FindGameObjectWithTag("Player");
 
-        SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
-        state = data.knowledgePlaceState;
+        StartCoroutine(FadeOutState0());    
 
-        if(state == 0){
-            DialogOpen.instance.StartDialog(firstMoment);
+        if(instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance de KnowledgePlaceManagment");
+            return;
         }
-        else if(state == 1){
-            CameraMovement.instance.enabled = false;
-
-            unknown.SetActive(true);
-            player.SetActive(false);
-
-            DialogOpen.instance.StartDialog(lastSpeech);
-            Camera.main.transform.position = secondaryCam.position; // chercher pourquoi main cam reste au même endroit
-            Camera.main.transform.rotation = secondaryCam.rotation;
-        }
-
-        StartCoroutine(FadeOut());
+        instance = this;
     }
 
     private void Update(){
         if(Input.GetButtonDown("Interact")){
-            if(DialogOpen.instance.DisplayNextSentences()){
-                PlayerMovement.instance.enabled = true;
+            if(!DialogOpen.instance.DisplayNextSentences()){
+                if(!ending)
+                    enabled = false;
+                else
+                    StartCoroutine(FadeIn());
             }
         }
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator FadeOutState0()
     {
         PlayerMovement.instance.StopMovement();
+
         yield return new WaitForSeconds(1f);
+        DialogOpen.instance.StartDialog(firstMoment);
+
+        enabled = true;
+
+        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void Transition()
+    {
+        StartCoroutine(FadeOutState1());
+    }
+
+    private IEnumerator FadeOutState1()
+    {
+        CameraMovement.instance.enabled = false;
+        player.SetActive(false);
+        unknown.SetActive(true);
+
+        PlayerMovement.instance.StopMovement();
+        yield return new WaitForSeconds(0.2f);
+        Camera.main.transform.position = secondaryCam.position;
+        Camera.main.transform.rotation = secondaryCam.rotation;
+
+        yield return new WaitForSeconds(0.8f);
+        DialogOpen.instance.StartDialog(lastSpeech);
+        ending = true;
+        enabled = true;
+
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
     }
 
     private IEnumerator FadeIn(){
+        Debug.Log("fade in");
         PlayerMovement.instance.StopMovement();
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeIn");
