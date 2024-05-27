@@ -11,15 +11,15 @@ public class LibraryManagment : MonoBehaviour
     private List<int> orderPlayer = new List<int>();
     private List<int> orderSolution = new List<int>();
 
-    private List<int> solution1 = new List<int>{ 1, 2};
-    private List<int> solution2 = new List<int> { 3,4};
-    private List<int> solution3 = new List<int> { 5,6};
+    private List<int> solution1 = new List<int>{ 2, 3, 1, 5, 4};
+    private List<int> solution2 = new List<int> { 7, 9, 8, 6, 10};
+    private List<int> solution3 = new List<int> { 14, 13, 12, 11};
+    private List<int> solution4 = new List<int> { 16, 15, 20, 19, 17, 18};
+
 
     private List<GameObject> symbols = new List<GameObject>();
 
-    public List<GameObject> symbols1;
-    public List<GameObject> symbols2;
-    public List<GameObject> symbols3;
+    public List<GameObject> symbols1, symbols2, symbols3, symbols4;
 
     public GameObject playerStart;
     public Transform spawnLibTwo;
@@ -225,7 +225,7 @@ public class LibraryManagment : MonoBehaviour
         ResetFlickering();
     }
 
-    private void LevelAccomplished()    // a faire : on supprime l'affichage des symboles une fois l'ordre trouv� -> donc trouver exactement le meme nombre de mots que de symboles
+    private void LevelAccomplished()
     {
         orderPlayer.Clear();
         if (level == 0)
@@ -254,6 +254,18 @@ public class LibraryManagment : MonoBehaviour
             UpdateLevel(solution3, symbols3);
         }
         else if (level == 2)
+        {
+            foreach (GameObject obj in cabLevel2)
+            {
+                obj.GetComponent<BoxCollider>().enabled = false;
+                obj.GetComponent<CabinetInteraction>().enabled = false;
+            }
+            foreach (GameObject obj in cabLevel3)
+                obj.GetComponent<BoxCollider>().enabled = true;
+            level = 3;
+            UpdateLevel(solution4, symbols4);readBook.enabled = false;
+        }
+        else if (level == 3)
         {
             readBook.enabled = false;
             DialogOpen.instance.StartDialog(ending);

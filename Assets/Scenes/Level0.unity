@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2607,7 +2607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1113232499}
   resume: {fileID: 1437905853}
-  levelToLoad: KnowledgePlace
+  levelToLoad: Library
 --- !u!1 &1113232499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1113232499, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
@@ -4874,6 +4874,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1065124922}
+    - target: {fileID: 1178011978, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1260881547, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0

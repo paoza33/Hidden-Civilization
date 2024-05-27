@@ -50,6 +50,8 @@ public class CabinetInteraction : MonoBehaviour
         if(other.CompareTag("Player")){
             textInteract.enabled = true;
             enabled = true;
+            LibraryManagment.instance.enabled = false;
+            readBook.enabled = false;
         }
     }
 
@@ -57,6 +59,8 @@ public class CabinetInteraction : MonoBehaviour
         if(other.CompareTag("Player")){
             textInteract.enabled = false;
             enabled = false;
+            LibraryManagment.instance.enabled = true;
+            readBook.enabled = true;
         }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571427, b: 0.30692387, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.22571349, b: 0.30692273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Lib id = 1
+      value: POUVOIR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -720,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "R\xC9VOLUTION"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -833,7 +833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: TENSION
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -850,6 +850,11 @@ BoxCollider:
 --- !u!1 &419476753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 419476750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &419476754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 419476750}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &515947547
@@ -1043,12 +1048,27 @@ MonoBehaviour:
   symbols1:
   - {fileID: 311037988}
   - {fileID: 2134206920}
-  symbols2:
   - {fileID: 416284277}
   - {fileID: 1640989561}
-  symbols3:
   - {fileID: 1954865557}
+  symbols2:
   - {fileID: 1879755128}
+  - {fileID: 738915855}
+  - {fileID: 1272035747}
+  - {fileID: 419476754}
+  - {fileID: 2086104278}
+  symbols3:
+  - {fileID: 1513119647}
+  - {fileID: 1016369521}
+  - {fileID: 1457358705}
+  - {fileID: 1100518162}
+  symbols4:
+  - {fileID: 649191727}
+  - {fileID: 1402309785}
+  - {fileID: 1825334878}
+  - {fileID: 596722565}
+  - {fileID: 1879813686}
+  - {fileID: 1550319564}
   playerStart: {fileID: 1226450373}
   spawnLibTwo: {fileID: 2771610641458570244}
   spawnState2: {fileID: 843628328}
@@ -1122,15 +1142,27 @@ MonoBehaviour:
   cabLevel0:
   - {fileID: 311037990}
   - {fileID: 2134206922}
-  cabLevel1:
   - {fileID: 416284279}
   - {fileID: 1640989563}
-  cabLevel2:
   - {fileID: 1954865559}
+  cabLevel1:
   - {fileID: 1879755130}
-  cabLevel3:
   - {fileID: 738915854}
   - {fileID: 1272035746}
+  - {fileID: 419476753}
+  - {fileID: 2086104277}
+  cabLevel2:
+  - {fileID: 1513119646}
+  - {fileID: 1016369520}
+  - {fileID: 1457358704}
+  - {fileID: 1100518161}
+  cabLevel3:
+  - {fileID: 649191726}
+  - {fileID: 1402309784}
+  - {fileID: 1825334877}
+  - {fileID: 596722564}
+  - {fileID: 1879813685}
+  - {fileID: 1550319563}
   objState0:
   - {fileID: 1933506407}
   - {fileID: 2071007191}
@@ -1173,32 +1205,52 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Book level 0
-    - Book level 0
-    - Book level 0
-    - Book level 0
-    - Book level 0
+    - "Tout d\xE9buta lorsque les villageois d\xE9couv\xE8rent une roche myst\xE9rieuse
+      dans leur for\xEAt.\nLes propri\xE9t\xE9s de cette mati\xE8re surpassaient
+      toutes les autres et, en la travaillant, devenait encore plus extraordinaire."
+    - "Le chef comprit rapidement son potentiel, ses b\xE9n\xE9fices et les cons\xE9quences
+      de ce pouvoir. Il d\xE9cida de garder secret tout ce qui concernait cette mati\xE8re.
+      Les villageois respect\xE8rent cet ordre, mais d'autres, avides et ambitieux,
+      refus\xE8rent de restreindre cette technologie au village."
   bookLevel1:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Book level 1
+    - "Le chef, sage et exp\xE9riment\xE9, savait que cela m\xE8nerait \xE0 une guerre
+      civile. Pour l'emp\xEAcher, il cr\xE9a un conseil de guerre rassemblant ses
+      hommes de confiance et \xE9limina ceux qui voulaient provoquer ce conflit."
+    - "Cette mesure fut efficace, mais engendra un d\xE9bat au sein du conseil :
+      fallait-il garder cette technologie pour eux, afin d'\xE9viter sa dispersion
+      dans le monde, ou bien partager ses bienfaits, au risque qu'elle tombe entre
+      de mauvaises mains ?"
   bookLevel2:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Book level 2
+    - "Ce d\xE9bat dura des ann\xE9es. Le chef vieillissait et savait que son temps
+      \xE9tait compt\xE9."
+    - "Avant de mourir, il confia secr\xE8tement les technologies les plus puissantes
+      et les recherches sur la mati\xE8re \xE0 ceux qui voulaient les garder secr\xE8tes.
+      \xC0 l'autre clan, il laissa une technologie capable d'am\xE9liorer les conditions
+      de vie d'une civilisation, mais sans les recherches et outils n\xE9cessaires
+      pour travailler et am\xE9liorer la mati\xE8re."
   bookLevel3:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Book level 3
+    - "\xC0 sa mort, le village se scinda en deux clans, celui de la Lune gardant
+      le secret et celui du Soleil. Ils \xE9taient assez sage pour \xE9viter tout
+      conflit pouvant engendrer des cons\xE9quences qu'ils les d\xE9passeront."
+    - "Le clan de la Lune \xE9taient satisfait du choix de leur chef, mais celui
+      du Soleil, persuad\xE9e d'etre dans le juste, ne voulait pas se contenter de
+      la situation et menat une guerre invisible pour mettre la main sur le reste
+      de la technologie."
   state: 0
   currentId: 0
   windows: {fileID: 2114838171}
@@ -1304,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: OEIL
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -1369,6 +1421,11 @@ BoxCollider:
 --- !u!1 &596722564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 596722561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &596722565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 596722561}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &616471849
@@ -1536,7 +1593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "D\xC9TENTE"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1553,6 +1610,11 @@ BoxCollider:
 --- !u!1 &649191726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 649191723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &649191727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 649191723}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &655770043
@@ -1855,7 +1917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: LEADER
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1872,6 +1934,11 @@ BoxCollider:
 --- !u!1 &738915854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 738915851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &738915855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 738915851}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &765076953
@@ -2448,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: OMBRE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -2465,6 +2532,11 @@ BoxCollider:
 --- !u!1 &1016369520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 1016369517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016369521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 1016369517}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080014936
@@ -2710,7 +2782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "CR\xC9PUSCULE"
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -2775,6 +2847,11 @@ BoxCollider:
 --- !u!1 &1100518161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1100518158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1100518162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1100518158}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1168006964
@@ -3290,7 +3367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "STRAT\xC9GIE"
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -3355,6 +3432,11 @@ BoxCollider:
 --- !u!1 &1272035746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1272035743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272035747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1272035743}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1292468490
@@ -3551,7 +3633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: DIVISION
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -3568,6 +3650,11 @@ BoxCollider:
 --- !u!1 &1402309784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 1402309781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1402309785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 1402309781}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1436799236
@@ -3831,7 +3918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "H\xC9RITAGE"
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -3896,6 +3983,11 @@ BoxCollider:
 --- !u!1 &1457358704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1457358701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1457358705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1457358701}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492813351
@@ -4098,7 +4190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "LUMI\xC8RE"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -4115,6 +4207,11 @@ BoxCollider:
 --- !u!1 &1513119646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4272629292625551810, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+  m_PrefabInstance: {fileID: 1513119643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1513119647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851303382347199303, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
   m_PrefabInstance: {fileID: 1513119643}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1550319560
@@ -4158,7 +4255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: AVANTAGE
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -4223,6 +4320,11 @@ BoxCollider:
 --- !u!1 &1550319563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1550319560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1550319564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1550319560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1609129885
@@ -4380,7 +4482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "CUPIDIT\xC9"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -4709,7 +4811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "D\xC9SACCORD"
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -4774,6 +4876,11 @@ BoxCollider:
 --- !u!1 &1825334877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1825334874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1825334878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1825334874}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858640305
@@ -4963,7 +5070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: MORT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -5028,7 +5135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: "BONT\xC9"
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -5093,6 +5200,11 @@ BoxCollider:
 --- !u!1 &1879813685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 1879813682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1879813686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 1879813682}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1910968575
@@ -5317,7 +5429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: CHOIX
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -6057,7 +6169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Yeeesssayyy
+      value: DILEMME
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -6122,6 +6234,11 @@ BoxCollider:
 --- !u!1 &2086104277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+  m_PrefabInstance: {fileID: 2086104274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2086104278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3712918739854131386, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
   m_PrefabInstance: {fileID: 2086104274}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2099613108
@@ -6356,7 +6473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: Lib id = 2
+      value: "D\xC9COUVERTE"
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.choices.Array.data[0]
