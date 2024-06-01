@@ -3719,6 +3719,7 @@ MonoBehaviour:
     - "Je dois cacher ce livre avant de rentrer si je ne veux pas que ma m\xE8re
       le vois. L'arbre \xE0 gauche devrait \xEAtre un bon endroit."
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!1 &424576429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,6 +5189,7 @@ MonoBehaviour:
     sentences:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 0}
 --- !u!1 &621265746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5644,6 +5646,7 @@ MonoBehaviour:
     sentences:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 0}
 --- !u!1 &657485392
 GameObject:
   m_ObjectHideFlags: 0
@@ -11627,6 +11630,7 @@ MonoBehaviour:
     sentences:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 0}
 --- !u!1 &1360875294
 GameObject:
   m_ObjectHideFlags: 0
@@ -12890,6 +12894,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &1455388819
 BoxCollider:
   m_ObjectHideFlags: 0

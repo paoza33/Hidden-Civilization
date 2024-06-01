@@ -57,7 +57,10 @@ public class LibraryManagment : MonoBehaviour
 
     private bool endingState0;
     private bool startingState2Dialog;
-    private bool readingBook;
+
+    [HideInInspector]
+    public bool readingBook;
+
     public bool anotherInteraction;
     private bool isEnding;
 
@@ -117,6 +120,8 @@ public class LibraryManagment : MonoBehaviour
             if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding)
             {
                 readingBook = true;
+                readBook.enabled = false;
+                textInteract.enabled = false;
 
                 if(level == 0)
                     DialogOpen.instance.StartDialog(bookLevel0);
@@ -146,6 +151,7 @@ public class LibraryManagment : MonoBehaviour
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
                     readingBook = false;
+                    readBook.enabled = true;
                 }
             }
             else if(isEnding && Input.GetButtonDown("Interact"))

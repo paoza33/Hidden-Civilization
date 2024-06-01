@@ -1388,6 +1388,7 @@ MonoBehaviour:
     sentences:
     - "C'est la cabane du vieil homme, il ne semble avoir personne \xE0 l'int\xE9rieur."
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!1 &1053488694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1497,7 @@ MonoBehaviour:
     - "J'entends des gens parler \xE0 l'int\xE9rieur."
     - Je ne devrais pas rester ici plus longtemps.
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &1105039680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1618,6 +1620,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &1275755701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2026,6 +2029,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &1592393456
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2062,6 +2062,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8696212970141724665, guid: 13d3ecf7496ffe043b4e8aebc2931ac3, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 804856338}
+    - target: {fileID: 8696212970141724665, guid: 13d3ecf7496ffe043b4e8aebc2931ac3, type: 3}
+      propertyPath: soundEffectMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 971583e2d92ce52469add029b5b986cb, type: 2}
     - target: {fileID: 8696212970141724666, guid: 13d3ecf7496ffe043b4e8aebc2931ac3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2111,6 +2119,11 @@ PrefabInstance:
 --- !u!1 &804856337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8696212970141724664, guid: 13d3ecf7496ffe043b4e8aebc2931ac3, type: 3}
+  m_PrefabInstance: {fileID: 804856336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &804856338 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8696212970141724667, guid: 13d3ecf7496ffe043b4e8aebc2931ac3, type: 3}
   m_PrefabInstance: {fileID: 804856336}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &862392795
@@ -2607,7 +2620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 1113232499}
   resume: {fileID: 1437905853}
-  levelToLoad: Library
+  levelToLoad: City
 --- !u!1 &1113232499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1113232499, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}

@@ -3614,6 +3614,24 @@ MonoBehaviour:
       \xE7a peut \xEAtre int\xE9ressant pour toi."
   needInteraction: 1
   item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1001 &166563614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5516,6 +5534,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &250871811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13934,6 +13953,24 @@ MonoBehaviour:
     - "Mais siiii je suis tr\xE8s net ! "
   needInteraction: 1
   item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1001 &663299684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20976,6 +21013,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: c95d154077d392547b248199d65e347d, type: 3}
 --- !u!65 &1031211153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22437,6 +22475,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!1001 &1085714327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31672,6 +31711,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: c95d154077d392547b248199d65e347d, type: 3}
 --- !u!65 &1515734070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36554,6 +36594,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
 --- !u!65 &1753377355
 BoxCollider:
   m_ObjectHideFlags: 0

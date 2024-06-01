@@ -138,6 +138,7 @@ public class DialogOpen : MonoBehaviour
 
         ifDialog = false;
         textReadBook.enabled = true;
+        LibraryManagment.instance.enabled = true;
     }
 
     private void DisplayButton()

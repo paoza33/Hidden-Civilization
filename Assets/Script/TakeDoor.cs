@@ -18,6 +18,8 @@ public class TakeDoor : MonoBehaviour
     public bool ifLibraryDoorState0;
     private bool libraryDoorAlreadyInteract;
 
+    public AudioClip audioClip;
+
     private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
     private void Awake()
     {
@@ -95,6 +97,7 @@ public class TakeDoor : MonoBehaviour
 
     public IEnumerator Fade()
     {
+        AudioManager.instance.PlayClipAt(audioClip, transform.position);
         sceneChanging = true;
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);

@@ -28,7 +28,7 @@ public class CabinetInteraction : MonoBehaviour
     }
     
     private void Update(){
-        if(Input.GetButtonDown("Interact") && !playerAlreadyInteract){
+        if(Input.GetButtonDown("Interact") && !playerAlreadyInteract && !LibraryManagment.instance.readingBook){
             LibraryManagment.instance.anotherInteraction = true;
             playerAlreadyInteract = true;
             textInteract.enabled = false;
@@ -36,6 +36,7 @@ public class CabinetInteraction : MonoBehaviour
             LibraryManagment.instance.UpdateCurrentCabinet(id, symbol, GetComponent<BoxCollider>());
 
             DialogOpen.instance.StartDialog(open);
+            LibraryManagment.instance.enabled = false;
         }
         else if(Input.GetButtonDown("Interact"))
         {
