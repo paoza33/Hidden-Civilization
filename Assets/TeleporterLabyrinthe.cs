@@ -8,6 +8,8 @@ public class TeleporterLabyrinthe : MonoBehaviour
     public GameObject lastPlateform, teleporter;
     public string levelToLoad;
 
+    public AudioClip audioTeleport;
+
     private Animator animator;
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class TeleporterLabyrinthe : MonoBehaviour
 
     private IEnumerator Fade()
     {
+        AudioManager.instance.StopCurrentSong();
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
         PlayerMovement.instance.enabled = true;
@@ -45,7 +48,7 @@ public class TeleporterLabyrinthe : MonoBehaviour
         data.previousSceneName = SceneManager.GetActiveScene().name;
 
         SaveDataManager.SaveDataSpawn(data);
-
+        AudioManager.instance.PlayClipAt(audioTeleport, transform.position);
         SceneManager.LoadScene(levelToLoad);
     }
 }

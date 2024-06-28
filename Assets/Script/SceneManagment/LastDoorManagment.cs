@@ -10,6 +10,7 @@ public class LastDoorManagment : MonoBehaviour
 
     public GameObject secretDoor;
     public GameObject labyrinth;
+    public GameObject triggerWarning;
 
     public GameObject[] Spheres;
     public GameObject[] triggerSpheres;
@@ -20,6 +21,10 @@ public class LastDoorManagment : MonoBehaviour
 
     public GameObject playerStart;
     public Transform spwanLabyrinth;
+
+    public AudioClip clip;
+
+    public Dialog dialog;
 
     public static LastDoorManagment instance;
     private void Awake()
@@ -43,11 +48,28 @@ public class LastDoorManagment : MonoBehaviour
             labyrinth.GetComponent<FlickeringEmissive>().enabled = true;
             secretDoor.GetComponent<MeshCollider>().enabled = false;
         }
+        DialogOpen.instance.StartDialog(dialog);
     }
 
-    private void Start()
+    private void Update()
     {
-        StartCoroutine(Fade());
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                StartCoroutine(Fade());
+                //enabled = false; //a enlever à la fin
+            }
+        }
+        if (solutionEditor)
+        {
+            for (int i = 0; i < triggerSpheres.Length; i++)
+            {
+                triggerSpheres[i].gameObject.SetActive(false);
+            }
+            StartCoroutine(CameraEffect());
+            enabled = false;
+        }
     }
 
     public void AddOrderPlayer(int symboleID)
@@ -80,28 +102,17 @@ public class LastDoorManagment : MonoBehaviour
         secretDoor.GetComponent<FlickeringEmissive>().enabled = true;
         labyrinth.GetComponent<FlickeringEmissive>().enabled = true;
         secretDoor.GetComponent<MeshCollider>().enabled = false;
+        triggerWarning.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(2f);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         SetCameraView.instance.SetNewPosCamera(player.transform.position + CameraMovement.instance.PosOffSet, CameraMovement.instance.CameraRotation, false, false);
-    }
-
-    private void Update()
-    {
-        if (solutionEditor)
-        {
-            for (int i = 0; i < triggerSpheres.Length; i++)
-            {
-                triggerSpheres[i].gameObject.SetActive(false);
-            }
-            StartCoroutine(CameraEffect());
-            enabled = false;
-        }
     }
 
     private IEnumerator Fade()
     {
         PlayerMovement.instance.StopMovement();
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayThemeSong(clip);
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;

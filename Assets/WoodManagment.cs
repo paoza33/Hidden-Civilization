@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
@@ -12,9 +13,12 @@ public class WoodManagment : MonoBehaviour
 
     private bool flipflap;
 
+    private TextMeshProUGUI textInteract;
+
     private void Awake()
     {
         enabled = false;
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -31,12 +35,14 @@ public class WoodManagment : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             enabled = true;
+            textInteract.enabled = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         enabled = false;
+        textInteract.enabled = false;
     }
 
     public void TreeManagment()

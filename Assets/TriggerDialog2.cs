@@ -27,6 +27,8 @@ public class TriggerDialog2 : MonoBehaviour
 
     private Animator animator;
 
+    public AudioClip audioTeleport;
+
     private void Awake()
     {
         enabled = false;
@@ -184,6 +186,7 @@ public class TriggerDialog2 : MonoBehaviour
         enabled = false;
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
+        AudioManager.instance.PlayClipAt(audioTeleport, transform.position);
         KnowledgePlaceManagment.instance.Transition();
     }
 }

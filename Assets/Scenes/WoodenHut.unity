@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Size.z
-      value: 2.1278389
+      value: 2.3158255
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Center.y
@@ -157,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Center.z
-      value: -0.75857395
+      value: -0.6645783
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_RootOrder
@@ -330,6 +330,8 @@ MonoBehaviour:
     sentences:
     - J'ai besoin de cette lampe-torche avant de partir
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!65 &399490368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -393,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Size.z
-      value: 0.9664084
+      value: 1.1185143
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Center.y
@@ -401,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067088, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_Center.z
-      value: -0.03223629
+      value: -0.10828919
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_RootOrder
@@ -730,6 +732,8 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1055370555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -939,32 +943,40 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Player!? Qu'est-ce que tu fais ici? Une lampe torche... Je vois.
-    - Et ce livre est crucial. Repose-le et rentre chez toi, rapidement! Tu arrives
-      au mauvais moment.
+    - Player!? Que fais-tu ici !?
+    - "Raah, c'est vraiment pas le bon moment l\xE0 !!"
+    - "Et lache ce livre imm\xE9diatement ! Tu ne sais pas ce que tu fais !"
+    - 'Rentre chez toi maintenant, sans plus tarder ! '
+    - C'est pas bon, c'est pas bon, c'est pas bon ....
     - ...
     - "... Attends... Tu pourrais bien \xEAtre la solution la plus s\xFBre..."
-    - "\xC9coute-moi attentivement! Des individus mal intentionn\xE9s sont \xE0 la
-      recherche de certains de mes biens. Je ne vais pas entrer dans les d\xE9tails,
+    - "Mais \xE0 quoi je pense ! Impliquer une personne ext\xE9rieure .."
+    - ".......... Mais c'est justement pour cette raison qu'ils n'y penseront jamais
+      ..................\nBON, FAISONS COMME \xC7A !!"
+    - " \xC9coute-moi attentivement! Des individus mal intentionn\xE9s sont \xE0
+      la recherche de certains de mes biens. Je ne vais pas entrer dans les d\xE9tails,
       mais il est imp\xE9ratif que ce livre ne tombe pas entre leurs mains."
     - "Cache-toi dans ma salle de bain. D\xE8s que tu entendras des hommes entrer,
-      sors par la fen\xEAtre et rentre chez toi en dissimulant le livre."
+      sors par la fen\xEAtre et rentre chez toi en dissimulant le livre. Personne
+      ne dois te voir !"
     - "Ils ne sont pas au courant de l'existence de ce livre. Ils ne le rechercheront
       pas apr\xE8s leur passage. Mais ne le montre \xE0 personne et n'en parle \xE0
-      personne."
-    - "Pose cette lampe-torche, ils ne doivent pas te rep\xE9rer, ils ne s'attendent
-      pas \xE0 te voir ici, seulement moi. Donc rentrer sans te faire remarquer devrait
-      \xEAtre simple pour toi."
-    - "Ils arrivent ... On a plus de temps, cache-toi et suis mes instructions ...
-      .  D\xE9sol\xE9 de t'embrigader dans ce danger, toi, un enfant, mais tu ne
-      mesure pas l'importance de ce que tu tiens entre tes mains. Je te le confie
-      car tu es inteligent et astucieux."
-    - "Ne cherche pas \xE0 en savoir plus, , je reviendrai quand je le pourrais.
-      J'ai confiance en toi Player."
+      personne. Compris ?"
+    - "Moi ou quelqu'un me ressemblant passera le r\xE9cup\xE9rer, t\xF4t ou tard.
+      Mais peu importe le temps qui passe, ne le montre \xE0 PERSONNE, j'insiste."
+    - ...
+    - Ils arrivent ... On a plus de temps, cache-toi et suis mes instructions.
+    - En te confiant ce livre, je met potentiellement le monde en danger, tu ne mesure
+      pas l'importance de ce que tu tiens entre tes mains. Je te le confie car tu
+      es inteligent et astucieux.
+    - "Tu n'es pas en danger mais tu le seras si tu cherche \xE0 en savoir plus,
+      je reviendrai quand je le pourrais. J'ai confiance en toi Player."
   unfixZ: 0
   unfixX: 0
   ifFade: 0
   destroyTrigger: 1
+  nightClip: {fileID: 0}
+  ifStopMusic: 1
 --- !u!65 &1256196198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1000,6 +1012,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2814888682283314516, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3576031
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814888682283314516, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6278841
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814888682283314516, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0032094023
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814888682283314516, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Center.z
+      value: 0.3277619
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814888682283314516, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1018,7 +1050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.46174863
+      value: 0.8870109
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1026,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8870109
+      value: 0.46174863
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1038,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -125
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1059,6 +1091,64 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8843805434500230555, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
   m_PrefabInstance: {fileID: 1334612776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1334612778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4883856789584035180, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+  m_PrefabInstance: {fileID: 1334612776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1334612779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334612777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c974a227e3cd6a499a1657652597464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Old man
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Il n'y a pas de temps \xE0 perdre !! Passe par la fen\xEAtre de la salle de
+      bain !"
+  needInteraction: 1
+  item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
+--- !u!65 &1334612780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334612778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0337957, y: 0.66802406, z: 1.6949302}
+  m_Center: {x: -0.0006794543, y: -0.017312238, z: 0.6973566}
 --- !u!1 &1428445244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,10 +1322,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 1
   levelToLoad: Camp
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!114 &1512398348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,6 +1390,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2192583393882944a3a9aac6c8496e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  youngSkin:
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
+  - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
+  - {fileID: 2100000, guid: b39e2d3e0feae0e49be3f7be6129b06e, type: 2}
+  - {fileID: 2100000, guid: 062985ab09623d649814a10d5c8c7da7, type: 2}
+  - {fileID: 2100000, guid: 784a68f5af95f3e4e8fae489b8904a64, type: 2}
+  - {fileID: 2100000, guid: d057cfcbc21c19c49bf2bde75783079a, type: 2}
+  - {fileID: 2100000, guid: 0a5a3e3d2f643234ea49a01751ab8175, type: 2}
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
   cameraMainPos: {x: 0.18651888, y: 5.0476747, z: -1.3636303}
   objState0:
   - {fileID: 8378569934897016107}
@@ -1309,6 +1410,7 @@ MonoBehaviour:
   - {fileID: 399490365}
   objState1:
   - {fileID: 1055370552}
+  clip: {fileID: 8300000, guid: 03b28d4c7405e4fa3864377a171cf308, type: 3}
 --- !u!64 &1742311573
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1568,7 +1670,9 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - what is this book ?
+    - 'C''est quoi ce livre ? Bizarre ces couleurs, je l''avais jamais vu avant.
+      Pareil pour ces boules ! '
+    - je vais aller le lire sur la table, le temps que le vieil homme arrive.
   notOpen:
     name: 
     choices: []
@@ -1579,10 +1683,12 @@ MonoBehaviour:
   isItemObtained: 1
   item: {fileID: 11400000, guid: da476122b0081e04193fa6dd9ec58700, type: 2}
   destroyObject: 1
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 1334612777}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!64 &2127876308
 MeshCollider:
   m_ObjectHideFlags: 0

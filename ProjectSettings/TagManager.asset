@@ -18,6 +18,8 @@ TagManager:
   - Flash
   - Menu
   - Credit
+  - Counter
+  - VerificationChoiceUI
   layers:
   - Default
   - TransparentFX

@@ -191,6 +191,7 @@ MonoBehaviour:
   - {fileID: 6959054721138396457}
   - {fileID: 8469483108797767705}
   - {fileID: 6415489440510758984}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &147419164
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +255,7 @@ MonoBehaviour:
   - {fileID: 8805068676533621509}
   - {fileID: 7523847349378688821}
   - {fileID: 6727698935210912018}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &206172452
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2002cb2cebb11354ea5f8d307665e8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 72c3fb8c38050f54b8893756aa190549, type: 3}
 --- !u!4 &394691593
 Transform:
   m_ObjectHideFlags: 0
@@ -859,6 +862,7 @@ MonoBehaviour:
   - {fileID: 8723161255948806351}
   - {fileID: 7421128528378798769}
   - {fileID: 7795755378162818401}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &670366430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1179,7 @@ MonoBehaviour:
   - {fileID: 8602348382311330356}
   - {fileID: 7134115789648193258}
   - {fileID: 8753914061914129552}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1001 &740348763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1601,6 +1606,7 @@ MonoBehaviour:
   lastPlateform: {fileID: 2525075775580465140}
   teleporter: {fileID: 7993090031177297680}
   levelToLoad: KnowledgePlace
+  audioTeleport: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
 --- !u!1 &1062203318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: LastDoor
+  ifSongDontNeedToStop: 0
 --- !u!1 &1515978403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2869,7 @@ MonoBehaviour:
   - {fileID: 8090540255629638897}
   - {fileID: 6546742198761381941}
   - {fileID: 4616954010613105199}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &1737399654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3132,7 @@ MonoBehaviour:
   - {fileID: 7023550441589150328}
   - {fileID: 7963268567438978019}
   - {fileID: 6956259113861492395}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &1871121404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,6 +3201,7 @@ MonoBehaviour:
   - {fileID: 8159214489970759478}
   - {fileID: 5699625566554076058}
   - {fileID: 8083736664645431403}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &1914955463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3269,7 @@ MonoBehaviour:
   - {fileID: 6879045823908621273}
   - {fileID: 6715604753760152523}
   - {fileID: 9195306119548975199}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &1916507789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,6 +3432,7 @@ MonoBehaviour:
   - {fileID: 8485636549770758698}
   - {fileID: 8314017125792863786}
   - {fileID: 8868451253596544527}
+  audioClip: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
 --- !u!1 &2030584593
 GameObject:
   m_ObjectHideFlags: 0

@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyNeeded: WoodKey
+  keyNeeded: 
   animatorDoor: {fileID: 298906116}
   colliderToDesactivate: {fileID: 872824086}
   meshColliderDesactivate: {fileID: 0}
@@ -256,7 +256,10 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Open noctis lucius caelum yare yare daze
+    - Il y a un motif ici ! Et les contours ... Cela semble une porte.
+    - "Cette for\xEAt est accessible \xE0 tout public. Donc comment se fait-il que
+      personne n'est remarqu\xE9 cet endroit jusqu'\xE0 maintenant ?"
+    - "Bref, il y a un m\xE9canisme. Activons -le !"
   notOpen:
     name: 
     choices: []
@@ -265,14 +268,16 @@ MonoBehaviour:
     sentences:
     - Still Close mada mada dane omae wa mo shindeiru
     - mais desespere pas mon ami, tu sais que yare yare daze n'est-ce pas ?
-  isNeedKey: 1
+  isNeedKey: 0
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &13243518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1078,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Cave
+  ifSongDontNeedToStop: 0
 --- !u!65 &125734496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5337,6 +5343,24 @@ MonoBehaviour:
       la nuit."
   needInteraction: 0
   item: {fileID: 11400000, guid: 053ef396c8047fc45852f04c1b8b42a9, type: 2}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1001 &661097894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7591,10 +7615,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 6273530120008833230}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1021990532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11163,6 +11189,11 @@ MonoBehaviour:
   - {fileID: 511635575}
   - {fileID: 992949174}
   - {fileID: 1338572425}
+  lights:
+  - {fileID: 515680897}
+  - {fileID: 761146532}
+  clipDay: {fileID: 8300000, guid: 4a87d7e487e06462b8681da493ee3f8f, type: 3}
+  clipEnigm: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!4 &1677580116
 Transform:
   m_ObjectHideFlags: 0
@@ -11353,7 +11384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664041740968178610, guid: 7db2eff13b40a794bbff08e0971c6af1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8572683
+      value: 6.297282
       objectReference: {fileID: 0}
     - target: {fileID: 3664041740968178610, guid: 7db2eff13b40a794bbff08e0971c6af1, type: 3}
       propertyPath: m_LocalPosition.y

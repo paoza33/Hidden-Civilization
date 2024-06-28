@@ -353,10 +353,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 1
   levelToLoad: Home
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &29369132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3720,6 +3722,7 @@ MonoBehaviour:
       le vois. L'arbre \xE0 gauche devrait \xEAtre un bon endroit."
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!1 &424576429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5193,7 @@ MonoBehaviour:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!1 &621265746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,6 +5651,7 @@ MonoBehaviour:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!1 &657485392
 GameObject:
   m_ObjectHideFlags: 0
@@ -9597,10 +9602,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1072755303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11631,6 +11638,7 @@ MonoBehaviour:
     - "Je n'ai rien \xE0 faire ici"
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!1 &1360875294
 GameObject:
   m_ObjectHideFlags: 0
@@ -12895,6 +12903,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1455388819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17864,6 +17873,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStart: {fileID: 6558067657585311133}
+  youngSkin:
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
+  - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
+  - {fileID: 2100000, guid: b39e2d3e0feae0e49be3f7be6129b06e, type: 2}
+  - {fileID: 2100000, guid: 062985ab09623d649814a10d5c8c7da7, type: 2}
+  - {fileID: 2100000, guid: 784a68f5af95f3e4e8fae489b8904a64, type: 2}
+  - {fileID: 2100000, guid: d057cfcbc21c19c49bf2bde75783079a, type: 2}
+  - {fileID: 2100000, guid: 0a5a3e3d2f643234ea49a01751ab8175, type: 2}
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
   spawnHome: {fileID: 428885465}
   spawnCity: {fileID: 1636016926}
   spawnCamp: {fileID: 2047946813}
@@ -17937,6 +17955,8 @@ MonoBehaviour:
   - {fileID: 1248481167820134220}
   - {fileID: 518033861}
   - {fileID: 22210351}
+  audioClipDay: {fileID: 8300000, guid: 7c1b7bbc412834d24b0900b6768572e6, type: 3}
+  audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!1 &1945566201
 GameObject:
   m_ObjectHideFlags: 0
@@ -18912,10 +18932,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &2046688656
 BoxCollider:
   m_ObjectHideFlags: 0

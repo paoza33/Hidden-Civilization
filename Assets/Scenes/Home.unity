@@ -635,7 +635,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &565488277
 MonoBehaviour:
@@ -690,8 +690,11 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je dois reprendre mes recherches, mais avant de partir, je dois r\xE9cup\xE9rer
-      mes affaires."
+    - "Des ann\xE9es de recherches, et enfin, une piste ! Qui aurait cru que la cl\xE9
+      se trouvait si pr\xE8s de ma maison d'enfance ?"
+    - "Au moins, je n'ai pas eu \xE0 chercher loin pour un endroit o\xF9 dormir.\nMaintenant
+      que je suis bien repos\xE9, je peux partir."
+    - "Mais avant \xE7a, je dois r\xE9cup\xE9rer le livre."
   dialogState1:
     name: Player
     choices: []
@@ -712,38 +715,84 @@ MonoBehaviour:
       a tant de page blanche entre ces textes."
     - "Une technologie sup\xE9rieure, une civilisation cach\xE9e, les dangers de
       ces d\xE9couvertes ... Mais qui \xE9tait ce vieil homme ?"
-    - Ma meilleure piste est ce centre de recherche
+    - "Le livre fait mention d'un centre de recherche.\nSi j'en crois la carte, l'emplacement
+      semble \xEAtre l\xE0 o\xF9 se trouve la librairie de la ville au nord."
+    - "Cela semble vrai sachant que cette librairie a \xE9t\xE9 construite sur une
+      ancienne structure."
+    - Direction la ville !
   dialogState3:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "La foret !! Ce signe me rappelle celui grav\xE9 dans cette structure \xE9trange.
-      Pas de temps \xE0 perdre, je dois v\xE9rifier \xE7a maintenant."
+    - "Le signe ! La for\xEAt !! Ce signe me rappelle celui grav\xE9 dans cette structure
+      \xE9trange dans la for\xEAt."
+    - "Je dois v\xE9rifier \xE7a sans perdre plus de temps."
   dialogState4:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Qui \xE9tait cet homme ? Il semblait avoir des connaissances sur cette structure
-      ..."
-    - "Bref, v\xE9rifions ces dires ,il fait nuit d\xE9sormais, je peux y aller."
+    - "Qui \xE9tait cet homme ? Il me rappelle vaguement quelqu'un .."
+    - Il semblait avoir des connaissances sur cette structure...
+    - 'Autant suivre ces conseils comme je n''ai aucune piste.
+
+'
+    - "Il fait d\xE9sormais nuit, direction la for\xEAt !"
   dialogState5:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je me suis assez repos\xE9, direction les ruines du nord-est."
+    - "Tout \xE7a est compl\xE9tement fou ! Je ne sais pas si je fais bien de continuer.
+      Pourquoi ce livre est toujours en ma possession ? Il y a t'il une raison \xE0
+      ce que je continue ?"
+    - ...
+    - "Ce n'est pas le moment de penser \xE0 tout \xE7a si pr\xE8s du but. Reprenons
+      nos recherches."
+    - "Le livre affiche une carte d'une cit\xE9. La disposition des b\xE2timents
+      semble \xEAtre similaire aux ruines du Nord-Est."
+    - "Mais ces ruines sont interdites d'acc\xE8s au public depuis que le \"QG\"
+      a pris possession des lieux. Et elles sontbien trop surveill\xE9s pour pouvoir
+      m'infiltrer."
+    - "Pour quelles raisons le \"QG\" s'est-il install\xE9 ici ? Et pourquoi autant
+      de surveillance pour des ruines ? Peut-\xEAtre qu'ils ont connaissances de
+      cette ancienne civilisation eux-aussi .. Je dois redoubler de vigilance \xE0
+      partir de maintenant."
+    - "Je suis pr\xEAt, direction les ruines du nord-est."
+  dialogsEN: []
+  recentSkin:
+  - {fileID: 2100000, guid: 71d3f8e2fbe5ba342b5e9f30bae32859, type: 2}
+  - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
+  - {fileID: 2100000, guid: ca55fa6181afb2b4a9d5c0fb93a9c3c7, type: 2}
+  - {fileID: 2100000, guid: 8498e66e61893c14aa71b7d6ffad69b6, type: 2}
+  - {fileID: 2100000, guid: 784a68f5af95f3e4e8fae489b8904a64, type: 2}
+  - {fileID: 2100000, guid: d057cfcbc21c19c49bf2bde75783079a, type: 2}
+  - {fileID: 2100000, guid: 0a5a3e3d2f643234ea49a01751ab8175, type: 2}
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
+  youngSkin:
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
+  - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
+  - {fileID: 2100000, guid: b39e2d3e0feae0e49be3f7be6129b06e, type: 2}
+  - {fileID: 2100000, guid: 062985ab09623d649814a10d5c8c7da7, type: 2}
+  - {fileID: 2100000, guid: 784a68f5af95f3e4e8fae489b8904a64, type: 2}
+  - {fileID: 2100000, guid: d057cfcbc21c19c49bf2bde75783079a, type: 2}
+  - {fileID: 2100000, guid: 0a5a3e3d2f643234ea49a01751ab8175, type: 2}
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
   spawnBedroom: {fileID: 6004611300616648162}
   unfixX: 1
   unfixZ: 0
   objState0:
   - {fileID: 2534518051061365792}
   - {fileID: 1120411358}
+  objState1:
+  - {fileID: 643558579}
+  - {fileID: 1370294480}
   laptop: {fileID: 608777329}
+  audioClip: {fileID: 8300000, guid: 505a0e829c7314e28b3270739fdccfa3, type: 3}
 --- !u!4 &587649524
 Transform:
   m_ObjectHideFlags: 0
@@ -757,7 +806,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &608777327
 PrefabInstance:
@@ -903,6 +952,161 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f566528c889e8af49b4579fd0155827a, type: 3}
+--- !u!1001 &643558576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.60664654
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Size.z
+      value: 0.95940673
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Center.x
+      value: 0.010810401
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Center.z
+      value: -0.27761954
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741937632766658753, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 359f77b94c041de4592b893743e69bb9, type: 2}
+    - target: {fileID: 2741937632766658753, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67c409c03d564094f82ef91aa0c5b97c, type: 2}
+    - target: {fileID: 2741937632766658753, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3faa82d245979143b17d16604c0da04, type: 2}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.279285
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6533252
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.795246
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.973539
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.22852091
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -333.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055952448736707487, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Name
+      value: Mom
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055952448736707487, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+--- !u!1 &643558577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2038887942746046345, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+  m_PrefabInstance: {fileID: 643558576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &643558578
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643558577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0337957, y: 0.73610944, z: 1.836738}
+  m_Center: {x: 0.0006800502, y: -0.016733274, z: 0.7680949}
+--- !u!1 &643558579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9055952448736707487, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+  m_PrefabInstance: {fileID: 643558576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &643558580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643558579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c974a227e3cd6a499a1657652597464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Mom
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - D'accord, mais ne rentre pas tard !
+  needInteraction: 1
+  item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1001 &755012087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1404,7 +1608,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1129095512
 PrefabInstance:
@@ -1662,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901073759416882773, guid: c4086be07c72aeb4aa6a4f4eed38c288, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2901073759416882773, guid: c4086be07c72aeb4aa6a4f4eed38c288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1710,6 +1914,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4086be07c72aeb4aa6a4f4eed38c288, type: 3}
+--- !u!1 &1370294480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370294483}
+  - component: {fileID: 1370294482}
+  - component: {fileID: 1370294481}
+  m_Layer: 0
+  m_Name: trigger Call mom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1370294481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370294480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55f54e73cb5b15488259c8a6e140901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Maman ! J'ai tout fini ! Je pars au campement !
+  unfixZ: 0
+  unfixX: 0
+  ifFade: 0
+  destroyTrigger: 1
+  nightClip: {fileID: 0}
+  ifStopMusic: 0
+--- !u!65 &1370294482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370294480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2357695, y: 1, z: 10.0786}
+  m_Center: {x: 1.0828849, y: 0, z: 1.2124376}
+--- !u!4 &1370294483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370294480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.72372, y: 0.90009, z: 19.50195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1419430003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2400,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1624688203
 MonoBehaviour:
@@ -2630,6 +2905,8 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 023ea3ddeaa8dd146b7633a0800e5a0e, type: 3}
+  ifStopMusic: 1
 --- !u!114 &2117406332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2690,7 +2967,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136530149
 MonoBehaviour:
@@ -2705,6 +2982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Village
+  ifSongDontNeedToStop: 0
 --- !u!4 &263172570315877292
 Transform:
   m_ObjectHideFlags: 0
@@ -2719,7 +2997,7 @@ Transform:
   m_Children:
   - {fileID: 2117406328}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2490264337801054346
 PrefabInstance:
@@ -2754,7 +3032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2895,7 +3173,7 @@ Transform:
   - {fileID: 1888091216}
   - {fileID: 1419430004}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4806376281040315465
 MeshFilter:
@@ -3000,7 +3278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901073759416882773, guid: c4086be07c72aeb4aa6a4f4eed38c288, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2901073759416882773, guid: c4086be07c72aeb4aa6a4f4eed38c288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3092,7 +3370,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6363125153876558718
 PrefabInstance:

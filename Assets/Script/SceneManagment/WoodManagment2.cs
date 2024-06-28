@@ -12,6 +12,12 @@ public class WoodManagment2 : MonoBehaviour
     public GameObject[] objState0;
     public GameObject[] objState1;
 
+    public Light[] lights;
+
+    private bool isNight;
+
+
+    public AudioClip clipDay, clipEnigm;
     private void Awake()
     {
         state = SaveDataManager.LoadDataSceneState().woodState;
@@ -23,15 +29,21 @@ public class WoodManagment2 : MonoBehaviour
     }
     private void Start()
     {
-        if(state == 0)
+        if (state == 0)
         {
-            foreach(GameObject obj in objState0)
+            isNight = false;
+            foreach (GameObject obj in objState0)
                 obj.SetActive(true);
         }
         else if(state == 1)
         {
+            isNight = true;
+            foreach (Light light in lights)
+                light.intensity = 0;
+
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Light>().enabled = true;
             foreach (GameObject obj in objState1)
-                obj.SetActive(true);
+                obj.SetActive(true);           
         }
     }
 
@@ -39,6 +51,12 @@ public class WoodManagment2 : MonoBehaviour
     {
         PlayerMovement.instance.StopMovement();
         yield return new WaitForSeconds(1f);
+
+        if(isNight)
+            AudioManager.instance.PlayThemeSong(clipEnigm);
+        else
+            AudioManager.instance.PlayThemeSong(clipDay);
+
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;

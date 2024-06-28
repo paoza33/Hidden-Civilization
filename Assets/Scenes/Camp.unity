@@ -387,6 +387,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStart: {fileID: 1947464217}
+  youngSkin:
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
+  - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
+  - {fileID: 2100000, guid: b39e2d3e0feae0e49be3f7be6129b06e, type: 2}
+  - {fileID: 2100000, guid: 062985ab09623d649814a10d5c8c7da7, type: 2}
+  - {fileID: 2100000, guid: 784a68f5af95f3e4e8fae489b8904a64, type: 2}
+  - {fileID: 2100000, guid: d057cfcbc21c19c49bf2bde75783079a, type: 2}
+  - {fileID: 2100000, guid: 0a5a3e3d2f643234ea49a01751ab8175, type: 2}
+  - {fileID: 2100000, guid: aa445fbd20bf7db4fa96414ac2a527b8, type: 2}
   spawnWoodenHut: {fileID: 8465755776970253264}
   spawnBeach: {fileID: 1639797504}
   spawnWindow: {fileID: 1937753837}
@@ -412,14 +421,39 @@ MonoBehaviour:
   - {fileID: 1592393453}
   - {fileID: 3310555977884721311}
   skyLight: {fileID: 654183126}
+  dialogState0:
+    name: Young Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - La plage est droit devant !
   dialogState1:
     name: Young Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - J'ai pas vu le temps passer, le soleil se couche. Je vais demander au vieil
-      homme une lampe-torche.
+    - "Wow ! Le soleil commence d\xE9j\xE0 \xE0 se coucher ! Il fait trop sombre.\nJe
+      vais demander au vieil homme une lampe-torche pour rentrer."
+    - "Il doit \xEAtre dans sa cabane."
+  dialogState2:
+    name: Young Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "(Je comprends rien \xE0 ce qu'il se passe ! Mais je ne veux pas rester ici
+      plus longtemps. Je veux rentrer chez moi.)"
+  dialogState3:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - La boussole pointe vers le lac. Continuons.
+  audioClipDay: {fileID: 8300000, guid: 9a2fbf85189b64abd9f6031bf71787c5, type: 3}
+  audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!4 &214542911
 Transform:
   m_ObjectHideFlags: 0
@@ -503,11 +537,13 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Time to play
+    - L'heure est venue de jouer !
   unfixZ: 0
   unfixX: 0
   ifFade: 1
   destroyTrigger: 0
+  nightClip: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
+  ifStopMusic: 0
 --- !u!65 &248560191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -743,7 +779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &446188907
 Transform:
   m_ObjectHideFlags: 0
@@ -999,7 +1035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &678686862
 Transform:
   m_ObjectHideFlags: 0
@@ -1142,7 +1178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784295456}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 15.095077, y: 1.5958472, z: -6.3063035}
+  m_LocalPosition: {x: 15.125108, y: 1.5958472, z: -7.0970907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1389,6 +1425,7 @@ MonoBehaviour:
     - "C'est la cabane du vieil homme, il ne semble avoir personne \xE0 l'int\xE9rieur."
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!1 &1053488694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1535,7 @@ MonoBehaviour:
     - Je ne devrais pas rester ici plus longtemps.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1105039680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1621,6 +1659,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1275755701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1775,7 +1814,17 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok let's go tutututututu
+    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chi ..."
+    - "Cette barque ... Comment se fait-il qu'elle soit intact apr\xE8s avoir abandonn\xE9e
+      depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un entretenait
+      tout ce temps, \xE7a se saurait !"
+    - "\xC0 moins que \xE7a ne soit pas du bois !? En regardant de plus pr\xEAt,
+      il n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
+    - "Ce n'est d\xE9finitivement pas normal. Donc tout ce \"bois\" serait compos\xE9
+      de cette myst\xE9rieuse mati\xE8re. Et \xE7a doit \xEAtre avec cette barque
+      qu'il devait atteindre l'\xEEle."
+    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normal. Curieux
+      de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle ehe."
   notOpen:
     name: 
     choices: []
@@ -1787,10 +1836,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 1
   levelToLoad: LostIsland
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1413355668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2030,6 +2081,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1592393456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2125,8 +2177,8 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Arbre sp\xE9cial"
-  needInteraction: 0
+    - "L'un des arbres que le vieil homme \xE9tudie. Il est minuscule !"
+  needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
   objToActivate: {fileID: 0}
@@ -2437,7 +2489,17 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok let's go tutututututu
+    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chi ..."
+    - "Cette barque ... Comment se fait-il qu'elle soit intact apr\xE8s avoir abandonn\xE9e
+      depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un entretenait
+      tout ce temps, \xE7a se saurait !"
+    - "\xC0 moins que \xE7a ne soit pas du bois !? En regardant de plus pr\xEAt,
+      il n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
+    - "Ce n'est d\xE9finitivement pas normal. Donc tout ce \"bois\" serait compos\xE9
+      de cette myst\xE9rieuse mati\xE8re. Et \xE7a doit \xEAtre avec cette barque
+      qu'il devait atteindre l'\xEEle."
+    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normal. Curieux
+      de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle ehe."
   notOpen:
     name: 
     choices: []
@@ -2449,10 +2511,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 1
   levelToLoad: LostIsland
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1943455159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2714,8 +2778,8 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Arbre sp\xE9cial"
-  needInteraction: 0
+    - "L'un des arbres que le vieil homme \xE9tudie. Il est immense !"
+  needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
   objToActivate: {fileID: 0}
@@ -3216,7 +3280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9105904106264533307}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 14.281401, y: 1.7471853, z: 12.463909}
+  m_LocalPosition: {x: 15.445432, y: 1.7471853, z: 13.463447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3967,7 +4031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3943432590826642674}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 13.396654, y: 1.737221, z: -10.59746}
+  m_LocalPosition: {x: 15.415398, y: 1.737221, z: -10.59746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

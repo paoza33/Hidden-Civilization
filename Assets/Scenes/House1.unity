@@ -452,6 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unfixX: 0
   unfixZ: 0
+  clip: {fileID: 8300000, guid: b6891bf38a3df44b29d9271a7acfea03, type: 3}
 --- !u!4 &583689632
 Transform:
   m_ObjectHideFlags: 0
@@ -1155,6 +1156,24 @@ MonoBehaviour:
     - Tu es chez moi
   needInteraction: 1
   item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1 &1419430003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: City
+  ifSongDontNeedToStop: 1
 --- !u!1001 &2490264337801054346
 PrefabInstance:
   m_ObjectHideFlags: 0

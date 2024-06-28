@@ -1,13 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class VillageManagment : MonoBehaviour
 {
     public GameObject playerStart;
     private GameObject player;
+    public Material[] youngSkin;
 
     public Transform spawnHome, spawnCity, spawnCamp, spawnWood;
 
@@ -19,6 +18,9 @@ public class VillageManagment : MonoBehaviour
 
     public GameObject[] portalsState0, portalsState1, portalsState2, portalsState3, portalsState4, portalsState5, portalsState6, portalsState7;
 
+    public AudioClip audioClipDay, audioClipNight;
+    private bool isNight;
+
     private void Awake()
     {
         enabled = false;
@@ -29,8 +31,15 @@ public class VillageManagment : MonoBehaviour
 
         if(state == 0)  // joueur enfant, il se dirige vers le camp, on bloque wood et city
         {
+            isNight = false;
             enabled = true;
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            Material[] tempMat = player.GetComponentInChildren<SkinnedMeshRenderer>().materials;
+
+            for (int i = 0; i < tempMat.Length; i++)
+            {
+                tempMat[i].color = youngSkin[i].color;
+            }
 
             // enfant jour avec objectif -> camp
             foreach (GameObject obj in colliderState0)
@@ -39,7 +48,15 @@ public class VillageManagment : MonoBehaviour
                 obj.SetActive(true);
         }
         else if(state == 1){
+            isNight=true;
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+
+            Material[] tempMat = player.GetComponentInChildren<SkinnedMeshRenderer>().materials;
+
+            for (int i = 0; i < tempMat.Length; i++)
+            {
+                tempMat[i].color = youngSkin[i].color;
+            }
 
             // enfant nuit objectif -> home, on bloque city, wood et camp
             skyLight.intensity = 0.2f;
@@ -50,6 +67,7 @@ public class VillageManagment : MonoBehaviour
         }
         else if(state == 2) // joueur se dirige vers city, on bloque wood et camp
         {
+            isNight = false;
             foreach (GameObject obj in colliderState2)
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState2)
@@ -57,6 +75,7 @@ public class VillageManagment : MonoBehaviour
         }
         else if (state == 3) // joueur se dirige vers wood en journée, on bloque City et camp
         {
+            isNight = false;
             foreach (GameObject obj in colliderState3)
                 obj.SetActive(true);
             foreach (GameObject obj in portalsState3)
@@ -64,12 +83,14 @@ public class VillageManagment : MonoBehaviour
         }
         else if(state == 4) // retour wood, direction home pour dormir
         {
+            isNight = false;
             foreach (GameObject obj in colliderState4)
                 obj.SetActive(true);
             foreach (GameObject obj in portalsState4)
                 obj.SetActive(true);
         }
         else if(state == 5){    // joueur se dirige vers wood, nuit, on bloque city et camp
+            isNight = true;
             skyLight.intensity = 0.2f;
             foreach (GameObject obj in colliderState5)
                 obj.SetActive(true);
@@ -77,6 +98,7 @@ public class VillageManagment : MonoBehaviour
                 obj.SetActive(true);
         }
         else if(state == 6){        // retour wood, direction city -> objectif ruins, on bloque wood et camp
+            isNight = false;
             foreach (GameObject obj in colliderState6)
                 obj.SetActive(true);
             foreach(GameObject obj in portalsState6)
@@ -84,6 +106,7 @@ public class VillageManagment : MonoBehaviour
         }
         else if (state == 7)    // retour ruins, objectif lost island, on bloque city, wood
         {
+            isNight = false;
             foreach (GameObject obj in colliderState7)
                 obj.SetActive(true);
             foreach (GameObject obj in portalsState7)
@@ -119,6 +142,11 @@ public class VillageManagment : MonoBehaviour
     {
         PlayerMovement.instance.StopMovement();
         yield return new WaitForSeconds(1f);
+        if(isNight)
+            AudioManager.instance.PlayThemeSong(audioClipNight);
+        else
+            AudioManager.instance.PlayThemeSong(audioClipDay);
+
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         if(state == 0){

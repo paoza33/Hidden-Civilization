@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class LibraryManagment : MonoBehaviour
 {
+    public Dialog startState0, startState1, startState2;
+    private bool startingDialog = true;
+
     private List<int> orderPlayer = new List<int>();
     private List<int> orderSolution = new List<int>();
 
@@ -36,7 +39,6 @@ public class LibraryManagment : MonoBehaviour
 
     private int nbrInteractionState0; // déclanche un dialogue quand = en state0
     public Dialog dialogEndState0;
-    public Dialog dialogBeginningState2;
     public Dialog ending;
 
     public Dialog bookLevel0, bookLevel1, bookLevel2, bookLevel3;
@@ -56,13 +58,16 @@ public class LibraryManagment : MonoBehaviour
     public GameObject windows;
 
     private bool endingState0;
-    private bool startingState2Dialog;
 
     [HideInInspector]
     public bool readingBook;
 
     public bool anotherInteraction;
     private bool isEnding;
+
+    public AudioClip clip;
+
+    private TextMeshProUGUI counterText;    // counter interaction cabinet in state 0
 
     public static LibraryManagment instance;
 
@@ -75,6 +80,7 @@ public class LibraryManagment : MonoBehaviour
         }
         instance = this;
 
+        counterText = GameObject.FindGameObjectWithTag("Counter").GetComponent<TextMeshProUGUI>();
         readBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
 
@@ -91,25 +97,25 @@ public class LibraryManagment : MonoBehaviour
                 coll.enabled = false;
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
-            StartCoroutine(Fade());
+            DialogOpen.instance.StartDialog(startState0);
         }
         else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
-                coll.enabled = false;                                                                                           // chercher à mettre le texte du chef + bon ordre
+                coll.enabled = false;
 
             foreach(GameObject obj in objState1)
                 obj.SetActive(true);
-                StartCoroutine(Fade());
+            DialogOpen.instance.StartDialog(startState1);
         }
         else if (state == 2){
             foreach (GameObject obj in cabLevel1) { obj.GetComponent<BoxCollider>().enabled = false; }
             foreach (GameObject obj in cabLevel2) { obj.GetComponent<BoxCollider>().enabled = false; }
             foreach (GameObject obj in cabLevel3) { obj.GetComponent<BoxCollider>().enabled = false; }
 
-            startingState2Dialog = true;
             playerStart.transform.position = spawnState2.position;
             SettingsEngima();
-            DialogOpen.instance.StartDialog(dialogBeginningState2);
+            DialogOpen.instance.StartDialog(startState2);
+            StartCoroutine(FadeState2());
         }
     }
 
@@ -117,7 +123,7 @@ public class LibraryManagment : MonoBehaviour
     {
         if(!anotherInteraction)
         {
-            if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding)
+            if (Input.GetButtonDown("ReadBook") && !readingBook && state == 2 && !isEnding && !startingDialog)
             {
                 readingBook = true;
                 readBook.enabled = false;
@@ -134,16 +140,22 @@ public class LibraryManagment : MonoBehaviour
 
             }
             else if(endingState0 && Input.GetButtonDown("Interact")){
-                if(!DialogOpen.instance.DisplayNextSentences())
+                if (!DialogOpen.instance.DisplayNextSentences())
+                {
                     endingState0 = false;
+                    counterText.enabled = false;
+                }
             }
 
-            else if (startingState2Dialog && Input.GetButtonDown("Interact")){
+            else if (startingDialog && Input.GetButtonDown("Interact")){
                 if(!DialogOpen.instance.DisplayNextSentences()){
-                    if (state == 2 && startingState2Dialog){ // start state2
-                        startingState2Dialog = false;
+                    startingDialog = false;
+                    if(state == 2)
+                    {
+
+                    }   
+                    else
                         StartCoroutine(Fade());
-                    }
                 }
             }
             else if(readingBook && Input.GetButtonDown("Interact"))
@@ -158,7 +170,8 @@ public class LibraryManagment : MonoBehaviour
             {
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
-                    StartCoroutine(FadeEnding());
+                    PlayerMovement.instance.enabled = true;
+                    CameraMovement.instance.cameraFixZ = false;
                 }
             }
         }
@@ -273,6 +286,7 @@ public class LibraryManagment : MonoBehaviour
         }
         else if (level == 3)
         {
+            AudioManager.instance.StopCurrentSong();
             readBook.enabled = false;
             DialogOpen.instance.StartDialog(ending);
             isEnding = true;
@@ -343,6 +357,8 @@ public class LibraryManagment : MonoBehaviour
 
     public void SetupState0(){
         nbrInteractionState0 +=1;
+        counterText.text = nbrInteractionState0 + " / 5";
+
         if(nbrInteractionState0 == 5){
             StartCoroutine(StartDialogEndState0());
         }
@@ -359,14 +375,26 @@ public class LibraryManagment : MonoBehaviour
     {
         PlayerMovement.instance.StopMovement();
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayThemeSong(clip);
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
         yield return new WaitForSeconds(1f);
-        if(state == 2)
-            readBook.enabled = true;
+        if (state == 0)
+            counterText.enabled = true;
+    }
+
+    private IEnumerator FadeState2()
+    {
+        PlayerMovement.instance.StopMovement();
+        yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayThemeSong(clip);
+        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1f);
+        readBook.enabled = true;
     }
 
     private IEnumerator FadeEnding()

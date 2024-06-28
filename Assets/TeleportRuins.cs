@@ -10,6 +10,8 @@ public class TeleportRuins : MonoBehaviour
     public Light lt;
     public string levelToLoad;
 
+    public AudioClip audioTeleport;
+
     private void Awake()
     {
         enabled = false;
@@ -46,8 +48,9 @@ public class TeleportRuins : MonoBehaviour
         PlayerMovement.instance.StopMovement();
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeIn");
-
+        AudioManager.instance.StopCurrentSong();
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayClipAt(audioTeleport, transform.position);
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         data.currentSceneName = "Tower";

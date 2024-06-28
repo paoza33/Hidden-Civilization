@@ -41,7 +41,6 @@ public static class SaveDataManager
     #region Save and load spawn data
     public static void SaveDataSpawn(SaveDataSpawn data)
     {
-        Debug.Log("save has passed");
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 
         string path = Application.persistentDataPath + "/SpawnData.data";
@@ -149,6 +148,25 @@ public static class SaveDataManager
         }
     }
     #endregion
+
+    public static void DeleteAllData()
+    {
+        string path = Application.persistentDataPath + "/SpawnData.data";
+        if (SpawnDataCreated())
+        {
+            File.Delete(path);
+            Debug.Log("delete spawn");
+        }
+            
+
+        path = Application.persistentDataPath + "/SceneStateData.data";
+        if (SceneStateDataCreated())
+        {
+            File.Delete(path);
+            Debug.Log("delete state");
+        }
+            
+    }
 
     public static bool SpawnDataCreated()
     {

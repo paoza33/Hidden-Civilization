@@ -49,6 +49,9 @@ public class PanelControl : MonoBehaviour
     private Vector3 newPosTower;
     private Vector3 newPosTopTower;
 
+    public AudioClip audioTowerRotation;
+    public AudioClip audioTowerGoDown;
+
     public static PanelControl instance;
 
     private void Awake()
@@ -64,6 +67,7 @@ public class PanelControl : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && !IsMooving && !isEnding)  // if true, rotate tower
         {
+            AudioManager.instance.PlayClipAt(audioTowerRotation, transform.position);
             initialRotation = towerToRotate.transform.rotation;
             if (isLvl1)
             {
@@ -171,6 +175,7 @@ public class PanelControl : MonoBehaviour
         {
             if (Mathf.Abs(towerToRotate.transform.rotation.eulerAngles.y - objectifRotationYLvl1) < 1f) // the player achieved the lvl when the rotation of the tower is near to the objectif rotation
             {
+                AudioManager.instance.PlayClipAt(audioTowerGoDown, transform.position);
                 offset = new Vector3(0, -6.71f, 0);
                 newPosTower = towerToRotate.transform.position + offset;
                 newPosTopTower = towerTop.transform.position + offset;
@@ -190,6 +195,7 @@ public class PanelControl : MonoBehaviour
         {
             if (Mathf.Abs(towerToRotate.transform.rotation.eulerAngles.y - objectifRotationYLvl2) < 1f)
             {
+                AudioManager.instance.PlayClipAt(audioTowerGoDown, transform.position);
                 offset = new Vector3(0, -6.71f, 0);
                 newPosTower = towerToRotate.transform.position + offset;
                 newPosTopTower = towerTop.transform.position + offset;
@@ -209,6 +215,7 @@ public class PanelControl : MonoBehaviour
         {
             if (Mathf.Abs(towerToRotate.transform.rotation.eulerAngles.y - objectifRotationYLvl3) < 1f)
             {
+                AudioManager.instance.PlayClipAt(audioTowerGoDown, transform.position);
                 offset = new Vector3(0, -6.6277f, 0);
                 newPosTower = towerToRotate.transform.position + offset;
                 newPosTopTower = towerTop.transform.position + offset;

@@ -5,10 +5,13 @@ using UnityEngine;
 public class ActiveDeathZoneLabyrinth : MonoBehaviour
 {
     public List<SubFracture> subFractureList;
+
+    public AudioClip audioClip;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayClipAt(audioClip, other.transform.position);
             foreach (SubFracture subFracture in subFractureList)
             {
                 LabyrinthManager.instance.subFractureList.Enqueue(subFracture);

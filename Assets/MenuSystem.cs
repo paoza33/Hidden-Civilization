@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuSystem : MonoBehaviour
 {
-    private GameObject menuUI;
+    private GameObject menuUI, verifUI;
+
     private bool gameIsPaused;
     public GameObject start;
     public GameObject resume;
@@ -16,11 +18,16 @@ public class MenuSystem : MonoBehaviour
     private void Awake()
     {
         menuUI = GameObject.FindGameObjectWithTag("Menu");
+        verifUI = GameObject.FindGameObjectWithTag("VerificationChoiceUI");
+
+        menuUI.SetActive(false);
+        verifUI.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Menu") && !(SceneManager.GetActiveScene().name == "Level0"))
+        if (Input.GetButtonDown("Menu") && !(SceneManager.GetActiveScene().name == "Level0")
+            && GameObject.FindGameObjectWithTag("UIMapText").GetComponent<TextMeshProUGUI>().enabled == false)
         {
             if (gameIsPaused)
             {
@@ -37,6 +44,24 @@ public class MenuSystem : MonoBehaviour
                 gameIsPaused = true;
             }
         }
+    }
+
+    public void verificationChoiceUI()
+    {
+        menuUI.SetActive(false);
+        verifUI.SetActive(true);
+    }
+
+    public void VerificationNo()
+    {
+        verifUI.SetActive(false);
+        menuUI.SetActive(true);
+    }
+
+    public void NewGame()
+    {
+        SaveDataManager.DeleteAllData();
+        StartGame();
     }
 
     public void StartGame()
@@ -75,10 +100,10 @@ public class MenuSystem : MonoBehaviour
     {
         enabled = false;
         menuUI.SetActive(false);
+        verifUI.SetActive(false);
         start.SetActive(false);
         resume.SetActive(true);
         yield return new WaitForSeconds(0.75f);
-
         SceneSpawn();
         enabled = true;
     }
@@ -120,7 +145,9 @@ public class MenuSystem : MonoBehaviour
             SaveDataManager.SaveDataSceneState(data);
         }
         SaveDataSpawn newData = SaveDataManager.LoadDataSpawn();
-        //string levelToLoad = newData.currentSceneName;
+        string levelToLoad = newData.currentSceneName;
+        AudioManager.instance.StopCurrentSong();
+
         SceneManager.LoadScene(levelToLoad);
     }
 }

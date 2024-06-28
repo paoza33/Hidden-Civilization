@@ -4,6 +4,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -42,9 +43,14 @@ public class SettingsSystem : MonoBehaviour
         dropdown.value = currentResolutionIndex;
         dropdown.RefreshShownValue();
     }
-    public void SetVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Music", volume);
+    }
+
+    public void SetSoundVolume(float volume)
+    {
+        audioMixer.SetFloat("Sound", volume);
     }
 
     public void SettingsDisplay()

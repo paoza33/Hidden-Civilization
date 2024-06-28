@@ -29,6 +29,7 @@ public class TriggerDialog : MonoBehaviour
     public bool isItemObtained;
     public Item item;
     public bool destroyObject;
+    public bool selfDesactivation;
 
     public bool isChangingScene;
     public string levelToLoad;
@@ -41,6 +42,8 @@ public class TriggerDialog : MonoBehaviour
 
     public bool ifLibrary;
     private bool ifAlreadyLibraryInteraction; // on incrémente de 1 l'etat de library en state 0
+
+    public AudioClip audioTeleport;
 
     private void Awake()
     {
@@ -123,6 +126,8 @@ public class TriggerDialog : MonoBehaviour
                 {
                     colliderDoorBathroom.enabled = true;
                 }
+                if(selfDesactivation)
+                    GetComponent<BoxCollider>().enabled = false;
                 if (isChangingScene && !isNeedKey)
                 {
                     enabled = false;
@@ -187,6 +192,11 @@ public class TriggerDialog : MonoBehaviour
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
+        AudioManager.instance.StopCurrentSong();
+        if(SceneManager.GetActiveScene().name == "Tower")
+            AudioManager.instance.PlayClipAt(audioTeleport, transform.position);
+
+        CameraMovement.instance.enabled = true;
         SceneManager.LoadScene(levelToLoad);
     }
 }

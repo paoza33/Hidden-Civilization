@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unfixX: 0
   unfixZ: 0
+  clip: {fileID: 0}
 --- !u!4 &216140741
 Transform:
   m_ObjectHideFlags: 0
@@ -1915,6 +1916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: City
+  ifSongDontNeedToStop: 1
 --- !u!1001 &2490264337801054346
 PrefabInstance:
   m_ObjectHideFlags: 0

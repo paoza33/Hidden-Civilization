@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapOpen : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class MapOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Map"))
+        if (Input.GetButtonDown("Map") && SceneManager.GetActiveScene().name != "Level0")
         {
             if (gameIsPaused)
             {

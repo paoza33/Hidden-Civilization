@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TriggerPlateformControl : MonoBehaviour
@@ -24,9 +25,14 @@ public class TriggerPlateformControl : MonoBehaviour
     private bool firstInteract = true;
     private bool canChangeButton = true;
 
+    public bool iftuto1, iftuto2;
+
+    private TextMeshProUGUI textInteract;
+
     private void Awake()
     {
         enabled = false;
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -34,6 +40,7 @@ public class TriggerPlateformControl : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            textInteract.enabled = true;
             buttons[indexPoints].GetComponent<FlickeringEmissive>().isReverse = false;
             buttons[indexPoints].GetComponent<FlickeringEmissive>().enabled = true;
             enabled = true;
@@ -44,6 +51,7 @@ public class TriggerPlateformControl : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            textInteract.enabled = false;
             buttons[indexPoints].GetComponent<FlickeringEmissive>().isReverse = true;
             buttons[indexPoints].GetComponent<FlickeringEmissive>().enabled = true;
             enabled = false;
@@ -58,6 +66,12 @@ public class TriggerPlateformControl : MonoBehaviour
         }
         if (Input.GetButtonDown("Interact") && firstInteract)
         {
+            if (iftuto1)
+                textInteract.text = "E TO TURN THE PILLAR";
+            else if (iftuto2)
+                textInteract.text = "LEFT OR RIGHT TO CHANGE THE PILLARS";
+            else
+                textInteract.enabled = false;
             PlayerMovement.instance.StopMovement();
             LaserSphereManagment.instance.SetLaser(laser, startPoint[indexPoints], endPoints[indexPoints]);
             laser.enabled = true;
@@ -69,6 +83,8 @@ public class TriggerPlateformControl : MonoBehaviour
         else if (Input.GetButtonDown("Interact") && canInteract)
         {
             PlateformMovement.instance.Moove(color, indexPoints);
+            if (iftuto1)
+                textInteract.text = "ESCAPE TO QUIT";
         }
         else if (Input.GetAxisRaw("Horizontal") == 1 && canInteract && canChangeButton)
         {
@@ -100,6 +116,8 @@ public class TriggerPlateformControl : MonoBehaviour
         }
         else if(Input.GetButtonDown("Cancel") && canInteract)
         {
+            textInteract.text = "E TO INTERACT";
+            textInteract.enabled = true;
             PlayerMovement.instance.enabled = true;
             laser.enabled = false;
 

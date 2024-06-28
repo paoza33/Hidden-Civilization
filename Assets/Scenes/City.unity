@@ -5490,7 +5490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &250871809
 Transform:
   m_ObjectHideFlags: 0
@@ -5535,6 +5535,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 0
 --- !u!65 &250871811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12587,6 +12588,7 @@ MonoBehaviour:
   spawnHouse3: {fileID: 478314846}
   spawnRuins: {fileID: 1904203069}
   spawnLibrary: {fileID: 48114049}
+  spawnCityNight: {fileID: 1461468279}
   objState0:
   - {fileID: 1731844593}
   - {fileID: 1515734067}
@@ -12594,6 +12596,9 @@ MonoBehaviour:
   - {fileID: 551189762}
   - {fileID: 1308877856}
   - {fileID: 115727486}
+  - {fileID: 1084685116}
+  - {fileID: 250871808}
+  - {fileID: 1753377352}
   objState1:
   - {fileID: 1932828755}
   - {fileID: 1031211150}
@@ -12606,12 +12611,20 @@ MonoBehaviour:
   - {fileID: 1685505801}
   - {fileID: 1731844593}
   - {fileID: 378488964}
+  - {fileID: 1084685116}
+  - {fileID: 250871808}
+  - {fileID: 1753377352}
   objState3:
   - {fileID: 1685505801}
   - {fileID: 1731844593}
   - {fileID: 1308877856}
   - {fileID: 115727486}
+  - {fileID: 1084685116}
+  - {fileID: 250871808}
+  - {fileID: 1753377352}
   skyLight: {fileID: 931790879}
+  audioClipDay: {fileID: 8300000, guid: b6891bf38a3df44b29d9271a7acfea03, type: 3}
+  audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!4 &584683118
 Transform:
   m_ObjectHideFlags: 0
@@ -21014,6 +21027,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: c95d154077d392547b248199d65e347d, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1031211153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22418,7 +22432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1084685117
 Transform:
   m_ObjectHideFlags: 0
@@ -22476,6 +22490,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 0
 --- !u!1001 &1085714327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30556,6 +30571,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5546c756905981f4eb9d0f73e2aed665, type: 3}
   m_PrefabInstance: {fileID: 1453014756}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1461468278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461468279}
+  m_Layer: 0
+  m_Name: CityNight
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461468279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461468278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.177885, y: -27.018698, z: 16.475025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2137089024}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1463868854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31712,6 +31758,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: c95d154077d392547b248199d65e347d, type: 3}
+  ifStopMusic: 1
 --- !u!65 &1515734070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36550,7 +36597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1753377353
 Transform:
   m_ObjectHideFlags: 0
@@ -36595,6 +36642,7 @@ MonoBehaviour:
     sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 0
 --- !u!65 &1753377355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44952,6 +45000,7 @@ Transform:
   - {fileID: 478314846}
   - {fileID: 48114049}
   - {fileID: 1904203069}
+  - {fileID: 1461468279}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

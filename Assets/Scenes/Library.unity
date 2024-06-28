@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.22571349, b: 0.30692273, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571427, b: 0.30692387, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -919,6 +919,8 @@ MonoBehaviour:
     sentences:
     - "Cette porte est interdit d'acc\xE8s. Impossible de passer par l\xE0."
   ifLibraryDoorState0: 1
+  audioClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!65 &515947550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1045,6 +1047,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3ca7521534a7f5b8052b8145e1cf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startState0:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Cherchons un indice dans cette librairie qui pourrait faire avancer les recherches.
+  startState1:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Infiltration r\xE9ussi .. Personne dans les environs ..\nParfait ! Commen\xE7ons
+      par chercher la cl\xE9 de la porte."
+  startState2:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Apr\xE8s avoir bien \xE9tudi\xE9 ce qu'il se passe, il semblerait que je dois
+      activer les dalles brillantes dans un ordre pr\xE9cis."
+    - "L'ordre semble \xEAtre indiqu\xE9 dans l'histoire apparu dans ce livre tout
+      \xE0 l'heure."
+    - Relisons encore une fois cette histoire et trouvons le bon ordre.
   symbols1:
   - {fileID: 311037988}
   - {fileID: 2134206920}
@@ -1184,21 +1212,29 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Le livre n'a aucune r\xE9action, blablabla"
-  dialogBeginningState2:
-    name: Player
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences:
-    - explication enigme.
+    - "J'ai fais le tour mais rien d'anormal \xE0 signaler."
+    - "Regarder tout en d\xE9tails me prendrai trop de temps et me donnerai un air
+      suspect. Je dois rester discret."
+    - "Il ne me reste que l'\xE9tage sup\xE9rieur, mais je ne peux y acc\xE9der seulement
+      par cette porte interdite d'acc\xE8s."
+    - "Je dois revenir ici cette nuit, \xE0 l'abris des regards..."
+    - "Si je d\xE9verrouille le verrou d'une des fen\xEAtres, personne ne pensera
+      \xE0 v\xE9rifier. Je n'aurai qu'\xE0 revenir cette nuit en passant par celle-ci."
   ending:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Voila la fin, direction home
+    - "Enfin ! Tout a \xE9t\xE9 activ\xE9 dans le bon ordre."
+    - (Prends le livre) ...
+    - "Comme pr\xE9vu. Du texte a bien \xE9t\xE9 r\xE9v\xE9l\xE9."
+    - Je comprends mieux .. Ce livre retrace l'histoire du clan des gardiens.
+    - "Apr\xE8s la division du village, le clan des gardiens a cach\xE9 leur technologie
+      dans un endroit \"hors du temps\" ? Qu'est-ce que cela signifie ?"
+    - "Il y a un signe \xE0 la fin du texte ..."
+    - "J'ai d\xE9j\xE0 vu ce signe quelque part ... Mais o\xF9 ?"
+    - "Je verrais \xE7a chez moi, je ne devrais pas rester ici plus logntemps."
   bookLevel0:
     name: 
     choices: []
@@ -1249,12 +1285,14 @@ MonoBehaviour:
       conflit pouvant engendrer des cons\xE9quences qu'ils les d\xE9passeront."
     - "Le clan de la Lune \xE9taient satisfait du choix de leur chef, mais celui
       du Soleil, persuad\xE9e d'etre dans le juste, ne voulait pas se contenter de
-      la situation et menat une guerre invisible pour mettre la main sur le reste
+      la situation et mena une guerre invisible pour mettre la main sur le reste
       de la technologie."
   state: 0
   currentId: 0
   windows: {fileID: 2114838171}
+  readingBook: 0
   anotherInteraction: 0
+  clip: {fileID: 8300000, guid: daf93a1a41a6f844db533a93e6b65426, type: 3}
 --- !u!4 &583166792
 Transform:
   m_ObjectHideFlags: 0
@@ -1491,6 +1529,8 @@ MonoBehaviour:
     sentences:
     - "ferm\xE9 ... La cl\xE9 devrait etre \xE0 la reception."
   ifLibraryDoorState0: 0
+  audioClip: {fileID: 0}
+  ifStopMusic: 1
 --- !u!65 &616471852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2292,10 +2332,12 @@ MonoBehaviour:
   isItemObtained: 1
   item: {fileID: 11400000, guid: 7a59efc737759e9ee93f3660dd9b7134, type: 2}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!64 &934505970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2668,7 +2710,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Aucune r\xE9action ne se passe sur cette rang\xE9e."
+    - "Juste une rang\xE9e de bouquins .."
   notOpen:
     name: 
     choices: []
@@ -2679,10 +2721,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 1
+  audioTeleport: {fileID: 0}
 --- !u!1 &1095916748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,7 +2798,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Aucune r\xE9action ne se passe sur cette rang\xE9e."
+    - "Rien d'intriguant sur cette rang\xE9e .."
   notOpen:
     name: 
     choices: []
@@ -2765,10 +2809,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 1
+  audioTeleport: {fileID: 0}
 --- !u!1001 &1100518158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3728,7 +3774,8 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Aucune r\xE9action ne se passe sur cette rang\xE9e."
+    - "\"Comment d\xE9velopper un jeu vid\xE9o de A \xE0 Z\". Int\xE9ressant, mais
+      pas ce que je cherche .."
   notOpen:
     name: 
     choices: []
@@ -3739,10 +3786,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 1
+  audioTeleport: {fileID: 0}
 --- !u!1 &1452826537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,6 +4071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: City
+  ifSongDontNeedToStop: 0
 --- !u!65 &1492813353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4954,7 +5004,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Aucune r\xE9action ne se passe sur cette rang\xE9e."
+    - Rien. Perdons pas plus de temps ici ..
   notOpen:
     name: 
     choices: []
@@ -4965,10 +5015,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 1
+  audioTeleport: {fileID: 0}
 --- !u!1001 &1879755126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5982,10 +6034,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!1 &2078963217
 GameObject:
   m_ObjectHideFlags: 0
@@ -6344,7 +6398,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "D\xE9verouiller. Personne pensera \xE0 v\xE9rifier la fenetre."
+    - "D\xE9verouiller. Plus qu'\xE0 esp\xE9rer que personne ne le verras."
   notOpen:
     name: 
     choices: []
@@ -6355,10 +6409,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &2114838174
 BoxCollider:
   m_ObjectHideFlags: 0

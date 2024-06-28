@@ -19,6 +19,7 @@ public class TakeDoor : MonoBehaviour
     private bool libraryDoorAlreadyInteract;
 
     public AudioClip audioClip;
+    public bool ifStopMusic;
 
     private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
     private void Awake()
@@ -110,6 +111,9 @@ public class TakeDoor : MonoBehaviour
         data.previousSceneName = SceneManager.GetActiveScene().name;
 
         SaveDataManager.SaveDataSpawn(data);
+
+        if(ifStopMusic)
+            AudioManager.instance.StopCurrentSong();
 
         SceneManager.LoadScene(levelToLoad);
     }

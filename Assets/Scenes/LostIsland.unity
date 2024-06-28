@@ -4280,6 +4280,8 @@ MonoBehaviour:
   endPoints:
   - {fileID: 692078528}
   speed: 1
+  iftuto1: 1
+  iftuto2: 0
 --- !u!1 &586656112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,6 +7762,8 @@ MonoBehaviour:
   - {fileID: 122500006}
   - {fileID: 1216404688}
   speed: 1
+  iftuto1: 0
+  iftuto2: 0
 --- !u!1001 &1021160370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13018,6 +13022,8 @@ MonoBehaviour:
   - {fileID: 1450670174}
   - {fileID: 408922430}
   speed: 1
+  iftuto1: 0
+  iftuto2: 0
 --- !u!1 &1798770189
 GameObject:
   m_ObjectHideFlags: 0
@@ -13091,6 +13097,8 @@ MonoBehaviour:
   - {fileID: 1217216683}
   - {fileID: 923781579}
   speed: 1
+  iftuto1: 0
+  iftuto2: 0
 --- !u!1 &1799785259
 GameObject:
   m_ObjectHideFlags: 0
@@ -14881,6 +14889,8 @@ MonoBehaviour:
   - {fileID: 1344317745}
   - {fileID: 894691559}
   speed: 1
+  iftuto1: 0
+  iftuto2: 1
 --- !u!1 &1937993021
 GameObject:
   m_ObjectHideFlags: 0
@@ -15540,6 +15550,7 @@ MonoBehaviour:
   - {fileID: 4604113830588370747}
   - {fileID: 3736393773416240373}
   - {fileID: 4951013942904692636}
+  audioClip: {fileID: 8300000, guid: 7b21b50f27a95224fa10e8f962ae17af, type: 3}
 --- !u!114 &2050257316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15561,11 +15572,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050257313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53856addf14f9cc40a7e8f6e4e091db1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c70be0eb4f6978408b9113740f66770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unfixX: 1
-  unfixZ: 1
+  clip: {fileID: 8300000, guid: fab4f81e154f8784ea674d6c13e5cac8, type: 3}
+  dialog:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Une barque sp\xE9ciale hein !? Foutu barque ! J'ai d\xFB me taper tout le
+      trajet en ramant !"
+    - "Heureusement qu'il y avait cette boussole, impossible de se rep\xE9rer dans
+      ce brouillard !"
+    - Aller, on respire un bon coup ...
+    - La boussole me dit d'aller tout droit.
 --- !u!1 &2078994195
 GameObject:
   m_ObjectHideFlags: 0
@@ -21025,6 +21047,8 @@ MonoBehaviour:
   unfixX: 1
   ifFade: 0
   destroyTrigger: 0
+  nightClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!23 &5827458571736563557
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class TowerManagment : MonoBehaviour
 
     private bool beggining = true;
 
+    public AudioClip clip;
+
     void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -42,6 +44,7 @@ public class TowerManagment : MonoBehaviour
     {
         
         yield return new WaitForSeconds(0.2f);
+        AudioManager.instance.PlayThemeSong(clip);
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;

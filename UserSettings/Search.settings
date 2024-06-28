@@ -1,15 +1,18 @@
 trackSelection = true
 fetchPreview = true
-defaultFlags = 0
+defaultFlags = 264
 keepOpen = false
 queryFolder = "Assets"
 onBoardingDoNotAskAgain = true
 showPackageIndexes = false
-showStatusBar = false
+showStatusBar = true
 scopes = {
 	"last_search.2138236A" = ""
 	"OpenInspectorPreview.2138236A" = "0"
 	"currentGroup.2138236A" = "asset"
+	"last_search.B655092D" = "st:key"
+	"OpenInspectorPreview.B655092D" = "0"
+	"currentGroup.B655092D" = "all"
 }
 providers = {
 	adb = {
@@ -52,10 +55,22 @@ providers = {
 		priority = 50
 		defaultAction = null
 	}
+	at = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	st = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
 recentSearches = [
+	"al"
+	"st:alias{}"
 ]
 searchItemFavorites = [
 ]

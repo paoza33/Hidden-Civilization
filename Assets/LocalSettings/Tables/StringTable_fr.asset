@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 67a7789231ac90047b2914e7708fda98, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 89611718656
+    m_Localized: Salut paoza !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23556520300544
+    m_Localized: '"E" POUR INTERAGIR'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23964236009472
+    m_Localized: COMMENCER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38506810724352
+    m_Localized: REPRENDRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38582283030528
+    m_Localized: PARAMETRES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38889821982720
+    m_Localized: QUITTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44121649991680
+    m_Localized: '"R" POUR LIRE LE LIVRE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44230483791872
+    m_Localized: EFFET SONORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44375766093824
+    m_Localized: MUSIQUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44510868819968
+    m_Localized: CONFIGURATION TOUCHES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44822174257152
+    m_Localized: PLEIN ECRAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723282798465024
+    m_Localized: QUALITE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723940599549952
+    m_Localized: RETOUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744877810143232
+    m_Localized: NOUVELLE PARTIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772247061417984
+    m_Localized: "CELA SUPPRIMERA VOS DONNEES.\n\t    \tCONTINUER ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772505162108928
+    m_Localized: OUI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772536522919936
+    m_Localized: NON
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

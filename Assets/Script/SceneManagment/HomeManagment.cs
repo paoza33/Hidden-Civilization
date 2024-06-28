@@ -12,6 +12,10 @@ public class HomeManagment : MonoBehaviour
     public Dialog dialogState4;
     public Dialog dialogState5;
 
+    public Dialog[] dialogsEN;
+
+    public Material[] recentSkin, youngSkin;
+
     private Animator animator;
 
     public Transform spawnBedroom;
@@ -20,8 +24,10 @@ public class HomeManagment : MonoBehaviour
     public bool unfixX;
     public bool unfixZ;
 
-    public GameObject[] objState0;
+    public GameObject[] objState0, objState1;
     public GameObject laptop;
+
+    public AudioClip audioClip;
 
     private void Awake()
     {
@@ -48,6 +54,15 @@ public class HomeManagment : MonoBehaviour
 
         else if(saveDataSceneState != null && saveDataSceneState.homeState == 1)    //pass�, flashback
         {
+            foreach (GameObject obj in objState1)
+                obj.SetActive(true);
+
+            Material[] tempMat = player.GetComponentInChildren<SkinnedMeshRenderer>().materials;
+
+            for(int i = 0; i < tempMat.Length; i++)
+            {
+                tempMat[i].color = youngSkin[i].color;
+            }
             laptop.SetActive(false);
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             ifLongFade = true;
@@ -57,6 +72,12 @@ public class HomeManagment : MonoBehaviour
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 2)   // retour pr�sent, joueur explique o� il doit aller
         {
+            Material[] tempMat = player.GetComponentInChildren<SkinnedMeshRenderer>().materials;
+
+            for (int i = 0; i < tempMat.Length; i++)
+            {
+                tempMat[i].color = recentSkin[i].color;
+            }
             player.transform.localScale = new Vector3(1f, 1f, 1f); // retour taille normal
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
@@ -123,6 +144,7 @@ public class HomeManagment : MonoBehaviour
         PlayerMovement.instance.StopMovement();
         enabled = false;
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayThemeSong(audioClip);
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;
         if (unfixX)

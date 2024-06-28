@@ -19,6 +19,8 @@ public class TriggerDialog3 : MonoBehaviour
 
     public bool destroyTrigger;
 
+    public AudioClip nightClip;
+    public bool ifStopMusic;
 
     private void Awake()
     {
@@ -30,6 +32,8 @@ public class TriggerDialog3 : MonoBehaviour
     {
         if (!playerEnter)
         {
+            if(ifStopMusic)
+                AudioManager.instance.StopCurrentSong();
             playerEnter = true;
             DialogOpen.instance.StartDialog(dialog);
         }
@@ -84,6 +88,8 @@ public class TriggerDialog3 : MonoBehaviour
         data.campState = 1;
         SaveDataManager.SaveDataSceneState(data);
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.StopCurrentSong();
+        AudioManager.instance.PlayThemeSong(nightClip);
         SceneManager.LoadScene("Camp");
     }
 }

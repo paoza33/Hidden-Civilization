@@ -7,6 +7,8 @@ public class TriggerChangeScene : MonoBehaviour
     public string levelToLoad;
     private Animator animator;
     private bool alreadyTriggered;
+
+    public bool ifSongDontNeedToStop;
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -35,6 +37,8 @@ public class TriggerChangeScene : MonoBehaviour
         data.previousSceneName = SceneManager.GetActiveScene().name;
 
         SaveDataManager.SaveDataSpawn(data);
+        if(!ifSongDontNeedToStop)
+            AudioManager.instance.StopCurrentSong();
 
         SceneManager.LoadScene(levelToLoad);
     }

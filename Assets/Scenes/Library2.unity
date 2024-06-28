@@ -181,51 +181,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.002354, y: 1, z: 15.557839}
   m_Center: {x: -4.001177, y: 0, z: -3.375997}
---- !u!1 &63362031
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 63362033}
-  - component: {fileID: 63362032}
-  m_Layer: 0
-  m_Name: BlockExit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &63362032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63362031}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.47721, y: 1, z: 1.8559189}
-  m_Center: {x: -0.8667016, y: 0, z: 0.42795944}
---- !u!4 &63362033
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63362031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0921364, y: -0.030030012, z: -10.05758}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97986233
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,8 +730,10 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "*Cough* *Cough * ... Toute cette poussi\xE8re ..."
-    - "Il n'y a que cette \xE9tag\xE8re cass\xE9e, fouillons \xE7a de plus pr\xE8s."
+    - "*Tousse* *Tousse * ... Toute cette poussi\xE8re ... Cet endroit n'a pas \xE9t\xE9
+      visit\xE9 depuis un bon moment."
+    - "La salle est vide, hormis cette \xE9tag\xE8re en piteux \xE9tat. Je devrais
+      y jeter un oeil."
 --- !u!1 &655770043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1111,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772528254}
   m_Mesh: {fileID: -5053925668127403250, guid: 428d602375a6bae45845bc309763ac6d, type: 3}
+--- !u!1 &815440885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815440886}
+  - component: {fileID: 815440887}
+  m_Layer: 0
+  m_Name: Stairs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815440886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815440885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7420568, y: 11.646067, z: -8.970824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1310827234}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &815440887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815440885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0903623, y: 3.1529775, z: 1}
+  m_Center: {x: -0.15442646, y: -0.5948861, z: 0}
 --- !u!1 &1080014936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyNeeded: 
   animatorDoor: {fileID: 0}
-  colliderToDesactivate: {fileID: 63362032}
+  colliderToDesactivate: {fileID: 815440887}
   meshColliderDesactivate: {fileID: 0}
   colliderToActivate: {fileID: 0}
   colliderDoorBathroom: {fileID: 0}
@@ -1306,10 +1308,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 1
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!1001 &1226450371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1505,6 +1509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 262229022}
+  - {fileID: 815440886}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1769,6 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Library
+  ifSongDontNeedToStop: 1
 --- !u!65 &1492813353
 BoxCollider:
   m_ObjectHideFlags: 0

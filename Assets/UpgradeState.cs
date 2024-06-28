@@ -34,6 +34,17 @@ public class UpgradeState : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!noInteraction)
+            {
+                enabled = false;
+            }
+        }
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Interact") && !alreadyInteract)

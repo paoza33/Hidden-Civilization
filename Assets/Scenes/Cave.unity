@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 1117788489}
   - component: {fileID: 1117788492}
   - component: {fileID: 1117788491}
-  - component: {fileID: 1117788493}
+  - component: {fileID: 1117788494}
   m_Layer: 0
   m_Name: CaveManagment
   m_TagString: Untagged
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &1117788493
+--- !u!114 &1117788494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1312,11 +1312,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1117788488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53856addf14f9cc40a7e8f6e4e091db1, type: 3}
+  m_Script: {fileID: 11500000, guid: d8925645da480c343ba75a3d0b8984bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unfixX: 1
-  unfixZ: 1
+  audioClip: {fileID: 8300000, guid: 64756924c431f714ca0e9d6ab04974ed, type: 3}
+  intro:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Woaw ! Cet endroit semble irr\xE9el !\nEst-ce un aper\xE7u des capacit\xE9s
+      de cette ancienne technologie ?"
+    - "\xC0 moi de trouver quoi faire ici d\xE9sormais."
 --- !u!1 &1264403016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,10 +1898,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 1
   levelToLoad: Home
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!114 &1898550558
 MonoBehaviour:
   m_ObjectHideFlags: 0

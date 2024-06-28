@@ -42,5 +42,7 @@ public class FallingDeathZone : MonoBehaviour
         animator.SetTrigger("FadeIn");
         yield return new WaitForSecondsRealtime(0.75f);
         animator.SetTrigger("FadeOut");
+        Time.timeScale = 1.0f;
+        Time.fixedDeltaTime = 0.02f;
     }
 }

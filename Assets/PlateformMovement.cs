@@ -7,6 +7,8 @@ public class PlateformMovement : MonoBehaviour
     [SerializeField]
     private GameObject[] plateformWhite, plateformRed, plateformBlue, plateformGreen, plateformTurquoise;
 
+    public AudioClip audioClip;
+
     public static PlateformMovement instance;
     private void Awake()
     {
@@ -57,5 +59,6 @@ public class PlateformMovement : MonoBehaviour
                 Debug.Log("error color in Moove fonction in class PlaterformMovement");
                 break;
         }
+        AudioManager.instance.PlayClipAt(audioClip, transform.position);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -33,7 +31,21 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!audioSource.isPlaying && audioSource.clip != null)
+        {
+            PlayNextSong();
+        }
+    }
 
+    public void PlayThemeSong(AudioClip audioClip)
+    {
+        if(!audioSource.isPlaying)
+        {
+            playlist[0] = audioClip;
+            audioSource.clip = playlist[0];
+            audioSource.Play();
+        }
+        
     }
 
     void PlayNextSong()
@@ -43,15 +55,20 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void StopCurrentSong()
+    {
+        audioSource.clip = null;
+    }
+
     public AudioSource PlayClipAt(AudioClip clip, Vector3 pos)
     {
         GameObject tempGO = new GameObject("tempAudio");
         tempGO.transform.position = pos;
-        AudioSource audioSource = tempGO.AddComponent<AudioSource>();
-        audioSource.clip = clip;
-        audioSource.outputAudioMixerGroup = soundEffectMixer;
-        audioSource.Play();
+        AudioSource audioSourceTemp = tempGO.AddComponent<AudioSource>();
+        audioSourceTemp.clip = clip;
+        audioSourceTemp.outputAudioMixerGroup = soundEffectMixer;
+        audioSourceTemp.Play();
         Destroy(tempGO, clip.length);
-        return audioSource;
+        return audioSourceTemp;
     }
 }

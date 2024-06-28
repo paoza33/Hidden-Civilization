@@ -12,7 +12,9 @@ public class RuinsManagment : MonoBehaviour
 
     public GameObject bodyguardLeft, bodyguardRight;
 
+    public Dialog dialog0, dialog1;
 
+    public AudioClip clip;
     private void Awake()
     {
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
@@ -23,26 +25,34 @@ public class RuinsManagment : MonoBehaviour
         if(state.ruinsState == 0){
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
+            DialogOpen.instance.StartDialog(dialog0);
         }
         else if(state.ruinsState == 1){
             bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0, -90f, 0));
             bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0, 90f, 0));
             foreach (GameObject obj in objState1)
                 obj.SetActive(true);
+            DialogOpen.instance.StartDialog(dialog1);
         }
-        
-
     }
 
-    private void Start()
+    void Update()
     {
-        StartCoroutine(Fade());
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                StartCoroutine(Fade());
+            }
+        }
     }
 
     private IEnumerator Fade()
     {
+        enabled = false;
         PlayerMovement.instance.StopMovement();
         yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlayThemeSong(clip);
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
         PlayerMovement.instance.enabled = true;

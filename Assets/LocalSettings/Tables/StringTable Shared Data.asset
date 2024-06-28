@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: 67a7789231ac90047b2914e7708fda98
+  m_Entries:
+  - m_Id: 89611718656
+    m_Key: ExampleKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23556520300544
+    m_Key: Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23964236009472
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38506810724352
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38582283030528
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38889821982720
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44121649991680
+    m_Key: Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44230483791872
+    m_Key: Sound_Effect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44375766093824
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44510868819968
+    m_Key: Key_Bidings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44822174257152
+    m_Key: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723282798465024
+    m_Key: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723940599549952
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 744877810143232
+    m_Key: new_Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772247061417984
+    m_Key: Verification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772505162108928
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772536522919936
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6158770905409912856
+  references:
+    version: 2
+    RefIds:
+    - rid: 6158770905409912856
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1719244161316

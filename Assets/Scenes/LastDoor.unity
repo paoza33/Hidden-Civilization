@@ -484,6 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Labyrinth
+  ifSongDontNeedToStop: 0
 --- !u!65 &203081197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -635,6 +636,8 @@ MonoBehaviour:
   unfixX: 1
   ifFade: 0
   destroyTrigger: 0
+  nightClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!1 &332234313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,10 +1128,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!1 &583227038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secretDoor: {fileID: 6130906496413844895}
   labyrinth: {fileID: 1208762130130167725}
+  triggerWarning: {fileID: 2071231265}
   Spheres:
   - {fileID: 1147117144}
   - {fileID: 503068797}
@@ -2028,6 +2034,14 @@ MonoBehaviour:
   solutionEditor: 0
   playerStart: {fileID: 623489882}
   spwanLabyrinth: {fileID: 2611953360730713225}
+  clip: {fileID: 8300000, guid: b66fb7b88c93ece4299463b22ba6cce3, type: 3}
+  dialog:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Enfin sorti de ce brouillard ! Qu'est-ce qui m'attends encore ?
 --- !u!4 &970785117
 Transform:
   m_ObjectHideFlags: 0
@@ -2914,10 +2928,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1557166609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3809,6 +3825,7 @@ Transform:
   - {fileID: 1577812676}
   - {fileID: 203081195}
   - {fileID: 1767389719}
+  - {fileID: 2071231266}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4172,6 +4189,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 1020510666}
   id: 6
+--- !u!1 &2071231265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071231266}
+  - component: {fileID: 2071231268}
+  - component: {fileID: 2071231269}
+  m_Layer: 0
+  m_Name: Warning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2071231266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071231265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -167.8131, y: 42.485027, z: 11.3435955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1864355751}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2071231268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071231265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 67.69194, y: 1, z: 0.86800957}
+  m_Center: {x: -4.1670303, y: 0, z: 10.050078}
+--- !u!114 &2071231269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071231265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55f54e73cb5b15488259c8a6e140901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Je devrais analyser ce qui s'est r\xE9v\xE9l\xE9 \xE0 gauche de la porte avant
+      de la franchir."
+  unfixZ: 0
+  unfixX: 0
+  ifFade: 0
+  destroyTrigger: 1
+  nightClip: {fileID: 0}
+  ifStopMusic: 0
 --- !u!1 &2099754018
 GameObject:
   m_ObjectHideFlags: 0
