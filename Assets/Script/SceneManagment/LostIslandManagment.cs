@@ -5,11 +5,15 @@ using UnityEngine;
 public class LostIslandManagment : MonoBehaviour
 {
     public AudioClip clip;
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
 
     private void Awake()
     {
-        DialogOpen.instance.StartDialog(dialog);
+        bool isEnglish = LocaleSelector.instance.IsEnglish();
+        if(isEnglish)
+            DialogOpen.instance.StartDialog(dialogEN);
+        else
+            DialogOpen.instance.StartDialog(dialog);
     }
 
     void Update()

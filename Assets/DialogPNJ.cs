@@ -7,7 +7,7 @@ public class DialogPNJ : MonoBehaviour
 {
     private bool playerAlreadyInteract = false;
 
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
     public bool needInteraction;
     public Item item;
 
@@ -17,8 +17,8 @@ public class DialogPNJ : MonoBehaviour
     public GameObject objToActivate;
 
     public bool isRuinsFlash;
-    public Dialog beforeFlash;
-    public Dialog afterFlash;
+    public Dialog beforeFlash, beforeFlashEN;
+    public Dialog afterFlash, afterFlashEN;
 
     public bool ifFlashFinishing;
 
@@ -27,8 +27,11 @@ public class DialogPNJ : MonoBehaviour
 
     private Animator animator;
 
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         animator = GameObject.FindGameObjectWithTag("Flash").GetComponent<Animator>();
         enabled = false;
@@ -42,7 +45,10 @@ public class DialogPNJ : MonoBehaviour
             {
                 textInteract.enabled = false;
                 playerAlreadyInteract = true;
-                DialogOpen.instance.StartDialog(dialog);
+                if(isEnglish)
+                    DialogOpen.instance.StartDialog(dialogEN);
+                else
+                    DialogOpen.instance.StartDialog(dialog);
             }
             else if (Input.GetButtonDown("Interact"))
             {
@@ -61,7 +67,10 @@ public class DialogPNJ : MonoBehaviour
             {
                 if(!isRuinsFlash)
                 {
-                    DialogOpen.instance.StartDialog(dialog);
+                    if(isEnglish)
+                        DialogOpen.instance.StartDialog(dialogEN);
+                    else
+                        DialogOpen.instance.StartDialog(dialog);
                     playerAlreadyInteract = true;
                 }
                 else
@@ -69,7 +78,10 @@ public class DialogPNJ : MonoBehaviour
                     bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0, -90f, 0));
                     bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0, 90f, 0));
 
-                    DialogOpen.instance.StartDialog(beforeFlash);
+                    if(isEnglish)
+                        DialogOpen.instance.StartDialog(beforeFlashEN);
+                    else
+                        DialogOpen.instance.StartDialog(beforeFlash);
                     playerAlreadyInteract = true;
                 }               
             }
@@ -124,7 +136,10 @@ public class DialogPNJ : MonoBehaviour
         yield return new WaitForSeconds(2f);
         animator.SetTrigger("FlashOut");
         ifFlashFinishing = true;
-        DialogOpen.instance.StartDialog(afterFlash);
+        if(isEnglish)
+            DialogOpen.instance.StartDialog(afterFlashEN);
+        else
+            DialogOpen.instance.StartDialog(afterFlash);
         enabled = true;
     }
 }

@@ -29,12 +29,16 @@ public class HomeManagment : MonoBehaviour
 
     public AudioClip audioClip;
 
+    private bool isEnglish;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         SaveDataSceneState saveDataSceneState = SaveDataManager.LoadDataSceneState();
+
+        isEnglish = LocaleSelector.instance.IsEnglish();
 
         if(saveDataSceneState == null)
         {
@@ -49,7 +53,11 @@ public class HomeManagment : MonoBehaviour
 
             player.transform.position = spawnBedroom.position;
             ifLongFade = true;
-            DialogOpen.instance.StartDialog(dialogState0);
+
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[0]);
+            else
+                DialogOpen.instance.StartDialog(dialogState0);
         }
 
         else if(saveDataSceneState != null && saveDataSceneState.homeState == 1)    //pass�, flashback
@@ -67,7 +75,11 @@ public class HomeManagment : MonoBehaviour
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState1);
+            
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[1]);
+            else
+                DialogOpen.instance.StartDialog(dialogState1);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 2)   // retour pr�sent, joueur explique o� il doit aller
@@ -81,7 +93,11 @@ public class HomeManagment : MonoBehaviour
             player.transform.localScale = new Vector3(1f, 1f, 1f); // retour taille normal
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState2);
+            
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[2]);
+            else
+                DialogOpen.instance.StartDialog(dialogState2);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 3)   // retour library, il explique qu'i reconnait le signe et qu'il doit aller vers for�t
@@ -91,17 +107,24 @@ public class HomeManagment : MonoBehaviour
             saveDataSceneState.villageState = 3;
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
 
-            DialogOpen.instance.StartDialog(dialogState3);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[3]);
+            else
+                DialogOpen.instance.StartDialog(dialogState3);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 4)   // retour wood, il se demande qui �tait cet homme et qu'il doit partir maintenant qu'il fait nuit
         {
             ifLongFade = true;
             player.transform.position = spawnBedroom.position;
-            DialogOpen.instance.StartDialog(dialogState4);
             saveDataSceneState.woodState =1;
             saveDataSceneState.villageState = 5;
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
+
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[4]);
+            else
+                DialogOpen.instance.StartDialog(dialogState4);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 5)   // retour Cave, "Je me suis assez repos�, il est temps d'aller au ruins"
@@ -112,7 +135,10 @@ public class HomeManagment : MonoBehaviour
             saveDataSceneState.villageState = 6;    // here
             SaveDataManager.SaveDataSceneState(saveDataSceneState);
 
-            DialogOpen.instance.StartDialog(dialogState5);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[5]);
+            else
+                DialogOpen.instance.StartDialog(dialogState5);
         }
 
         else if (saveDataSceneState != null && saveDataSceneState.homeState == 6)   // default
@@ -128,7 +154,7 @@ public class HomeManagment : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Interact"))
         {

@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class TeleportRuins : MonoBehaviour
 {
     public GameObject barrier;
-    public Dialog dialogBarrier;
+    public Dialog dialogBarrier, dialogBarrierEN;
     public Light lt;
     public string levelToLoad;
 
     public AudioClip audioTeleport;
 
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
         enabled = false;
     }
 
@@ -34,7 +37,10 @@ public class TeleportRuins : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             barrier.SetActive(true);
-            DialogOpen.instance.StartDialog(dialogBarrier);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogBarrierEN);
+            else
+                DialogOpen.instance.StartDialog(dialogBarrier);
             PlayerMovement.instance.enabled = true;
             GetComponent<BoxCollider>().enabled = false;
             enabled = true;

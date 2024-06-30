@@ -6,7 +6,7 @@ public class TowerManagment : MonoBehaviour
 {
     public new Transform camera;
 
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
 
     private Animator animator;
 
@@ -18,13 +18,12 @@ public class TowerManagment : MonoBehaviour
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
 
-        DialogOpen.instance.StartDialog(dialog);
+        bool isEnglish = LocaleSelector.instance.IsEnglish();
+        if(isEnglish)
+            DialogOpen.instance.StartDialog(dialogEN);
+        else
+            DialogOpen.instance.StartDialog(dialog);
 
-    }
-
-    private void Start()
-    {
-        
     }
 
     void Update()

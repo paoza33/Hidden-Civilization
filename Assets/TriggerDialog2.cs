@@ -12,15 +12,15 @@ public class TriggerDialog2 : MonoBehaviour
     private int index = 0;  //index of contenair's list
 
 
-    public Dialog[] dialogs;
-    public Dialog emptyDialog;
+    public Dialog[] dialogs, dialogsEN;
+    public Dialog emptyDialog, emptyDialogEN;
 
     public GameObject[] contenairs;
     private Vector3[] startPosContenairs;   // contain all contenairs position before next movement
 
     private bool moovingLeft, moovingRight;
     private bool isMooving = false;
-    public Dialog speech;
+    public Dialog speech, speechEN;
     private bool isLastTalking;
 
     public float speedDeplacement = 0;
@@ -29,8 +29,12 @@ public class TriggerDialog2 : MonoBehaviour
 
     public AudioClip audioTeleport;
 
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
+        
         enabled = false;
 
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
@@ -58,7 +62,10 @@ public class TriggerDialog2 : MonoBehaviour
             if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
             {
                 playerAlreadyInteract = true;
-                DialogOpen.instance.StartDialog(dialogs[index]);
+                if(isEnglish)
+                    DialogOpen.instance.StartDialog(dialogsEN[index]);
+                else
+                    DialogOpen.instance.StartDialog(dialogs[index]);
             }
             else if (Input.GetButtonDown("Interact") && canDisplayNextSentences)
             {
@@ -88,7 +95,11 @@ public class TriggerDialog2 : MonoBehaviour
                 }
                 else if(index == contenairs.Length -1){
                     // ouvrir le dialog de fin puis passer à scène du speech de l'unknown
-                    DialogOpen.instance.StartDialog(speech);
+                    if(isEnglish)
+                        DialogOpen.instance.StartDialog(speechEN);
+                    else
+                        DialogOpen.instance.StartDialog(speech);
+
                     isLastTalking = true;
                 }
             }
@@ -120,7 +131,11 @@ public class TriggerDialog2 : MonoBehaviour
 
     private void ContenairsMoovingRight()
     {
-        DialogOpen.instance.StartDialog(emptyDialog);
+        if(isEnglish)
+            DialogOpen.instance.StartDialog(emptyDialogEN);
+        else
+            DialogOpen.instance.StartDialog(emptyDialog);
+
         canDisplayNextSentences = false;
         for (int i = 0; i < contenairs.Length -1; i++)
         {
@@ -132,7 +147,11 @@ public class TriggerDialog2 : MonoBehaviour
 
         if (Vector3.Distance(contenairs[0].transform.position, startPosContenairs[1]) < 0.01f)  // check if one contenair is close enough to the target position
         {
-            DialogOpen.instance.StartDialog(dialogs[index]);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[index]);
+            else
+                DialogOpen.instance.StartDialog(dialogs[index]);
+
             canDisplayNextSentences = true;
             UpdatePositionOrderAfterRightMoove();
             moovingRight = false;
@@ -142,7 +161,11 @@ public class TriggerDialog2 : MonoBehaviour
 
     private void ContenairsMoovingLeft()
     {
-        DialogOpen.instance.StartDialog(emptyDialog);
+        if(isEnglish)
+            DialogOpen.instance.StartDialog(emptyDialogEN);
+        else
+            DialogOpen.instance.StartDialog(emptyDialog);
+
         canDisplayNextSentences = false;
         for (int i = 1; i < contenairs.Length; i++)
         {
@@ -154,7 +177,10 @@ public class TriggerDialog2 : MonoBehaviour
 
         if(Vector3.Distance(contenairs[1].transform.position, startPosContenairs[0]) < 0.01f)   // check if one contenair is close enough to the target position
         {
-            DialogOpen.instance.StartDialog(dialogs[index]);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[index]);
+            else
+                DialogOpen.instance.StartDialog(dialogs[index]);
             canDisplayNextSentences = true;
             UpdatePositionOrderAfterLeftMoove();
             moovingLeft = false;

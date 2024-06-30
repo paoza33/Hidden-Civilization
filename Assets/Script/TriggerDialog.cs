@@ -21,8 +21,8 @@ public class TriggerDialog : MonoBehaviour
 
     public bool ifChangeStateCamp; // pareil
 
-    public Dialog open;
-    public Dialog notOpen;
+    public Dialog open, openEN;
+    public Dialog notOpen, notOpenEN;
 
     public bool isNeedKey;
 
@@ -45,8 +45,11 @@ public class TriggerDialog : MonoBehaviour
 
     public AudioClip audioTeleport;
 
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
@@ -76,16 +79,25 @@ public class TriggerDialog : MonoBehaviour
                         colliderToDesactivate.enabled = false;
                         textInteract.enabled = false;
                     }
-                    DialogOpen.instance.StartDialog(open);
+                    if(isEnglish)
+                        DialogOpen.instance.StartDialog(openEN);
+                    else
+                        DialogOpen.instance.StartDialog(open);
                 }
                 else
                 {
-                    DialogOpen.instance.StartDialog(notOpen);
+                    if(isEnglish)
+                        DialogOpen.instance.StartDialog(openEN);
+                    else
+                        DialogOpen.instance.StartDialog(open);
                 }
             }
             else
             {
-                DialogOpen.instance.StartDialog(open);
+                if(isEnglish)
+                    DialogOpen.instance.StartDialog(openEN);
+                else
+                    DialogOpen.instance.StartDialog(open);
             }
         }
         else if(Input.GetButtonDown("Interact"))

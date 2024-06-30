@@ -10,8 +10,7 @@ public class CabinetInteraction : MonoBehaviour
     public string keyNeeded;
     public bool playerAlreadyInteract = false;
     
-    public Dialog open;
-    public Dialog notOpen;
+    public Dialog open, openEN;
 
     public int id;
 
@@ -20,8 +19,11 @@ public class CabinetInteraction : MonoBehaviour
     private TextMeshProUGUI textInteract;
     private TextMeshProUGUI readBook;
 
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         readBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
         enabled = false;
@@ -35,7 +37,11 @@ public class CabinetInteraction : MonoBehaviour
             readBook.enabled = false;
             LibraryManagment.instance.UpdateCurrentCabinet(id, symbol, GetComponent<BoxCollider>());
 
-            DialogOpen.instance.StartDialog(open);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(openEN);
+            else
+                DialogOpen.instance.StartDialog(open);
+                
             LibraryManagment.instance.enabled = false;
         }
         else if(Input.GetButtonDown("Interact"))

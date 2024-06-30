@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TriggerDialog3 : MonoBehaviour
 {
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
 
     private Animator animator;
 
@@ -22,9 +22,12 @@ public class TriggerDialog3 : MonoBehaviour
     public AudioClip nightClip;
     public bool ifStopMusic;
 
+    private bool isEnglish;
+
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        isEnglish = LocaleSelector.instance.IsEnglish();
         enabled = false;
     }
 
@@ -35,7 +38,10 @@ public class TriggerDialog3 : MonoBehaviour
             if(ifStopMusic)
                 AudioManager.instance.StopCurrentSong();
             playerEnter = true;
-            DialogOpen.instance.StartDialog(dialog);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogEN);
+            else
+                DialogOpen.instance.StartDialog(dialog);
         }
         else if(playerEnter && Input.GetButtonDown("Interact"))
         {

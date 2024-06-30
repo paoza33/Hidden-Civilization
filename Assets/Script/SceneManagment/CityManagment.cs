@@ -26,8 +26,15 @@ public class CityManagment : MonoBehaviour
     public AudioClip audioClipDay, audioClipNight;
     private bool isNight;
 
+    public Dialog dialogNight, dialogNightEN;
+
+    private bool isEnglish;
+
     private void Awake()
     {
+        enabled = false;
+        isEnglish = LocaleSelector.instance.IsEnglish();
+
         state = SaveDataManager.LoadDataSceneState().cityState;
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
@@ -53,16 +60,40 @@ public class CityManagment : MonoBehaviour
         StartCoroutine(Fade());
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                enabled = false;
+                Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+                animator.SetTrigger("FadeOut");
+            }
+        }
+    }
+
     private IEnumerator Fade()
     {
         yield return new WaitForSeconds(1f);
-        if (isNight)
+        if (isNight){
             AudioManager.instance.PlayThemeSong(audioClipNight);
-        else
-            AudioManager.instance.PlayThemeSong(audioClipDay);
+            if (isEnglish)
+            {
+                DialogOpen.instance.StartDialog(dialogNightEN);
+            }
+            else
+                DialogOpen.instance.StartDialog(dialogNight);
 
-        Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
-        animator.SetTrigger("FadeOut");
+            enabled = true;
+
+        }
+            
+        else{
+            AudioManager.instance.PlayThemeSong(audioClipDay);
+            Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+            animator.SetTrigger("FadeOut");
+        }
     }
 
     private void SettingsCityState()

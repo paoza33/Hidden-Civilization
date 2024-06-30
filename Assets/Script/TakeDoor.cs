@@ -11,8 +11,8 @@ public class TakeDoor : MonoBehaviour
     private Animator animator;
     public bool isKeyNeeded;
     public string keyName;
-    public Dialog open;
-    public Dialog notOpen;
+    public Dialog open, openEN;
+    public Dialog notOpen, notOpenEN;
     private TextMeshProUGUI text;
 
     public bool ifLibraryDoorState0;
@@ -22,10 +22,13 @@ public class TakeDoor : MonoBehaviour
     public bool ifStopMusic;
 
     private bool sceneChanging = false; // true lorsque la scene est en train d'etre modifie
+
+    private bool isEnglish;
     private void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         text = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
+        isEnglish = LocaleSelector.instance.IsEnglish();
         enabled = false;
     }
     private void Update()
@@ -41,12 +44,18 @@ public class TakeDoor : MonoBehaviour
                     if (Inventory.instance.FindItem(keyName))
                     {
                         ifChangeLevel = true;
-                        DialogOpen.instance.StartDialog(open);
+                        if(isEnglish)
+                            DialogOpen.instance.StartDialog(openEN);
+                        else
+                            DialogOpen.instance.StartDialog(open);
                     }
                     else
                     {
                         ifChangeLevel = false;
-                        DialogOpen.instance.StartDialog(notOpen);
+                        if(isEnglish)
+                            DialogOpen.instance.StartDialog(notOpenEN);
+                        else
+                            DialogOpen.instance.StartDialog(notOpen);
                     }
                 }
                 else

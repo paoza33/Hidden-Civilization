@@ -24,7 +24,8 @@ public class LastDoorManagment : MonoBehaviour
 
     public AudioClip clip;
 
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
+    private bool isEnglish;
 
     public static LastDoorManagment instance;
     private void Awake()
@@ -35,6 +36,8 @@ public class LastDoorManagment : MonoBehaviour
             return;
         }
         instance = this;
+
+        isEnglish = LocaleSelector.instance.IsEnglish();
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Labyrinth")
@@ -48,7 +51,11 @@ public class LastDoorManagment : MonoBehaviour
             labyrinth.GetComponent<FlickeringEmissive>().enabled = true;
             secretDoor.GetComponent<MeshCollider>().enabled = false;
         }
-        DialogOpen.instance.StartDialog(dialog);
+        
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogEN);
+            else
+                DialogOpen.instance.StartDialog(dialog);
     }
 
     private void Update()
@@ -58,7 +65,7 @@ public class LastDoorManagment : MonoBehaviour
             if (!DialogOpen.instance.DisplayNextSentences())
             {
                 StartCoroutine(Fade());
-                //enabled = false; //a enlever à la fin
+                //enabled = false; //a enlever ï¿½ la fin
             }
         }
         if (solutionEditor)

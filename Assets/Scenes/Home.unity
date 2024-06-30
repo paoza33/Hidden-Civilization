@@ -763,7 +763,38 @@ MonoBehaviour:
       cette ancienne civilisation eux-aussi .. Je dois redoubler de vigilance \xE0
       partir de maintenant."
     - "Je suis pr\xEAt, direction les ruines du nord-est."
-  dialogsEN: []
+  dialogsEN:
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - In english please
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   recentSkin:
   - {fileID: 2100000, guid: 71d3f8e2fbe5ba342b5e9f30bae32859, type: 2}
   - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}

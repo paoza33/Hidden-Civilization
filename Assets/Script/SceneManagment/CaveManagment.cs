@@ -5,11 +5,16 @@ using UnityEngine;
 public class CaveManagment : MonoBehaviour
 {
     public AudioClip audioClip;
-    public Dialog intro;
+    public Dialog intro, introEN;
+    private bool isEnglish;
 
     private void Awake()
     {
-        DialogOpen.instance.StartDialog(intro);
+        isEnglish = LocaleSelector.instance.IsEnglish();
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(introEN);
+            else
+                DialogOpen.instance.StartDialog(intro);
     }
 
     private void Update()

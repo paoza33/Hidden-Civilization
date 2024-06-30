@@ -7,18 +7,22 @@ public class KnowledgePlaceManagment : MonoBehaviour
 {
     private GameObject player;
     public GameObject unknown;
-    public Dialog firstMoment, lastSpeech;
+    public Dialog firstMoment, firstMomentEN, lastSpeech, lastSpeechEN;
     public Transform secondaryCam;
 
     private bool ending;
 
     public AudioClip clip;
 
+    private bool isEnglish;
+
     public static KnowledgePlaceManagment instance;
 
     private void Awake()
     {
         enabled = false;
+
+        isEnglish = LocaleSelector.instance.IsEnglish();
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -49,7 +53,11 @@ public class KnowledgePlaceManagment : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         AudioManager.instance.PlayThemeSong(clip);
-        DialogOpen.instance.StartDialog(firstMoment);
+        
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(firstMomentEN);
+            else
+                DialogOpen.instance.StartDialog(firstMoment);
 
         enabled = true;
 
@@ -75,7 +83,12 @@ public class KnowledgePlaceManagment : MonoBehaviour
         Camera.main.transform.rotation = secondaryCam.rotation;
 
         yield return new WaitForSeconds(0.8f);
-        DialogOpen.instance.StartDialog(lastSpeech);
+        
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(lastSpeechEN);
+            else
+                DialogOpen.instance.StartDialog(lastSpeech);
+
         ending = true;
         enabled = true;
 

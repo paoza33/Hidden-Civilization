@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class LibraryManagment : MonoBehaviour
 {
     public Dialog startState0, startState1, startState2;
+    public Dialog[] dialogsEN;
     private bool startingDialog = true;
 
     private List<int> orderPlayer = new List<int>();
@@ -38,10 +39,11 @@ public class LibraryManagment : MonoBehaviour
     public GameObject[] objState1;
 
     private int nbrInteractionState0; // déclanche un dialogue quand = en state0
-    public Dialog dialogEndState0;
-    public Dialog ending;
+    public Dialog dialogEndState0, dialogEndState0EN;
+    public Dialog ending, endingEN;
 
     public Dialog bookLevel0, bookLevel1, bookLevel2, bookLevel3;
+    public Dialog[] dialogsBook;
 
     private int level = 0;
 
@@ -69,6 +71,8 @@ public class LibraryManagment : MonoBehaviour
 
     private TextMeshProUGUI counterText;    // counter interaction cabinet in state 0
 
+    private bool isEnglish;
+
     public static LibraryManagment instance;
 
     private void Awake()
@@ -79,6 +83,8 @@ public class LibraryManagment : MonoBehaviour
             return;
         }
         instance = this;
+
+        isEnglish = LocaleSelector.instance.IsEnglish();
 
         counterText = GameObject.FindGameObjectWithTag("Counter").GetComponent<TextMeshProUGUI>();
         readBook = GameObject.FindGameObjectWithTag("UIReadBook").GetComponent<TextMeshProUGUI>();
@@ -97,7 +103,10 @@ public class LibraryManagment : MonoBehaviour
                 coll.enabled = false;
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
-            DialogOpen.instance.StartDialog(startState0);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[0]);
+            else
+                DialogOpen.instance.StartDialog(startState0);
         }
         else if(state == 1){    // nuit -> pas encore le médaillon
             foreach(BoxCollider coll in collidersDesactivateState1)
@@ -105,7 +114,10 @@ public class LibraryManagment : MonoBehaviour
 
             foreach(GameObject obj in objState1)
                 obj.SetActive(true);
-            DialogOpen.instance.StartDialog(startState1);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[1]);
+            else
+                DialogOpen.instance.StartDialog(startState1);
         }
         else if (state == 2){
             foreach (GameObject obj in cabLevel1) { obj.GetComponent<BoxCollider>().enabled = false; }
@@ -114,7 +126,10 @@ public class LibraryManagment : MonoBehaviour
 
             playerStart.transform.position = spawnState2.position;
             SettingsEngima();
-            DialogOpen.instance.StartDialog(startState2);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[2]);
+            else
+                DialogOpen.instance.StartDialog(startState2);
             StartCoroutine(FadeState2());
         }
     }
@@ -129,15 +144,30 @@ public class LibraryManagment : MonoBehaviour
                 readBook.enabled = false;
                 textInteract.enabled = false;
 
-                if(level == 0)
-                    DialogOpen.instance.StartDialog(bookLevel0);
-                else if(level == 1)
-                    DialogOpen.instance.StartDialog(bookLevel1);
-                else if(level == 2)
-                    DialogOpen.instance.StartDialog(bookLevel2);
-                else if(level == 3)
-                    DialogOpen.instance.StartDialog(bookLevel3);
-
+                if(level == 0){
+                    if(isEnglish)
+                       DialogOpen.instance.StartDialog(dialogsBook[0]);
+                    else
+                       DialogOpen.instance.StartDialog(bookLevel0);
+                }                 
+                else if(level == 1){
+                    if(isEnglish)
+                       DialogOpen.instance.StartDialog(dialogsBook[1]);
+                    else
+                       DialogOpen.instance.StartDialog(bookLevel1);
+                }
+                else if(level == 2){
+                    if(isEnglish)
+                       DialogOpen.instance.StartDialog(dialogsBook[2]);
+                    else
+                       DialogOpen.instance.StartDialog(bookLevel2);
+                }
+                else if(level == 3){
+                    if(isEnglish)
+                       DialogOpen.instance.StartDialog(dialogsBook[3]);
+                    else
+                       DialogOpen.instance.StartDialog(bookLevel3);
+                }
             }
             else if(endingState0 && Input.GetButtonDown("Interact")){
                 if (!DialogOpen.instance.DisplayNextSentences())
@@ -152,7 +182,7 @@ public class LibraryManagment : MonoBehaviour
                     startingDialog = false;
                     if(state == 2)
                     {
-
+                        StartCoroutine(FadeState2());
                     }   
                     else
                         StartCoroutine(Fade());
@@ -288,7 +318,10 @@ public class LibraryManagment : MonoBehaviour
         {
             AudioManager.instance.StopCurrentSong();
             readBook.enabled = false;
-            DialogOpen.instance.StartDialog(ending);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(endingEN);
+            else
+                DialogOpen.instance.StartDialog(ending);
             isEnding = true;
         }
     }
@@ -368,7 +401,10 @@ public class LibraryManagment : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         windows.SetActive(true);
         endingState0 = true;
-        DialogOpen.instance.StartDialog(dialogEndState0);
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogEndState0EN);
+            else
+                DialogOpen.instance.StartDialog(dialogEndState0);
     }
 
     private IEnumerator Fade()

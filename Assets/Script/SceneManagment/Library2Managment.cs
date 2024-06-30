@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Library2Managment : MonoBehaviour
 {
-    public Dialog dialog;
+    public Dialog dialog, dialogEN;
     private Animator animator;
 
+    private bool isEnglish;
     // Start is called before the first frame update
     void Awake()
     {
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
-        DialogOpen.instance.StartDialog(dialog);
+        isEnglish = LocaleSelector.instance.IsEnglish();
+        if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogEN);
+        else
+            DialogOpen.instance.StartDialog(dialog);
     }
 
     // Update is called once per frame

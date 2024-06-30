@@ -17,11 +17,14 @@ public class CampManagment : MonoBehaviour
     public Light skyLight;
 
     public Dialog dialogState0, dialogState1, dialogState2, dialogState3;
+    public Dialog[] dialogsEN;
 
     private SaveDataSpawn spawn;
 
     public AudioClip audioClipDay, audioClipNight;
     private bool isNight;
+
+    private bool isEnglish;
 
     private void Awake()
     {
@@ -31,6 +34,8 @@ public class CampManagment : MonoBehaviour
 
         spawn = SaveDataManager.LoadDataSpawn();
 
+        isEnglish = LocaleSelector.instance.IsEnglish();
+        
         SettingsStart();
     }
 
@@ -64,10 +69,13 @@ public class CampManagment : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-            DialogOpen.instance.StartDialog(dialogState0);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[0]);
+            else
+                DialogOpen.instance.StartDialog(dialogState0);
         }
 
-        else if(state == 1) // enfant -> night, longfade "oops il fait déjà nuit, door (joueur rentre dedans sans dialog), invisible wall village
+        else if(state == 1) // enfant -> night, longfade "oops il fait dï¿½jï¿½ nuit, door (joueur rentre dedans sans dialog), invisible wall village
         {
             isNight=true;
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
@@ -80,7 +88,10 @@ public class CampManagment : MonoBehaviour
 
             playerStart.transform.position = spawnBeach.position;
 
-            DialogOpen.instance.StartDialog(dialogState1);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[1]);
+            else
+                DialogOpen.instance.StartDialog(dialogState1);
 
             foreach (GameObject obj in triggerState1)
             {
@@ -90,7 +101,7 @@ public class CampManagment : MonoBehaviour
             skyLight.intensity = 0.2f;
         }
 
-        else if (state == 2) // enfant -> night -> door ("J'entends des gens parler à l'interieur, je ne devrais pas rester là longtemps")
+        else if (state == 2) // enfant -> night -> door ("J'entends des gens parler ï¿½ l'interieur, je ne devrais pas rester lï¿½ longtemps")
         {
             isNight = true;
             player.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
@@ -101,7 +112,11 @@ public class CampManagment : MonoBehaviour
                 obj.SetActive(true);
             }
             skyLight.intensity = 0.2f;
-            DialogOpen.instance.StartDialog(dialogState2);
+            
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[2]);
+            else
+                DialogOpen.instance.StartDialog(dialogState2);
         }
 
         else if(state == 3) // trigger boat -> direction lost island, door -> peut rentrer.
@@ -114,7 +129,11 @@ public class CampManagment : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-            DialogOpen.instance.StartDialog(dialogState3);
+            
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[3]);
+            else
+                DialogOpen.instance.StartDialog(dialogState3);
         }
     }
 

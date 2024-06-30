@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -452,6 +452,27 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - La boussole pointe vers le lac. Continuons.
+  dialogsEN:
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  - name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   audioClipDay: {fileID: 8300000, guid: 9a2fbf85189b64abd9f6031bf71787c5, type: 3}
   audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!4 &214542911

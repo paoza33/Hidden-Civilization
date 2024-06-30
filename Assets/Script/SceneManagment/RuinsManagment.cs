@@ -13,10 +13,15 @@ public class RuinsManagment : MonoBehaviour
     public GameObject bodyguardLeft, bodyguardRight;
 
     public Dialog dialog0, dialog1;
+    public Dialog[] dialogsEN;
 
     public AudioClip clip;
+
+    private bool isEnglish;
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
+
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Tower")
             playerStart.transform.position = spawnTower.position;
@@ -25,14 +30,20 @@ public class RuinsManagment : MonoBehaviour
         if(state.ruinsState == 0){
             foreach(GameObject obj in objState0)
                 obj.SetActive(true);
-            DialogOpen.instance.StartDialog(dialog0);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[0]);
+            else
+                DialogOpen.instance.StartDialog(dialog0);
         }
         else if(state.ruinsState == 1){
             bodyguardLeft.transform.rotation = Quaternion.Euler(bodyguardLeft.transform.rotation.eulerAngles + new Vector3(0, -90f, 0));
             bodyguardRight.transform.rotation = Quaternion.Euler(bodyguardRight.transform.rotation.eulerAngles + new Vector3(0, 90f, 0));
             foreach (GameObject obj in objState1)
                 obj.SetActive(true);
-            DialogOpen.instance.StartDialog(dialog1);
+            if(isEnglish)
+                DialogOpen.instance.StartDialog(dialogsEN[1]);
+            else
+                DialogOpen.instance.StartDialog(dialog1);
         }
     }
 
