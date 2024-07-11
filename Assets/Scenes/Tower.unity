@@ -1434,24 +1434,48 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: 
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Encore le logo du clan. Cette fois-ci, cela fait r\xE9f\xE9rence\xE0 une \xEEle
-      cach\xE9e dans un \"brouillard \xE9ternel\" ? Le texte mentionne une boussole
-      attach\xE9e \xE0 l'\xEEle comme unique moyen d'y acc\xE9der."
+    - "Encore le logo des Gardiens. Cette fois-ci, cela fait r\xE9f\xE9rence \xE0
+      une \xEEle cach\xE9e dans un \"brouillard \xE9ternel\" ? Le texte mentionne
+      une boussole attach\xE9e \xE0 l'\xEEle comme unique moyen d'y acc\xE9der."
     - "L'id\xE9e que tout cela n'est qu'une chasse au tr\xE9sor se confirme. Reste
-      \xE0 savoir ce qui nous attends \xE0 la fin."
+      \xE0 savoir ce qui nous attend \xE0 la fin."
     - "Aucune information sur la localisation de l'\xEEle ou de cette boussole. \xC7a
-      ne m'avance en rien, j'ai d\xFB louper quelque chose .."
+      ne m'avance \xE0 rien, j'ai d\xFB louper quelque chose..."
     - "Attends !? Il y a quelque chose incrust\xE9 dedans !"
     - '*retire l''artefact*'
-    - "Une boule de cristal ? Non. Il y a quelque chose \xE0 l'int\xE9rieur ...\nUne
-      image d'une \xEEle ? \xC7a serait la boussole ? C'\xE9tait facile ! Aha ..
-      ah ....... ah ............. ah ...................."
+    - "Une boule de cristal ? Non. Il y a quelque chose \xE0 l'int\xE9rieur... Une
+      image d'une \xEEle ? C'est la boussole ? C'est certainement \xE7a !"
+    - Bon maintenant, comment... sortir... de...
+  openEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Still the Guardians' logo. This time, it refers to an island hidden in "eternal
+      fog"? The text mentions a compass attached to the island as the only means
+      of access.
+    - The idea that this is all a treasure hunt is confirmed. We still need to know
+      what awaits us in the end.
+    - No information on the location of the island or this compass. It doesn't help
+      me at all; I must have missed something...
+    - Wait!? There's something embedded inside!
+    - '*takes out the artifact*'
+    - A crystal ball? No. There's something inside... An image of an island? Is this
+      the compass? It must be!
+    - Now, how do ... I... get ... out...
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2579,14 +2603,24 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "... O\xF9 est-ce que je suis ? Et qui m'a transport\xE9 ici ? Les gardes du
-      QG ?"
-    - "Non impossible, ils \xE9taient comme vide de l'int\xE9rieur."
+    - "... O\xF9 suis-je ? Et qui m'a transport\xE9 ici ? Les gardes du QG ?"
+    - "Non, impossible, ils semblaient vides \xE0 l'int\xE9rieur."
     - "De la t\xE9l\xE9portation ? Tout me semble possible maintenant."
     - IL Y A QUELQU'UN ?
-    - "Pas un bruit ... Si j'ai \xE9t\xE9 emmen\xE9 ici, c'est que je dois bien pouvoir
-      faire quelque chose ici."
-    - "J'ai pas d'autres choix de toute fa\xE7on."
+    - "Pas un bruit... Si j'ai \xE9t\xE9 emmen\xE9 ici, c'est pour une raison pr\xE9cise.
+      Je dois la d\xE9couvrir."
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - ... Where am I? And who transported me here? The HQ guards?
+    - No, impossible, they seemed empty inside.
+    - Teleportation? Everything seems possible now.
+    - IS ANYONE THERE?
+    - Not a sound... If I've been brought here, it's for a specific reason. I need
+      to find out what it is.
   clip: {fileID: 8300000, guid: a0666e39bcde2f94d982f4302a7dba6b, type: 3}
 --- !u!4 &3176666299424253809
 Transform:

@@ -15577,17 +15577,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: fab4f81e154f8784ea674d6c13e5cac8, type: 3}
   dialog:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Une barque sp\xE9ciale hein !? Foutu barque ! J'ai d\xFB me taper tout le
-      trajet en ramant !"
-    - "Heureusement qu'il y avait cette boussole, impossible de se rep\xE9rer dans
-      ce brouillard !"
-    - Aller, on respire un bon coup ...
-    - La boussole me dit d'aller tout droit.
+    - "Une barque sp\xE9ciale, hein !? Maudit bateau ! J'ai d\xFB ramer tout le trajet
+      !"
+    - Heureusement qu'il y avait cette boussole, impossible de s'orienter dans ce
+      brouillard !
+    - Aller, on respire un bon coup et on se calme...
+    - Selon la boussole, je devrais aller tout droit.
+  dialogEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - A special boat, huh!? Damn boat! I had to paddle the whole way!
+    - Thank goodness for this compass, impossible to navigate in this fog!
+    - Alright, take a deep breath...
+    - According to the compass, I should go straight ahead.
 --- !u!1 &2078994195
 GameObject:
   m_ObjectHideFlags: 0
@@ -21043,6 +21053,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Pas besoin de bouger ici
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   unfixZ: 0
   unfixX: 1
   ifFade: 0

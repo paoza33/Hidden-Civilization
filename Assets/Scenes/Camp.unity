@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -457,22 +457,31 @@ MonoBehaviour:
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - The beach is straight ahead!
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - 'Wow! The sun is already starting to set! It''s getting too dark.
+
+      I''ll
+      ask the old man for a flashlight to get back.'
+    - He must be in his cabin.
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - (I don't understand what's happening! But I don't want to stay here any longer.
+      I want to go home.)
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - The compass points towards the lake. Let's keep going.
   audioClipDay: {fileID: 8300000, guid: 9a2fbf85189b64abd9f6031bf71787c5, type: 3}
   audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
 --- !u!4 &214542911
@@ -559,6 +568,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - L'heure est venue de jouer !
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Time to play !
   unfixZ: 0
   unfixX: 0
   ifFade: 1
@@ -1437,6 +1453,12 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Player
     choices: []
@@ -1444,6 +1466,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "C'est la cabane du vieil homme, il ne semble avoir personne \xE0 l'int\xE9rieur."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - It's the old man's cabin; there doesn't seem to be anyone inside.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
   ifStopMusic: 1
@@ -1546,6 +1575,12 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Player
     choices: []
@@ -1554,6 +1589,14 @@ MonoBehaviour:
     sentences:
     - "J'entends des gens parler \xE0 l'int\xE9rieur."
     - Je ne devrais pas rester ici plus longtemps.
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I hear people talking inside.
+    - I shouldn't stay here any longer.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
   ifStopMusic: 1
@@ -1664,7 +1707,7 @@ MonoBehaviour:
   isKeyNeeded: 0
   keyName: 
   open:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1672,7 +1715,22 @@ MonoBehaviour:
     - '*toc* *toc* *toc*'
     - "... Personne ... Il est toujours l\xE0 habituellement."
     - La porte est ouverte, je lui rendrais sa lampe-torche plus tard, comme d'habitude.
+  openEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - '*knock* *knock* *knock*'
+    - ... Nobody ... He's usually always there.
+    - The door is open; I'll return his flashlight later, as usual.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -1835,24 +1893,48 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chi ..."
-    - "Cette barque ... Comment se fait-il qu'elle soit intact apr\xE8s avoir abandonn\xE9e
-      depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un entretenait
-      tout ce temps, \xE7a se saurait !"
-    - "\xC0 moins que \xE7a ne soit pas du bois !? En regardant de plus pr\xEAt,
-      il n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
+    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chis..."
+    - "Cette barque... Comment se fait-il qu'elle soit intacte apr\xE8s avoir \xE9t\xE9
+      abandonn\xE9e depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un
+      l'avait entretenue tout ce temps, \xE7a se saurait !"
+    - "\xC0 moins que ce ne soit pas du bois !? En regardant de plus pr\xE8s, il
+      n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
     - "Ce n'est d\xE9finitivement pas normal. Donc tout ce \"bois\" serait compos\xE9
-      de cette myst\xE9rieuse mati\xE8re. Et \xE7a doit \xEAtre avec cette barque
-      qu'il devait atteindre l'\xEEle."
-    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normal. Curieux
-      de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle ehe."
+      de cette myst\xE9rieuse mati\xE8re. Et c'est avec cette barque qu'il devait
+      atteindre l'\xEEle."
+    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normale. Je
+      suis curieux de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle
+      ehe."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - There is only this boat, I see nothing else. Think...
+    - This boat... How is it intact after being abandoned for so many years? The
+      same goes for the cabin! If someone had maintained it all this time, we would
+      know!
+    - Unless it's not wood!? On closer inspection, there are no flaws. Even new,
+      wood has imperfections.
+    - This is definitely not normal. So all this "wood" would be made of this mysterious
+      material. And it must be with this boat that he was supposed to reach the island.
+    - 'I suppose it doesn''t move like a normal boat. Curious to know how this special
+      boat will take me to the island ehe. '
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - je peux pas encore prendre le bateau
+    - Aucune raison de prendre cette barque.
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - No reason to take this boat.
   isNeedKey: 0
   isItemObtained: 0
   item: {fileID: 0}
@@ -2094,7 +2176,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2199,6 +2293,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "L'un des arbres que le vieil homme \xE9tudie. Il est minuscule !"
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - One of the trees the old man studies. It's tiny!
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -2210,7 +2311,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2510,24 +2623,48 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chi ..."
-    - "Cette barque ... Comment se fait-il qu'elle soit intact apr\xE8s avoir abandonn\xE9e
-      depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un entretenait
-      tout ce temps, \xE7a se saurait !"
-    - "\xC0 moins que \xE7a ne soit pas du bois !? En regardant de plus pr\xEAt,
-      il n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
+    - "Il n'y a que cette barque, je ne vois rien d'autre. R\xE9fl\xE9chis..."
+    - "Cette barque... Comment se fait-il qu'elle soit intacte apr\xE8s avoir \xE9t\xE9
+      abandonn\xE9e depuis tant d'ann\xE9es ? Pareil pour la cabane ! Si quelqu'un
+      l'avait entretenue tout ce temps, \xE7a se saurait !"
+    - "\xC0 moins que ce ne soit pas du bois !? En regardant de plus pr\xE8s, il
+      n'y a aucun d\xE9faut. M\xEAme neuf, le bois pr\xE9sente des imperfections."
     - "Ce n'est d\xE9finitivement pas normal. Donc tout ce \"bois\" serait compos\xE9
-      de cette myst\xE9rieuse mati\xE8re. Et \xE7a doit \xEAtre avec cette barque
-      qu'il devait atteindre l'\xEEle."
-    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normal. Curieux
-      de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle ehe."
+      de cette myst\xE9rieuse mati\xE8re. Et c'est avec cette barque qu'il devait
+      atteindre l'\xEEle."
+    - "Je suppose qu'elle ne doit pas se d\xE9placer comme une barque normale. Je
+      suis curieux de savoir comment cette barque sp\xE9ciale va m'emmener \xE0 l'\xEEle
+      ehe."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - There is only this boat, I see nothing else. Think...
+    - This boat... How is it intact after being abandoned for so many years? The
+      same goes for the cabin! If someone had maintained it all this time, we would
+      know!
+    - Unless it's not wood!? On closer inspection, there are no flaws. Even new,
+      wood has imperfections.
+    - This is definitely not normal. So all this "wood" would be made of this mysterious
+      material. And it must be with this boat that he was supposed to reach the island.
+    - 'I suppose it doesn''t move like a normal boat. Curious to know how this special
+      boat will take me to the island ehe. '
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - je peux pas encore prendre le bateau
+    - Aucune raison de prendre cette barque.
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - No reason to take this boat.
   isNeedKey: 0
   isItemObtained: 0
   item: {fileID: 0}
@@ -2800,6 +2937,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "L'un des arbres que le vieil homme \xE9tudie. Il est immense !"
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - One of the trees the old man studies. It's enormous!
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -2811,7 +2955,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 

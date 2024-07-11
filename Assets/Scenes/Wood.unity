@@ -251,23 +251,39 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: 
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Il y a un motif ici ! Et les contours ... Cela semble une porte.
-    - "Cette for\xEAt est accessible \xE0 tout public. Donc comment se fait-il que
-      personne n'est remarqu\xE9 cet endroit jusqu'\xE0 maintenant ?"
-    - "Bref, il y a un m\xE9canisme. Activons -le !"
+    - "Qu'est-ce que c'est ? Un motif... et ces contours... \xE7a ressemble \xE0
+      une porte."
+    - "C'est \xE9trange, cette for\xEAt est ouverte \xE0 tout le monde. Comment personne
+      n'a-t-il d\xE9couvert cet endroit jusqu'\xE0 maintenant ?"
+    - "Il y a quelque chose ici... un m\xE9canisme peut-\xEAtre. Voyons si je peux
+      l'activer."
+  openEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - What is this? A pattern... and these contours... it looks like a door.
+    - It's strange, this forest is open to everyone. How has no one discovered this
+      place until now?
+    - There's something here... maybe a mechanism. Let's see if I can activate it.
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences:
-    - Still Close mada mada dane omae wa mo shindeiru
-    - mais desespere pas mon ami, tu sais que yare yare daze n'est-ce pas ?
+    sentences: []
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   isNeedKey: 0
   isItemObtained: 0
   item: {fileID: 0}
@@ -5332,15 +5348,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
+    name: Inconnu
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Cette structure est entour\xE9e de myst\xE8re, tu ne trouves pas ?"
+    - "Est-ce simplement un \xE9l\xE9ment de d\xE9cor ou a-t-elle \xE9t\xE9 construite
+      pour une raison pr\xE9cise ?"
+    - "D'apr\xE8s ce que je sais, elle r\xE9agit la nuit sous certaines conditions.
+      Et quelque chose me dit que ce sera le cas cette nuit."
+    - Je te conseille de revenir ce soir.
+  dialogEN:
     name: Unknown
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Cette structure n'est qu'un simple \xE9l\xE9ment de d\xE9cor ou a t'elle \xE9tait
-      construite pour avoir une utilit\xE9 ?"
-    - "Elle semble r\xE9agir lorsqu'elle est \xE0 proximit\xE9 d'un objet particulier
-      la nuit."
+    - This structure is shrouded in mystery, don't you think?
+    - Is it just a simple decoration, or was it built for a specific purpose?
+    - From what I know, it reacts at night under certain conditions. And something
+      tells me tonight is one of those nights.
+    - I suggest you come back tonight.
   needInteraction: 0
   item: {fileID: 11400000, guid: 053ef396c8047fc45852f04c1b8b42a9, type: 2}
   objToDesactivate: {fileID: 0}
@@ -5352,7 +5381,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -7605,7 +7646,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Parle du signe etc ...
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

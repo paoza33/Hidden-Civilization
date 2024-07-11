@@ -632,6 +632,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Pas besoin de d\xE9cale ici"
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   unfixZ: 0
   unfixX: 1
   ifFade: 0
@@ -1118,7 +1124,19 @@ MonoBehaviour:
     - "alphabet : \n\n1-    <sprite=0>/  2-    <sprite=1>/  3-    <sprite=2>/  4-   
       <sprite=3>\n\n\n5-    <sprite=4>/  6-    <sprite=5>/  7-    <sprite=6>/  8-   
       <sprite=7>"
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2036,12 +2054,19 @@ MonoBehaviour:
   spwanLabyrinth: {fileID: 2611953360730713225}
   clip: {fileID: 8300000, guid: b66fb7b88c93ece4299463b22ba6cce3, type: 3}
   dialog:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Enfin sorti de ce brouillard ! Qu'est-ce qui m'attends encore ?
+  dialogEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Finally out of that fog! What awaits me next?
 --- !u!4 &970785117
 Transform:
   m_ObjectHideFlags: 0
@@ -2916,9 +2941,23 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Que l'homme \xE0 la t\xEAte de ma\xEFs active les sph\xE8res dans le bon ordre,
-      pour que la porte secr\xE8te soit r\xE9v\xE9l\xE9e."
+    - "Pour accomplir notre devoir, nous devons rester invisibles. Pour cela, nous
+      devons \xE9tablir un ordre d'illusion."
+  openEN:
+    name: Poneglyph
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - To fulfill our duty, we must remain unseen. For that, we must establish an
+      order of illusion.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -4253,8 +4292,16 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je devrais analyser ce qui s'est r\xE9v\xE9l\xE9 \xE0 gauche de la porte avant
-      de la franchir."
+    - "Je devrais analyser ce qui s'est r\xE9v\xE9l\xE9 sur cette montagne avant
+      de franchir la porte."
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I should analyze what was revealed on this mountain before passing through
+      the gate.
   unfixZ: 0
   unfixX: 0
   ifFade: 0

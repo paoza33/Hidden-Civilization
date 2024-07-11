@@ -86,6 +86,10 @@ MonoBehaviour:
     m_Localized: NON
     m_Metadata:
       m_Items: []
+  - m_Id: 2671823183826944
+    m_Localized: ACTIVER
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

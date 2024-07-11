@@ -3074,6 +3074,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - ok je vois
+  dialogsEN: []
   emptyDialog:
     name: 
     choices: []
@@ -3081,6 +3082,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - 
+  emptyDialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   contenairs:
   - {fileID: 924934516}
   - {fileID: 3593716266497987290}
@@ -3096,6 +3103,12 @@ MonoBehaviour:
     - "Donc la j'arrive \xE0 la fin"
     - Un dernier mot ?
     - Non un peu la flemme
+  speechEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   speedDeplacement: 5
   audioTeleport: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
 --- !u!1 &1443910047
@@ -3654,26 +3667,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknown: {fileID: 329283716}
   firstMoment:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Cet endroit ... C'est bien ce que je pense ? Il y a quelque chose droit devant.
+    - "Cet endroit... Est-ce bien ce que je pense ? Suis-je enfin arriv\xE9 au bout
+      ? Il y a quelque chose droit devant."
+  firstMomentEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - This place... Is it what I think it is? Have I finally reached the end? There's
+      something right ahead.
   lastSpeech:
     name: Unknown
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Tu as confi\xE9 ce livre \xE0 une personne n'ayant rien \xE0 voir avec nous,
-      imb\xE9cile ..."
-    - "Mais il a r\xE9ussi \xE0 d\xE9chiffrer les \xE9crits par lui-m\xEAme et garder
-      tout \xE7a secret. Preuve d'une certaine sagesse."
-    - "C'est pour cela que je me suis autoris\xE9 \xE0 l'aider un peu."
-    - "Mais quel va \xEAtre ton choix maintenant ? De quel clan, tes valeurs correspondent-ils
-      ? Deviendras-tu un alli\xE9 potentiel ou vais-je devoir t'\xE9loigner de ce
-      monde \xE0 tout jamais ?"
+    - "Tu as confi\xE9 ce livre \xE0 une personne qui n'a rien \xE0 voir avec nous,
+      imb\xE9cile..."
+    - "Mais il a r\xE9ussi \xE0 d\xE9chiffrer les \xE9crits par lui-m\xEAme et \xE0
+      garder tout cela secret. Preuve d'une certaine sagesse."
+    - C'est pour cela que je me suis permis de l'aider un peu.
+    - "Maintenant, quel sera ton choix ? \xC0 quel clan tes valeurs correspondent-elles
+      ? Deviendras-tu un alli\xE9 potentiel, ou devrai-je t'\xE9loigner de ce monde
+      \xE0 tout jamais ?"
+  lastSpeechEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - You entrusted this book to someone completely unrelated to us, you fool...
+    - But he managed to decipher the writings by himself and keep it all secret.
+      Proof of some wisdom.
+    - That's why I took the liberty to help him a little.
+    - So, what will your choice be now? Which clan do your values align with? Will
+      you become a potential ally, or must I banish you from this world forever?
   secondaryCam: {fileID: 792377021}
   clip: {fileID: 8300000, guid: b1947c67bb4a2d144b09c7ef3806ad3d, type: 3}
 --- !u!1 &1823513317
@@ -3989,8 +4023,22 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - explication endroit
+    - 'ZONE DE STOCKAGE
+
+'
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

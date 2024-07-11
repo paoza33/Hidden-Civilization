@@ -322,6 +322,12 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Player
     choices: []
@@ -329,6 +335,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - J'ai besoin de cette lampe-torche avant de partir
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
   ifStopMusic: 0
@@ -725,8 +737,20 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -938,39 +962,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Old Man
+    name: Vieil homme
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Player!? Que fais-tu ici !?
+    - Que fais-tu ici !?
     - "Raah, c'est vraiment pas le bon moment l\xE0 !!"
-    - "Et lache ce livre imm\xE9diatement ! Tu ne sais pas ce que tu fais !"
-    - 'Rentre chez toi maintenant, sans plus tarder ! '
-    - C'est pas bon, c'est pas bon, c'est pas bon ....
+    - "Et l\xE2che ce livre imm\xE9diatement ! Tu ne sais pas ce que tu fais !"
+    - Rentre chez toi maintenant, sans plus tarder !
+    - C'est pas bon, c'est pas bon, c'est pas bon...
     - ...
-    - "... Attends... Tu pourrais bien \xEAtre la solution la plus s\xFBre..."
-    - "Mais \xE0 quoi je pense ! Impliquer une personne ext\xE9rieure .."
-    - ".......... Mais c'est justement pour cette raison qu'ils n'y penseront jamais
-      ..................\nBON, FAISONS COMME \xC7A !!"
-    - " \xC9coute-moi attentivement! Des individus mal intentionn\xE9s sont \xE0
+    - "Attends... Tu pourrais bien \xEAtre la solution la plus s\xFBre..."
+    - "Mais \xE0 quoi je pense ! Impliquer une personne ext\xE9rieure..."
+    - "Mais c'est justement pour cette raison qu'ils n'y penseront jamais ! BON,
+      FAISONS COMME \xC7A !!\n"
+    - "\xC9coute-moi attentivement ! Des individus mal intentionn\xE9s sont \xE0
       la recherche de certains de mes biens. Je ne vais pas entrer dans les d\xE9tails,
       mais il est imp\xE9ratif que ce livre ne tombe pas entre leurs mains."
     - "Cache-toi dans ma salle de bain. D\xE8s que tu entendras des hommes entrer,
       sors par la fen\xEAtre et rentre chez toi en dissimulant le livre. Personne
-      ne dois te voir !"
+      ne doit te voir !"
     - "Ils ne sont pas au courant de l'existence de ce livre. Ils ne le rechercheront
       pas apr\xE8s leur passage. Mais ne le montre \xE0 personne et n'en parle \xE0
       personne. Compris ?"
     - "Moi ou quelqu'un me ressemblant passera le r\xE9cup\xE9rer, t\xF4t ou tard.
       Mais peu importe le temps qui passe, ne le montre \xE0 PERSONNE, j'insiste."
     - ...
-    - Ils arrivent ... On a plus de temps, cache-toi et suis mes instructions.
-    - En te confiant ce livre, je met potentiellement le monde en danger, tu ne mesure
-      pas l'importance de ce que tu tiens entre tes mains. Je te le confie car tu
-      es inteligent et astucieux.
-    - "Tu n'es pas en danger mais tu le seras si tu cherche \xE0 en savoir plus,
-      je reviendrai quand je le pourrais. J'ai confiance en toi Player."
+    - Ils arrivent ... On n'a plus de temps, cache-toi et suis mes instructions.
+    - En te confiant ce livre, je mets potentiellement le monde en danger, tu ne
+      mesures pas l'importance de ce que tu tiens entre tes mains. Je te le confie
+      car tu es intelligent et astucieux.
+    - "Tu n'es pas en danger mais tu le seras si tu cherches \xE0 en savoir plus.
+      Je reviendrai quand je le pourrai. J'ai confiance en toi."
+  dialogEN:
+    name: Old man
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - What are you doing here!?
+    - Raah, this is really not the right time !!
+    - And put that book down immediately! You don't know what you're doing!
+    - Go home now, without delay!
+    - This is not good, this is not good, this is not good...
+    - ...
+    - 'Wait... You might actually be the safest solution...
+
+'
+    - But what am I thinking! Involving an outsider...
+    - 'But that''s precisely why they would never think of it ! OK, LET''S DO IT
+      THIS WAY!!
+
+'
+    - Listen to me carefully! Some ill-intentioned individuals are looking for certain
+      items of mine. I'm not going into details, but it is imperative that this book
+      does not fall into their hands.
+    - Hide in my bathroom. As soon as you hear men enter, climb out the window and
+      go home, hiding the book. No one must see you!
+    - They are not aware of this book's existence. They won't look for it after their
+      visit. But don't show it to anyone and don't talk to anyone about it. Understood?
+    - I or someone who looks like me will come to retrieve it, sooner or later. But
+      no matter how much time passes, don't show it to ANYONE, I insist.
+    - ...
+    - They're coming... We don't have any more time, hide and follow my instructions.
+    - By entrusting you with this book, I am potentially putting the world in danger,
+      you don't realize the importance of what you're holding in your hands. I trust
+      you because you are smart and resourceful.
+    - You're not in danger but you will be if you try to find out more. I will come
+      back when I can. I trust you.
   unfixZ: 0
   unfixX: 0
   ifFade: 0
@@ -1116,6 +1176,13 @@ MonoBehaviour:
     sentences:
     - "Il n'y a pas de temps \xE0 perdre !! Passe par la fen\xEAtre de la salle de
       bain !"
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - There's no time to lose!! Go through the bathroom window!
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -1127,7 +1194,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -1312,7 +1391,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - J'ai peur
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -1665,15 +1756,31 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 1512398345}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - 'C''est quoi ce livre ? Bizarre ces couleurs, je l''avais jamais vu avant.
-      Pareil pour ces boules ! '
-    - je vais aller le lire sur la table, le temps que le vieil homme arrive.
+    - "C'est quoi ce livre ? Bizarre ces couleurs, je l'avais jamais vu avant. Pareil
+      pour ces sph\xE8res ! Trop cool !"
+    - "Regardons \xE7a de plus pr\xE8s sur le canap\xE9, le temps que le vieil homme
+      arrive."
+  openEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - What's this book? These colors are strange, I've never seen it before. Same
+      with these spheres! So cool!
+    - Let's take a closer look on the couch while we wait for the old man to arrive.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

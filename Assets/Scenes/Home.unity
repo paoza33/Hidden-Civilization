@@ -690,18 +690,25 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Des ann\xE9es de recherches, et enfin, une piste ! Qui aurait cru que la cl\xE9
-      se trouvait si pr\xE8s de ma maison d'enfance ?"
-    - "Au moins, je n'ai pas eu \xE0 chercher loin pour un endroit o\xF9 dormir.\nMaintenant
-      que je suis bien repos\xE9, je peux partir."
-    - "Mais avant \xE7a, je dois r\xE9cup\xE9rer le livre."
+    - "Cela fait maintenant plusieurs ann\xE9es que j'ai mis la main sur ce myst\xE9rieux
+      livre qui a chang\xE9 ma vie."
+    - "Son contenu \xE9tait incompr\xE9hensible : une langue inconnue, des pages
+      blanches, des signes et des plans encore jamais vus."
+    - "C'est seulement maintenant, apr\xE8s tant de recherches, que j'ai r\xE9ussi
+      \xE0 d\xE9crypter une partie des \xE9crits."
+    - "Ils mentionnent un centre de recherche o\xF9 une civilisation \xE9tudiait
+      une mati\xE8re qui semblerait extraterrestre."
+    - "Si j'ai raison, il se situerait dans la ville au nord de mon village d'enfance.
+      Heureusement que j'ai gard\xE9 cette maison."
+    - "Allons vers ce centre de recherche. Mais avant cela, je dois r\xE9cup\xE9rer
+      le livre."
   dialogState1:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Rangement de chambre termin\xE9 ! Je peux enfin partir au campement."
+    - J'ai fini de ranger ma chambre ! Je peux enfin aller au lac !
   dialogState2:
     name: Player
     choices: []
@@ -709,25 +716,25 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Depuis cette \xE9poque, j'ai continu\xE9 mes recherches sur ce livre, malgr\xE9
-      les avertissement du vieil homme."
+      les avertissements du vieil homme."
     - "Apr\xE8s toutes ces ann\xE9es, j'ai r\xE9ussi \xE0 d\xE9chiffrer une grande
       partie de ces textes. M\xEAme si je ne comprends toujours pas pourquoi il y
-      a tant de page blanche entre ces textes."
+      a tant de pages blanches entre ces textes."
     - "Une technologie sup\xE9rieure, une civilisation cach\xE9e, les dangers de
-      ces d\xE9couvertes ... Mais qui \xE9tait ce vieil homme ?"
+      ces d\xE9couvertes... Mais qui \xE9tait ce vieil homme ?"
     - "Le livre fait mention d'un centre de recherche.\nSi j'en crois la carte, l'emplacement
       semble \xEAtre l\xE0 o\xF9 se trouve la librairie de la ville au nord."
-    - "Cela semble vrai sachant que cette librairie a \xE9t\xE9 construite sur une
+    - "Cela semble vrai, sachant que cette librairie a \xE9t\xE9 construite sur une
       ancienne structure."
-    - Direction la ville !
+    - Allons chercher des indices dans cette librairie.
   dialogState3:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Le signe ! La for\xEAt !! Ce signe me rappelle celui grav\xE9 dans cette structure
-      \xE9trange dans la for\xEAt."
+    - "Le signe ! C'est celui de la for\xEAt !! Il me rappelle celui qui \xE9tait
+      grav\xE9 sur cette structure \xE9trange dans la for\xEAt."
     - "Je dois v\xE9rifier \xE7a sans perdre plus de temps."
   dialogState4:
     name: Player
@@ -735,66 +742,107 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Qui \xE9tait cet homme ? Il me rappelle vaguement quelqu'un .."
-    - Il semblait avoir des connaissances sur cette structure...
-    - 'Autant suivre ces conseils comme je n''ai aucune piste.
-
-'
-    - "Il fait d\xE9sormais nuit, direction la for\xEAt !"
+    - "Qui \xE9tait cet homme ? Il me rappelle vaguement quelqu'un... Il semblait
+      avoir des connaissances sur cette structure."
+    - Autant suivre ses conseils, puisque je n'ai aucune piste.
+    - "Il fait d\xE9sormais nuit ; en route pour la for\xEAt !"
   dialogState5:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Tout \xE7a est compl\xE9tement fou ! Je ne sais pas si je fais bien de continuer.
-      Pourquoi ce livre est toujours en ma possession ? Il y a t'il une raison \xE0
-      ce que je continue ?"
+    - "Tout cela est compl\xE8tement fou! Je ne sais pas si je fais bien de continuer.
+      Pourquoi est-ce que ce livre est toujours en ma possession ? Y a-t-il une raison
+      pour que je continue ?"
     - ...
     - "Ce n'est pas le moment de penser \xE0 tout \xE7a si pr\xE8s du but. Reprenons
       nos recherches."
-    - "Le livre affiche une carte d'une cit\xE9. La disposition des b\xE2timents
-      semble \xEAtre similaire aux ruines du Nord-Est."
-    - "Mais ces ruines sont interdites d'acc\xE8s au public depuis que le \"QG\"
-      a pris possession des lieux. Et elles sontbien trop surveill\xE9s pour pouvoir
-      m'infiltrer."
-    - "Pour quelles raisons le \"QG\" s'est-il install\xE9 ici ? Et pourquoi autant
-      de surveillance pour des ruines ? Peut-\xEAtre qu'ils ont connaissances de
-      cette ancienne civilisation eux-aussi .. Je dois redoubler de vigilance \xE0
-      partir de maintenant."
-    - "Je suis pr\xEAt, direction les ruines du nord-est."
+    - "Le livre montre une carte d'une cit\xE9. La disposition des b\xE2timents semble
+      similaire aux ruines du Nord-Est."
+    - "Cependant, ces ruines sont interdites d'acc\xE8s au public depuis que le \"QG\"
+      en a pris possession. Elles sont bien trop surveill\xE9es pour que je puisse
+      m'y infiltrer."
+    - "Pourquoi le \"QG\" s'est-il install\xE9 ici ? Et pourquoi tant de surveillance
+      pour des ruines ? Peut-\xEAtre qu'ils ont aussi connaissance de cette ancienne
+      civilisation... Je dois redoubler de vigilance \xE0 partir de maintenant."
+    - "Je suis pr\xEAt, en route vers les ruines du nord-est."
   dialogsEN:
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - In english please
+    - It's now been several years since I got my hands on this mysterious book that
+      changed my life.
+    - 'Its content was incomprehensible: an unknown language, blank pages, signs,
+      and plans never seen before.'
+    - Only now, after so much research, have I managed to decipher part of the writings.
+    - They mention a research center where a civilization studied what seems to be
+      extraterrestrial material.
+    - If I'm right, it would be located in the city north of my childhood village.
+      It's a good thing I kept that house.
+    - Let's head to this research center. But before that, I need to retrieve the
+      book.
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Finished tidying my room! I can finally go to the lake!
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Since that time, I have continued my research on this book, despite the old
+      man's warnings.
+    - After all these years, I have managed to decipher a large part of these texts.
+      Although I still don't understand why there are so many blank pages between
+      these texts.
+    - Superior technology, a hidden civilization, the dangers of these discoveries...
+      But who was that old man?
+    - 'The book mentions a research center.
+
+      If I believe the map, the location
+      seems to be where the library in the northern town is.'
+    - This seems true, knowing that this library was built on an ancient structure.
+    - Let's go look for clues in this library.
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - The sign! It's the one from the forest! It reminds me of the one carved on
+      that strange structure in the forest.
+    - I need to check this without wasting any more time.
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Who was that man? He vaguely reminds me of someone... He seemed to have knowledge
+      about this structure.
+    - I might as well follow his advice since I have no leads.
+    - It's nighttime now; off to the forest!
   - name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - All of this is completely insane! I'm not sure if I should continue. Why do
+      I still have this book in my possession? Is there a reason for me to keep going?
+    - ...
+    - Now is not the time to dwell on this so close to the goal. Let's resume our
+      research.
+    - The book displays a map of a city. The layout of the buildings seems similar
+      to the ruins in the Northeast.
+    - However, these ruins have been off-limits to the public since the Headquarters
+      took over. They are heavily guarded, making infiltration impossible.
+    - Why did the Headquarters establish itself here? And why such heavy surveillance
+      for ruins? Perhaps they also know about this ancient civilization... I need
+      to be extra cautious from now on.
+    - I'm ready, heading to the Northeast ruins.
   recentSkin:
   - {fileID: 2100000, guid: 71d3f8e2fbe5ba342b5e9f30bae32859, type: 2}
   - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
@@ -1118,6 +1166,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - D'accord, mais ne rentre pas tard !
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Okay, but make sure you're home early!
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -1129,7 +1184,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -1982,6 +2049,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Maman ! J'ai tout fini ! Je pars au campement !
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   unfixZ: 0
   unfixX: 0
   ifFade: 0
@@ -2929,7 +3002,20 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Ce livre ... Tout a commenc\xE9 ce soir-l\xE0."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - This book... It all began that evening.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

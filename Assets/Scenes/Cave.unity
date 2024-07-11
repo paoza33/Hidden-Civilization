@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 64756924c431f714ca0e9d6ab04974ed, type: 3}
   intro:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1325,6 +1325,17 @@ MonoBehaviour:
     - "Woaw ! Cet endroit semble irr\xE9el !\nEst-ce un aper\xE7u des capacit\xE9s
       de cette ancienne technologie ?"
     - "\xC0 moi de trouver quoi faire ici d\xE9sormais."
+  introEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Wow! This place looks unreal!
+
+      Is this a glimpse of the capabilities
+      of this ancient technology?'
+    - It's up to me to figure out what to do here now.
 --- !u!1 &1264403016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,8 +1898,40 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - first history
+    - "Le symbole des Gardiens est pr\xE9sent sur cette st\xE8le."
+    - "Il semble que ce texte d\xE9crive une cit\xE9 o\xF9 ils vivaient."
+    - "Elle est prot\xE9g\xE9e par une barri\xE8re invisible qui camoufle la cit\xE9,
+      la rendant inaccessible aux \xE9trangers.\nPratique pour la retrouver..."
+    - "Il y a une description de la disposition des b\xE2timents ainsi que de leur
+      mat\xE9riau."
+    - "La plupart sont en pierre, ce qui est plut\xF4t \xE9trange compte tenu de
+      leur technologie, \xE0 moins que leurs ressources ne soient limit\xE9es."
+    - "\xC9tudions tout cela chez moi."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - The symbol of the Guardians is present on this stele.
+    - It seems that this text describes a city where they lived.
+    - 'It is protected by an invisible barrier that conceals the city, making it
+      inaccessible to outsiders.
+
+      Convenient for rediscovering it...'
+    - 'There is a description of the layout of the buildings and their material.
+
+'
+    - Most of them are made of stone, which is rather strange given their technology,
+      unless their resources are limited.
+    - Let's study all of this at my place.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

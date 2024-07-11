@@ -725,15 +725,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "*Tousse* *Tousse * ... Toute cette poussi\xE8re ... Cet endroit n'a pas \xE9t\xE9
-      visit\xE9 depuis un bon moment."
-    - "La salle est vide, hormis cette \xE9tag\xE8re en piteux \xE9tat. Je devrais
-      y jeter un oeil."
+    - "*Tousse* *Tousse * ... Toute cette poussi\xE8re... Cet endroit n'a pas \xE9t\xE9
+      visit\xE9 depuis longtemps."
+    - "La salle est vide \xE0 l'exception de cette \xE9tag\xE8re en piteux \xE9tat.
+      Je devrais y jeter un coup d'\u0153il."
+  dialogEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - '*Cough*  *Cough*... All this dust... This place hasn''t been visited in a
+      while.'
+    - The room is empty, except for this dilapidated shelf. I should take a look
+      at it.
 --- !u!1 &655770043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,20 +1295,48 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "L'\xE9tag\xE8re est vide ... Tout \xE7a pour rien ..."
-    - "Un indice dans le livre que j'aurais loup\xE9 ? regardons \xE7a."
-    - "!? Quelque chose dans le creux de l'\xE9tag\xE8re a commenc\xE9 \xE0 briller
+    - "L'\xE9tag\xE8re est vide... Tout \xE7a pour rien..."
+    - "Est-ce qu'il y aurait un indice dans le livre que j'aurais manqu\xE9 ? V\xE9rifions
+      \xE7a."
+    - "Quelque chose dans le creux de l'\xE9tag\xE8re a commenc\xE9 \xE0 briller
       lorsque j'ai sorti le livre."
-    - "(prend l'objet) ... Un m\xE9daillon ? Il y a un signe dessus."
-    - "C'est l'un des signes du livre qui est suivi d'une page blanche. Oui voila,
-      cette page l\xE0."
-    - "HEIN !? Du texte est apparu ... Le m\xE9daillon fait appraitre le texte lorsqu'il
-      est \xE0 proximit\xE9 du livre. Toute les pages blanches sont apreils ? Int\xE9ressant."
-    - "HEIN !? Du texte est apparu ! Le m\xE9daillon fait appraitre le texte lorsqu'il
-      est \xE0 proximit\xE9 du livre. Toute les pages blanches sont apreils ? Int\xE9ressant..."
+    - '*Prends l''objet*
+
+'
+    - "Un m\xE9daillon ? Il y a un signe dessus. C'est l'un des signes du livre,
+      suivi d'une page blanche. Ah, cette page-l\xE0."
+    - "Du texte est apparu !? Le m\xE9daillon fait appara\xEEtre du texte lorsqu'il
+      est \xE0 proximit\xE9 du livre. Toutes les pages blanches sont pareilles ?
+      Fascinant !"
+    - Lisons son contenu...
     - "Le texte raconte une histoire, et les signes correspondent aux plaques devant
-      les \xE9tag\xE8res de l'\xE9tage inf\xE9rieure. Allons voir \xE7a de plus pr\xE8s."
+      les \xE9tag\xE8res de l'\xE9tage inf\xE9rieur. Allons examiner cela de plus
+      pr\xE8s."
+  openEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - The shelf is empty... All that for nothing...
+    - Could there be a clue in the book that I missed? Let's check that.
+    - Something in the hollow of the shelf started glowing when I pulled out the
+      book !
+    - '*Takes the object*'
+    - A medallion ? There's a symbol on it. It's one of the symbols from the book,
+      followed by a blank page. Ah, this page here.
+    - Text has appeared! ? The medallion reveals text when it's near the book. Are
+      all the blank pages the same ? Fascinating !
+    - Let's read its contents...
+    - The text tells a story, and the symbols correspond to the plaques in front
+      of the shelves on the lower floor. Let's investigate this further.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 

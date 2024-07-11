@@ -491,8 +491,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: POUVOIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: POWER
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -719,8 +727,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "R\xC9VOLUTION"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: REVOLUTION
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -832,7 +848,15 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
+      value: TENSION
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
       value: TENSION
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -911,6 +935,12 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Player
     choices: []
@@ -918,6 +948,13 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Cette porte est interdit d'acc\xE8s. Impossible de passer par l\xE0."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - This door is off-limits. It's impossible to pass through here.
   ifLibraryDoorState0: 1
   audioClip: {fileID: 0}
   ifStopMusic: 0
@@ -1068,11 +1105,36 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Apr\xE8s avoir bien \xE9tudi\xE9 ce qu'il se passe, il semblerait que je dois
-      activer les dalles brillantes dans un ordre pr\xE9cis."
-    - "L'ordre semble \xEAtre indiqu\xE9 dans l'histoire apparu dans ce livre tout
-      \xE0 l'heure."
+    - "Apr\xE8s avoir bien \xE9tudi\xE9 la situation, il semble que je doive activer
+      les dalles brillantes dans un ordre pr\xE9cis."
+    - "Cet ordre semble \xEAtre indiqu\xE9 dans l'histoire apparue dans ce livre
+      tout \xE0 l'heure."
     - Relisons encore une fois cette histoire et trouvons le bon ordre.
+  dialogsEN:
+  - name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Let's look for a clue in this bookstore that could further our research.
+  - name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Infiltration successful... No one around...
+
+      Perfect! Let''s start by
+      looking for the key to the door.'
+  - name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - After studying the situation carefully, it appears that I must activate the
+      glowing tiles in a specific order.
+    - The order seems to be indicated in the story that appeared in the book earlier.
+    - Let's reread this story once more and find the correct order.
   symbols1:
   - {fileID: 311037988}
   - {fileID: 2134206920}
@@ -1212,14 +1274,28 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "J'ai fais le tour mais rien d'anormal \xE0 signaler."
-    - "Regarder tout en d\xE9tails me prendrai trop de temps et me donnerai un air
-      suspect. Je dois rester discret."
-    - "Il ne me reste que l'\xE9tage sup\xE9rieur, mais je ne peux y acc\xE9der seulement
-      par cette porte interdite d'acc\xE8s."
-    - "Je dois revenir ici cette nuit, \xE0 l'abris des regards..."
-    - "Si je d\xE9verrouille le verrou d'une des fen\xEAtres, personne ne pensera
-      \xE0 v\xE9rifier. Je n'aurai qu'\xE0 revenir cette nuit en passant par celle-ci."
+    - "J'ai fait le tour mais rien d'anormal \xE0 signaler."
+    - "Examiner tout en d\xE9tail prendrait trop de temps et attirerait des suspicions.
+      Je dois rester discret."
+    - "Il ne me reste que l'\xE9tage sup\xE9rieur, mais je ne peux y acc\xE9der que
+      par cette porte interdite."
+    - "Je dois revenir ici cette nuit, \xE0 l'abri des regards..."
+    - "Si je d\xE9verrouille une des fen\xEAtres, personne ne pensera \xE0 v\xE9rifier.
+      Je pourrai revenir cette nuit par l\xE0."
+  dialogEndState0EN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I've looked around, but there's nothing unusual to report.
+    - Examining everything in detail would take too long and make me look suspicious.
+      I need to remain discreet.
+    - The only option left is the upper floor, accessible only through that forbidden
+      door.
+    - I must return here tonight, out of sight...
+    - If I unlock one of the windows, no one will think to check. I'll just come
+      back tonight through it.
   ending:
     name: Player
     choices: []
@@ -1227,40 +1303,55 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Enfin ! Tout a \xE9t\xE9 activ\xE9 dans le bon ordre."
-    - (Prends le livre) ...
-    - "Comme pr\xE9vu. Du texte a bien \xE9t\xE9 r\xE9v\xE9l\xE9."
-    - Je comprends mieux .. Ce livre retrace l'histoire du clan des gardiens.
+    - '*Prends le livre*'
+    - "Comme pr\xE9vu, du texte a bien \xE9t\xE9 r\xE9v\xE9l\xE9 dans le livre."
+    - Je comprends mieux... Ce livre retrace l'histoire du clan des gardiens.
     - "Apr\xE8s la division du village, le clan des gardiens a cach\xE9 leur technologie
-      dans un endroit \"hors du temps\" ? Qu'est-ce que cela signifie ?"
-    - "Il y a un signe \xE0 la fin du texte ..."
-    - "J'ai d\xE9j\xE0 vu ce signe quelque part ... Mais o\xF9 ?"
-    - "Je verrais \xE7a chez moi, je ne devrais pas rester ici plus logntemps."
+      dans un endroit \"hors du temps\". Qu'est-ce que cela signifie ?"
+    - "Il y a un signe \xE0 la fin du texte. J'ai d\xE9j\xE0 vu ce signe quelque
+      part... Mais o\xF9 ?"
+    - "Je verrai \xE7a chez moi, je ne devrais pas rester ici plus longtemps."
+  endingEN:
+    name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Finally! Everything has been activated in the correct order.
+    - '*Takes the book*'
+    - As expected, some text has indeed been revealed in the book.
+    - I understand better now... This book traces the history of the Guardian Clan.
+    - After the village split, the Guardian Clan hid their technology in a place
+      "out of time." What does that mean?
+    - There's a symbol at the end of the text. I've seen this symbol somewhere before...
+      But where?
+    - I'll figure this out at home; I shouldn't stay here any longer.
   bookLevel0:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Tout d\xE9buta lorsque les villageois d\xE9couv\xE8rent une roche myst\xE9rieuse
-      dans leur for\xEAt.\nLes propri\xE9t\xE9s de cette mati\xE8re surpassaient
-      toutes les autres et, en la travaillant, devenait encore plus extraordinaire."
+    - "Tout commen\xE7a lorsque les villageois d\xE9couvrirent une mati\xE8re myst\xE9rieuse
+      dans leur for\xEAt. Les propri\xE9t\xE9s de cette mati\xE8re surpassaient toutes
+      les autres, et en la travaillant, elle devenait encore plus extraordinaire."
     - "Le chef comprit rapidement son potentiel, ses b\xE9n\xE9fices et les cons\xE9quences
-      de ce pouvoir. Il d\xE9cida de garder secret tout ce qui concernait cette mati\xE8re.
-      Les villageois respect\xE8rent cet ordre, mais d'autres, avides et ambitieux,
-      refus\xE8rent de restreindre cette technologie au village."
+      de ce pouvoir. Il d\xE9cida de garder secr\xE8tes toutes les informations concernant
+      cette mati\xE8re. Les villageois respect\xE8rent cet ordre, mais d'autres,
+      avides et ambitieux, refus\xE8rent de limiter cette technologie au village."
   bookLevel1:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Le chef, sage et exp\xE9riment\xE9, savait que cela m\xE8nerait \xE0 une guerre
-      civile. Pour l'emp\xEAcher, il cr\xE9a un conseil de guerre rassemblant ses
-      hommes de confiance et \xE9limina ceux qui voulaient provoquer ce conflit."
-    - "Cette mesure fut efficace, mais engendra un d\xE9bat au sein du conseil :
-      fallait-il garder cette technologie pour eux, afin d'\xE9viter sa dispersion
-      dans le monde, ou bien partager ses bienfaits, au risque qu'elle tombe entre
-      de mauvaises mains ?"
+    - "Le chef, sage et exp\xE9riment\xE9, savait que cela pourrait d\xE9clencher
+      une guerre civile. Pour l'emp\xEAcher, il forma un conseil de guerre avec ses
+      hommes de confiance et \xE9limina ceux qui cherchaient \xE0 provoquer ce conflit."
+    - "Cette mesure fut efficace, mais elle suscita un d\xE9bat au sein du conseil
+      : devaient-ils garder cette technologie pour eux-m\xEAmes afin d'\xE9viter
+      sa propagation dans le monde, ou bien partager ses bienfaits au risque qu'elle
+      ne tombe entre de mauvaises mains ?"
   bookLevel2:
     name: 
     choices: []
@@ -1272,21 +1363,67 @@ MonoBehaviour:
     - "Avant de mourir, il confia secr\xE8tement les technologies les plus puissantes
       et les recherches sur la mati\xE8re \xE0 ceux qui voulaient les garder secr\xE8tes.
       \xC0 l'autre clan, il laissa une technologie capable d'am\xE9liorer les conditions
-      de vie d'une civilisation, mais sans les recherches et outils n\xE9cessaires
-      pour travailler et am\xE9liorer la mati\xE8re."
+      de vie d'une civilisation, mais sans les recherches et les outils n\xE9cessaires
+      pour manipuler et perfectionner la mati\xE8re."
   bookLevel3:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "\xC0 sa mort, le village se scinda en deux clans, celui de la Lune gardant
-      le secret et celui du Soleil. Ils \xE9taient assez sage pour \xE9viter tout
-      conflit pouvant engendrer des cons\xE9quences qu'ils les d\xE9passeront."
-    - "Le clan de la Lune \xE9taient satisfait du choix de leur chef, mais celui
-      du Soleil, persuad\xE9e d'etre dans le juste, ne voulait pas se contenter de
-      la situation et mena une guerre invisible pour mettre la main sur le reste
-      de la technologie."
+    - "\xC0 sa mort, le village se divisa en deux clans : celui de l'Aube, gardant
+      le secret, et celui des Gardiens. Ils \xE9taient suffisamment sages pour \xE9viter
+      tout conflit susceptible d'avoir des cons\xE9quences qui les d\xE9passeraient."
+    - "Le clan des Gardiens \xE9tait satisfait du choix de leur chef, mais celui
+      de l'Aube, convaincu d'\xEAtre dans son bon droit, refusait de se contenter
+      de la situation et menait une guerre invisible pour s'approprier le reste de
+      la technologie."
+  dialogsBook:
+  - name: Book
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - It all began when the villagers discovered a mysterious rock in their forest.
+      The properties of this substance exceeded all others, and through their work
+      on it, it became even more extraordinary.
+    - The chief quickly understood its potential, its benefits, and the consequences
+      of its power. He chose to keep all matters concerning this substance secret.
+      The villagers obeyed this directive, but others, greedy and ambitious, refused
+      to confine this technology to the village.
+  - name: Book
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - The wise and experienced chief knew this could lead to civil war. To prevent
+      it, he formed a war council with his trusted men and eliminated those who sought
+      to provoke conflict.
+    - 'This measure was effective but sparked a debate within the council: should
+      they keep this technology to themselves to prevent its spread in the world,
+      or share its benefits at the risk of it falling into the wrong hands?'
+  - name: Book
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - The debate lasted for years. The chief was aging and knew his time was limited.
+    - Before his death, he secretly entrusted the most powerful technologies and
+      research on the substance to those who wanted to keep them secret. To the other
+      clan, he left technology capable of improving civilization's living conditions,
+      but without the necessary research and tools to manipulate and enhance the
+      substance.
+  - name: Book
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Upon his death, the village split into two clans: the Dawn, keeping the secret,
+      and the Guardians. They were wise enough to avoid any conflict that could have
+      consequences beyond their control.'
+    - The Guardians were content with their leader's choice, but the Dawn, convinced
+      of their righteousness, refused to accept the situation and waged an invisible
+      war to seize the remaining technology.
   state: 0
   currentId: 0
   windows: {fileID: 2114838171}
@@ -1393,8 +1530,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: OEIL
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: EYE
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -1521,13 +1666,26 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Ouvert !
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: Not open
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "ferm\xE9 ... La cl\xE9 devrait etre \xE0 la reception."
+    - "Ferm\xE9 ... La cl\xE9 devrait etre \xE0 la reception."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Closed... The key should be at the reception.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
   ifStopMusic: 1
@@ -1632,8 +1790,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "D\xC9TENTE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: CEASEFIRE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -1956,7 +2122,15 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
+      value: CHEF
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
       value: LEADER
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2322,7 +2496,19 @@ MonoBehaviour:
     sentences:
     - "\xE7a doit etre cette cl\xE9."
     - "(Vous avez obtenu une cl\xE9)"
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2556,8 +2742,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: OMBRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: SHADOW
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -2711,7 +2905,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Juste une rang\xE9e de bouquins .."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2799,7 +3005,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Rien d'intriguant sur cette rang\xE9e .."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -2827,8 +3045,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "CR\xC9PUSCULE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: TWILIGHT
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -3412,8 +3638,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "STRAT\xC9GIE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: STRATEGY
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -3678,7 +3912,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
+      value: DIVISION
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
       value: DIVISION
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3776,7 +4018,19 @@ MonoBehaviour:
     sentences:
     - "\"Comment d\xE9velopper un jeu vid\xE9o de A \xE0 Z\". Int\xE9ressant, mais
       pas ce que je cherche .."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -3966,8 +4220,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "H\xC9RITAGE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: HERITAGE
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -4239,8 +4501,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
-      value: "LUMI\xC8RE"
+      value: AUBE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: DAWN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -4304,7 +4574,15 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
+      value: AVANTAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
       value: AVANTAGE
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
@@ -4531,8 +4809,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "CUPIDIT\xC9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: GREED
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -4860,8 +5146,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "D\xC9SACCORD"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: DISAGREEMENT
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -5005,7 +5299,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Rien. Perdons pas plus de temps ici ..
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -5121,8 +5427,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: MORT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: DEATH
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
@@ -5186,8 +5500,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "BONT\xC9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: KINDNESS
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -5480,8 +5802,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: CHOIX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: CHOICE
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -6024,7 +6354,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - Welcome to the library
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -6222,8 +6564,16 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: DILEMME
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: DILEMMA
       objectReference: {fileID: 0}
     - target: {fileID: 2847431298572271439, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: m_Name
@@ -6399,7 +6749,19 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "D\xE9verouiller. Plus qu'\xE0 esp\xE9rer que personne ne le verras."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -6524,6 +6886,10 @@ PrefabInstance:
       value: Retour
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.sentences.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6538,6 +6904,10 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.choices.Array.data[1]
       value: choix 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentences.Array.data[0]
+      value: DISCOVERY
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}

@@ -3612,6 +3612,14 @@ MonoBehaviour:
     sentences:
     - "Je me demande ce que les ruines peuvent raconter, tu devrais y faire un tour,
       \xE7a peut \xEAtre int\xE9ressant pour toi."
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I wonder what the ruins might reveal. You should check them out; it could be
+      interesting for you.
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -3623,7 +3631,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -5527,7 +5547,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -12625,6 +12657,18 @@ MonoBehaviour:
   skyLight: {fileID: 931790879}
   audioClipDay: {fileID: 8300000, guid: b6891bf38a3df44b29d9271a7acfea03, type: 3}
   audioClipNight: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
+  dialogNight:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  dialogNightEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
 --- !u!4 &584683118
 Transform:
   m_ObjectHideFlags: 0
@@ -13964,6 +14008,15 @@ MonoBehaviour:
     sentences:
     - Tu as tout pris !? Mais t'es pas net !?
     - "Mais siiii je suis tr\xE8s net ! "
+  dialogEN:
+    name: Young Boys
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Bro! Did you take everything!?
+    - ...
+    - I'm screwed.
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -13975,7 +14028,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -21019,7 +21084,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -22482,7 +22559,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -31750,7 +31839,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -32845,7 +32946,20 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "C'est ferm\xE9e, je dois passer par la fen\xEAtre."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - It's closed, I'll have to go through the window.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -32855,10 +32969,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1564448663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35027,7 +35143,22 @@ MonoBehaviour:
     - "\"La librairie est ferm\xE9e pour un temps ind\xE9finie pour cause de cambriolage.
       Toutes les plaques ont \xE9t\xE9 vol\xE9es\"."
     - ... Ne restons pas ici plus longtemps.
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - '"The library is closed indefinitely due to a burglary. All the plaques have
+      been stolen."'
+    - ... Let's not stay here any longer.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -35037,10 +35168,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1685505803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36057,7 +36190,20 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Le QG n'est pas ouvert aux non-employ\xE9s. Veuillez faire demi-tour."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - The HQ is not open to non-employees. Please turn around.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -36067,10 +36213,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!1001 &1734181886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36634,7 +36782,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -41267,7 +41427,20 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Tu n'as rien \xE0 faire ici, d\xE9gage."
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - You have no business here, get lost.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -41277,10 +41450,12 @@ MonoBehaviour:
   isItemObtained: 0
   item: {fileID: 0}
   destroyObject: 0
+  selfDesactivation: 0
   isChangingScene: 0
   levelToLoad: 
   pnjAppear: {fileID: 0}
   ifLibrary: 0
+  audioTeleport: {fileID: 0}
 --- !u!65 &1932828758
 BoxCollider:
   m_ObjectHideFlags: 0

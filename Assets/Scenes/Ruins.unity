@@ -11125,6 +11125,12 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   needInteraction: 0
   item: {fileID: 0}
   objToDesactivate: {fileID: 1024581166}
@@ -11138,6 +11144,12 @@ MonoBehaviour:
     sentences:
     - Interdiction
     - bruit
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
     name: Player
     choices: []
@@ -11145,6 +11157,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - aucun mouvement
+  afterFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   ifFlashFinishing: 0
   bodyguardLeft: {fileID: 1688614504}
   bodyguardRight: {fileID: 544640939}
@@ -17365,26 +17383,47 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "D'autres gars du QG garde encore l'entr\xE9e des ruines .. Comment faire ?"
-    - "Essayons de passer comme si c'\xE9tait normal ..."
+    - "D'autres gardes du QG gardent toujours l'entr\xE9e des ruines... Que faire
+      ?"
+    - "Essayons de passer comme si c'\xE9tait normal..."
   dialog1:
     name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je d\xE9teste cette sensation ! Foutu technologie !"
-    - "Bref. De retour ici. Ce cercle et cette barri\xE8re .. Cela ne peut qu'\xEAtre
-      de la t\xE9l\xE9portation. Mais combien de temps s'est \xE9coul\xE9 ?"
-    - LA BOUSSOLE !?'ai toujours la boussole sur moi. Je ferai mieux de rentrer au
-      village le plus rapidement possible.
-    - Ouf .. je l'ai toujours sur moi. Mais c'est bizarre ..
-    - "Malgr\xE9 le temps pass\xE9, je me sens comme lorsque je suis arriv\xE9 au
-      ruines ..\n\xC7a serait une de ses zones hors du temps ? Fascinant !"
+    - "Je d\xE9teste cette sensation ! Maudite technologie !"
+    - "Enfin. De retour ici. Ce cercle et cette barri\xE8re... Cela ne peut \xEAtre
+      que de la t\xE9l\xE9portation. Mais combien de temps s'est \xE9coul\xE9 ?"
+    - "LA BOUSSOLE ! Ouf... je l'ai toujours sur moi. Mais c'est \xE9trange..."
+    - "Malgr\xE9 le temps pass\xE9, je me sens comme lorsque je suis arriv\xE9 aux
+      ruines... Serait-ce une de ces zones hors du temps ? Fascinant !"
     - "Profitons-en pour partir directement vers cette \xEEle !"
     - "La boussole pointe vers la cabane du vieil homme. Ce n'est pas anodin. Il
       devait s\xFBrement s'y rendre en partant de l\xE0-bas. Reste \xE0 savoir comment.
-      Il n'y a qu'un moyen de le savoir."
+      Il n'y a qu'un moyen de le d\xE9couvrir."
+  dialogsEN:
+  - name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Other HQ guards are still guarding the entrance to the ruins... What to do?
+    - Let's try to pass like it's normal...
+  - name: You
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I hate this feeling! Damn technology!
+    - Anyway. Back here. This circle and barrier... It must be teleportation. But
+      how much time has passed?
+    - THE COMPASS! Phew... I still have it on me. But it's strange...
+    - Despite the time passed, I feel like when I first arrived at the ruins... Could
+      this be one of those timeless zones? Fascinating!
+    - Let's take advantage and head straight to that island!
+    - The compass points to the old man's cabin. That's not insignificant. He must
+      have gone there from here. Now, how? There's only one way to find out.
   clip: {fileID: 8300000, guid: 2d2be9ad9f9294fda8292aefe64d92ee, type: 3}
 --- !u!4 &1635550124
 Transform:
@@ -19616,6 +19655,19 @@ MonoBehaviour:
     - Je dois trouver une ... solution ...
     - Je dois ... Qu'est-ce qu'il ... m'arrive ...
     - Je perds ... connaissance ...
+  dialogBarrierEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - WHAT!? WHAT'S THIS NOW!?
+    - A barrier? Can't get out!
+    - Okay, don't panic... don't panic...
+    - Everything's getting dark around me! What the hell!?
+    - I need to find a... solution...
+    - I must... What's happening to me...
+    - I'm losing... consciousness...
   lt: {fileID: 1050018587}
   levelToLoad: Ruins
   audioTeleport: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
@@ -21401,6 +21453,12 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - ...
+  dialogEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 1024581166}
@@ -21412,7 +21470,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
