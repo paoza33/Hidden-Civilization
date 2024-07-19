@@ -1148,12 +1148,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Civil
+    name: Citoyen
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Tu es chez moi
+    - "Tu savais que Paoza s'\xE9tait lanc\xE9 le d\xE9fi de d\xE9velopper ce jeu
+      seul et dans son int\xE9gralit\xE9 ? Il ne connaissait que la programmation
+      au d\xE9part. Le r\xE9sultat est pas mal, non ?"
+    - "Il pensait que tout \xE7a lui prendrait environ trois mois. Il a mis plus
+      d'un an, AHAHAHA. Quelle na\xEFvet\xE9 !"
+  dialogEN:
+    name: Citizen
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Did you know that Paoza challenged himself to develop this game entirely on
+      his own? He only knew programming at the start. The result is pretty good,
+      isn't it?
+    - He thought it would take him about three months. It took him over a year, AHAHAHA.
+      How naive!
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 0}
@@ -1165,7 +1180,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 

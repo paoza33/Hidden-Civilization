@@ -1328,7 +1328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1512398346}
   - component: {fileID: 1512398345}
-  - component: {fileID: 1512398347}
+  - component: {fileID: 1512398349}
   - component: {fileID: 1512398348}
   m_Layer: 0
   m_Name: Door2
@@ -1365,60 +1365,6 @@ Transform:
   m_Father: {fileID: 543450652643119539}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1512398347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512398343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b5b9f2996c26a49b4d27aac61dce34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyNeeded: 
-  animatorDoor: {fileID: 0}
-  colliderToDesactivate: {fileID: 0}
-  meshColliderDesactivate: {fileID: 0}
-  colliderToActivate: {fileID: 0}
-  colliderDoorBathroom: {fileID: 0}
-  ifChangeStateCamp: 0
-  open:
-    name: Player
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences:
-    - J'ai peur
-  openEN:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
-  notOpen:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
-  notOpenEN:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
-  isNeedKey: 0
-  isItemObtained: 0
-  item: {fileID: 0}
-  destroyObject: 0
-  selfDesactivation: 0
-  isChangingScene: 1
-  levelToLoad: Camp
-  pnjAppear: {fileID: 0}
-  ifLibrary: 0
-  audioTeleport: {fileID: 0}
 --- !u!114 &1512398348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,6 +1383,48 @@ MonoBehaviour:
   - WoodenHut
   statement: 020000000100000001000000
   noInteraction: 0
+--- !u!114 &1512398349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512398343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fb5e198f3939843b2c5480fa10ed04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Camp
+  isKeyNeeded: 0
+  keyName: 
+  open:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifLibraryDoorState0: 0
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
+  ifStopMusic: 1
 --- !u!1 &1672784026
 GameObject:
   m_ObjectHideFlags: 0

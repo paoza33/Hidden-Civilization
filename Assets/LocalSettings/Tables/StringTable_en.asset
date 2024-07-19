@@ -90,6 +90,10 @@ MonoBehaviour:
     m_Localized: ACTIVATE
     m_Metadata:
       m_Items: []
+  - m_Id: 8744969737490432
+    m_Localized: '"M" TO OPEN THE MAP'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

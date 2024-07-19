@@ -467,6 +467,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -479,8 +487,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -497,6 +517,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: POUVOIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -703,6 +731,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -715,8 +751,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -733,6 +781,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "R\xC9VOLUTION"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -824,6 +880,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -836,8 +900,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -854,6 +930,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: TENSION
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -942,7 +1026,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   notOpen:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1085,14 +1169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startState0:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Cherchons un indice dans cette librairie qui pourrait faire avancer les recherches.
   startState1:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1100,7 +1184,7 @@ MonoBehaviour:
     - "Infiltration r\xE9ussi .. Personne dans les environs ..\nParfait ! Commen\xE7ons
       par chercher la cl\xE9 de la porte."
   startState2:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1111,13 +1195,13 @@ MonoBehaviour:
       tout \xE0 l'heure."
     - Relisons encore une fois cette histoire et trouvons le bon ordre.
   dialogsEN:
-  - name: You
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Let's look for a clue in this bookstore that could further our research.
-  - name: You
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1126,7 +1210,7 @@ MonoBehaviour:
 
       Perfect! Let''s start by
       looking for the key to the door.'
-  - name: You
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1297,7 +1381,7 @@ MonoBehaviour:
     - If I unlock one of the windows, no one will think to check. I'll just come
       back tonight through it.
   ending:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1312,7 +1396,7 @@ MonoBehaviour:
       part... Mais o\xF9 ?"
     - "Je verrai \xE7a chez moi, je ne devrais pas rester ici plus longtemps."
   endingEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1327,7 +1411,7 @@ MonoBehaviour:
       But where?
     - I'll figure this out at home; I shouldn't stay here any longer.
   bookLevel0:
-    name: 
+    name: Livre
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1340,7 +1424,7 @@ MonoBehaviour:
       cette mati\xE8re. Les villageois respect\xE8rent cet ordre, mais d'autres,
       avides et ambitieux, refus\xE8rent de limiter cette technologie au village."
   bookLevel1:
-    name: 
+    name: Livre
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1353,7 +1437,7 @@ MonoBehaviour:
       sa propagation dans le monde, ou bien partager ses bienfaits au risque qu'elle
       ne tombe entre de mauvaises mains ?"
   bookLevel2:
-    name: 
+    name: Livre
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1366,7 +1450,7 @@ MonoBehaviour:
       de vie d'une civilisation, mais sans les recherches et les outils n\xE9cessaires
       pour manipuler et perfectionner la mati\xE8re."
   bookLevel3:
-    name: 
+    name: Livre
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1506,6 +1590,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -1518,8 +1610,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -1536,6 +1640,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: OEIL
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -1660,7 +1772,7 @@ MonoBehaviour:
   isKeyNeeded: 1
   keyName: KeyLibrary
   open:
-    name: Open
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1671,9 +1783,10 @@ MonoBehaviour:
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Open !
   notOpen:
-    name: Not open
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1687,7 +1800,7 @@ MonoBehaviour:
     sentences:
     - Closed... The key should be at the reception.
   ifLibraryDoorState0: 0
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
   ifStopMusic: 1
 --- !u!65 &616471852
 BoxCollider:
@@ -1766,6 +1879,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -1778,8 +1899,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -1796,6 +1929,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "D\xC9TENTE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -2098,6 +2239,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -2110,8 +2259,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -2128,6 +2289,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: CHEF
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -2489,19 +2658,21 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "\xE7a doit etre cette cl\xE9."
+    - "\xC7a doit \xEAtre cette cl\xE9."
     - "(Vous avez obtenu une cl\xE9)"
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - This must be the key.
+    - (You have obtained a key)
   notOpen:
     name: 
     choices: []
@@ -2718,6 +2889,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -2730,8 +2909,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -2748,6 +2939,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: OMBRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -2899,18 +3098,19 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Juste une rang\xE9e de bouquins .."
+    - "Juste une rang\xE9e de bouquins sans int\xE9r\xEAt..."
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Just a row of uninteresting books...
   notOpen:
     name: 
     choices: []
@@ -2999,18 +3199,19 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Rien d'intriguant sur cette rang\xE9e .."
+    - "Rien d'intriguant sur cette rang\xE9e..."
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Nothing intriguing in this row...
   notOpen:
     name: 
     choices: []
@@ -3041,8 +3242,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 1452826538}
     m_Modifications:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.size
@@ -3051,6 +3272,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "CR\xC9PUSCULE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -3614,6 +3843,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -3626,8 +3863,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -3644,6 +3893,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "STRAT\xC9GIE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -3908,8 +4165,28 @@ PrefabInstance:
       value: Cabinet16
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.size
@@ -3918,6 +4195,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: DIVISION
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -4011,19 +4296,21 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "\"Comment d\xE9velopper un jeu vid\xE9o de A \xE0 Z\". Int\xE9ressant, mais
-      pas ce que je cherche .."
+    - "\"Comment d\xE9velopper un jeu vid\xE9o de A \xE0 Z, par Paoza\". Int\xE9ressant,
+      mais pas ce que je cherche..."
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - '"How to Develop a Video Game from A to Z, by Paoza". Interesting, but not
+      what I''m looking for...'
   notOpen:
     name: 
     choices: []
@@ -4196,6 +4483,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -4208,8 +4503,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -4226,6 +4533,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "H\xC9RITAGE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -4477,6 +4792,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -4489,8 +4812,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -4507,6 +4842,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: AUBE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -4550,6 +4893,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -4562,8 +4913,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -4580,6 +4943,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: AVANTAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -4785,6 +5156,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -4797,8 +5176,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -4815,6 +5206,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "CUPIDIT\xC9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -5122,6 +5521,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -5134,8 +5541,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -5152,6 +5571,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "D\xC9SACCORD"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -5293,18 +5720,19 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Rien. Perdons pas plus de temps ici ..
+    - Rien. Ne perdons pas plus de temps ici...
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - "Nothing. Let\u2019s not waste any more time here..."
   notOpen:
     name: 
     choices: []
@@ -5403,6 +5831,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -5415,8 +5851,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -5433,6 +5881,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: MORT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -5476,6 +5932,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -5488,8 +5952,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -5506,6 +5982,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "BONT\xC9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -5778,6 +6262,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -5790,8 +6282,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -5808,6 +6312,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: CHOIX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -6348,18 +6860,23 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
+    name: "R\xE9ceptionniste"
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Bienvenue \xE0 la biblioth\xE8que municipale !\nPrenez votre temps et explorez
+      \xE0 votre guise, car le savoir vous attend avec impatience !"
+  openEN:
     name: Receptionist
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Welcome to the library
-  openEN:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
+    - 'Welcome to the city library!
+
+      Feel free to stay as long as you like,
+      for knowledge is eager to be discovered!'
   notOpen:
     name: 
     choices: []
@@ -6540,6 +7057,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentencesChoice1
       value: Activer
       objectReference: {fileID: 0}
@@ -6552,8 +7077,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.choices.Array.data[0]
@@ -6570,6 +7107,14 @@ PrefabInstance:
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: DILEMME
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 2710697167434889274, guid: 257bba6c990f80c49b25fc323d6c3bb0, type: 3}
       propertyPath: openEN.sentences.Array.data[0]
@@ -6707,7 +7252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2114838172
 Transform:
   m_ObjectHideFlags: 0
@@ -6743,18 +7288,19 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "D\xE9verouiller. Plus qu'\xE0 esp\xE9rer que personne ne le verras."
+    - "D\xE9verrouiller. Plus qu'\xE0 esp\xE9rer que personne ne le verra."
   openEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Unlock. Let's hope no one sees it.
   notOpen:
     name: 
     choices: []
@@ -6854,6 +7400,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: open.name
+      value: "\xC9tag\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.name
       value: 
       objectReference: {fileID: 0}
@@ -6870,8 +7424,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice1
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.sentencesChoice2
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.choices.Array.size
@@ -6896,6 +7462,14 @@ PrefabInstance:
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: open.sentences.Array.data[0]
       value: "D\xC9COUVERTE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[0]
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
+      propertyPath: openEN.choices.Array.data[1]
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4832984756315465984, guid: c4fb2c31142913641954ea13f63fcd41, type: 3}
       propertyPath: notOpen.choices.Array.data[0]

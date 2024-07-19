@@ -52,9 +52,7 @@ public class CityManagment : MonoBehaviour
 
         else if (data.previousSceneName == "Library")
             playerStart.transform.position = spawnLibrary.position;
-    }
-    private void Start()
-    {
+
         SettingsCityState();
 
         StartCoroutine(Fade());

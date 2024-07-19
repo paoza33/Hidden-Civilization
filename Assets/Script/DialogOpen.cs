@@ -46,11 +46,12 @@ public class DialogOpen : MonoBehaviour
     {
         PlayerMovement.instance.StopMovement();
         textNameCanvas.text = _dialog.name;
-        if(_dialog.choices.Length == 2) // cette solution n'est pas viable si on travail en groupe.
+
+        if (_dialog.choices.Length == 2) // cette solution n'est pas viable si on travail en groupe.
         {
             ifDialog = true;
-            choice1.GetComponentInChildren<Text>().text = _dialog.choices[0];
-            choice2.GetComponentInChildren<Text>().text = _dialog.choices[1];
+            choice1.GetComponentInChildren<TextMeshProUGUI>().text = _dialog.choices[0];
+            choice2.GetComponentInChildren<TextMeshProUGUI>().text = _dialog.choices[1];
         }
         else
         {

@@ -7645,13 +7645,27 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Parle du signe etc ...
+    - "C'est bien le m\xEAme signe. Analysons \xE7a de plus pr\xE8s."
+    - ... Rien ...
+    - "Mmmhh ... Peut-\xEAtre \xE7a ? Toujours rien ..."
+    - "Dans les environs, peut-\xEAtre ? ..."
+    - "Je ne comprends rien \xE0 son fonctionnement et le livre ne fournit aucun
+      indice."
+    - "Rester plant\xE9 ici pendant des heures ne changera rien, et je suis \xE0
+      court d'id\xE9es. Je vais rentrer me reposer."
   openEN:
-    name: 
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - It's definitely the same sign. Let's analyze it more closely.
+    - ... Nothing ...
+    - Hmm ... Maybe this? Still nothing ...
+    - Maybe around here? ...
+    - I don't understand how it works and the book provides no clues.
+    - Standing here for hours won't change anything, and I'm out of ideas. I'm going
+      to go home and rest.
   notOpen:
     name: 
     choices: []

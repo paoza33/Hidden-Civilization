@@ -200,8 +200,7 @@ public class LibraryManagment : MonoBehaviour
             {
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
-                    PlayerMovement.instance.enabled = true;
-                    CameraMovement.instance.cameraFixZ = false;
+                    StartCoroutine(FadeEnding());
                 }
             }
         }

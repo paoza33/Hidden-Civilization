@@ -3043,51 +3043,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogs:
-  - name: age control
+  - name: "T\xE9l\xE9portation"
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "contr\xF4le de l'age 1"
-    - "contr\xF4le de l'age 2"
-  - name: deuxieme pour le test
+    - "Dispositifs permettant de cr\xE9er des portails instantan\xE9s entre deux
+      points, r\xE9duisant les distances de voyage \xE0 presque z\xE9ro.\n\nAutorisation
+      OMEGA n\xE9cessaire."
+  - name: "G\xE9n\xE9rateurs d'\xC9nergie Z\xE9ro-Point"
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok je vois
-  - name: trois pour le test
+    - "Dispositifs capables d'extraire et d'utiliser l'\xE9nergie du vide quantique,
+      fournissant une source d'\xE9nergie propre, infinie et in\xE9puisable.\n\nAutorisation
+      OMEGA n\xE9cessaire."
+  - name: "M\xE9tamat\xE9riaux Invisibles"
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok je vois
-  - name: quatre
+    - "Des mat\xE9riaux capables de manipuler la lumi\xE8re pour rendre des objets
+      ou m\xEAme des personnes invisibles \xE0 l'\u0153il nu.\n\nAutorisation OMEGA
+      n\xE9cessaire."
+  - name: "Brouillard \xE9ternel"
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok je vois
-  - name: 5
+    - "Une brume dense et omnipr\xE9sente d\xE9sorientant les sens humains. \xC0
+      l'int\xE9rieur de ce brouillard, les rep\xE8res visuels et auditifs sont distordus,
+      cr\xE9ant un labyrinthe naturel.\n\nAutorisation OMEGA n\xE9cessaire."
+  - name: "Lumi\xE8re stase"
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - ok je vois
-  dialogsEN: []
+    - "Une lumi\xE8re capable de figer le cerveau humain pour celui qui l'a regarde.
+      Cela suspend ses fonctions cognitives et motrices. Le temps de fixation varie
+      en fonction de l'intensit\xE9 de la lumi\xE8re."
+  dialogsEN:
+  - name: Teleportation
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Devices allowing the creation of instantaneous portals between two points,
+      reducing travel distances to almost zero.
+
+
+      OMEGA authorization required.'
+  - name: Zero-Point Energy Generators
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Devices capable of extracting and utilizing energy from the quantum vacuum,
+      providing a clean, infinite, and inexhaustible energy source.
+
+
+      OMEGA
+      authorization required.'
+  - name: Invisible Metamaterials
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'Materials capable of manipulating light to render objects or even people invisible
+      to the naked eye.
+
+
+      OMEGA authorization required.'
+  - name: Eternal Fog
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'A dense and omnipresent mist that disorients human senses. Within this fog,
+      visual and auditory cues are distorted, creating a natural labyrinth.
+
+
+      OMEGA
+      authorization required.'
+  - name: Stasis Light
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - A light capable of freezing the human brain for those who look at it. It suspends
+      cognitive and motor functions. The fixation time varies depending on the light's
+      intensity.
   emptyDialog:
-    name: 
+    name: Toi
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - 
+    - "Il y a encore tant d'artefacts tout aussi puissants, c'est terrifiant. Les
+      cacher semble \xEAtre la meilleure chose \xE0 faire, mais ils pourraient aussi
+      r\xE9soudre tous les probl\xE8mes de ce monde."
+    - "Je comprends mieux le dilemme des deux clans : rendre le monde meilleur au
+      risque de perdre tout contr\xF4le, ou bien choisir la s\xE9curit\xE9 et ne
+      pas utiliser cette technologie."
+    - "Tout cela me d\xE9passe, et je ne peux rien faire de plus. Mais c'est \xE9trange..."
+    - "Cet homme myst\xE9rieux qui me donnait des indices, ce flash blanc, et tout
+      le reste. Je ne suis pas arriv\xE9 ici par hasard ou par chance, quelqu'un
+      m'a aid\xE9 ! Mais pourquoi ?"
+    - "J'ai besoin de faire le point sur tout ce que j'ai v\xE9cu, cela va prendre
+      un certain temps."
+    - "Le syst\xE8me me propose de quitter cet endroit par t\xE9l\xE9portation. Quittons
+      cet endroit."
   emptyDialogEN:
-    name: 
+    name: You
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - There are still so many artifacts just as powerful; it's terrifying. Hiding
+      them seems to be the best thing to do, but they could also solve all the problems
+      in this world.
+    - 'I understand the dilemma of the two clans better now: make the world better
+      at the risk of losing all control, or choose safety and not use this technology.'
+    - All of this is beyond me, and I can't do anything more. But it's strange...
+    - That mysterious man giving me clues, that white flash, and everything else.
+      I didn't get here by chance or luck; someone helped me! But why?
+    - I need to reflect on everything I've experienced; it's going to take some time.
+    - The system is offering me a way out of here by teleportation. Let's leave this
+      place.
   contenairs:
   - {fileID: 924934516}
   - {fileID: 3593716266497987290}
@@ -3688,26 +3771,29 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Tu as confi\xE9 ce livre \xE0 une personne qui n'a rien \xE0 voir avec nous,
-      imb\xE9cile..."
-    - "Mais il a r\xE9ussi \xE0 d\xE9chiffrer les \xE9crits par lui-m\xEAme et \xE0
-      garder tout cela secret. Preuve d'une certaine sagesse."
-    - C'est pour cela que je me suis permis de l'aider un peu.
-    - "Maintenant, quel sera ton choix ? \xC0 quel clan tes valeurs correspondent-elles
-      ? Deviendras-tu un alli\xE9 potentiel, ou devrai-je t'\xE9loigner de ce monde
-      \xE0 tout jamais ?"
+    - "Jeune homme... tu as r\xE9ussi \xE0 d\xE9chiffrer les \xE9crits par toi-m\xEAme
+      et \xE0 garder tout cela secret le temps d'en savoir plus. C'est la preuve
+      d'une certaine sagesse."
+    - "Je ne sais pas pourquoi ce vieux fou t'a confi\xE9 le livre du guide, mais
+      il ne faisait jamais rien au hasard. C'est pour cela que je me suis permis
+      de t'aider un peu, pour comprendre son choix."
+    - "Mais maintenant, jeune homme, quel sera ton choix ? \xC0 quel clan tes valeurs
+      correspondent-elles ? Deviendras-tu un alli\xE9 potentiel, ou devrai-je t'\xE9loigner
+      de ce monde \xE0 tout jamais ?"
   lastSpeechEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - You entrusted this book to someone completely unrelated to us, you fool...
-    - But he managed to decipher the writings by himself and keep it all secret.
-      Proof of some wisdom.
-    - That's why I took the liberty to help him a little.
-    - So, what will your choice be now? Which clan do your values align with? Will
-      you become a potential ally, or must I banish you from this world forever?
+    - Young man... you managed to decipher the writings by yourself and kept all
+      this secret until you learned more. This shows a certain wisdom.
+    - I don't know why that old fool entrusted you with the guidebook, but he never
+      did anything by chance. That's why I allowed myself to help you a little, to
+      understand his choice.
+    - But now, young man, what will be your choice? Which clan do your values align
+      with? Will you become a potential ally, or will I have to remove you from this
+      world forever?
   secondaryCam: {fileID: 792377021}
   clip: {fileID: 8300000, guid: b1947c67bb4a2d144b09c7ef3806ad3d, type: 3}
 --- !u!1 &1823513317
@@ -4018,20 +4104,48 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: 
+    name: '?'
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - 'ZONE DE STOCKAGE
-
-'
+    - "Bienvenue \xE0 l'Archive des Savoirs Interdits\n\nVous vous trouvez \xE0 l'entr\xE9e
+      du sanctuaire technologique sup\xE9rieure, un lieu o\xF9 des avanc\xE9es inestimables
+      sont prot\xE9g\xE9es du monde ext\xE9rieur. Cet endroit est r\xE9serv\xE9 \xE0
+      ceux qui poss\xE8dent les connaissances et les habilitations n\xE9cessaires."
+    - "\xC9TAT DU SANCTUAIRE\n\nS\xE9curit\xE9 Maximale\nEspace-temps: Distortion
+      \xE0 99%\nArtefacts restants: 99.8%"
+    - "ANALYSE DU SUJET\n\nIdentit\xE9:  inconnu.\nPr\xE9sence du livre du guide,
+      autorisation BETA accord\xE9e."
   openEN:
-    name: 
+    name: '?'
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - 'Welcome to the Archive of Forbidden Knowledge
+
+
+      You are at the entrance
+      of the superior technological sanctuary, a place where invaluable advancements
+      are protected from the outside world. This location is reserved for those with
+      the necessary knowledge and authorizations.'
+    - 'SANCTUARY STATUS
+
+
+      Maximum Security
+
+      Space-time: Distortion at
+      99%
+
+      Remaining Artifacts: 99.8%'
+    - 'SUBJECT ANALYSIS
+
+
+      Identity: Unknown.
+
+      Presence of the guidebook,
+      BETA authorization granted.'
   notOpen:
     name: 
     choices: []

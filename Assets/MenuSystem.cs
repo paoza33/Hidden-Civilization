@@ -13,7 +13,7 @@ public class MenuSystem : MonoBehaviour
     private bool gameIsPaused;
     public GameObject start;
     public GameObject resume;
-    public string levelToLoad; // temporaire pour gain de temps
+    public GameObject newGame;
 
     private void Awake()
     {
@@ -103,6 +103,7 @@ public class MenuSystem : MonoBehaviour
         verifUI.SetActive(false);
         start.SetActive(false);
         resume.SetActive(true);
+        newGame.SetActive(false);
         yield return new WaitForSeconds(0.75f);
         SceneSpawn();
         enabled = true;

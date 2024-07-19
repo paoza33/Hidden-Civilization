@@ -227,6 +227,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &218943650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218943651}
+  - component: {fileID: 218943652}
+  - component: {fileID: 218943653}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218943651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218943650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 662649841}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &218943652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218943650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3904084, y: 1, z: 0.5589987}
+  m_Center: {x: -0.016005894, y: 0, z: -0.49813488}
+--- !u!114 &218943653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218943650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c974a227e3cd6a499a1657652597464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Citoyenne
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Apr\xE8s avoir compris que tout faire soi-m\xEAme prend un temps fou, Paoza
+      a d\xE9cid\xE9 de ne pas faire les musiques du jeu. Il a fait au mieux, mais
+      je crois qu'il n'en est pas satisfait."
+    - "C'est \xE7a de ne chercher que des musiques gratuites ! Quel radin !"
+  dialogEN:
+    name: Citizen
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - After realizing that doing everything himself takes an enormous amount of time,
+      Paoza decided not to create the music for the game. He did his best, but I
+      think he's not satisfied with it.
+    - That's what you get for only looking for free music! What a cheapskate!
+  needInteraction: 1
+  item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
 --- !u!1 &425313529
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +645,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Size.z
+      value: 0.74043393
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0078110704
+      objectReference: {fileID: 0}
+    - target: {fileID: -4862649326598520591, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+      propertyPath: m_Center.z
+      value: 0.029414698
+      objectReference: {fileID: 0}
     - target: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -585,6 +707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+--- !u!4 &662649841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8567786481068251429, guid: da19a25987c275d4397015a9929b34ec, type: 3}
+  m_PrefabInstance: {fileID: 662649840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &753017223
 PrefabInstance:
   m_ObjectHideFlags: 0

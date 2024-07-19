@@ -87,6 +87,10 @@ MonoBehaviour:
     m_Key: Activate
     m_Metadata:
       m_Items: []
+  - m_Id: 8744969737490432
+    m_Key: Map
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

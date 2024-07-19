@@ -708,7 +708,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - J'ai fini de ranger ma chambre ! Je peux enfin aller au lac !
+    - J'ai fini de ranger ma chambre ! Je peux enfin aller au campement !
   dialogState2:
     name: Player
     choices: []
@@ -789,7 +789,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Finished tidying my room! I can finally go to the lake!
+    - Finished tidying my room! I can finally go to the campsite !
   - name: Player
     choices: []
     sentencesChoice1: 
@@ -2050,11 +2050,12 @@ MonoBehaviour:
     sentences:
     - Maman ! J'ai tout fini ! Je pars au campement !
   dialogEN:
-    name: 
+    name: Player
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Mom! I've finished everything! I'm heading to the campsite!
   unfixZ: 0
   unfixX: 0
   ifFade: 0

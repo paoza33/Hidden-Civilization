@@ -12662,13 +12662,15 @@ MonoBehaviour:
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - Personne dans les alentours, parfait ! Profitons-en.
   dialogNightEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - No one around, perfect! Let's take advantage of it.
 --- !u!4 &584683118
 Transform:
   m_ObjectHideFlags: 0

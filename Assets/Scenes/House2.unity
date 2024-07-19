@@ -302,6 +302,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -796961039071331344, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6677032
+      objectReference: {fileID: 0}
+    - target: {fileID: -796961039071331344, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8380234
+      objectReference: {fileID: 0}
+    - target: {fileID: -796961039071331344, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0078110686
+      objectReference: {fileID: 0}
+    - target: {fileID: -796961039071331344, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.74519014
+      objectReference: {fileID: 0}
+    - target: {fileID: -796961039071331344, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0809883
+      objectReference: {fileID: 0}
     - target: {fileID: 3942430708274480595, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -352,6 +372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+--- !u!4 &500183294 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3942430708274480595, guid: c0a523efc4f881449b64502a32e0254b, type: 3}
+  m_PrefabInstance: {fileID: 500183293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &508856599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1309,6 +1334,114 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5944823897204208114, guid: df5eb1316cf8f264d8d3a6bdbbf6a3c0, type: 3}
   m_PrefabInstance: {fileID: 1484406426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1497153564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497153565}
+  - component: {fileID: 1497153567}
+  - component: {fileID: 1497153566}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1497153565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497153564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 500183294}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497153566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497153564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c974a227e3cd6a499a1657652597464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Karateka
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Paoza souhaite, un jour, cr\xE9er le jeu de ses r\xEAves. Le chemin est encore
+      long et difficile, mais son mental est \xE0 toute \xE9preuve !"
+    - "NE L\xC2CHE RIEN, PAOZA !! OSU !"
+  dialogEN:
+    name: Karateka
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - Paoza dreams of one day creating the game of his dreams. The path is still
+      long and difficult, but his mental strength is unbreakable!
+    - DON'T GIVE UP, PAOZA !! OSU !
+  needInteraction: 1
+  item: {fileID: 0}
+  objToDesactivate: {fileID: 0}
+  objToActivate: {fileID: 0}
+  isRuinsFlash: 0
+  beforeFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  beforeFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlash:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  afterFlashEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  ifFlashFinishing: 0
+  bodyguardLeft: {fileID: 0}
+  bodyguardRight: {fileID: 0}
+--- !u!65 &1497153567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497153564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5311412, y: 0.2450012, z: 0.94032675}
+  m_Center: {x: 0.030034093, y: 0.3775037, z: 0.30145523}
 --- !u!1001 &1642661374
 PrefabInstance:
   m_ObjectHideFlags: 0

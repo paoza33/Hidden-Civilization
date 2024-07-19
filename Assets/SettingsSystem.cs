@@ -75,6 +75,9 @@ public class SettingsSystem : MonoBehaviour
             else if (obj.name == "Resume")
                 obj.SetActive(!isMenu);
 
+            else if (obj.name == "NewGame")
+                obj.SetActive(isMenu);
+
             else
                 obj.SetActive(true);
         }

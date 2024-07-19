@@ -342,8 +342,22 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Personne ne pensera \xE0 fouiller ici."
-    - "... La nuit est tomb\xE9e ... Ma m\xE8re va me tuer."
+    - "La nuit est tomb\xE9e ... Ma m\xE8re va me tuer."
+  openEN:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - No one will think to search here.
+    - Night has fallen ... My mom is going to kill me.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -3712,14 +3726,28 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - "Je dois cacher ce livre avant de rentrer si je ne veux pas que ma m\xE8re
-      le vois. L'arbre \xE0 gauche devrait \xEAtre un bon endroit."
+      le voie. L'arbre \xE0 gauche devrait \xEAtre un bon endroit."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I need to hide this book before going back home if I don't want my mom to see
+      it. The tree on the left should be a good spot.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 8300000, guid: 51995b88000ddfa43a25b075de5e564f, type: 3}
   ifStopMusic: 1
@@ -5184,13 +5212,26 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je n'ai rien \xE0 faire ici"
+    - "Je n'ai rien \xE0 faire ici."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I have nothing to do here.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
   ifStopMusic: 0
@@ -5642,13 +5683,26 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je n'ai rien \xE0 faire ici"
+    - "Je n'ai rien \xE0 faire ici."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I have nothing to do here.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
   ifStopMusic: 0
@@ -9592,7 +9646,20 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences:
     - "Mon arbre \xE0 cachette. L'endroit le plus s\xFBr ehe."
+  openEN:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - My hiding tree. The safest place, hehe.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -11629,13 +11696,26 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Je n'ai rien \xE0 faire ici"
+    - "Je n'ai rien \xE0 faire ici."
+  notOpenEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I have nothing to do here.
   ifLibraryDoorState0: 0
   audioClip: {fileID: 0}
   ifStopMusic: 0
@@ -12895,7 +12975,19 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences: []
+  openEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
@@ -18922,7 +19014,20 @@ MonoBehaviour:
     sentences:
     - "Cet arbre m'aura bien servi. Personne n'aura trouv\xE9 ma planque jusqu'\xE0
       la fin."
+  openEN:
+    name: Player
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - This tree has served me well. No one will have found my hideout until the end.
   notOpen:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  notOpenEN:
     name: 
     choices: []
     sentencesChoice1: 
