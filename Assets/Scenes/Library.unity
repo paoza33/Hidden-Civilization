@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571427, b: 0.30692387, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.22571349, b: 0.30692273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   - {fileID: 1436799236}
   - {fileID: 1095199190}
   dialogEndState0:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1367,7 +1367,7 @@ MonoBehaviour:
     - "Si je d\xE9verrouille une des fen\xEAtres, personne ne pensera \xE0 v\xE9rifier.
       Je pourrai revenir cette nuit par l\xE0."
   dialogEndState0EN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1791,7 +1791,7 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Ferm\xE9 ... La cl\xE9 devrait etre \xE0 la reception."
+    - "Ferm\xE9e ... La cl\xE9 devrait \xEAtre \xE0 la r\xE9ception."
   notOpenEN:
     name: 
     choices: []
@@ -2695,6 +2695,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!64 &934505970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3133,6 +3135,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 1
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1 &1095916748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,6 +3238,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 1
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1001 &1100518158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4333,6 +4339,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 1
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1 &1452826537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,6 +5763,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 1
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1001 &1879755126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6899,6 +6909,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1 &2078963217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,6 +7335,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &2114838174
 BoxCollider:
   m_ObjectHideFlags: 0

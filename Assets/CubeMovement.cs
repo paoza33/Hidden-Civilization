@@ -138,6 +138,12 @@ public class CubeMovement : MonoBehaviour
                 {
                     if((cubeObject.GetComponent<CubeObject>().positionX == 3) && (cubeObject.GetComponent<CubeObject>().positionY == 3)) // win !!!
                     {
+                        BoxCollider[] allBoxes = cubeObject.GetComponentsInChildren<BoxCollider>();
+                        foreach (BoxCollider box in allBoxes)
+                        {
+                            box.enabled = false;
+                        }
+                        
                         stele.gameObject.SetActive(true);
                         cubeObject.GetComponent<MeshRenderer>().material.shader = shader;
                         DissolveElement.instance.Dissolve(cubeObject.GetComponent<MeshRenderer>().material, "_Dissolve_value", cubeObject);

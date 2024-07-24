@@ -29,10 +29,6 @@ public class PlateformMovement : MonoBehaviour
                 for (int i = 0; i < plateformWhite[index].transform.childCount; i++)
                 {
                     Transform childTransform = plateformWhite[index].transform.GetChild(i);
-                    if (childTransform.name.Contains("Cylinder"))
-                    {
-                        Debug.Log(childTransform.name);
-                    }
                 }
                 break;
             case "Red":
@@ -40,10 +36,6 @@ public class PlateformMovement : MonoBehaviour
                 for (int i = 0; i < plateformRed[index].transform.childCount; i++)
                 {
                     Transform childTransform = plateformRed[index].transform.GetChild(i);
-                    if (childTransform.name.Contains("Cylinder"))
-                    {
-                        Debug.Log(childTransform.name);
-                    }
                 }
                 break;
             case "Blue":

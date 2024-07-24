@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -422,14 +422,14 @@ MonoBehaviour:
   - {fileID: 3310555977884721311}
   skyLight: {fileID: 654183126}
   dialogState0:
-    name: Young Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - La plage est droit devant !
   dialogState1:
-    name: Young Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -438,7 +438,7 @@ MonoBehaviour:
       vais demander au vieil homme une lampe-torche pour rentrer."
     - "Il doit \xEAtre dans sa cabane."
   dialogState2:
-    name: Young Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -446,20 +446,20 @@ MonoBehaviour:
     - "(Je comprends rien \xE0 ce qu'il se passe ! Mais je ne veux pas rester ici
       plus longtemps. Je veux rentrer chez moi.)"
   dialogState3:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - La boussole pointe vers le lac. Continuons.
   dialogsEN:
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - The beach is straight ahead!
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -469,14 +469,14 @@ MonoBehaviour:
       I''ll
       ask the old man for a flashlight to get back.'
     - He must be in his cabin.
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - (I don't understand what's happening! But I don't want to stay here any longer.
       I want to go home.)
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   notOpen:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1582,7 +1582,7 @@ MonoBehaviour:
     sentencesChoice2: 
     sentences: []
   notOpen:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   isKeyNeeded: 0
   keyName: 
   open:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1716,7 +1716,7 @@ MonoBehaviour:
     - "... Personne ... Il est toujours l\xE0 habituellement."
     - La porte est ouverte, je lui rendrais sa lampe-torche plus tard, comme d'habitude.
   openEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1945,6 +1945,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1413355668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2287,7 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -2675,6 +2677,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1943455159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2931,7 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 

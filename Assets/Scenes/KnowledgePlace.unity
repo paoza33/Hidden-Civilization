@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1938,14 +1938,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792377017}
-  m_LocalRotation: {x: 0.4507952, y: -0, z: -0, w: 0.8926274}
-  m_LocalPosition: {x: -0.25031275, y: 8.46, z: -9.49}
+  m_LocalRotation: {x: 0.42135236, y: 0, z: 0, w: 0.906897}
+  m_LocalPosition: {x: -0.1, y: 6.9, z: -9.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 53.589, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.84, y: 0, z: 0}
 --- !u!1 &820996554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,20 +3178,42 @@ MonoBehaviour:
   - {fileID: 658940572}
   - {fileID: 1142205339}
   speech:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - "Donc la j'arrive \xE0 la fin"
-    - Un dernier mot ?
-    - Non un peu la flemme
+    - "Il y a encore tant d'artefacts tout aussi puissants, c'est terrifiant. Les
+      cacher semble \xEAtre la meilleure chose \xE0 faire, mais ils pourraient aussi
+      r\xE9soudre tous les probl\xE8mes de ce monde."
+    - "Je comprends mieux le dilemme des deux clans : rendre le monde meilleur au
+      risque de perdre tout contr\xF4le, ou bien choisir la s\xE9curit\xE9 et ne
+      pas utiliser cette technologie."
+    - "Tout cela me d\xE9passe, et je ne peux rien faire de plus. Mais c'est \xE9trange..."
+    - "Cet homme myst\xE9rieux qui me donnait des indices, ce flash blanc, et tout
+      le reste. Je ne suis pas arriv\xE9 ici par hasard ou par chance, quelqu'un
+      m'a aid\xE9 ! Mais pourquoi ?"
+    - "J'ai besoin de faire le point sur tout ce que j'ai v\xE9cu, cela va prendre
+      un certain temps."
+    - "Le syst\xE8me me propose de quitter cet endroit par t\xE9l\xE9portation. Quittons
+      cet endroit."
   speechEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - There are still so many artifacts just as powerful; it's terrifying. Hiding
+      them seems to be the best thing to do, but they could also solve all the problems
+      in this world.
+    - 'I understand the dilemma of the two clans better now: make the world better
+      at the risk of losing all control, or choose safety and not use this technology.'
+    - All of this is beyond me, and I can't do anything more. But it's strange...
+    - That mysterious man giving me clues, that white flash, and everything else.
+      I didn't get here by chance or luck; someone helped me! But why?
+    - I need to reflect on everything I've experienced; it's going to take some time.
+    - The system is offering me a way out of here by teleportation. Let's leave this
+      place.
   speedDeplacement: 5
   audioTeleport: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
 --- !u!1 &1443910047
@@ -3750,7 +3772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknown: {fileID: 329283716}
   firstMoment:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -3758,7 +3780,7 @@ MonoBehaviour:
     - "Cet endroit... Est-ce bien ce que je pense ? Suis-je enfin arriv\xE9 au bout
       ? Il y a quelque chose droit devant."
   firstMomentEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -3766,7 +3788,7 @@ MonoBehaviour:
     - This place... Is it what I think it is? Have I finally reached the end? There's
       something right ahead.
   lastSpeech:
-    name: Unknown
+    name: Membre des Gardiens
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -3781,7 +3803,7 @@ MonoBehaviour:
       correspondent-elles ? Deviendras-tu un alli\xE9 potentiel, ou devrai-je t'\xE9loigner
       de ce monde \xE0 tout jamais ?"
   lastSpeechEN:
-    name: 
+    name: Guardians member
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -4104,7 +4126,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: '?'
+    name: ???
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -4118,7 +4140,7 @@ MonoBehaviour:
     - "ANALYSE DU SUJET\n\nIdentit\xE9:  inconnu.\nPr\xE9sence du livre du guide,
       autorisation BETA accord\xE9e."
   openEN:
-    name: '?'
+    name: ???
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -4168,6 +4190,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1 &76714126622322567
 GameObject:
   m_ObjectHideFlags: 0

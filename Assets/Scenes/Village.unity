@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,7 +336,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -344,7 +344,7 @@ MonoBehaviour:
     - "Personne ne pensera \xE0 fouiller ici."
     - "La nuit est tomb\xE9e ... Ma m\xE8re va me tuer."
   openEN:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -373,6 +373,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &29369132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9640,14 +9642,14 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - "Mon arbre \xE0 cachette. L'endroit le plus s\xFBr ehe."
   openEN:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -9675,6 +9677,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1072755303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19007,7 +19011,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -19015,7 +19019,7 @@ MonoBehaviour:
     - "Cet arbre m'aura bien servi. Personne n'aura trouv\xE9 ma planque jusqu'\xE0
       la fin."
   openEN:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -19043,6 +19047,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &2046688656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20022,10 +20028,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2225268707613963761, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
-  - {fileID: -6478536213147159724, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
-  - {fileID: -1293887620268828351, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
-  - {fileID: -876546973899608171, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
+  - {fileID: 2100000, guid: 49316768a78b94e448cdb28013e81467, type: 2}
+  - {fileID: 2100000, guid: 359f77b94c041de4592b893743e69bb9, type: 2}
+  - {fileID: 2100000, guid: ec2018912c93b1d499d5985d19e8a802, type: 2}
+  - {fileID: 2100000, guid: 27d5362b8e414b04e93ebb891f7135fe, type: 2}
   - {fileID: -7184292951177722594, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
   - {fileID: -5893160060819351940, guid: c9dca591237925047b66cc9fab8c4f43, type: 3}
   m_StaticBatchInfo:

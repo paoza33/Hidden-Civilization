@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11763,6 +11763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlazeHair
       objectReference: {fileID: 0}
+    - target: {fileID: 5556796063610803052, guid: 0fd2226ba779e9e49b024279532e37e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd2226ba779e9e49b024279532e37e6, type: 3}
 --- !u!4 &551189761 stripped
@@ -12631,6 +12635,8 @@ MonoBehaviour:
   - {fileID: 1084685116}
   - {fileID: 250871808}
   - {fileID: 1753377352}
+  - {fileID: 551189762}
+  - {fileID: 1164003412}
   objState1:
   - {fileID: 1932828755}
   - {fileID: 1031211150}
@@ -24867,6 +24873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choked
       objectReference: {fileID: 0}
+    - target: {fileID: 893252490769797771, guid: b5a116cf13d5af34e920460646aea3e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6324493215722625493, guid: b5a116cf13d5af34e920460646aea3e7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -32942,7 +32952,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -32977,6 +32987,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1564448663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35137,7 +35149,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -35176,6 +35188,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1685505803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36221,6 +36235,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1001 &1734181886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41458,6 +41474,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1932828758
 BoxCollider:
   m_ObjectHideFlags: 0

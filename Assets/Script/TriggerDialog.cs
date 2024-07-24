@@ -38,7 +38,7 @@ public class TriggerDialog : MonoBehaviour
 
     private Animator animator;
 
-    private TextMeshProUGUI textInteract;
+    private TextMeshProUGUI textInteract, textRestart;
 
     public bool ifLibrary;
     private bool ifAlreadyLibraryInteraction; // on incrémente de 1 l'etat de library en state 0
@@ -46,6 +46,7 @@ public class TriggerDialog : MonoBehaviour
     public AudioClip audioTeleport;
 
     private bool isEnglish;
+    public bool ifWoodDoor, ifCaveStele;
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class TriggerDialog : MonoBehaviour
         animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         enabled = false;
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
+        textRestart = GameObject.FindGameObjectWithTag("UIRestart").GetComponent<TextMeshProUGUI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -94,6 +96,12 @@ public class TriggerDialog : MonoBehaviour
             }
             else
             {
+                if(ifCaveStele){
+                    textRestart.enabled = false;
+                    CaveManagment.instance.isDialogOpen = true;
+                    CaveManagment.instance.isEnding = true;
+                }
+
                 if(isEnglish)
                     DialogOpen.instance.StartDialog(openEN);
                 else
@@ -107,6 +115,10 @@ public class TriggerDialog : MonoBehaviour
                 if(ifLibrary && !ifAlreadyLibraryInteraction){// cas de library en state0
                     ifAlreadyLibraryInteraction = true;
                     LibraryManagment.instance.SetupState0();
+                }
+
+                else if(ifWoodDoor){
+                    WoodManagment2.instance.OpenSecretDoor();
                 }
 
                 playerAlreadyInteract = false;

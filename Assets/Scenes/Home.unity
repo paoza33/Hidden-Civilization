@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogState0:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -703,14 +703,14 @@ MonoBehaviour:
     - "Allons vers ce centre de recherche. Mais avant cela, je dois r\xE9cup\xE9rer
       le livre."
   dialogState1:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - J'ai fini de ranger ma chambre ! Je peux enfin aller au campement !
   dialogState2:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -728,7 +728,7 @@ MonoBehaviour:
       ancienne structure."
     - Allons chercher des indices dans cette librairie.
   dialogState3:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -737,7 +737,7 @@ MonoBehaviour:
       grav\xE9 sur cette structure \xE9trange dans la for\xEAt."
     - "Je dois v\xE9rifier \xE7a sans perdre plus de temps."
   dialogState4:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -747,7 +747,7 @@ MonoBehaviour:
     - Autant suivre ses conseils, puisque je n'ai aucune piste.
     - "Il fait d\xE9sormais nuit ; en route pour la for\xEAt !"
   dialogState5:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -768,7 +768,7 @@ MonoBehaviour:
       civilisation... Je dois redoubler de vigilance \xE0 partir de maintenant."
     - "Je suis pr\xEAt, en route vers les ruines du nord-est."
   dialogsEN:
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -784,13 +784,13 @@ MonoBehaviour:
       It's a good thing I kept that house.
     - Let's head to this research center. But before that, I need to retrieve the
       book.
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Finished tidying my room! I can finally go to the campsite !
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -808,7 +808,7 @@ MonoBehaviour:
       seems to be where the library in the northern town is.'
     - This seems true, knowing that this library was built on an ancient structure.
     - Let's go look for clues in this library.
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -816,7 +816,7 @@ MonoBehaviour:
     - The sign! It's the one from the forest! It reminds me of the one carved on
       that strange structure in the forest.
     - I need to check this without wasting any more time.
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -825,7 +825,7 @@ MonoBehaviour:
       about this structure.
     - I might as well follow his advice since I have no leads.
     - It's nighttime now; off to the forest!
-  - name: Player
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1160,14 +1160,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Mom
+    name: Maman
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - D'accord, mais ne rentre pas tard !
   dialogEN:
-    name: 
+    name: Mom
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -2043,14 +2043,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Maman ! J'ai tout fini ! Je pars au campement !
   dialogEN:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 

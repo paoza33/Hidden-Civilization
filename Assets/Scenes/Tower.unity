@@ -1434,7 +1434,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1452,7 +1452,7 @@ MonoBehaviour:
       image d'une \xEEle ? C'est la boussole ? C'est certainement \xE7a !"
     - Bon maintenant, comment... sortir... de...
   openEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1491,6 +1491,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!114 &1927155942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2598,7 +2600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 379824334}
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 

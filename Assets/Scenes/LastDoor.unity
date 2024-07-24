@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1108,6 +1108,28 @@ MonoBehaviour:
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
+    - '<sprite=0>Bleu        ->   2
+
+
+      <sprite=1>Vert     =    0
+
+
+      <sprite=2>Orange  
+      ->   1
+
+
+      <sprite=3>Rose        <-   3'
+    - "<sprite=4>Rouge \t      ->   2\n\n<sprite=5>Noir    <-   1\n\n<sprite=6>Blanc         
+      ->   1\n\n<sprite=7>Jaune         <-   2"
+    - "alphabet : \n\n1-    <sprite=0>/  2-    <sprite=1>/  3-    <sprite=2>/  4-   
+      <sprite=3>\n\n\n5-    <sprite=4>/  6-    <sprite=5>/  7-    <sprite=6>/  8-   
+      <sprite=7>"
+  openEN:
+    name: Poneglyph
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
     - '<sprite=0>Blue        ->   2
 
 
@@ -1124,12 +1146,6 @@ MonoBehaviour:
     - "alphabet : \n\n1-    <sprite=0>/  2-    <sprite=1>/  3-    <sprite=2>/  4-   
       <sprite=3>\n\n\n5-    <sprite=4>/  6-    <sprite=5>/  7-    <sprite=6>/  8-   
       <sprite=7>"
-  openEN:
-    name: 
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
-    sentences: []
   notOpen:
     name: 
     choices: []
@@ -1152,6 +1168,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!1 &583227038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,14 +2072,14 @@ MonoBehaviour:
   spwanLabyrinth: {fileID: 2611953360730713225}
   clip: {fileID: 8300000, guid: b66fb7b88c93ece4299463b22ba6cce3, type: 3}
   dialog:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Enfin sorti de ce brouillard ! Qu'est-ce qui m'attends encore ?
   dialogEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -2973,6 +2991,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1557166609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4287,7 +4307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -4444,7 +4464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4717,7 +4737,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5025,7 +5045,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5154,7 +5174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5246,7 +5266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5577,7 +5597,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5619,7 +5639,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6079,7 +6099,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6306,7 +6326,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1007667215275655573, guid: 1ae3ad81703aeed4c92236b80e684ef5, type: 3}
+  - {fileID: 2100000, guid: 0fcc5b24d351e274b9dfe3b96b3a6326, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

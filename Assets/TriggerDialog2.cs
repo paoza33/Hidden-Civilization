@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class TriggerDialog2 : MonoBehaviour
 {
@@ -30,10 +31,16 @@ public class TriggerDialog2 : MonoBehaviour
     public AudioClip audioTeleport;
 
     private bool isEnglish;
+    private TextMeshProUGUI textInteract, textLeft, textRight;
 
     private void Awake()
     {
         isEnglish = LocaleSelector.instance.IsEnglish();
+
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
+
+        textLeft = GameObject.FindGameObjectWithTag("LeftUI").GetComponent<TextMeshProUGUI>();
+        textRight = GameObject.FindGameObjectWithTag("RightUI").GetComponent<TextMeshProUGUI>();
         
         enabled = false;
 
@@ -51,7 +58,17 @@ public class TriggerDialog2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            textInteract.enabled = true;
             enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            textInteract.enabled = false;
+            enabled = false;
         }
     }
 
@@ -61,7 +78,11 @@ public class TriggerDialog2 : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !playerAlreadyInteract)
             {
+                textInteract.enabled = false;
                 playerAlreadyInteract = true;
+                textLeft.enabled = true;
+                textRight.enabled = true;
+
                 if(isEnglish)
                     DialogOpen.instance.StartDialog(dialogsEN[index]);
                 else
@@ -71,6 +92,9 @@ public class TriggerDialog2 : MonoBehaviour
             {
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
+                    textLeft.enabled = false;
+                    textRight.enabled = false;
+
                     playerAlreadyInteract = false;
                 }
             }
@@ -99,6 +123,9 @@ public class TriggerDialog2 : MonoBehaviour
                         DialogOpen.instance.StartDialog(speechEN);
                     else
                         DialogOpen.instance.StartDialog(speech);
+                    
+                    textLeft.enabled = false;
+                    textRight.enabled = false;
 
                     isLastTalking = true;
                 }
@@ -121,21 +148,8 @@ public class TriggerDialog2 : MonoBehaviour
             ContenairsMoovingRight();
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            enabled = false;
-        }
-    }
-
     private void ContenairsMoovingRight()
     {
-        if(isEnglish)
-            DialogOpen.instance.StartDialog(emptyDialogEN);
-        else
-            DialogOpen.instance.StartDialog(emptyDialog);
-
         canDisplayNextSentences = false;
         for (int i = 0; i < contenairs.Length -1; i++)
         {
@@ -161,11 +175,6 @@ public class TriggerDialog2 : MonoBehaviour
 
     private void ContenairsMoovingLeft()
     {
-        if(isEnglish)
-            DialogOpen.instance.StartDialog(emptyDialogEN);
-        else
-            DialogOpen.instance.StartDialog(emptyDialog);
-
         canDisplayNextSentences = false;
         for (int i = 1; i < contenairs.Length; i++)
         {

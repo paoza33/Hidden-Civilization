@@ -14,7 +14,7 @@ public class SettingsSystem : MonoBehaviour
     private Resolution[] resolutions;
     public TMP_Dropdown dropdown;
 
-    public GameObject settings;
+    public GameObject settings, controls;
     public GameObject[] menuButtons;
 
     private void Start()
@@ -67,6 +67,35 @@ public class SettingsSystem : MonoBehaviour
         bool isMenu = SceneManager.GetActiveScene().name == "Level0";
 
         settings.SetActive(false);
+        foreach (GameObject obj in menuButtons)
+        {
+            if (obj.name == "Start")
+                obj.SetActive(isMenu);
+
+            else if (obj.name == "Resume")
+                obj.SetActive(!isMenu);
+
+            else if (obj.name == "NewGame")
+                obj.SetActive(isMenu);
+
+            else
+                obj.SetActive(true);
+        }
+    }
+
+    public void ControlsDisplay(){
+        foreach(GameObject obj in menuButtons)
+        {
+            obj.SetActive(false);
+        }
+        controls.SetActive(true);
+    }
+
+    public void ControlsBack()
+    {
+        bool isMenu = SceneManager.GetActiveScene().name == "Level0";
+
+        controls.SetActive(false);
         foreach (GameObject obj in menuButtons)
         {
             if (obj.name == "Start")

@@ -97,7 +97,6 @@ public class KnowledgePlaceManagment : MonoBehaviour
     }
 
     private IEnumerator FadeIn(){
-        Debug.Log("fade in");
         PlayerMovement.instance.StopMovement();
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeIn");

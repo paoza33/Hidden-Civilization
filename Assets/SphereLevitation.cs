@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SphereLevitation : MonoBehaviour
 {
@@ -19,9 +20,12 @@ public class SphereLevitation : MonoBehaviour
 
     public Camera seconcaryCamera;
 
+    private TextMeshProUGUI textInteract;
+
     public static SphereLevitation instance;
     private void Awake()
     {
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         enabled = false;
         startPosition = sphere.transform.position.y;
     }
@@ -30,6 +34,7 @@ public class SphereLevitation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            textInteract.enabled = true;
             sphere.GetComponent<FlickeringEmissive>().isReverse = false;
             sphere.GetComponent<FlickeringEmissive>().enabled = true;
             socle.GetComponent<FlickeringEmissive>().isReverse = false;
@@ -44,6 +49,7 @@ public class SphereLevitation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            textInteract.enabled = false;
             sphere.GetComponent<FlickeringEmissive>().isReverse = true;
             sphere.GetComponent<FlickeringEmissive>().enabled = true;
             socle.GetComponent<FlickeringEmissive>().isReverse = true;
@@ -57,6 +63,7 @@ public class SphereLevitation : MonoBehaviour
     {
         if (!isDown && Input.GetButtonDown("Interact"))
         {
+            textInteract.enabled = false;
             SetCameraView.instance.SetNewPosCamera(seconcaryCamera.transform.position, seconcaryCamera.transform.rotation, true, false);
             sphere.GetComponent<PanelControl>().enabled = true;
             PlayerMovement.instance.StopMovement();

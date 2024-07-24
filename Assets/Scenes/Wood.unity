@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -251,7 +251,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -263,7 +263,7 @@ MonoBehaviour:
     - "Il y a quelque chose ici... un m\xE9canisme peut-\xEAtre. Voyons si je peux
       l'activer."
   openEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -294,6 +294,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 1
+  ifCaveStele: 0
 --- !u!65 &13243518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4556,6 +4558,19 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: d6d4ddee1c665a44fa49320667201353, type: 2}
   - {fileID: 2100000, guid: a5a8c900f953c3c4e9a791df58dc51ab, type: 2}
+  isFirstStructInteraction: 0
+  firstInteract:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  firstInteractEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
 --- !u!65 &511635578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7425,6 +7440,19 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: d6d4ddee1c665a44fa49320667201353, type: 2}
   - {fileID: 2100000, guid: a5a8c900f953c3c4e9a791df58dc51ab, type: 2}
+  isFirstStructInteraction: 0
+  firstInteract:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  firstInteractEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
 --- !u!65 &992949177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7640,7 +7668,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 0}
   ifChangeStateCamp: 0
   open:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -7654,7 +7682,7 @@ MonoBehaviour:
     - "Rester plant\xE9 ici pendant des heures ne changera rien, et je suis \xE0
       court d'id\xE9es. Je vais rentrer me reposer."
   openEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -7688,6 +7716,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 6273530120008833230}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!65 &1021990532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9463,6 +9493,19 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: d6d4ddee1c665a44fa49320667201353, type: 2}
   - {fileID: 2100000, guid: a5a8c900f953c3c4e9a791df58dc51ab, type: 2}
+  isFirstStructInteraction: 0
+  firstInteract:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  firstInteractEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
 --- !u!65 &1338572428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9528,6 +9571,19 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: d6d4ddee1c665a44fa49320667201353, type: 2}
   - {fileID: 2100000, guid: a5a8c900f953c3c4e9a791df58dc51ab, type: 2}
+  isFirstStructInteraction: 0
+  firstInteract:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
+  firstInteractEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences: []
 --- !u!65 &1375918202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11261,6 +11317,7 @@ MonoBehaviour:
   - {fileID: 761146532}
   clipDay: {fileID: 8300000, guid: 4a87d7e487e06462b8681da493ee3f8f, type: 3}
   clipEnigm: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
+  secretDoor: {fileID: 298906116}
 --- !u!4 &1677580116
 Transform:
   m_ObjectHideFlags: 0
@@ -12310,6 +12367,23 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: d6d4ddee1c665a44fa49320667201353, type: 2}
   - {fileID: 2100000, guid: a5a8c900f953c3c4e9a791df58dc51ab, type: 2}
+  isFirstStructInteraction: 1
+  firstInteract:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "La sph\xE8re a chang\xE9 de couleur ?\nJ'ai entendu du bruit derri\xE8re moi."
+  firstInteractEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - 'The sphere changed color?
+
+      I heard a noise behind me.'
 --- !u!65 &1829880248
 BoxCollider:
   m_ObjectHideFlags: 0

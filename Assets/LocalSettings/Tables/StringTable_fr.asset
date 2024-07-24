@@ -91,7 +91,71 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8744969737490432
-    m_Localized: '"M" POUR OUVRIR LA MAP'
+    m_Localized: '"M" POUR OUVRIR LA CARTE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9738829824573440
+    m_Localized: '"I" POUR RECOMMENCER'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593590404759552
+    m_Localized: RUINES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593634591752192
+    m_Localized: VILLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593782642294784
+    m_Localized: "FOR\xCAT"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10594577110581248
+    m_Localized: CAMPEMENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845636382998528
+    m_Localized: <- GAUCHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845723616133120
+    m_Localized: DROITE ->
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10926123596169216
+    m_Localized: COMMANDES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935322078134272
+    m_Localized: AVANT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935370019028992
+    m_Localized: "ARRI\xC8RE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935616195313664
+    m_Localized: GAUCHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935692821053440
+    m_Localized: DROITE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936141603192832
+    m_Localized: CARTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936864562790400
+    m_Localized: INTERAGIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939006782586880
+    m_Localized: TOUCHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939047127597056
+    m_Localized: TOUCHE ALT
     m_Metadata:
       m_Items: []
   references:

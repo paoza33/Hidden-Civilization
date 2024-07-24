@@ -20,6 +20,9 @@ TagManager:
   - Credit
   - Counter
   - VerificationChoiceUI
+  - UIRestart
+  - LeftUI
+  - RightUI
   layers:
   - Default
   - TransparentFX

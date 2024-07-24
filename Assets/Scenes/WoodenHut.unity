@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8211642714666067089, guid: deb1f83b296b69046b2bc8a739112017, type: 3}
       propertyPath: m_LocalPosition.x
@@ -490,7 +490,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6558067656828193053, guid: f566528c889e8af49b4579fd0155827a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1092,6 +1092,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4927332537345719856, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec2018912c93b1d499d5985d19e8a802, type: 2}
+    - target: {fileID: 4927332537345719856, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 359f77b94c041de4592b893743e69bb9, type: 2}
+    - target: {fileID: 4927332537345719856, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27d5362b8e414b04e93ebb891f7135fe, type: 2}
+    - target: {fileID: 4927332537345719856, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
+      propertyPath: m_Materials.Array.data[11]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49316768a78b94e448cdb28013e81467, type: 2}
     - target: {fileID: 8210152844108396321, guid: 3cc4c265f4894984e937ffdf1a05e142, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1169,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Old man
+    name: Vieil homme
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1177,7 +1193,7 @@ MonoBehaviour:
     - "Il n'y a pas de temps \xE0 perdre !! Passe par la fen\xEAtre de la salle de
       bain !"
   dialogEN:
-    name: 
+    name: Old man
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1744,7 +1760,7 @@ MonoBehaviour:
   colliderDoorBathroom: {fileID: 1512398345}
   ifChangeStateCamp: 0
   open:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1754,7 +1770,7 @@ MonoBehaviour:
     - "Regardons \xE7a de plus pr\xE8s sur le canap\xE9, le temps que le vieil homme
       arrive."
   openEN:
-    name: You
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -1784,6 +1800,8 @@ MonoBehaviour:
   pnjAppear: {fileID: 1334612777}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
+  ifWoodDoor: 0
+  ifCaveStele: 0
 --- !u!64 &2127876308
 MeshCollider:
   m_ObjectHideFlags: 0

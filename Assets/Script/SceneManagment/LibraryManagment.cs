@@ -73,6 +73,8 @@ public class LibraryManagment : MonoBehaviour
 
     private bool isEnglish;
 
+    public bool soluceEditor;
+
     public static LibraryManagment instance;
 
     private void Awake()
@@ -201,8 +203,13 @@ public class LibraryManagment : MonoBehaviour
                 if (!DialogOpen.instance.DisplayNextSentences())
                 {
                     StartCoroutine(FadeEnding());
+                    enabled = false;
                 }
             }
+        }
+        if(soluceEditor){
+            StartCoroutine(FadeEnding());
+            enabled = false;
         }
     }
 
@@ -437,6 +444,7 @@ public class LibraryManagment : MonoBehaviour
         readBook.enabled = false;
         PlayerMovement.instance.StopMovement();
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
+        animator.ResetTrigger("FadeOut");
         animator.SetTrigger("FadeIn");
 
         yield return new WaitForSeconds(1f);
@@ -444,6 +452,14 @@ public class LibraryManagment : MonoBehaviour
         SaveDataSceneState data = SaveDataManager.LoadDataSceneState();
         data.homeState = 3;
         SaveDataManager.SaveDataSceneState(data);
+
+        SaveDataSpawn dataSpawn = SaveDataManager.LoadDataSpawn();
+        dataSpawn.currentSceneName = "Home";
+        dataSpawn.previousSceneName = SceneManager.GetActiveScene().name;
+        SaveDataManager.SaveDataSpawn(dataSpawn);
+
+        AudioManager.instance.StopCurrentSong();
+
         SceneManager.LoadScene("Home");
         
     }

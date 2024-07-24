@@ -94,6 +94,70 @@ MonoBehaviour:
     m_Localized: '"M" TO OPEN THE MAP'
     m_Metadata:
       m_Items: []
+  - m_Id: 9738829824573440
+    m_Localized: '"I" TO TRY AGAIN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593590404759552
+    m_Localized: RUINS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593634591752192
+    m_Localized: CITY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593782642294784
+    m_Localized: FOREST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10594577110581248
+    m_Localized: CAMP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845636382998528
+    m_Localized: <- LEFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845723616133120
+    m_Localized: RIGHT ->
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10926123596169216
+    m_Localized: CONTROLS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935322078134272
+    m_Localized: FORWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935370019028992
+    m_Localized: BACKWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935616195313664
+    m_Localized: LEFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935692821053440
+    m_Localized: RIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936141603192832
+    m_Localized: MAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936864562790400
+    m_Localized: INTERACT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939006782586880
+    m_Localized: KEY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939047127597056
+    m_Localized: KEY ALT
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

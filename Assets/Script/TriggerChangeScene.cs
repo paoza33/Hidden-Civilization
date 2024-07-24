@@ -25,6 +25,7 @@ public class TriggerChangeScene : MonoBehaviour
     }
     private IEnumerator Fade()
     {
+        animator.ResetTrigger("FadeOut");
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(0.75f);
         PlayerMovement.instance.enabled = true;

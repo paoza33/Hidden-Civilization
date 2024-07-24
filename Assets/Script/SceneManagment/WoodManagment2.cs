@@ -18,8 +18,18 @@ public class WoodManagment2 : MonoBehaviour
 
 
     public AudioClip clipDay, clipEnigm;
+
+    public Animator secretDoor;
+
+    public static WoodManagment2 instance;
     private void Awake()
     {
+        if(instance == null)
+            instance = this;
+        else{
+            Debug.Log("Il y a plus d'une instance de WoodManagment2");
+            return;
+        }
         state = SaveDataManager.LoadDataSceneState().woodState;
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
@@ -45,6 +55,10 @@ public class WoodManagment2 : MonoBehaviour
             foreach (GameObject obj in objState1)
                 obj.SetActive(true);           
         }
+    }
+
+    public void OpenSecretDoor(){
+        secretDoor.SetBool("PlayerHaveKey", true);
     }
 
     private IEnumerator Fade()

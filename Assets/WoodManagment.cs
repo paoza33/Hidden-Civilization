@@ -15,8 +15,15 @@ public class WoodManagment : MonoBehaviour
 
     private TextMeshProUGUI textInteract;
 
+    public bool isFirstStructInteraction;
+    private bool isDialog;
+    public Dialog firstInteract, firstInteractEN;
+
+    private bool isEnglish;
+
     private void Awake()
     {
+        isEnglish = LocaleSelector.instance.IsEnglish();
         enabled = false;
         textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
     }
@@ -25,7 +32,25 @@ public class WoodManagment : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            TreeManagment();
+            if(isFirstStructInteraction){
+                textInteract.enabled = false;
+                TreeManagment();
+                isFirstStructInteraction = false;
+                if(isEnglish)
+                    DialogOpen.instance.StartDialog(firstInteractEN);
+                else
+                    DialogOpen.instance.StartDialog(firstInteract);
+                isDialog = true;
+            }
+            if(isDialog){
+                if (!DialogOpen.instance.DisplayNextSentences()){
+                    isDialog = false;
+                    textInteract.enabled = true;
+                }
+            }
+            else
+                TreeManagment();
+            
         }
     }
 

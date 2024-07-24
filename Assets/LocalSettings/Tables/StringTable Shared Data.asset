@@ -91,6 +91,70 @@ MonoBehaviour:
     m_Key: Map
     m_Metadata:
       m_Items: []
+  - m_Id: 9738829824573440
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593590404759552
+    m_Key: Ruins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593634591752192
+    m_Key: City
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10593782642294784
+    m_Key: Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10594577110581248
+    m_Key: Camp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845636382998528
+    m_Key: Left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10845723616133120
+    m_Key: Right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10926123596169216
+    m_Key: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935322078134272
+    m_Key: Forward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935370019028992
+    m_Key: Backward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935616195313664
+    m_Key: LEFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10935692821053440
+    m_Key: RIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936141603192832
+    m_Key: MAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10936864562790400
+    m_Key: INTERACT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939006782586880
+    m_Key: KEY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10939047127597056
+    m_Key: KEY ALT
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

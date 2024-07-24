@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11137,32 +11137,37 @@ MonoBehaviour:
   objToActivate: {fileID: 1896674519}
   isRuinsFlash: 1
   beforeFlash:
+    name: Gardes du corps
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "Qu'est-ce que tu fais l\xE0 ? Attrapons-le !"
+  beforeFlashEN:
     name: BodyGuards
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
-    - Interdiction
-    - bruit
-  beforeFlashEN:
+    - What are you doing here? Let's catch him!
+  afterFlash:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
-  afterFlash:
-    name: Player
-    choices: []
-    sentencesChoice1: 
-    sentencesChoice2: 
     sentences:
-    - aucun mouvement
+    - "C'\xE9tait quoi, \xE7a ? C'\xE9tait vous ?"
+    - ...
+    - "Ils sont inertes. Comme vide. Mais qui a fait \xE7a ?"
   afterFlashEN:
     name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - What was that? Was it you?
+    - ...
+    - They are inert. Like empty. But who did this?
   ifFlashFinishing: 0
   bodyguardLeft: {fileID: 1688614504}
   bodyguardRight: {fileID: 544640939}
@@ -17378,7 +17383,7 @@ MonoBehaviour:
   bodyguardLeft: {fileID: 1688614504}
   bodyguardRight: {fileID: 544640939}
   dialog0:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -17387,7 +17392,7 @@ MonoBehaviour:
       ?"
     - "Essayons de passer comme si c'\xE9tait normal..."
   dialog1:
-    name: Player
+    name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -17403,14 +17408,14 @@ MonoBehaviour:
       devait s\xFBrement s'y rendre en partant de l\xE0-bas. Reste \xE0 savoir comment.
       Il n'y a qu'un moyen de le d\xE9couvrir."
   dialogsEN:
-  - name: You
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - Other HQ guards are still guarding the entrance to the ruins... What to do?
     - Let's try to pass like it's normal...
-  - name: You
+  - name: 
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
@@ -21447,18 +21452,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: BodyGuards
+    name: Gardes du corps
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
     sentences:
     - ...
   dialogEN:
-    name: 
+    name: Bodyguards
     choices: []
     sentencesChoice1: 
     sentencesChoice2: 
-    sentences: []
+    sentences:
+    - ...
   needInteraction: 1
   item: {fileID: 0}
   objToDesactivate: {fileID: 1024581166}
