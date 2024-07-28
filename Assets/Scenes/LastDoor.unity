@@ -4399,6 +4399,7 @@ GameObject:
   - component: {fileID: 8305354242915993969}
   - component: {fileID: 7522915618321880506}
   - component: {fileID: 7567382414837980143}
+  - component: {fileID: 8305354242915993970}
   m_Layer: 0
   m_Name: Stele Enigm
   m_TagString: Untagged
@@ -5932,6 +5933,7 @@ GameObject:
   - component: {fileID: 5982179051262849704}
   - component: {fileID: 3753735807349054785}
   - component: {fileID: 7729463051964306780}
+  - component: {fileID: 7729463051964306781}
   m_Layer: 0
   m_Name: Stele Colors
   m_TagString: Untagged
@@ -5981,6 +5983,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7729463051964306781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574245473415263092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.9999998, z: 1.9999998}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7999101139062365227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,6 +6321,19 @@ Transform:
   m_Father: {fileID: 1899115591305352570}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8305354242915993970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73128832038444768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.9999998, z: 1.9999998}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8358052167341436910
 MeshRenderer:
   m_ObjectHideFlags: 0

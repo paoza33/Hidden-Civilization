@@ -15550,7 +15550,7 @@ MonoBehaviour:
   - {fileID: 4604113830588370747}
   - {fileID: 3736393773416240373}
   - {fileID: 4951013942904692636}
-  audioClip: {fileID: 8300000, guid: 7b21b50f27a95224fa10e8f962ae17af, type: 3}
+  audioClip: {fileID: 8300000, guid: 023ea3ddeaa8dd146b7633a0800e5a0e, type: 3}
 --- !u!114 &2050257316
 MonoBehaviour:
   m_ObjectHideFlags: 0
