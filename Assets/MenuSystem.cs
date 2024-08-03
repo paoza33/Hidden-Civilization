@@ -109,6 +109,7 @@ public class MenuSystem : MonoBehaviour
         enabled = true;
     }
 
+    /*
     private void SceneSpawn()
     {
         if (!SaveDataManager.SpawnDataCreated())
@@ -149,7 +150,51 @@ public class MenuSystem : MonoBehaviour
         string levelToLoad = newData.currentSceneName;
         AudioManager.instance.StopCurrentSong();
 
-        //SceneManager.LoadScene(levelToLoad);
-        SceneManager.LoadScene("Labyrinth");
+        SceneManager.LoadScene(levelToLoad);
+    }
+    */
+
+    // DEMO
+    private void SceneSpawn()
+    {
+        if (!SaveDataManager.SpawnDataCreated())
+        {
+            SaveDataSpawn dataSpawn = new SaveDataSpawn()
+            {
+                currentSceneName = "Wood",
+                previousSceneName = "",
+
+                spawnVillage = "",
+                spawnWood = "",
+                spawnCamp = "",
+                spawnCity = "",
+                spawnRuins = "",
+                spawnLastDoor = "",
+                spawnLibrary = "",
+                spawnLostIsland = ""
+            };
+            SaveDataManager.SaveDataSpawn(dataSpawn);
+        }
+        if (!SaveDataManager.SceneStateDataCreated())
+        {
+            SaveDataSceneState data = new SaveDataSceneState
+            {
+                homeState = 0,
+                woodState = 1,
+                libraryState = 0,
+                cityState = 0,
+                ruinsState = 0,
+                villageState = 0,
+                towerState = 0,
+                campState = 0,
+                woodenHutState = 0
+            };
+            SaveDataManager.SaveDataSceneState(data);
+        }
+        SaveDataSpawn newData = SaveDataManager.LoadDataSpawn();
+        string levelToLoad = newData.currentSceneName;
+        AudioManager.instance.StopCurrentSong();
+
+        SceneManager.LoadScene(levelToLoad);
     }
 }

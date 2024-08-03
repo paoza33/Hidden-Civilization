@@ -21,6 +21,8 @@ public class WoodManagment2 : MonoBehaviour
 
     public Animator secretDoor;
 
+    public Dialog intro, introEN;
+
     public static WoodManagment2 instance;
     private void Awake()
     {
@@ -30,30 +32,50 @@ public class WoodManagment2 : MonoBehaviour
             Debug.Log("Il y a plus d'une instance de WoodManagment2");
             return;
         }
+
         state = SaveDataManager.LoadDataSceneState().woodState;
 
         SaveDataSpawn data = SaveDataManager.LoadDataSpawn();
         if (data.previousSceneName == "Cave")
             playerStart.transform.position = spawnCave.position;
-        StartCoroutine(Fade());
-    }
-    private void Start()
-    {
+        
+
         if (state == 0)
         {
+            enabled = false;
+
             isNight = false;
             foreach (GameObject obj in objState0)
                 obj.SetActive(true);
+
+            StartCoroutine(Fade());
         }
-        else if(state == 1)
+        else if (state == 1)
         {
+            if(LocaleSelector.instance.IsEnglish())
+                DialogOpen.instance.StartDialog(introEN);
+            else
+                DialogOpen.instance.StartDialog(intro);
+
             isNight = true;
             foreach (Light light in lights)
                 light.intensity = 0;
 
             GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Light>().enabled = true;
             foreach (GameObject obj in objState1)
-                obj.SetActive(true);           
+                obj.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (!DialogOpen.instance.DisplayNextSentences())
+            {
+                enabled = false;
+                StartCoroutine(Fade());
+            }
         }
     }
 

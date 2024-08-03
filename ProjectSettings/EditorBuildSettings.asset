@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level0.unity
     guid: f18c5d1cd89dee4498919b1e30ceffac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LastDoor.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ruins.unity
     guid: b59dd50183fe3544b9ef7500cbdd1d1f
   - enabled: 1
@@ -20,46 +20,46 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: 70a73090ddf2e154980b9375b0dbde49
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Camp.unity
     guid: def224f5c1a647a459b1995bc2c0629f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/City.unity
     guid: fadbfb3597fa58448b6c0fb8976c1dea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tower.unity
     guid: fa53ddf53043a574b97d7c6aa0afd3ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LostIsland.unity
     guid: 08d50d8c44e5cf34d8d180d121a6253c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Labyrinth.unity
     guid: 252aa9fe86c28194ba981e8badb106bb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KnowledgePlace.unity
     guid: 0e3eb2ca4a2db4446bc1615a3f131794
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Home.unity
     guid: 190d3fd9664bbb348a49db21ec7d95db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Library.unity
     guid: 181bb07a9e83ff241ba502abb935fc0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Library2.unity
     guid: 7e1f7d108ed7c824dae581c19049ee7c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/House3.unity
     guid: 3224f90f5ce28f14fbfcc8c90d292875
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Village.unity
     guid: 1e4bcf8aac816864fb73529d2dd0f1fd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/House1.unity
     guid: 9615e958f04949c479b15a4df0e4b194
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/House2.unity
     guid: a2b703853709b3f4191fe3090322142b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WoodenHut.unity
     guid: eb53b930ae9ef004188b3355669b1296
   - enabled: 1
