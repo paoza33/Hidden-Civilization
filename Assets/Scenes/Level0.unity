@@ -4580,7 +4580,7 @@ RectTransform:
   m_GameObject: {fileID: 1692960648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1762156582}
@@ -5119,30 +5119,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679925161, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_text
-      value: "<SIZE=15> HIDDEN CIVILIZATION </SIZE>\r\n<SIZE=8> Thank you for playing!
-        </SIZE>\r\n</SIZE>\r<SIZE=8> The entire game was made by me, Paoza, except
-        for the music and sound effects. </SIZE>\r\n<SIZE=10><b>Music and Sound Effects:</b>
-        </SIZE>\r\n<SIZE=8> 1. \"Sci-fi Evolution Gift Pack\" by Epic Sounds and
-        FX </SIZE>\r\n<SIZE=8> 2. \"Sci Fi Ambient Power\" by Vincent T </SIZE>\r\n<SIZE=8>
-        3. \"Adventure Music and SFX\" by whatsoundsnice </SIZE>\r\n<SIZE=8> 4. \"Ambience
-        - Banaue Rice Terraces (Free Sample Pack)\" by InspectorJ Audio </SIZE>\r\n<SIZE=8>
+      value: "<SIZE=15> HIDDEN CIVILIZATION </SIZE>\r\n<SIZE=8> Thank you for playing
+        this DEMO! </SIZE>\r\n</SIZE>\r<SIZE=8> The entire game is available on my
+        itch.io and was made by me, Paoza, except for the music and sound effects.
+        </SIZE>\r\n<SIZE=10><b>Music and Sound Effects:</b> </SIZE>\r\n<SIZE=8> 1.
+        \"Sci-fi Evolution Gift Pack\" by Epic Sounds and FX </SIZE>\r\n<SIZE=8>
+        2. \"Sci Fi Ambient Power\" by Vincent T </SIZE>\r\n<SIZE=8> 3. \"Adventure
+        Music and SFX\" by whatsoundsnice </SIZE>\r\n<SIZE=8> 4. \"Ambience - Banaue
+        Rice Terraces (Free Sample Pack)\" by InspectorJ Audio </SIZE>\r\n<SIZE=8>
         5. \"Calm Instrumental Music - Nightfall\" by Soundtrack Forge </SIZE>\r\n<SIZE=8>
         6. \"Chilled Electronic Music\" by Cathran </SIZE>\r\n<SIZE=10><b>Special
         Thanks:</b> </SIZE>\r\n<SIZE=8> Thank you to the artists who made their sounds
         available for free on the Unity Asset Store. </SIZE>\r\n<SIZE=8> Once again,
-        thank you for playing HIDDEN CIVILIZATION. </SIZE>\r\n\n<SIZE=8> Merci d'y
-        avoir jou\xE9 ! </SIZE>\r\n<SIZE=8>Tout le jeu a \xE9t\xE9 fait par moi,
-        Paoza, except\xE9 les musiques et effets sonores. </SIZE>\r\n<SIZE=10><b>Musiques
-        et effets sonores :</b> </SIZE>\r\n<SIZE=8> 1. \"Sci-fi Evolution Gift Pack\"
-        par Epic Sounds and FX </SIZE>\r\n<SIZE=8> 2. \"Sci Fi Ambient Power\" par
-        Vincent T </SIZE>\r\n<SIZE=8> 3. \"Adventure Music and SFX\" par whatsoundsnice
-        </SIZE>\r\n<SIZE=8> 4. \"Ambience - Banaue Rice Terraces (Free Sample Pack)\"
-        par InspectorJ Audio </SIZE>\r\n<SIZE=8> 5. \"Calm Instrumental Music - Nightfall\"
-        par Soundtrack Forge </SIZE>\r\n<SIZE=8> 6. \"Chilled Electronic Music\"
-        par Cathran </SIZE>\r\n<SIZE=10><b>Remerciements :</b> </SIZE>\r\n<SIZE=8>
-        Merci aux artistes qui ont mis leurs assets gratuitement sur l'Unity Asset
-        Store. </SIZE>\r\n<SIZE=8> Encore une fois, merci d'avoir jou\xE9 \xE0 \nHIDDEN
-        CIVILIZATION. </SIZE>\r"
+        thank you for playing HIDDEN CIVILIZATION (DEMO). </SIZE>\r\n\n<SIZE=8> Merci
+        d'avoir jou\xE9 \xE0 cette DEMO! </SIZE>\r\n<SIZE=8>Le jeu entier est disponible
+        sur mon itch.io et a \xE9t\xE9 fait par moi, Paoza, except\xE9 les musiques
+        et effets sonores. </SIZE>\r\n<SIZE=10><b>Musiques et effets sonores :</b>
+        </SIZE>\r\n<SIZE=8> 1. \"Sci-fi Evolution Gift Pack\" par Epic Sounds and
+        FX </SIZE>\r\n<SIZE=8> 2. \"Sci Fi Ambient Power\" par Vincent T </SIZE>\r\n<SIZE=8>
+        3. \"Adventure Music and SFX\" par whatsoundsnice </SIZE>\r\n<SIZE=8> 4.
+        \"Ambience - Banaue Rice Terraces (Free Sample Pack)\" par InspectorJ Audio
+        </SIZE>\r\n<SIZE=8> 5. \"Calm Instrumental Music - Nightfall\" par Soundtrack
+        Forge </SIZE>\r\n<SIZE=8> 6. \"Chilled Electronic Music\" par Cathran </SIZE>\r\n<SIZE=10><b>Remerciements
+        :</b> </SIZE>\r\n<SIZE=8> Merci aux artistes qui ont mis leurs assets gratuitement
+        sur l'Unity Asset Store. </SIZE>\r\n<SIZE=8> Encore une fois, merci d'avoir
+        jou\xE9 \xE0 \nHIDDEN CIVILIZATION (DEMO). </SIZE>\r"
       objectReference: {fileID: 0}
     - target: {fileID: 679925161, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_margin.w
@@ -5156,6 +5157,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1065124922}
+    - target: {fileID: 1178011977, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178011977, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178011977, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1260881546, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -11562.002
@@ -5175,6 +5188,18 @@ PrefabInstance:
     - target: {fileID: 1314701671, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324787453, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324787453, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324787453, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1324787453, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5236,6 +5261,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1065124913}
+    - target: {fileID: 2110376193, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110376193, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110376193, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2110376193, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 232.65625
@@ -5324,6 +5361,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1065124913}
+    - target: {fileID: 5780340508722976486, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780340508722976486, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5780340508722976486, guid: 4c943614ce5097645b99f3ee0f972556, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -416.0625

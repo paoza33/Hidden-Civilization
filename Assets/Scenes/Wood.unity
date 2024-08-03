@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11318,6 +11318,32 @@ MonoBehaviour:
   clipDay: {fileID: 8300000, guid: 4a87d7e487e06462b8681da493ee3f8f, type: 3}
   clipEnigm: {fileID: 8300000, guid: 8a0c0f6e7771d624db90b53f4af93fa3, type: 3}
   secretDoor: {fileID: 298906116}
+  intro:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - "J'esp\xE8re que cet homme ne m'a pas menti. S'il dit vrai, la structure devrait
+      r\xE9agir lorsque certaines conditions sont remplies, et selon lui, ces conditions
+      seront r\xE9unies cette nuit."
+    - "Il ne m'a rien dit de plus. Je ne devrais pas lui faire confiance avec si
+      peu, mais je n'ai pas d'autres pistes.\nBref, le moment de v\xE9rit\xE9 est
+      arriv\xE9, la structure est droit devant."
+  introEN:
+    name: 
+    choices: []
+    sentencesChoice1: 
+    sentencesChoice2: 
+    sentences:
+    - I hope that man didn't lie to me. If he's telling the truth, the structure
+      should react when certain conditions are met, and according to him, these conditions
+      will be met tonight.
+    - 'He didn''t tell me anything else. I shouldn''t trust him with so little information,
+      but I have no other leads.
+
+      Anyway, the moment of truth has arrived,
+      the structure is straight ahead.'
 --- !u!4 &1677580116
 Transform:
   m_ObjectHideFlags: 0

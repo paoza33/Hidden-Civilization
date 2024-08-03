@@ -145,7 +145,6 @@ public static class SaveDataManager
         if (SpawnDataCreated())
         {
             File.Delete(path);
-            Debug.Log("delete spawn");
         }
             
 
@@ -153,7 +152,6 @@ public static class SaveDataManager
         if (SceneStateDataCreated())
         {
             File.Delete(path);
-            Debug.Log("delete state");
         }
             
     }
