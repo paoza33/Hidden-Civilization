@@ -1945,7 +1945,7 @@ MonoBehaviour:
   destroyObject: 0
   selfDesactivation: 0
   isChangingScene: 1
-  levelToLoad: Home
+  levelToLoad: Credit
   pnjAppear: {fileID: 0}
   ifLibrary: 0
   audioTeleport: {fileID: 0}
