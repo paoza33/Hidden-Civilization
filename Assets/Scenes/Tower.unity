@@ -3141,7 +3141,7 @@ MonoBehaviour:
   Barier: {fileID: 6142667561733231997}
   lvlAchieved: 0
   audioTowerRotation: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
-  audioTowerGoDown: {fileID: 8300000, guid: 8bc0249e5fd614ea7b26484aa9c91a7a, type: 3}
+  audioTowerGoDown: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
 --- !u!114 &6227791424925401152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,7 +3397,7 @@ MonoBehaviour:
   Barier: {fileID: 6142667561733231997}
   lvlAchieved: 0
   audioTowerRotation: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
-  audioTowerGoDown: {fileID: 8300000, guid: 8bc0249e5fd614ea7b26484aa9c91a7a, type: 3}
+  audioTowerGoDown: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
 --- !u!114 &6829242283551766349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   Barier: {fileID: 6142667561733231997}
   lvlAchieved: 0
   audioTowerRotation: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
-  audioTowerGoDown: {fileID: 8300000, guid: 8bc0249e5fd614ea7b26484aa9c91a7a, type: 3}
+  audioTowerGoDown: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
 --- !u!114 &7568404729474780088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   Barier: {fileID: 6142667561733231997}
   lvlAchieved: 0
   audioTowerRotation: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
-  audioTowerGoDown: {fileID: 8300000, guid: 8bc0249e5fd614ea7b26484aa9c91a7a, type: 3}
+  audioTowerGoDown: {fileID: 8300000, guid: 671b1348f49834394bbb9ed14b947df7, type: 3}
 --- !u!114 &8708683241751206806
 MonoBehaviour:
   m_ObjectHideFlags: 0

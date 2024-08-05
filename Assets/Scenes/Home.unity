@@ -759,14 +759,14 @@ MonoBehaviour:
     - "Ce n'est pas le moment de penser \xE0 tout \xE7a si pr\xE8s du but. Reprenons
       nos recherches."
     - "Le livre montre une carte d'une cit\xE9. La disposition des b\xE2timents semble
-      similaire aux ruines du Nord-Est."
+      similaire aux ruines du Nord-Ouest."
     - "Cependant, ces ruines sont interdites d'acc\xE8s au public depuis que le \"QG\"
       en a pris possession. Elles sont bien trop surveill\xE9es pour que je puisse
       m'y infiltrer."
     - "Pourquoi le \"QG\" s'est-il install\xE9 ici ? Et pourquoi tant de surveillance
       pour des ruines ? Peut-\xEAtre qu'ils ont aussi connaissance de cette ancienne
       civilisation... Je dois redoubler de vigilance \xE0 partir de maintenant."
-    - "Je suis pr\xEAt, en route vers les ruines du nord-est."
+    - "Je suis pr\xEAt, en route vers les ruines du Nord-Ouest."
   dialogsEN:
   - name: 
     choices: []
@@ -836,13 +836,13 @@ MonoBehaviour:
     - Now is not the time to dwell on this so close to the goal. Let's resume our
       research.
     - The book displays a map of a city. The layout of the buildings seems similar
-      to the ruins in the Northeast.
+      to the ruins in the Northwest.
     - However, these ruins have been off-limits to the public since the Headquarters
       took over. They are heavily guarded, making infiltration impossible.
     - Why did the Headquarters establish itself here? And why such heavy surveillance
       for ruins? Perhaps they also know about this ancient civilization... I need
       to be extra cautious from now on.
-    - I'm ready, heading to the Northeast ruins.
+    - I'm ready, heading to the Northwest ruins.
   recentSkin:
   - {fileID: 2100000, guid: 71d3f8e2fbe5ba342b5e9f30bae32859, type: 2}
   - {fileID: 2100000, guid: 95f9be64f89ec6f46bd9e34caedd59f4, type: 2}
