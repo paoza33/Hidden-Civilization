@@ -44,6 +44,7 @@ public class WoodManagment2 : MonoBehaviour
             isNight = false;
             foreach (GameObject obj in objState0)
                 obj.SetActive(true);
+            StartCoroutine(Fade());
         }
         else if (state == 1)
         {
