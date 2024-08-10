@@ -149,6 +149,6 @@ public class MenuSystem : MonoBehaviour
         string levelToLoad = newData.currentSceneName;
         AudioManager.instance.StopCurrentSong();
 
-        SceneManager.LoadScene("LastDoor");
+        SceneManager.LoadScene(levelToLoad);
     }
 }
