@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TriggerSphereLastDoor : MonoBehaviour
@@ -7,9 +9,11 @@ public class TriggerSphereLastDoor : MonoBehaviour
     public GameObject sphere;
     private bool alreadyInteract = false;
     public int id;
+    private TextMeshProUGUI textInteract;
 
     private void Awake()
     {
+        textInteract = GameObject.FindGameObjectWithTag("UIInteract").GetComponent<TextMeshProUGUI>();
         enabled = false;
     }
 
@@ -29,6 +33,7 @@ public class TriggerSphereLastDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            textInteract.enabled = true;
             enabled = true;
         }
     }
@@ -38,6 +43,7 @@ public class TriggerSphereLastDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             enabled = false;
+            textInteract.enabled = false;
         }
     }
 

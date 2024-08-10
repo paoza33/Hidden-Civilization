@@ -17,8 +17,6 @@ public class LastDoorManagment : MonoBehaviour
 
     public Transform newPosCamera;
 
-    public bool solutionEditor = false;
-
     public GameObject playerStart;
     public Transform spwanLabyrinth;
 
@@ -65,17 +63,7 @@ public class LastDoorManagment : MonoBehaviour
             if (!DialogOpen.instance.DisplayNextSentences())
             {
                 StartCoroutine(Fade());
-                //enabled = false; //a enlever � la fin
             }
-        }
-        if (solutionEditor)
-        {
-            for (int i = 0; i < triggerSpheres.Length; i++)
-            {
-                triggerSpheres[i].gameObject.SetActive(false);
-            }
-            StartCoroutine(CameraEffect());
-            enabled = false;
         }
     }
 
@@ -99,6 +87,7 @@ public class LastDoorManagment : MonoBehaviour
             {
                 Spheres[i].GetComponent<TriggerSphereLastDoor>().ResetInteraction();
             }
+            orderPlayer.Clear();
         }
     }
 
@@ -122,6 +111,7 @@ public class LastDoorManagment : MonoBehaviour
         AudioManager.instance.PlayThemeSong(clip);
         Animator animator = GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>();
         animator.SetTrigger("FadeOut");
+        enabled = false;
         PlayerMovement.instance.enabled = true;
         CameraMovement.instance.cameraFixX = false;
         CameraMovement.instance.cameraFixZ = false;
